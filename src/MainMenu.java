@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -10,11 +8,13 @@ import javafx.scene.text.Font;
 
 public class MainMenu extends TestStage
 {
+	static VBox vbox2 = new VBox();
+	
 	public static void mainMenu()
 	{
-		VBox vbox2 = new VBox(10);
+		vbox2 = new VBox(10);
 		HBox hbox1 = new HBox();
-		Label title = new Label("Text Based Adventure Game");
+		Label title = new Label("Escape the Tower");
 
 		Button newGameButton = new Button("New Game");
 		Button loadGameButton = new Button("Load Game");
@@ -32,13 +32,23 @@ public class MainMenu extends TestStage
 		vbox2.setAlignment(Pos.CENTER);
 		
 		newGameButton.setOnAction(e -> {MainMenu.newGame(); });
-		newGameButton.setOnAction(e -> {MainMenu.loadGame(); });
-		newGameButton.setOnAction(e -> {MainMenu.helpMenu(); });
-		newGameButton.setOnAction(e -> {MainMenu.exitGame(); });
+		loadGameButton.setOnAction(e -> {MainMenu.loadGame(); });
+		helpMenuButton.setOnAction(e -> {MainMenu.helpMenu(); });
+		exitGameButton.setOnAction(e -> {MainMenu.exitGame(); });
 	}
 	
 	public static void newGame()
 	{
+		MainMenu.vbox1 = new VBox();
+		
+		HBox hbox1 = new HBox();
+		HBox hbox2 = new HBox();
+		VBox vbox2 = new VBox();
+		VBox vbox3 = new VBox();
+		
+		
+		
+		
 		
 	}
 	

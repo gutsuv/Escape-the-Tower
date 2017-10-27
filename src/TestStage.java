@@ -6,16 +6,6 @@ import javafx.stage.Stage;
 public class TestStage extends Application
 {
 	static VBox vbox1 = new VBox();
-	
-	public VBox getVbox1()
-	{
-		return vbox1;
-	}
-
-	public void setVbox1(VBox vbox1)
-	{
-		TestStage.vbox1 = vbox1;
-	}
 
 	@Override
 	public void start(Stage primaryStage) throws Exception
@@ -24,7 +14,7 @@ public class TestStage extends Application
 		
 		Scene scene = new Scene(vbox1, 600, 400);
 		primaryStage.setResizable(false);
-		primaryStage.setTitle("Text Based Adventure Game");
+		primaryStage.setTitle("Escape the Tower");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
