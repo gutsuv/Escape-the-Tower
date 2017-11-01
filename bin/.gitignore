@@ -1,4 +1,10 @@
-/Player.class
 /Character.class
+/Consumable.class
 /Enemy.class
+/Gear.class
+/Item.class
+/MainMenu.class
+/Player.class
+/Puzzle.class
 /Room.class
+/TestStage.class
