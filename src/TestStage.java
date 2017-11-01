@@ -10,7 +10,9 @@ public class TestStage extends Application
 	@Override
 	public void start(Stage primaryStage) throws Exception
 	{
-		MainMenu.mainMenu();
+		MainMenu main = new MainMenu();
+		
+		main.mainMenu();
 		
 		Scene scene = new Scene(vbox1, 600, 400);
 		primaryStage.setResizable(false);
