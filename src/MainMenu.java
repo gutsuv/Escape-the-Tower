@@ -19,7 +19,6 @@ import javafx.scene.text.Font;
 public class MainMenu extends TestStage
 {
 	static VBox vbox2 = new VBox();
-	//new comment
 	public void mainMenu() 
 	{
 		vbox2 = new VBox(10);
