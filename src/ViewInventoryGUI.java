@@ -24,6 +24,7 @@ public class ViewInventoryGUI extends Application
 	@Override
 	public void start(Stage stage1) throws Exception 
 	{
+		st1.setTitle("Inventory");
 		int i = items.size();
 		Button use,drop;
 		Label l;
