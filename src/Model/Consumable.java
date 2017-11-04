@@ -1,3 +1,5 @@
+
+
 public class Consumable extends Item
 {	
 	protected int healthEffect;	
@@ -5,7 +7,7 @@ public class Consumable extends Item
 	
 	public Consumable() 
 	{
-		super(// Some things here);
+		//super(// Some things here);
 		this.healthEffect = 0;
 		this.maxHealthEffect = 0;
 	}
