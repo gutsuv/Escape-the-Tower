@@ -20,6 +20,8 @@ public class MainMenu extends TestStage
 {
 	static VBox vbox2 = new VBox();
 	
+	static int saveSlot;
+	
 	public void mainMenu() 
 	{
 		vbox2 = new VBox(10);
@@ -28,7 +30,7 @@ public class MainMenu extends TestStage
 		Label title = new Label();
 		
 		Image image = new Image("file:mainmenubackground.png");
-		BackgroundImage bgImage= new BackgroundImage(image, BackgroundRepeat.NO_REPEAT,
+		BackgroundImage bgImage = new BackgroundImage(image, BackgroundRepeat.NO_REPEAT,
 				BackgroundRepeat.NO_REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT);
 		vbox1.setBackground(new Background(bgImage));
 		
@@ -47,6 +49,15 @@ public class MainMenu extends TestStage
 		Button helpMenuButton = new Button("Help Menu");
 		Button exitGameButton = new Button("Exit Game");
 		
+		newGameButton.setMaxWidth(200);
+		newGameButton.setStyle("-fx-focus-color: brown;");
+		loadGameButton.setMaxWidth(200);
+		loadGameButton.setStyle("-fx-focus-color: brown;");
+		helpMenuButton.setMaxWidth(200);
+		helpMenuButton.setStyle("-fx-focus-color: brown;");
+		exitGameButton.setMaxWidth(200);
+		exitGameButton.setStyle("-fx-focus-color: brown;");
+		
 		vbox1.getChildren().addAll(hbox1, vbox2);
 		vbox2.getChildren().addAll(newGameButton, loadGameButton, helpMenuButton, exitGameButton);
 		hbox1.getChildren().addAll(title);
@@ -57,48 +68,9 @@ public class MainMenu extends TestStage
 		
 		vbox2.setAlignment(Pos.CENTER);
 		
-		newGameButton.setOnAction(e -> {MainMenu.newGame(); });
-		loadGameButton.setOnAction(e -> {MainMenu.loadGame(); });
-		helpMenuButton.setOnAction(e -> {MainMenu.helpMenu(); });
-		exitGameButton.setOnAction(e -> {MainMenu.exitGame(); });
-	}
-	
-	public static void newGame()
-	{
-		
-		
-		
-		
-		
-		
-		//Put below stuff in new class? runs if registration is true?
-		vbox1.getChildren().clear();
-		
-		HBox hbox1 = new HBox();
-		HBox hbox2 = new HBox();
-		VBox vbox2 = new VBox();
-		VBox vbox3 = new VBox();
-		
-		Label hitPoints = new Label();
-		Button inGameMenu = new Button("Menu");
-		
-		vbox1.getChildren().addAll(hbox1, hbox2);
-		hbox1.getChildren().addAll(hitPoints, inGameMenu);
-		hbox2.getChildren().addAll(vbox2, vbox3);	
-	}
-	
-	public static void loadGame()
-	{
-		
-	}
-	
-	public static void helpMenu()
-	{
-		
-	}
-	
-	public static void exitGame()
-	{
-		System.exit(0);
+		newGameButton.setOnAction(e -> {NewGame.newGame(); });
+		loadGameButton.setOnAction(e -> {LoadGame.loadGame(); });
+		helpMenuButton.setOnAction(e -> {HelpMenu.helpMenu(); });
+		exitGameButton.setOnAction(e -> {ExitGame.exitGame(); });
 	}
 }
