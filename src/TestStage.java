@@ -15,7 +15,7 @@ public class TestStage extends Application
 		
 		main.mainMenu();
 		
-		Scene scene = new Scene(vbox1, 600, 400);
+		Scene scene = new Scene(vbox1, 1000, 600);
 		primaryStage.getIcons().add(new Image("file:skullicon.png"));
 		primaryStage.setResizable(false);
 		primaryStage.setTitle("Escape the Tower");
