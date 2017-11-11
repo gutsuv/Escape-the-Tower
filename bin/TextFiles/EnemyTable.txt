@@ -1,0 +1,11 @@
+00|Prison Guard|10|5|0|8|10|Pretty lazy. Sleeps often. Has a club. (If you start fight with guard he laughs at you and then eats the key)
+01|Guard Dog|15|5|0|9|12|Not very strong but has a strong sense of smell and pretty darn fast
+02|Interrogator|30|7|1|7|04|Loves to torture, pretty darn sadistic and has a whip 
+03|Injured guard|40|10|3|6|02/11|Was injured badly, has only one arm carries a Morning Star other arm is missing and bleeding. Was waiting on doctor to help him
+04|Drunk guard|65|9|1|3|06|He was supposed to guard the alcohol but well let's just say he snuck some down. Pretty woozy right now. Carries a club
+05|Deranged Prisoner|45|10|5|8|12|Not sure what I’m seeing here. He has an eye patch, a peg leg and one of his hand is a hook but he seems to be way out of place. The only thing I can see when looking at him is a pirate. Fights with hook
+06|Heavily Armored soldier|35|25|15|5|03|Oh boy stumbled upon a big one. Is wearing armor from head to toe. Doesn’t appear to be fast. Yells a lot. Appear to be carrying an important item. Wields a two handed battle axe
+07|Warden|100|20|15|9|13|Looks like a pretty important person in this tower. Seems to be guarding the treasure room. Its armored from head to toes but doesn't seem to be slow. Carries a 2 handed sword and looks highly experience.
+08|Archer|50|12|5|9|05|Not much to say. Carries a bow and likes to fire them arrows
+09|Innocent Servant|100|0|0|10|10|Was in the middle of cleaning. It can’t be help, if I let him live he will tell the others. It’s either him or me. Wields a butter knife
+10|Servant Cook|100|0|0|10|12|Looks like he is carrying some food. Oh well time to end his misery. Wields a plate.

@@ -1,22 +1,29 @@
+// Superclass
+
+package Model;
+
+import View.Console;
 
 public class Character 
 {
+	protected Console view;
+
 	protected int characterId;
 	protected int health;
 	protected int damage;
 	protected int defense;
 	protected boolean alive;
-
-	public Character() 
+	
+	public Character()
 	{
 		this.characterId = 0;
 		this.health = 0;
 		this.damage = 0;
-		this.defense = 0;		
+		this.defense = 0;
 		this.alive = false;
 	}
 
-	public Character(int characterId, int health, int damage, int defense, boolean alive) 
+	public Character(int characterId, int health, int damage, int defense, boolean alive)
 	{
 		this.characterId = characterId;
 		this.health = health;
@@ -25,58 +32,70 @@ public class Character
 		this.alive = false;
 	}
 
-	public int getCharacterId() 
+	public int getCharacterId()
 	{
 		return characterId;
 	}
+
 
 	public void setCharacterId(int characterId)
 	{
 		this.characterId = characterId;
 	}
 
-	public int getHealth() 
+
+	public int getHealth()
 	{
 		return health;
 	}
+
 
 	public void setHealth(int health)
 	{
 		this.health = health;
 	}
 
+
 	public int getDamage()
 	{
 		return damage;
 	}
 
-	public void setDamage(int damage) 
+
+	public void setDamage(int damage)
 	{
 		this.damage = damage;
 	}
-	
+
+
 	public int getDefense()
 	{
 		return defense;
 	}
 
-	public void setDefense(int defense) 
+
+	public void setDefense(int defense)
 	{
 		this.defense = defense;
 	}
 
-	public boolean getAlive() 
+
+	public boolean isAlive()
 	{
 		return alive;
 	}
-	
-	public void setAlive(boolean alive) 
+
+
+	public void setAlive(boolean alive)
 	{
 		this.alive = alive;
 	}
-	
-	public void attack()
+
+
+	@Override
+	public String toString()
 	{
-		
+		return "Character [view=" + view + ", characterId=" + characterId + ", health=" + health + ", damage=" + damage
+				+ ", defense=" + defense + ", alive=" + alive + "]";
 	}
 }

@@ -1,13 +1,18 @@
+// Subclass
 
+package Model;
+import View.Console;
 
 public class Consumable extends Item
-{	
-	protected int healthEffect;	
+{
+	Console view;
+	
+	protected int healthEffect;
 	protected int maxHealthEffect;
 	
-	public Consumable() 
+	public Consumable()
 	{
-		//super(// Some things here);
+		super(0, "", "");
 		this.healthEffect = 0;
 		this.maxHealthEffect = 0;
 	}
@@ -19,24 +24,29 @@ public class Consumable extends Item
 		this.maxHealthEffect = maxHealthEffect;
 	}
 
-	public int getHealthEffect() 
+	public int getHealthEffect()
 	{
 		return healthEffect;
 	}
 
-	public void setHealthEffect(int healthEffect) 
+	public void setHealthEffect(int healthEffect)
 	{
 		this.healthEffect = healthEffect;
 	}
-	
-	public void use()
+
+	public int getMaxHealthEffect()
 	{
-		
+		return maxHealthEffect;
 	}
 
-	@Override
-	public String toString() 
+	public void setMaxHealthEffect(int maxHealthEffect)
 	{
-		return "Consumable [healthEffect=" + healthEffect + "]";
+		this.maxHealthEffect = maxHealthEffect;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Gear [healthEffect=" + healthEffect + "]";
 	}
 }
