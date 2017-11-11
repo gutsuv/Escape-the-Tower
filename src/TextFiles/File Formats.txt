@@ -1,0 +1,17 @@
+Consumable
+int itemID, String itemName, int healthEffect, int maxHealthEffect, String itemDescShort, String itemDescLong
+
+EnemyTable
+int characterId, String name, int health, int damage, int defense, int acc, Item itemId, String enemyDescription
+
+Gear
+int itemId, String itemName, char slot, int defense, int attackMin, int attackMax,int acc, String itemDescShort, String itemDescLong
+
+PuzzleItem
+int ID, String name, int puzzleId, String description
+
+RoomsA
+int roomId, int exitRoomId, char direction, String description
+
+RoomsB
+int roomId, int puzzleId, int enemyId, int itemId
