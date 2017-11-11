@@ -1,4 +1,4 @@
-00|Flaying Knife|w|0|3|5|-9|“A dull knife used to skin victims alive.”|“A knife used to re-move layers of prisoners’ skin, expos-ing nerve and muscle tissue as a form of torture”
+﻿00|Flaying Knife|w|0|3|5|-9|“A dull knife used to skin victims alive.”|“A knife used to re-move layers of prisoners’ skin, expos-ing nerve and muscle tissue as a form of torture”
 01|Short Sword|w|0|7|10|-8|“A well-kept short sword that needs to be sharpened”|“A double-edged short sword, about 60 cm, in length. The sword shows no sign of rust, but has not been sharpened recently”
 02|Morning Star|w|0|10|15|-8|“A club like weapon with spikes”|“A spiked ball attached to a wood shaft. It looks deadly.”
 03|Flail|w|0|5|25|-8|“A spiked metal ball attached to a shaft by chain”|“A 3 foot shaft with a chain connection to a spiked steel ball. It looks like it can do some serious damage if handled correctly”

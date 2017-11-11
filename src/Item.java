@@ -2,20 +2,21 @@ public class Item
 {
 	protected int itemId;
 	protected String itemName;
-	protected String itemDesc;
-
+	protected String itemDescShort;
+	protected String itemDescLong;
+	
 	public Item() 
 	{
 		this.itemId = 0;
 		this.itemName = "";
-		this.itemDesc = "";
+		this.itemDescShort = "";
 	}
 
 	public Item(int itemId, String itemName, String itemDesc) 
 	{
 		this.itemId = itemId;
 		this.itemName = itemName;
-		this.itemDesc = itemDesc;
+		this.itemDescShort = itemDesc;
 	}
 
 	public int getItemId()
@@ -40,12 +41,12 @@ public class Item
 
 	public String getItemDesc()
 	{
-		return itemDesc;
+		return itemDescShort;
 	}
 
 	public void setItemDesc(String itemDesc) 
 	{
-		this.itemDesc = itemDesc;
+		this.itemDescShort = itemDesc;
 	}
 
 	@Override
