@@ -4,6 +4,8 @@ import Model.*;
 import View.Console;
 import java.util.*;
 
+
+// Reference will be scrapped or split up into multiple controllers.
 public class Controller
 {	
 	protected Console view;
@@ -11,6 +13,11 @@ public class Controller
 	
 	protected String name;
 	protected Player player;
+	//private ArrayList<Room> rooms;
+/*	private int x;
+	private int y;
+	private final int rows = 5;
+	private final int columns = 10;*/
 	protected String puzzleInput;
 	protected ArrayList<Item> inventory = new ArrayList<Item>();
 	
@@ -28,6 +35,8 @@ public class Controller
 	PuzzleContent puzzle = new PuzzleContent();
 	RoomContent room = new RoomContent();
 
+	//String[] temp1 = temp.;
+	//String[] temp1 = temp.;
 	String[] consumableName = consumable.getConsumableName();
 	String[] consumableDesc = consumable.getConsumableDesc();
 	String[] gearName = gear.getGearName();
@@ -46,6 +55,10 @@ public class Controller
 	Gear key31 = new Gear(6, gearName[6], gearDesc[6], 7, 0, 0, ""); 
 
 	Item[] items = {con1, con2, con3, g11, g21, g31, key11, key21, key31};
+	//Item[] items3 = {con1, con2, con3, g11, g21, g31, key11, key21, key31};
+	//Item[] items4 = {con1, con2, con3, g11, g21, g31, key11, key21, key31};
+	//Item[] items5 = {con1, con2, con3, g11, g21, g31, key11, key21, key31};
+
 
 	//Enemy e1 = new Enemy(1, 45, 75, false, 1, enemyName[0], enemyDesc[0]);
 	//Enemy e2 = new Enemy(2, 15, 100, false, 2, enemyName[1], enemyDesc[1]);
@@ -53,8 +66,10 @@ public class Controller
 	//Enemy[] enemy = {e1, e2, e3};
 
 	HashMap<Double, Integer> enemyMap = new HashMap<Double, Integer>();
-	HashMap<Double, Integer> gearMap = new HashMap<Double, Integer>();
 	HashMap<Double, Integer> itemMap = new HashMap<Double, Integer>();
+	HashMap<Double, Integer> gearMap = new HashMap<Double, Integer>();
+
+	
 	
 	protected void mainMenu()
 	{
@@ -65,7 +80,7 @@ public class Controller
 			 
 			String userInput = input.nextLine();
 
-			if (userInput.equalsIgnoreCase("start") || userInput.equalsIgnoreCase("new") || userInput.equalsIgnoreCase("new game") || userInput.equalsIgnoreCase("start a new game"))
+			if (userInput.equalsIgnoreCase("start") || userInput.equalsIgnoreCase("new") || userInput.equalsIgnoreCase("new game"))
 			{
 				mainMenu = false; 
 				newGame();
@@ -117,7 +132,7 @@ public class Controller
 		view.println(MiscellaneousContent.displayDefaultMenu());
 		displayRoomContent();
 	}
-
+	
 	protected void displayRoomContent()
 	{
 
@@ -156,7 +171,7 @@ public class Controller
 				addItem(player.getPlayerPosition());
 
 			}
-			else if (userInput.equalsIgnoreCase("combat") || userInput.equalsIgnoreCase("Engage Enemy"))
+			else if (userInput.equalsIgnoreCase("combat") || userInput.equalsIgnoreCase("engage Enemy"))
 			{
 
 				roomText = false;
@@ -208,25 +223,6 @@ public class Controller
 
 	}
 
-	protected void displayHelpMenu()
-	{
-		view.println(MiscellaneousContent.help());
-		boolean help = true;
-
-		while (help)
-		{
-			view.println("Return with back");
-			 
-			String userInput = input.nextLine();
-
-			if (userInput.equalsIgnoreCase("back"))
-			{
-				help = false;
-				view.println(MiscellaneousContent.displayDefaultMenu());
-				mainMenu();
-			}
-		}
-	}
 
 	boolean occupied1 = false;
 	boolean occupied2 = false;
@@ -314,6 +310,26 @@ public class Controller
 		{
 			//view.println(enemy[enemyMap.get(player.getPlayerPosition())].getEnemyDescription());
 			combatOptions();
+		}
+	}
+	
+	protected void displayHelpMenu()
+	{
+		view.println(MiscellaneousContent.help());
+		boolean help = true;
+
+		while (help)
+		{
+			view.println("Return with back");
+			 
+			String userInput = input.nextLine();
+
+			if (userInput.equalsIgnoreCase("back"))
+			{
+				help = false;
+				view.println(MiscellaneousContent.displayDefaultMenu());
+				mainMenu();
+			}
 		}
 	}
 
@@ -738,6 +754,12 @@ public class Controller
 			}
 		}
 	}
+	
+	protected void exit()
+	{
+		view.println("Ending");
+		System.exit(1);
+	}
 
 	private void move(double position)
 	{
@@ -890,11 +912,6 @@ public class Controller
 		}
 	}
 	
-	protected void exit()
-	{
-		view.println("Ending");
-		System.exit(1);
-	}
 
 
 	public String prompt(String question, String prompt)

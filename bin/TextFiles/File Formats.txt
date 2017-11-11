@@ -11,7 +11,7 @@ PuzzleItem
 int ID, String name, int puzzleId, String description
 
 RoomsA
-int roomId, int exitRoomId, char direction, String description
+int roomId, String roomDescription, int exitRoomId, char direction, String description
 
 RoomsB
 int roomId, int puzzleId, int enemyId, int itemId
