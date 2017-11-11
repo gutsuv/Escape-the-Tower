@@ -6,7 +6,6 @@ public class Console
 	{
 		System.out.print(string);
 	}
-
 	public void println(String string)
 	{
 		System.out.println(string);
