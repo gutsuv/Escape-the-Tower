@@ -12,7 +12,6 @@ public class EnemyContent
 	Enemy enemy2;
 	Enemy enemy3;
 	
-
 	String enemyName1 = "Ex";
 	String enemyName2 = "Ex";
 	String enemyName3 = "Ex";

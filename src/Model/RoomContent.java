@@ -206,92 +206,58 @@ public class RoomContent
 	//String roomDesc66 = "Room Name, Floor 1: Room 6 \nRoom Description";
 	//String roomDesc67 = "Room Name, Floor 1: Room 7 \nRoom Description";
 
-	// Not accurate, but room## should have the necessary N,S,E,W directions associated with room which leads into proper room ID.
-	int 	room1North = 1, 
-			room1East = 2,
-			room1South = 3,
-			room1West = 4,
+	// Not accurate so far, but room##Door# = (the int ID value of connecting room)
+	int 	room11Door1 = 1, 
+			room11Door2 = 2,
+			room11Door3 = 3,
+			room11Door4 = 4,
 			
-		    room2North = 1,
-			room2East = 2,
-			room2South = 3,
-			room2West = 4,
+		    room12Door1 = 1,
+			room12Door2 = 2,
+			room12Door3 = 3,
+			room12Door4 = 4,
 			
-			room3North = 1, 
-			room3East = 2,
-			room3South = 3,
-			room3West = 4,
+			room13Door1 = 1, 
+			room13Door2 = 2,
+			room13Door3 = 3,
+			room13Door4 = 4,
 			
-			room4North = 1, 
-			room4East = 2,
-			room4South = 3,
-			room4West = 4,
-			
-			room5North = 1, 
-			room5East = 2,
-			room5South = 3,
-			room5West = 4,
-			
-			room6North = 1, 
-			room6East = 2,
-			room6South = 3,
-			room6West = 4,
-			
-			room7North = 1, 
-			room7East = 2,
-			room7South = 3,
-			room7West = 4,
-			
-			room8North = 1, 
-			room8East = 2,
-			room8South = 3,
-			room8West = 4,
-			
-			room9North = 1, 
-			room9East = 2,
-			room9South = 3,
-			room9West = 4,
-					
-			room10North = 1, 
-			room10East = 2,
-			room10South = 3,
-			room10West = 4,
-			
-			room11North = 1, 
-			room11East = 2,
-			room11South = 3,
-			room11West = 4;
+			room14Door1 = 1, 
+			room14Door2 = 2,
+			room14Door3 = 3,
+			room14Door4 = 4;
 
-	Room room11 = new Room(roomId12, roomDesc11, roomEnemy11, roomPuzzle12, room1North, room1West, roomItem11, room1South, room1East, roomLocked11);
-	Room room12 = new Room(roomId12, roomDesc12, roomEnemy12, roomPuzzle12, room2North, room2West, roomItem12, room2South, room2East, roomLocked12);
-	Room room13 = new Room(roomId13, roomDesc13, roomEnemy13, roomPuzzle13, room3North, room3West, roomItem13, room3South, room3East, roomLocked13);
-	Room room14 = new Room(roomId14, roomDesc14, roomEnemy14, roomPuzzle14, room4North, room4West, roomItem14, room4South, room4East, roomLocked14);
-	Room room15 = new Room(roomId15, roomDesc15, roomEnemy15, roomPuzzle15, room4North, room4West, roomItem15, room4South, room4East, roomLocked15);
-	Room room21 = new Room(roomId21, roomDesc21, roomEnemy21, roomPuzzle21, room4North, room4West, roomItem21, room4South, room4East, roomLocked21);
-	Room room22 = new Room(roomId22, roomDesc22, roomEnemy22, roomPuzzle22, room4North, room4West, roomItem22, room4South, room4East, roomLocked22);
-	Room room23 = new Room(roomId23, roomDesc23, roomEnemy23, roomPuzzle23, room4North, room4West, roomItem23, room4South, room4East, roomLocked23);
-	Room room24 = new Room(roomId24, roomDesc24, roomEnemy24, roomPuzzle24, room4North, room4West, roomItem24, room4South, room4East, roomLocked24);
-	Room room31 = new Room(roomId31, roomDesc31, roomEnemy31, roomPuzzle31, room4North, room4West, roomItem31, room4South, room4East, roomLocked31);
-	Room room32 = new Room(roomId32, roomDesc32, roomEnemy32, roomPuzzle32, room4North, room4West, roomItem32, room4South, room4East, roomLocked32);
-	Room room33 = new Room(roomId33, roomDesc33, roomEnemy33, roomPuzzle33, room4North, room4West, roomItem33, room4South, room4East, roomLocked33);
-	Room room34 = new Room(roomId34, roomDesc34, roomEnemy34, roomPuzzle34, room4North, room4West, roomItem34, room4South, room4East, roomLocked34);
-	Room room35 = new Room(roomId35, roomDesc35, roomEnemy35, roomPuzzle35, room4North, room4West, roomItem35, room4South, room4East, roomLocked35);
-	Room room41 = new Room(roomId41, roomDesc41, roomEnemy41, roomPuzzle41, room4North, room4West, roomItem41, room4South, room4East, roomLocked41);
-	Room room42 = new Room(roomId42, roomDesc42, roomEnemy42, roomPuzzle42, room4North, room4West, roomItem42, room4South, room4East, roomLocked42);
-	Room room43 = new Room(roomId43, roomDesc43, roomEnemy43, roomPuzzle43, room4North, room4West, roomItem43, room4South, room4East, roomLocked43);
-	Room room44 = new Room(roomId44, roomDesc44, roomEnemy44, roomPuzzle44, room4North, room4West, roomItem44, room4South, room4East, roomLocked44);
-	Room room45 = new Room(roomId45, roomDesc45, roomEnemy45, roomPuzzle45, room4North, room4West, roomItem45, room4South, room4East, roomLocked45);
-	Room room51 = new Room(roomId51, roomDesc51, roomEnemy51, roomPuzzle51, room4North, room4West, roomItem51, room4South, room4East, roomLocked51);
-	Room room52 = new Room(roomId52, roomDesc52, roomEnemy52, roomPuzzle52, room4North, room4West, roomItem52, room4South, room4East, roomLocked52);
-	Room room53 = new Room(roomId53, roomDesc53, roomEnemy53, roomPuzzle53, room4North, room4West, roomItem53, room4South, room4East, roomLocked53);
-	Room room54 = new Room(roomId54, roomDesc54, roomEnemy54, roomPuzzle54, room4North, room4West, roomItem54, room4South, room4East, roomLocked54);
-	Room room55 = new Room(roomId55, roomDesc55, roomEnemy55, roomPuzzle55, room4North, room4West, roomItem55, room4South, room4East, roomLocked55);
-	Room room56 = new Room(roomId56, roomDesc56, roomEnemy56, roomPuzzle56, room4North, room4West, roomItem56, room4South, room4East, roomLocked56);
-	Room room61 = new Room(roomId61, roomDesc61, roomEnemy61, roomPuzzle61, room4North, room4West, roomItem61, room4South, room4East, roomLocked61);
-	Room room62 = new Room(roomId62, roomDesc62, roomEnemy62, roomPuzzle62, room4North, room4West, roomItem62, room4South, room4East, roomLocked62);
-	Room room63 = new Room(roomId63, roomDesc63, roomEnemy63, roomPuzzle63, room4North, room4West, roomItem63, room4South, room4East, roomLocked63);
-	Room room64 = new Room(roomId64, roomDesc64, roomEnemy64, roomPuzzle64, room4North, room4West, roomItem64, room4South, room4East, roomLocked64);
-	Room room65 = new Room(roomId65, roomDesc65, roomEnemy65, roomPuzzle65, room4North, room4West, roomItem65, room4South, room4East, roomLocked65);
+
+	Room room11 = new Room(roomId12, roomDesc11, roomEnemy11, roomPuzzle12, room11Door1, room11Door4, roomItem11, room11Door3, room11Door2, roomLocked11);
+	Room room12 = new Room(roomId12, roomDesc12, roomEnemy12, roomPuzzle12, room12Door1, room12Door4, roomItem12, room12Door3, room12Door2, roomLocked12);
+	Room room13 = new Room(roomId13, roomDesc13, roomEnemy13, roomPuzzle13, room13Door1, room13Door4, roomItem13, room13Door3, room13Door2, roomLocked13);
+	Room room14 = new Room(roomId14, roomDesc14, roomEnemy14, roomPuzzle14, room14Door1, room14Door4, roomItem14, room14Door3, room14Door2, roomLocked14);
+	Room room15 = new Room(roomId15, roomDesc15, roomEnemy15, roomPuzzle15, room14Door1, room14Door4, roomItem15, room14Door3, room14Door2, roomLocked15);
+	Room room21 = new Room(roomId21, roomDesc21, roomEnemy21, roomPuzzle21, room14Door1, room14Door4, roomItem21, room14Door3, room14Door2, roomLocked21);
+	Room room22 = new Room(roomId22, roomDesc22, roomEnemy22, roomPuzzle22, room14Door1, room14Door4, roomItem22, room14Door3, room14Door2, roomLocked22);
+	Room room23 = new Room(roomId23, roomDesc23, roomEnemy23, roomPuzzle23, room14Door1, room14Door4, roomItem23, room14Door3, room14Door2, roomLocked23);
+	Room room24 = new Room(roomId24, roomDesc24, roomEnemy24, roomPuzzle24, room14Door1, room14Door4, roomItem24, room14Door3, room14Door2, roomLocked24);
+	Room room31 = new Room(roomId31, roomDesc31, roomEnemy31, roomPuzzle31, room14Door1, room14Door4, roomItem31, room14Door3, room14Door2, roomLocked31);
+	Room room32 = new Room(roomId32, roomDesc32, roomEnemy32, roomPuzzle32, room14Door1, room14Door4, roomItem32, room14Door3, room14Door2, roomLocked32);
+	Room room33 = new Room(roomId33, roomDesc33, roomEnemy33, roomPuzzle33, room14Door1, room14Door4, roomItem33, room14Door3, room14Door2, roomLocked33);
+	Room room34 = new Room(roomId34, roomDesc34, roomEnemy34, roomPuzzle34, room14Door1, room14Door4, roomItem34, room14Door3, room14Door2, roomLocked34);
+	Room room35 = new Room(roomId35, roomDesc35, roomEnemy35, roomPuzzle35, room14Door1, room14Door4, roomItem35, room14Door3, room14Door2, roomLocked35);
+	Room room41 = new Room(roomId41, roomDesc41, roomEnemy41, roomPuzzle41, room14Door1, room14Door4, roomItem41, room14Door3, room14Door2, roomLocked41);
+	Room room42 = new Room(roomId42, roomDesc42, roomEnemy42, roomPuzzle42, room14Door1, room14Door4, roomItem42, room14Door3, room14Door2, roomLocked42);
+	Room room43 = new Room(roomId43, roomDesc43, roomEnemy43, roomPuzzle43, room14Door1, room14Door4, roomItem43, room14Door3, room14Door2, roomLocked43);
+	Room room44 = new Room(roomId44, roomDesc44, roomEnemy44, roomPuzzle44, room14Door1, room14Door4, roomItem44, room14Door3, room14Door2, roomLocked44);
+	Room room45 = new Room(roomId45, roomDesc45, roomEnemy45, roomPuzzle45, room14Door1, room14Door4, roomItem45, room14Door3, room14Door2, roomLocked45);
+	Room room51 = new Room(roomId51, roomDesc51, roomEnemy51, roomPuzzle51, room14Door1, room14Door4, roomItem51, room14Door3, room14Door2, roomLocked51);
+	Room room52 = new Room(roomId52, roomDesc52, roomEnemy52, roomPuzzle52, room14Door1, room14Door4, roomItem52, room14Door3, room14Door2, roomLocked52);
+	Room room53 = new Room(roomId53, roomDesc53, roomEnemy53, roomPuzzle53, room14Door1, room14Door4, roomItem53, room14Door3, room14Door2, roomLocked53);
+	Room room54 = new Room(roomId54, roomDesc54, roomEnemy54, roomPuzzle54, room14Door1, room14Door4, roomItem54, room14Door3, room14Door2, roomLocked54);
+	Room room55 = new Room(roomId55, roomDesc55, roomEnemy55, roomPuzzle55, room14Door1, room14Door4, roomItem55, room14Door3, room14Door2, roomLocked55);
+	Room room56 = new Room(roomId56, roomDesc56, roomEnemy56, roomPuzzle56, room14Door1, room14Door4, roomItem56, room14Door3, room14Door2, roomLocked56);
+	Room room61 = new Room(roomId61, roomDesc61, roomEnemy61, roomPuzzle61, room14Door1, room14Door4, roomItem61, room14Door3, room14Door2, roomLocked61);
+	Room room62 = new Room(roomId62, roomDesc62, roomEnemy62, roomPuzzle62, room14Door1, room14Door4, roomItem62, room14Door3, room14Door2, roomLocked62);
+	Room room63 = new Room(roomId63, roomDesc63, roomEnemy63, roomPuzzle63, room14Door1, room14Door4, roomItem63, room14Door3, room14Door2, roomLocked63);
+	Room room64 = new Room(roomId64, roomDesc64, roomEnemy64, roomPuzzle64, room14Door1, room14Door4, roomItem64, room14Door3, room14Door2, roomLocked64);
+	Room room65 = new Room(roomId65, roomDesc65, roomEnemy65, roomPuzzle65, room14Door1, room14Door4, roomItem65, room14Door3, room14Door2, roomLocked65);
 
 	public void getRoom(int roomID)
 	{
@@ -514,44 +480,44 @@ public class RoomContent
 		}
 	}
 
-	public void accessible(int north, int south, int east, int west, double position)
+	public void accessible(int door1, int door2, int door3, int door4, double position)
 	{
-		String northOption, westOption, southOption, eastOption, up, left, right;
+		String door1Option, door4Option, door2Option, door3Option, up, down;
 
-		if (north != 0) 
+		if (door1 != 0) 
 		{
-			northOption = "North: ";
+			door1Option = "Door 1: ";
 		}
 		else 
 		{
-			northOption = "";
+			door1Option = "";
 		}
 
-		if (east != 0)
+		if (door3 != 0)
 		{
-			eastOption = "East: ";
+			door3Option = "Door 3: ";
 		}
 		else 
 		{
-			eastOption = "";
+			door3Option = "";
 		}
 
-		if (south != 0)
+		if (door2 != 0)
 		{
-			southOption = "South: ";
+			door2Option = "Door 2: ";
 		}
 		else 
 		{
-			southOption = "";
+			door2Option = "";
 		}
 
-		if (west != 0)
+		if (door4 != 0)
 		{
-			westOption = "West: ";
+			door4Option = "Door 4: ";
 		}
 		else 
 		{
-			westOption = "";
+			door4Option = "";
 		}
 	
 		if (position == 1 || position == 2 || position == 3)
@@ -565,21 +531,13 @@ public class RoomContent
 		
 		if (position == 4)
 		{
-			left = "Left: ";
+			down = "Left: ";
 		}
 		else
 		{
-			left = "";
+			down = "";
 		}
-		if (position == 5)
-		{
-			right ="Right: ";
-		}
-		else
-		{
-			right = "";
-		}
-		view.println("\nExits avalible: " + northOption + westOption + southOption + eastOption + up + left + right);
+		view.println("\nExits avalible: " + door1Option + door4Option + door2Option + door3Option + up + down);
 	}
 
 	public void obtainItem(int item)

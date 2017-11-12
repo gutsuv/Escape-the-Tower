@@ -9,28 +9,27 @@ public class Player extends Character
 
 	private String playerName;
 	private double position;
-	private double northRoom;
-	private double eastRoom;
-	private double southRoom;
-	private double westRoom;
+	private double door1Room;
+	private double door2Room;
+	private double door3Room;
+	private double door4Room;
 	private String puzzle;
-
 
 	public Player() 
 	{
-		super(1, 15, 150, 0, false);
+		super(1, 100, 150, 0, false);
 		this.playerName = "";
 		this.position = 1;
 	}
 
-	public Player(String playerName, double position, double northRoom, double eastRoom, double southRoom, double westRoom, int monsterScore, int puzzleScore, int gameScore)
+	public Player(String playerName, double position, double door1Room, double door2Room, double door3Room, double door4Room, int monsterScore, int puzzleScore, int gameScore)
 	{
 		this.playerName = playerName;
 		this.position = position;
-		this.northRoom = northRoom;
-		this.eastRoom = eastRoom;
-		this.southRoom = southRoom;
-		this.westRoom = westRoom;
+		this.door1Room = door1Room;
+		this.door2Room = door2Room;
+		this.door3Room = door3Room;
+		this.door4Room = door4Room;
 	}
 
 	public String getPlayerName() 
@@ -42,7 +41,6 @@ public class Player extends Character
 	{
 		this.playerName = playerName;
 	}
-
 
 	public double getPlayerPosition()
 	{
@@ -59,12 +57,10 @@ public class Player extends Character
 		return alive;
 	}
 
-
 	public void setAlive(boolean alive) 
 	{
 		this.alive = alive;
 	}
-
 
 	public void retreat()
 	{
@@ -72,104 +68,104 @@ public class Player extends Character
 		System.exit(0);
 	}
 
-	public double getNorthRoom()
+	public double getDoor1Room()
 	{
-		return northRoom;
+		return door1Room;
 	}
 
-	public void setNorthRoom(double position) 
+	public void setDoor1Room(double position) 
 	{
 		if (position == 1) 
 		{
-			this.northRoom = 2;
+			this.door1Room = 2;
 		}
 		else if (position == 3) 
 		{
-			this.northRoom = 4;
+			this.door1Room = 4;
 		}
 		else if (position == 5)
 		{
-			this.northRoom = 6;
+			this.door1Room = 6;
 		}
 		else 
 		{
-			this.northRoom = position;
+			this.door1Room = position;
 		}
 	}
 
-	public double getEastRoom()
+	public double getDoor2Room()
 	{
-		return eastRoom;
+		return door2Room;
 	}
 
-	public void setEastRoom(double position)
+	public void setDoor2Room(double position)
 	{
 		if (position == 1) 
 		{
-			this.eastRoom = 3;
+			this.door2Room = 3;
 		}
 		else if (position == 3) 
 		{
-			this.eastRoom = 5;
+			this.door2Room = 5;
 		}
 		else if (position == 5)
 		{
-			this.eastRoom = 7;
+			this.door2Room = 7;
 		}
 		else 
 		{
-			this.eastRoom = position;
+			this.door2Room = position;
 		}
 	}
 
-	public double getSouthRoom() 
+	public double getDoor3Room() 
 	{
-		return southRoom;
+		return door3Room;
 	}
 
 
-	public void setSouthRoom(double position)
+	public void setDoor3Room(double position)
 	{
 		if (position == 1) 
 		{
-			this.southRoom = 3;
+			this.door3Room = 3;
 		}
 		else if (position == 3) 
 		{
-			this.southRoom = 5;
+			this.door3Room = 5;
 		}
 		else if (position == 5)
 		{
-			this.southRoom = 7;
+			this.door3Room = 7;
 		}
 		else 
 		{
-			this.southRoom = position;
+			this.door3Room = position;
 		}
 	}
 
-	public double getWestRoom() 
+	public double getDoor4Room() 
 	{
-		return westRoom;
+		return door4Room;
 	}
 
-	public void setWestRoom(double position) 
+	public void setDoor4Room(double position) 
 	{
 		if (position == 1) 
 		{
-			this.southRoom = 3;
+			this.door3Room = 3;
 		}
 		else if (position == 3) 
 		{
-			this.southRoom = 5;
+			this.door3Room = 5;
 		}
 		else if (position == 5)
 		{
-			this.southRoom = 7;
+			this.door3Room = 7;
 		}
 		else 
 		{
-			this.southRoom = position;
+			this.door3Room = position;
 		}
 	}
 
