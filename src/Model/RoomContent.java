@@ -209,11 +209,11 @@ public class RoomContent
 	// Not accurate so far, but room##Door# = (the int ID value of connecting room)
 	int 	room11Door1 = 1, 
 			room11Door2 = 2,
-			room11Door3 = 3,
+			room11Door3 = 0, // 0 can represent a nonexistent door. 
 			room11Door4 = 4,
 			
-		    room12Door1 = 1,
-			room12Door2 = 2,
+		    room12Door1 = 0,
+			room12Door2 = 0,
 			room12Door3 = 3,
 			room12Door4 = 4,
 			
