@@ -22,6 +22,42 @@ public class Model {
 		//delete this code vvvv
 		inventory.add(new Item());
 		inventory.add(new Item());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		inventory.add(new Item());
 		ViewInventoryGUI v =new ViewInventoryGUI(inventory);
 		//delete this code ^^^^
