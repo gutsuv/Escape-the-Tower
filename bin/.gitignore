@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-/LoadGame$1.class
-/NewGame$1.class
-/1510331119830.html
-/java.policy.applet
-=======
-/Controller/
 /Model/
 /View/
-/TextFiles/
->>>>>>> 51a60f3eef1d0199e63c162e3551009ddfc9136a
 /Classes/
+/Controller/

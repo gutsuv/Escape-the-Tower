@@ -4,7 +4,7 @@ public class MiscellaneousContent
 {
 	public static String displayIntro()
 	{
-		return  "Welcome";
+		return  "Welcome\n";
 	}
 
 	public static String displayMainMenu()
@@ -12,7 +12,7 @@ public class MiscellaneousContent
 		return  "New Game\n"
 				+ "Load Game\n"
 				+ "Save Game\n"
-				+ "Exit";
+				+ "Exit\n";
 	}
 
 	public static String displayDefaultMenu()
@@ -24,20 +24,20 @@ public class MiscellaneousContent
 				+ "View Inventory\n"
 				+ "Help Menu\n"
 				+ "Change Room\n"
-				+ "Exit";
+				+ "Exit\n";
 	}
 
 	public static String move()
 	{
 		return  	"Password\n"
-					+ "Down";
+					+ "Down\n";
 	}
 
 
 	public static String help() 
 	{
 		return  "Help\n"
-				+ "Menu Goes Here";
+				+ "Menu Goes Here\n";
 	}
 
 
@@ -50,7 +50,7 @@ public class MiscellaneousContent
 	public static String invalidPuzzleInput() 
 	{
 		return  "Incorrect\n"
-				+ "Exit Option Goes Here";
+				+ "Exit Option Goes Here\n";
 	}
 
 	public static String invalidEnemyInput() 
@@ -64,7 +64,7 @@ public class MiscellaneousContent
 		return  "Combat\n"
 				+ "Attack\n"
 				+ "Defense\n"
-				+ "Retreat";
+				+ "Retreat\n";
 	}
 
 	public static String displayAttackCommand() 
