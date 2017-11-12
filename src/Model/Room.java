@@ -1,31 +1,30 @@
 // Used for designing room object.
 
 package Model;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import View.Console;
 
 public class Room
 {
 	private Console view;
 	
-	protected double roomId;
+	protected int roomId;
 	protected String roomDesc;
 	protected int items; 
 	protected int puzzles;
 	protected int enemies; 
-	protected double north;
-	protected Room northName;
-	protected double south;
-	protected double east;
-	protected double west;
-	public static LinkedList<Room> rooms = new LinkedList<Room>();
+	protected double door1;
+	protected double door2;
+	protected double door3;
+	protected double door4;
+	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	protected boolean locked;
 
 	public Room()
 	{
 	}
 
-	public Room(double roomId, String roomDesc, int enemies, int puzzles, double north, double west, int items, double south, double east, boolean locked)
+	public Room(int roomId, String roomDesc, int enemies, int puzzles, double door1, double door4, int items, double door2, double door3, boolean locked)
 	{
 		this.roomId = roomId;
 		this.roomDesc = roomDesc;
@@ -33,19 +32,19 @@ public class Room
 		this.locked = locked;
 		this.enemies = enemies;
 		this.puzzles = puzzles;
-		this.north = north;
-		this.west = west;
-		this.south = south;
-		this.east = east;
+		this.door1 = door1;
+		this.door4 = door4;
+		this.door2 = door2;
+		this.door3 = door3;
 		Room.rooms.add(this);
 	}
 	
-	public double getRoomId()
+	public int getRoomId()
 	{
 		return roomId;
 	}
 
-	public void setRoomId(double roomId)
+	public void setRoomId(int roomId)
 	{
 		this.roomId = roomId;
 	}
@@ -90,57 +89,47 @@ public class Room
 		this.enemies = enemies;
 	}
 
-	public Room getNorthName()
+	public double getDoor1()
 	{
-		return northName;
+		return door1;
 	}
 
-	public void setNorthName(Room northName)
+	public void setDoor1(double door1)
 	{
-		this.northName = northName;
+		this.door1 = door1;
 	}
 
-	public double getSouth()
+	public double getDoor2()
 	{
-		return south;
+		return door2;
 	}
 
-	public void setSouth(double south)
+	public void setDoor2(double door2)
 	{
-		this.south = south;
+		this.door2 = door2;
 	}
 
-	public double getEast()
+	public double getDoor3()
 	{
-		return east;
+		return door3;
 	}
 
-	public void setEast(double east)
+	public void setDoor3(double door3)
 	{
-		this.east = east;
+		this.door3 = door3;
 	}
 
-	public double getWest()
+	public double getDoor4()
 	{
-		return west;
+		return door4;
 	}
 
-	public void setWest(double west)
+	public void setDoor4(double door4)
 	{
-		this.west = west;
+		this.door4 = door4;
 	}
 
-	public static LinkedList<Room> getRooms()
-	{
-		return rooms;
-	}
-
-	public static void setRooms(LinkedList<Room> rooms)
-	{
-		Room.rooms = rooms;
-	}
-
-	public boolean getLocked()
+	public boolean isLocked()
 	{
 		return locked;
 	}
@@ -150,50 +139,34 @@ public class Room
 		this.locked = locked;
 	}
 
-	public double getNorth()
-	{
-		return north;
-	}
-	
-	public void setNorth(double position) 
+	public void setDoor(double position) 
 	{
 		if (position == 1)
 		{
-			this.north = 2;
+			this.door1 = 2;
 		}
 		else if (position == 3)
 		{
-			this.north = 4;
+			this.door1 = 4;
 		}
 		else if (position == 5)
 		{
-			this.north = 6;
+			this.door1 = 6;
 		}
 		else if (position == 7)
 		{
-			this.north = 8;
+			this.door1 = 8;
 		}
 		else if (position == 9)
 		{
-			this.north = 10;
+			this.door1 = 10;
 		}
 		else if (position == 11)
 		{
-			this.north = 12;
+			this.door1 = 12;
 		}
 	}
-
-	public void examineRoom(double roomId) 
-	{
-		view.println("The room contains:\tEnemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
-	}
-
-	public void showPaths(int north, int west, int south, int east)
-	{
-		view.println("Rooms avalible: " + north + " north room " + west + " west room " + south + " south room " + east + " east");
-		view.println("Enter which room?  North East South West");
-	}
-
+	
 	public void lockedRoom() 
 	{
 		if(locked == true)
@@ -207,11 +180,20 @@ public class Room
 		}
 	}
 
+	public void examineRoom(double roomId) 
+	{
+		view.println("Enemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
+	}
+
+	public void showPaths(int door1, int door4, int door2, int door3)
+	{
+		view.println("Rooms avalible: " + door1 + " door1 room " + door4 + " door4 room " + door2 + " door2 room " + door3 + " door3 room");
+		view.println("Enter which room?  Door1 Door2 Door3 Door4");
+	}
+
 	@Override
 	public String toString()
 	{
-		return "Room [view=" + view + ", roomId=" + roomId + ", roomDesc=" + roomDesc + ", items=" + items
-				+ ", puzzles=" + puzzles + ", enemies=" + enemies + ", north=" + north + ", northName=" + northName
-				+ ", south=" + south + ", east=" + east + ", west=" + west + ", locked=" + locked + "]";
+		return getRoomDesc();
 	}
 }

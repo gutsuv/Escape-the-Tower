@@ -10,9 +10,6 @@ public class PuzzleContent
 	Puzzle puzzle4;
 	Puzzle puzzle5;
 
-	private boolean solved = true;
-	private boolean unsolved= false;
-
 	public String puzzleDesc1 = "Puzzle: Example puzzle  ";
 	public String puzzleAnswer1 = "puzzle";
 	
