@@ -57,7 +57,7 @@ public class Room
 
 	public void setRoomId(double roomId)
 	{
-		fileName = "RoomsB.txt";
+		fileName = "RoomsB_int roomId, int puzzleId, int enemyId, int itemId.txt";
 		this.line = line;
 		reader(fileName, line);
 		this.roomId = roomId;

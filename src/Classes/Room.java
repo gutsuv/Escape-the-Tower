@@ -1,3 +1,5 @@
+package Classes;
+
 import java.lang.reflect.Array;
 
 public class Room
@@ -13,7 +15,7 @@ public class Room
 	}
 	
 	public Room(String loadedString)
-	{
+ 	{
 		// loaded from file
 		//int roomId, String roomDescription, int exitRoomId, char direction, String doorDescription
 		try {
