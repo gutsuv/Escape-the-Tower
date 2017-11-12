@@ -293,7 +293,7 @@ public class RoomContent
 	Room room64 = new Room(roomId64, roomDesc64, roomEnemy64, roomPuzzle64, room4North, room4West, roomItem64, room4South, room4East, roomLocked64);
 	Room room65 = new Room(roomId65, roomDesc65, roomEnemy65, roomPuzzle65, room4North, room4West, roomItem65, room4South, room4East, roomLocked65);
 
-	public void getRoom(double roomID)
+	public void getRoom(int roomID)
 	{
 		switch (String.valueOf(roomID)) 
 		{
@@ -360,7 +360,7 @@ public class RoomContent
 		}
 	}
 
-	public void examineRoom(double id) 
+	public void examineRoom(int id) 
 	{
 		if (id == 11) 
 		{ 

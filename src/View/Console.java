@@ -2,6 +2,7 @@ package View;
 
 public class Console
 {
+	// Prints
 	public void print(String string) 
 	{
 		System.out.print(string);

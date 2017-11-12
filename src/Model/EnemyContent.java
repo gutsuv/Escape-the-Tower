@@ -91,7 +91,7 @@ public class EnemyContent
 		return enemyDesc;
 	} 
 
-	public void examineEnemy(double enemy)
+	public void examineEnemy(int enemy)
 	{
 		if(enemy == 1)
 		{

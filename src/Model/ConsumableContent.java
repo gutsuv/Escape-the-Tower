@@ -13,7 +13,6 @@ public class ConsumableContent
 	
 	private ArrayList<Item> inventory = new ArrayList<Item>();
 
-
 	public ArrayList<Item> getinventory() 
 	{
 		return inventory;
@@ -81,7 +80,7 @@ public class ConsumableContent
 		this.consumableDescArray = consumableDescArray;
 	}
 	
-	public void getConsumable(double consumable)
+	public void getConsumable(int consumable)
 	{
 		if(consumable == 1) 
 		{
@@ -97,7 +96,7 @@ public class ConsumableContent
 		}
 	}
 
-	public void setConsumableDescription(double consumable) 
+	public void setConsumableDescription(int consumable) 
 	{
 		if(consumable == 1)
 		{
@@ -117,7 +116,7 @@ public class ConsumableContent
 		}
 	}
 
-	public void getConsumableName(double consumable)
+	public void getConsumableName(int consumable)
 	{
 		if(consumable == 1)
 		{
