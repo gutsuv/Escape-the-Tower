@@ -1,3 +1,5 @@
+/*
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -54,3 +56,5 @@ public class ViewInventoryGUI extends Application
 		st1.show();
 	}
 }
+
+*/

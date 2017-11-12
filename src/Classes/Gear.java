@@ -1,3 +1,5 @@
+package Classes;
+
 public class Gear extends Item
 {
 	protected int defense;
