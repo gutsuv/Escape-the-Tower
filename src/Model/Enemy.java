@@ -1,32 +1,29 @@
+// Subclass
+package Model;
+
 public class Enemy extends Character
-{
-	private String enemyDescription;
+{	
+	private String enemyDesc;
 	
-	public Enemy()
+	public Enemy() 
 	{
-		super(// Things);
-		this.enemyDescription = "";
+		super(2, 0, 0, 0, false);
+		this.enemyDesc = "";
 	}
 
-	public Enemy(int characterId, int health, int damage, int defense, boolean alive, String enemyDescription) 
+	public Enemy(int characterId, int health, int damage, int defense, boolean alive)
 	{
 		super(characterId, health, damage, defense, alive);
-		this.enemyDescription = enemyDescription;
+		this.enemyDesc = enemyDesc;
 	}
 
-	public String getEnemyDescription()
+	public String getEnemyDesc()
 	{
-		return enemyDescription;
+		return enemyDesc;
 	}
 
-	public void setEnemyDescription(String enemyDescription) 
+	public void setEnemyDesc(String enemyDesc)
 	{
-		this.enemyDescription = enemyDescription;
-	}
-
-	@Override
-	public String toString() 
-	{
-		return enemyDescription;
+		this.enemyDesc = enemyDesc;
 	}
 }

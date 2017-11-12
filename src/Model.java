@@ -18,10 +18,7 @@ public class Model {
 	Room currentRoom;
 	public Model() throws Exception 
 	{
-		//delete this code vvvv
-		Room r1 = new Room(1.0,false,"","");
-		roomsmap.put(r1.getRoomId(),r1);
-		//delete this code ^^^^
+
 		//delete this code vvvv
 		inventory.add(new Item());
 		inventory.add(new Item());

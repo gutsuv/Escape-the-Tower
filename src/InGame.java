@@ -1,5 +1,7 @@
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -15,23 +17,28 @@ public class InGame extends MainMenu
 		HBox hbox1 = new HBox();
 		HBox hbox2 = new HBox(20);
 		VBox vbox2 = new VBox(20);
-		VBox vbox3 = new VBox();
+		VBox vbox3 = new VBox(20);
 		
 		// Inside vbox 2 and 3
 		HBox hbox3 = new HBox();
 		HBox hbox4 = new HBox();
 		
-
-		Label hitPoints = new Label("Hitpoints: "); //ADD later
-		Button inGameMenu = new Button("Menu");
+		// Initializing some buttons and whatnot for stats
+		Label hitPoints = new Label("Hitpoints (HP): ");
+		Label attackPower = new Label("Attack Power (DMG): ");
+		Label defense = new Label("Defense (DEF): ");
 		
-		Button viewMap = new Button("View Map"); //View map depending on current floor, ADD to hbox1
+		ComboBox<String> equipWeapon = new ComboBox<>();
+		ComboBox<String> equipArmor = new ComboBox<>();
+		
+		Button inGameMenu = new Button("Menu");
+		Button viewMap = new Button("View Map");
 		
 		vbox1.getChildren().addAll(hbox1, hbox2);
 		hbox1.getChildren().addAll(inGameMenu);
 		hbox2.getChildren().addAll(vbox2, vbox3);
 		vbox2.getChildren().addAll(hbox3, hbox4);
-		vbox3.getChildren().addAll(viewMap);
+		vbox3.getChildren().addAll(viewMap, hitPoints, attackPower, defense, equipWeapon, equipArmor);
 		
 		// hbox1 and children properties
 		hbox1.setStyle("-fx-background-color: #382F27;" 
@@ -74,8 +81,25 @@ public class InGame extends MainMenu
 		hbox4.setPrefHeight(235);
 		
 		// vbox3 properties
+		vbox3.setAlignment(Pos.TOP_CENTER);
 		vbox3.setPadding(new Insets(20, 20, 20, 20));
 		viewMap.setStyle("-fx-focus-color: brown;");
+		viewMap.setMinWidth(300);
+		
+		hitPoints.setTextFill(Color.WHITE);
+		attackPower.setTextFill(Color.WHITE);
+		defense.setTextFill(Color.WHITE);
+		
+		equipWeapon.getItems().addAll("Sample Text");
+		equipWeapon.setStyle("-fx-focus-color: brown;");
+		equipWeapon.setValue("Sample Default Weapon");
+		equipWeapon.setMinWidth(200);
+		
+		equipArmor.getItems().addAll("Sample Text");
+		equipArmor.setStyle("-fx-focus-color: brown;");
+		equipArmor.setValue("Sample Default Armor");
+		equipArmor.setMinWidth(200);
+	
 		
 	}
 }

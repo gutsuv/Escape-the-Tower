@@ -1,10 +1,18 @@
+// Superclass ITEM
+package Model;
+import View.Console;
+import java.util.ArrayList;
+
 public class Item 
 {
+	protected Console view;
+
 	protected int itemId;
 	protected String itemName;
 	protected String itemDesc;
-
-	public Item() 
+	protected ArrayList<Gear> gears;
+	
+	public Item()
 	{
 		this.itemId = 0;
 		this.itemName = "";
@@ -18,12 +26,12 @@ public class Item
 		this.itemDesc = itemDesc;
 	}
 
-	public int getItemId()
+	public int getItemId() 
 	{
 		return itemId;
 	}
 
-	public void setItemId(int itemId) 
+	public void setItemId(int itemId)
 	{
 		this.itemId = itemId;
 	}
@@ -33,7 +41,7 @@ public class Item
 		return itemName;
 	}
 
-	public void setItemName(String itemName)
+	public void setItemName(String itemName) 
 	{
 		this.itemName = itemName;
 	}
@@ -43,14 +51,29 @@ public class Item
 		return itemDesc;
 	}
 
-	public void setItemDesc(String itemDesc) 
+	public void setItemDesc(String itemDesc)
 	{
 		this.itemDesc = itemDesc;
 	}
 
-	@Override
-	public String toString()
+	public ArrayList<Gear> getInventory() 
 	{
-		return "Item [itemID=" + itemId + ", itemName=" + itemName + "itemDesc=" + " itemDesc]";
+		return gears;
+	}
+
+	public void setWeapon(ArrayList<Gear> gear)
+	{
+		this.gears = gear;
+	}
+
+	public void addGear(Gear gear) 
+	{
+		gears.add(gear);
+	}
+	
+	@Override
+	public String toString() 
+	{
+		return "Item [itemID=" + itemId + ", itemName=" + itemName + ", itemDesc=" + itemDesc + "]";
 	}
 }

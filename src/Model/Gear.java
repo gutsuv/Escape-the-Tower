@@ -1,37 +1,45 @@
+// Subclass
+
+package Model;
+
 public class Gear extends Item
 {
+	protected int gearId;
 	protected int defense;
+	protected int attack;
+	protected String type;
 
 	public Gear() 
 	{
-		super(// Some things here);
+		super(0, "", "");
+		this.gearId = 0;
 		this.defense = 0;
+		this.attack = 0;
+		this.type = "";
 	}
 
-	public Gear(int itemId, String itemName, String itemDesc, int defense)
+	public Gear(int itemId, String itemName, String itemDesc, int gearId, int defense, int attack, String type)
 	{
 		super(itemId, itemName, itemDesc);
+		this.gearId = gearId;
 		this.defense = defense;
+		this.attack = attack;
+		this.type = type;
 	}
 
-	public int getDefense() 
+	public int getGearId()
 	{
-		return defense;
+		return gearId;
 	}
 
-	public void setDefense(int defense) 
+	public void setGearId(int gearId) 
 	{
-		this.defense = defense;
-	}
-	
-	public void equip()
-	{
-		
+		this.gearId = gearId;
 	}
 
 	@Override
 	public String toString()
 	{
-		return "Gear [defense=" + defense + "]";
+		return "Gear [gearId=" + gearId + ", defense=" + defense + ", attack=" + attack + ", type=" + type + "]";
 	}
 }

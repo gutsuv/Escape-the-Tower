@@ -1,83 +1,65 @@
+package Model;
+
+import View.Console;
+
 public class Puzzle
 {
+	private Console view;
+
 	private int puzzleId;
-	private String puzzleDescription;
+	private String puzzleDesc;
+	private String answer;
 	private boolean solved;
-	private String solution;
 	
-	public Puzzle(int puzzleId, String puzzleDescription, boolean solved, String solution) 
+	public Puzzle(int puzzleId, String puzzleDesc, boolean solved, String answer)
 	{
 		this.puzzleId = puzzleId;
-		this.puzzleDescription = puzzleDescription;
+		this.puzzleDesc = puzzleDesc;
 		this.solved = solved;
-		this.solution = solution;
+		this.answer = answer;
 	}
 
-	public int getPuzzleId()
+	public int getPuzzleID() 
 	{
 		return puzzleId;
 	}
 
-	public void setPuzzleId(int puzzleId)
+	public String getPuzzleDescription() 
 	{
-		this.puzzleId = puzzleId;
+		return puzzleDesc;
 	}
 
-	public String getPuzzleDescription()
-	{
-		return puzzleDescription;
-	}
-
-	public void setPuzzleDescription(String puzzleDescription)
-	{
-		this.puzzleDescription = puzzleDescription;
-	}
-
-	public boolean isSolved()
+	public boolean solved() 
 	{
 		return solved;
 	}
-
-	public void setSolved(boolean solved)
+	
+	public void setSolved(boolean solved) 
 	{
 		this.solved = solved;
 	}
 
-	public String getSolution()
+	public void solve(String answer)
 	{
-		return solution;
-	}
-
-	public void setSolution(String solution)
-	{
-		this.solution = solution;
-	}
-
-	public void solve(String answer) 
-	{
-		if (answer.equalsIgnoreCase(solution))
+		if (answer.equalsIgnoreCase(answer))
 		{
-			//view.println("Correct");
+			view.println("Correct");
 		}
 		else 
 		{
-			//view.println("Incorrect");
+			view.println("Incorrect");
 		}
-	}
-	
-	public void getHint() 
-	{
-		view.println("");
 	}
 
 	public void exitPuzzle() 
 	{
-		view.println("");
+		view.println("Puzzle exited.");
 	}
 
 	@Override
-	public String toString() 
+	public String toString()
 	{
-		return "Puzzle ID: " + puzzleId + "; Puzzle Description: " + puzzleDescription + "; solved:" + solved;
-	}	
+		return "Puzzle [puzzleId=" + puzzleId + ", puzzleDesc=" + puzzleDesc + ", answer=" + answer + ", solved="
+				+ solved + ", view=" + view + "]";
+	}
 }
