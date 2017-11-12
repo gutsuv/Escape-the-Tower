@@ -480,7 +480,7 @@ public class RoomContent
 		}
 	}
 
-	public void accessible(int door1, int door2, int door3, int door4, double position)
+	public void accessible(int door1, int door2, int door3, int door4, int position)
 	{
 		String door1Option, door4Option, door2Option, door3Option, up, down;
 

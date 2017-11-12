@@ -10,9 +10,9 @@ public class Main
 	{
 		Model model = new Model();
 		Console view = new Console();
-		//Controller controller = new Controller(model, view);
+		Controller controller = new Controller(model, view);
 		view.println(MiscellaneousContent.displayIntro());
 		view.println(MiscellaneousContent.displayMainMenu());
-		//controller.mainMenu();
+		controller.mainMenu();
 	}
 }
