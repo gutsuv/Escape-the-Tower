@@ -8,11 +8,11 @@ public class Player extends Character
 	private Console view;
 
 	private String playerName;
-	private double position;
-	private double door1Room;
-	private double door2Room;
-	private double door3Room;
-	private double door4Room;
+	private int position;
+	private int door1Room;
+	private int door2Room;
+	private int door3Room;
+	private int door4Room;
 	private String puzzle;
 
 	public Player() 
@@ -22,7 +22,7 @@ public class Player extends Character
 		this.position = 1;
 	}
 
-	public Player(String playerName, double position, double door1Room, double door2Room, double door3Room, double door4Room, int monsterScore, int puzzleScore, int gameScore)
+	public Player(String playerName, int position, int door1Room, int door2Room, int door3Room, int door4Room, int monsterScore, int puzzleScore, int gameScore)
 	{
 		this.playerName = playerName;
 		this.position = position;
@@ -42,12 +42,12 @@ public class Player extends Character
 		this.playerName = playerName;
 	}
 
-	public double getPlayerPosition()
+	public int getPlayerPosition()
 	{
 		return position;
 	}
 
-	public void setPlayerPosition(double position)
+	public void setPlayerPosition(int position)
 	{
 		this.position = position;
 	}
@@ -68,12 +68,12 @@ public class Player extends Character
 		System.exit(0);
 	}
 
-	public double getDoor1Room()
+	public int getDoor1Room()
 	{
 		return door1Room;
 	}
 
-	public void setDoor1Room(double position) 
+	public void setDoor1Room(int position) 
 	{
 		if (position == 1) 
 		{
@@ -93,12 +93,12 @@ public class Player extends Character
 		}
 	}
 
-	public double getDoor2Room()
+	public int getDoor2Room()
 	{
 		return door2Room;
 	}
 
-	public void setDoor2Room(double position)
+	public void setDoor2Room(int position)
 	{
 		if (position == 1) 
 		{
@@ -118,13 +118,13 @@ public class Player extends Character
 		}
 	}
 
-	public double getDoor3Room() 
+	public int getDoor3Room() 
 	{
 		return door3Room;
 	}
 
 
-	public void setDoor3Room(double position)
+	public void setDoor3Room(int position)
 	{
 		if (position == 1) 
 		{
@@ -144,12 +144,12 @@ public class Player extends Character
 		}
 	}
 
-	public double getDoor4Room() 
+	public int getDoor4Room() 
 	{
 		return door4Room;
 	}
 
-	public void setDoor4Room(double position) 
+	public void setDoor4Room(int position) 
 	{
 		if (position == 1) 
 		{

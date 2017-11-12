@@ -1,3 +1,5 @@
+package Classes;
+
 public class Player extends Character
 {
 	private String playerName;

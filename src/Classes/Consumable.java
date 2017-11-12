@@ -1,3 +1,5 @@
+package Classes;
+
 public class Consumable extends Item
 {	
 	protected int healthEffect;	

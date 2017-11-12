@@ -1,3 +1,5 @@
+package Classes;
+
 public class Enemy extends Character
 {
 	private String enemyDescription;
