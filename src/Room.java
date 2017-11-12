@@ -34,7 +34,7 @@ public class Room
 		// loaded from file
 		//int roomId, String roomDescription, int exitRoomId, char direction, String doorDescription
 		try {
-			String[] splitString = loadedString.split("--");
+			String[] splitString = loadedString.split("-_");
 			roomId = Integer.parseInt(splitString[2]);
 			roomDescription = splitString[1];
 			//exits
