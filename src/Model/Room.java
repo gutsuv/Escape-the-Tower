@@ -8,7 +8,7 @@ public class Room
 {
 	private Console view;
 	
-	protected double roomId;
+	protected int roomId;
 	protected String roomDesc;
 	protected int items; 
 	protected int puzzles;
@@ -25,7 +25,7 @@ public class Room
 	{
 	}
 
-	public Room(double roomId, String roomDesc, int enemies, int puzzles, double north, double west, int items, double south, double east, boolean locked)
+	public Room(int roomId, String roomDesc, int enemies, int puzzles, double north, double west, int items, double south, double east, boolean locked)
 	{
 		this.roomId = roomId;
 		this.roomDesc = roomDesc;
@@ -40,12 +40,12 @@ public class Room
 		Room.rooms.add(this);
 	}
 	
-	public double getRoomId()
+	public int getRoomId()
 	{
 		return roomId;
 	}
 
-	public void setRoomId(double roomId)
+	public void setRoomId(int roomId)
 	{
 		this.roomId = roomId;
 	}

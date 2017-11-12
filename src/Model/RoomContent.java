@@ -207,7 +207,7 @@ public class RoomContent
 	//String roomDesc67 = "Room Name, Floor 1: Room 7 \nRoom Description";
 
 	// Not accurate, but room## should have the necessary N,S,E,W directions associated with room which leads into proper room ID.
-	double  room1North = 1, 
+	int 	room1North = 1, 
 			room1East = 2,
 			room1South = 3,
 			room1West = 4,
