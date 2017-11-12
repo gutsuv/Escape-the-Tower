@@ -207,57 +207,186 @@ public class RoomContent
 	//String roomDesc67 = "Room Name, Floor 1: Room 7 \nRoom Description";
 
 	// Not accurate so far, but room##Door# = (the int ID value of connecting room)
-	int 	room11Door1 = 1, 
-			room11Door2 = 2,
-			room11Door3 = 0, // 0 can represent a nonexistent door. 
-			room11Door4 = 4,
+	int 	room1_26Door1 = 1, 
+			room1_26Door2 = 0,
+			room1_26Door3 = 0, // 0 can represent a nonexistent door. 
+			room1_26Door4 = 0,
 			
-		    room12Door1 = 0,
-			room12Door2 = 0,
-			room12Door3 = 3,
-			room12Door4 = 4,
+		    room1_27Door1 = 0,
+			room1_27Door2 = 0,
+			room1_27Door3 = 0,
+			room1_27Door4 = 0,
 			
-			room13Door1 = 1, 
-			room13Door2 = 2,
-			room13Door3 = 3,
-			room13Door4 = 4,
+			room1_28Door1 = 1, 
+			room1_28Door2 = 1,
+			room1_28Door3 = 1,
+			room1_28Door4 = 0,
 			
-			room14Door1 = 1, 
-			room14Door2 = 2,
-			room14Door3 = 3,
-			room14Door4 = 4;
+			room1_29Door1 = 0, 
+			room1_29Door2 = 0,
+			room1_29Door3 = 0,
+			room1_29Door4 = 0,
+	
+			room1_30Door1 = 0, 
+			room1_30Door2 = 0,
+			room1_30Door4 = 0,
+			room1_30Door5 = 0,
 
-
-	Room room11 = new Room(roomId12, roomDesc11, roomEnemy11, roomPuzzle12, room11Door1, room11Door4, roomItem11, room11Door3, room11Door2, roomLocked11);
-	Room room12 = new Room(roomId12, roomDesc12, roomEnemy12, roomPuzzle12, room12Door1, room12Door4, roomItem12, room12Door3, room12Door2, roomLocked12);
-	Room room13 = new Room(roomId13, roomDesc13, roomEnemy13, roomPuzzle13, room13Door1, room13Door4, roomItem13, room13Door3, room13Door2, roomLocked13);
-	Room room14 = new Room(roomId14, roomDesc14, roomEnemy14, roomPuzzle14, room14Door1, room14Door4, roomItem14, room14Door3, room14Door2, roomLocked14);
-	Room room15 = new Room(roomId15, roomDesc15, roomEnemy15, roomPuzzle15, room14Door1, room14Door4, roomItem15, room14Door3, room14Door2, roomLocked15);
-	Room room21 = new Room(roomId21, roomDesc21, roomEnemy21, roomPuzzle21, room14Door1, room14Door4, roomItem21, room14Door3, room14Door2, roomLocked21);
-	Room room22 = new Room(roomId22, roomDesc22, roomEnemy22, roomPuzzle22, room14Door1, room14Door4, roomItem22, room14Door3, room14Door2, roomLocked22);
-	Room room23 = new Room(roomId23, roomDesc23, roomEnemy23, roomPuzzle23, room14Door1, room14Door4, roomItem23, room14Door3, room14Door2, roomLocked23);
-	Room room24 = new Room(roomId24, roomDesc24, roomEnemy24, roomPuzzle24, room14Door1, room14Door4, roomItem24, room14Door3, room14Door2, roomLocked24);
-	Room room31 = new Room(roomId31, roomDesc31, roomEnemy31, roomPuzzle31, room14Door1, room14Door4, roomItem31, room14Door3, room14Door2, roomLocked31);
-	Room room32 = new Room(roomId32, roomDesc32, roomEnemy32, roomPuzzle32, room14Door1, room14Door4, roomItem32, room14Door3, room14Door2, roomLocked32);
-	Room room33 = new Room(roomId33, roomDesc33, roomEnemy33, roomPuzzle33, room14Door1, room14Door4, roomItem33, room14Door3, room14Door2, roomLocked33);
-	Room room34 = new Room(roomId34, roomDesc34, roomEnemy34, roomPuzzle34, room14Door1, room14Door4, roomItem34, room14Door3, room14Door2, roomLocked34);
-	Room room35 = new Room(roomId35, roomDesc35, roomEnemy35, roomPuzzle35, room14Door1, room14Door4, roomItem35, room14Door3, room14Door2, roomLocked35);
-	Room room41 = new Room(roomId41, roomDesc41, roomEnemy41, roomPuzzle41, room14Door1, room14Door4, roomItem41, room14Door3, room14Door2, roomLocked41);
-	Room room42 = new Room(roomId42, roomDesc42, roomEnemy42, roomPuzzle42, room14Door1, room14Door4, roomItem42, room14Door3, room14Door2, roomLocked42);
-	Room room43 = new Room(roomId43, roomDesc43, roomEnemy43, roomPuzzle43, room14Door1, room14Door4, roomItem43, room14Door3, room14Door2, roomLocked43);
-	Room room44 = new Room(roomId44, roomDesc44, roomEnemy44, roomPuzzle44, room14Door1, room14Door4, roomItem44, room14Door3, room14Door2, roomLocked44);
-	Room room45 = new Room(roomId45, roomDesc45, roomEnemy45, roomPuzzle45, room14Door1, room14Door4, roomItem45, room14Door3, room14Door2, roomLocked45);
-	Room room51 = new Room(roomId51, roomDesc51, roomEnemy51, roomPuzzle51, room14Door1, room14Door4, roomItem51, room14Door3, room14Door2, roomLocked51);
-	Room room52 = new Room(roomId52, roomDesc52, roomEnemy52, roomPuzzle52, room14Door1, room14Door4, roomItem52, room14Door3, room14Door2, roomLocked52);
-	Room room53 = new Room(roomId53, roomDesc53, roomEnemy53, roomPuzzle53, room14Door1, room14Door4, roomItem53, room14Door3, room14Door2, roomLocked53);
-	Room room54 = new Room(roomId54, roomDesc54, roomEnemy54, roomPuzzle54, room14Door1, room14Door4, roomItem54, room14Door3, room14Door2, roomLocked54);
-	Room room55 = new Room(roomId55, roomDesc55, roomEnemy55, roomPuzzle55, room14Door1, room14Door4, roomItem55, room14Door3, room14Door2, roomLocked55);
-	Room room56 = new Room(roomId56, roomDesc56, roomEnemy56, roomPuzzle56, room14Door1, room14Door4, roomItem56, room14Door3, room14Door2, roomLocked56);
-	Room room61 = new Room(roomId61, roomDesc61, roomEnemy61, roomPuzzle61, room14Door1, room14Door4, roomItem61, room14Door3, room14Door2, roomLocked61);
-	Room room62 = new Room(roomId62, roomDesc62, roomEnemy62, roomPuzzle62, room14Door1, room14Door4, roomItem62, room14Door3, room14Door2, roomLocked62);
-	Room room63 = new Room(roomId63, roomDesc63, roomEnemy63, roomPuzzle63, room14Door1, room14Door4, roomItem63, room14Door3, room14Door2, roomLocked63);
-	Room room64 = new Room(roomId64, roomDesc64, roomEnemy64, roomPuzzle64, room14Door1, room14Door4, roomItem64, room14Door3, room14Door2, roomLocked64);
-	Room room65 = new Room(roomId65, roomDesc65, roomEnemy65, roomPuzzle65, room14Door1, room14Door4, roomItem65, room14Door3, room14Door2, roomLocked65);
+			room2_22Door1 = 0, 
+			room2_22Door2 = 0,
+			room2_22Door3 = 0,
+			room2_22Door4 = 0,	
+			
+			room22Door1 = 0, 
+			room22Door2 = 0,
+			room22Door3 = 0,
+			room22Door4 = 0,
+				
+			room23Door1 = 0, 
+			room23Door2 = 0,
+			room23Door3 = 0,
+			room23Door4 = 0,
+			
+			room24Door1 = 0, 
+			room24Door2 = 0,
+			room24Door3 = 0,
+			room24Door4 = 0,
+			
+			room31Door1 = 0, 
+			room31Door2 = 0,
+			room31Door3 = 0,
+			room31Door4 = 0,
+			
+			room32Door1 = 0, 
+			room32Door2 = 0,
+			room32Door3 = 0,
+			room32Door4 = 0,
+					
+			room33Door1 = 0, 
+			room33Door2 = 0,
+			room33Door3 = 0,
+			room33Door4 = 0,
+							
+			room34Door1 = 0, 
+			room34Door2 = 0,
+			room34Door3 = 0,
+			room34Door4 = 0,
+									
+			room35Door1 = 0, 
+			room35Door2 = 0,
+			room35Door3 = 0,
+			room35Door4 = 0,
+			
+			room41Door1 = 0, 
+			room41Door2 = 0,
+			room41Door3 = 0,
+			room41Door4 = 0,
+			
+			room42Door1 = 0, 
+			room42Door2 = 0,
+			room42Door3 = 0,
+			room42Door4 = 0,	
+			
+			room43Door1 = 0, 
+			room43Door2 = 0,
+			room43Door3 = 0,
+			room43Door4 = 0,
+					
+			room44Door1 = 0, 
+			room44Door2 = 0,
+			room44Door3 = 0,
+			room44Door4 = 0,
+							
+			room45Door1 = 0, 
+			room45Door2 = 0,
+			room45Door3 = 0,
+			room45Door4 = 0,
+			
+			room51Door1 = 0, 
+			room51Door2 = 0,
+			room51Door3 = 0,
+			room51Door4 = 0,
+			
+			room52Door1 = 0, 
+			room52Door2 = 0,
+			room52Door3 = 0,
+			room52Door4 = 0,
+					
+			room53Door1 = 0, 
+			room53Door2 = 0,
+			room53Door3 = 0,
+			room53Door4 = 0,
+							
+			room54Door1 = 0, 
+			room54Door2 = 0,
+			room54Door3 = 0,
+			room54Door4 = 0,
+									
+			room55Door1 = 0, 
+			room55Door2 = 0,
+			room55Door3 = 0,
+			room55Door4 = 0,
+									
+			room56Door1 = 0, 
+			room56Door2 = 0,
+			room56Door3 = 0,
+			room56Door4 = 0,
+			
+			room61Door1 = 0, 
+			room61Door2 = 0,
+			room61Door3 = 0,
+			room61Door4 = 0,
+			
+			room62Door1 = 0, 
+			room62Door2 = 0,
+			room62Door3 = 0,
+			room62Door4 = 0,
+					
+			room63Door1 = 0, 
+			room63Door2 = 0,
+			room63Door3 = 0,
+			room63Door4 = 0,
+			
+			room64Door1 = 0, 
+			room64Door2 = 0,
+			room64Door3 = 0,
+			room64Door4 = 0,
+					
+			room65Door1 = 0, 
+			room65Door2 = 0,
+			room65Door3 = 0,
+			room66Door4 = 0;
+			
+	Room room11 = new Room(roomId12, roomDesc11, roomEnemy11, roomPuzzle12, room1_26Door1, room1_26Door4, roomItem11, room1_26Door3, room1_26Door1, roomLocked11);
+	Room room12 = new Room(roomId12, roomDesc12, roomEnemy12, roomPuzzle12, room1_27Door1, room1_27Door4, roomItem12, room1_27Door3, room1_27Door2, roomLocked12);
+	Room room13 = new Room(roomId13, roomDesc13, roomEnemy13, roomPuzzle13, room1_28Door1, room1_28Door4, roomItem13, room1_28Door3, room1_28Door2, roomLocked13);
+	Room room14 = new Room(roomId14, roomDesc14, roomEnemy14, roomPuzzle14, room1_29Door1, room1_29Door4, roomItem14, room1_29Door3, room1_29Door2, roomLocked14);
+	Room room15 = new Room(roomId15, roomDesc15, roomEnemy15, roomPuzzle15, room1_29Door1, room1_29Door4, roomItem15, room1_29Door3, room1_29Door2, roomLocked15);
+	Room room21 = new Room(roomId21, roomDesc21, roomEnemy21, roomPuzzle21, room1_29Door1, room1_29Door4, roomItem21, room1_29Door3, room1_29Door2, roomLocked21);
+	Room room22 = new Room(roomId22, roomDesc22, roomEnemy22, roomPuzzle22, room1_29Door1, room1_29Door4, roomItem22, room1_29Door3, room1_29Door2, roomLocked22);
+	Room room23 = new Room(roomId23, roomDesc23, roomEnemy23, roomPuzzle23, room1_29Door1, room1_29Door4, roomItem23, room1_29Door3, room1_29Door2, roomLocked23);
+	Room room24 = new Room(roomId24, roomDesc24, roomEnemy24, roomPuzzle24, room1_29Door1, room1_29Door4, roomItem24, room1_29Door3, room1_29Door2, roomLocked24);
+	Room room31 = new Room(roomId31, roomDesc31, roomEnemy31, roomPuzzle31, room1_29Door1, room1_29Door4, roomItem31, room1_29Door3, room1_29Door2, roomLocked31);
+	Room room32 = new Room(roomId32, roomDesc32, roomEnemy32, roomPuzzle32, room1_29Door1, room1_29Door4, roomItem32, room1_29Door3, room1_29Door2, roomLocked32);
+	Room room33 = new Room(roomId33, roomDesc33, roomEnemy33, roomPuzzle33, room1_29Door1, room1_29Door4, roomItem33, room1_29Door3, room1_29Door2, roomLocked33);
+	Room room34 = new Room(roomId34, roomDesc34, roomEnemy34, roomPuzzle34, room1_29Door1, room1_29Door4, roomItem34, room1_29Door3, room1_29Door2, roomLocked34);
+	Room room35 = new Room(roomId35, roomDesc35, roomEnemy35, roomPuzzle35, room1_29Door1, room1_29Door4, roomItem35, room1_29Door3, room1_29Door2, roomLocked35);
+	Room room41 = new Room(roomId41, roomDesc41, roomEnemy41, roomPuzzle41, room1_29Door1, room1_29Door4, roomItem41, room1_29Door3, room1_29Door2, roomLocked41);
+	Room room42 = new Room(roomId42, roomDesc42, roomEnemy42, roomPuzzle42, room1_29Door1, room1_29Door4, roomItem42, room1_29Door3, room1_29Door2, roomLocked42);
+	Room room43 = new Room(roomId43, roomDesc43, roomEnemy43, roomPuzzle43, room1_29Door1, room1_29Door4, roomItem43, room1_29Door3, room1_29Door2, roomLocked43);
+	Room room44 = new Room(roomId44, roomDesc44, roomEnemy44, roomPuzzle44, room1_29Door1, room1_29Door4, roomItem44, room1_29Door3, room1_29Door2, roomLocked44);
+	Room room45 = new Room(roomId45, roomDesc45, roomEnemy45, roomPuzzle45, room1_29Door1, room1_29Door4, roomItem45, room1_29Door3, room1_29Door2, roomLocked45);
+	Room room51 = new Room(roomId51, roomDesc51, roomEnemy51, roomPuzzle51, room1_29Door1, room1_29Door4, roomItem51, room1_29Door3, room1_29Door2, roomLocked51);
+	Room room52 = new Room(roomId52, roomDesc52, roomEnemy52, roomPuzzle52, room1_29Door1, room1_29Door4, roomItem52, room1_29Door3, room1_29Door2, roomLocked52);
+	Room room53 = new Room(roomId53, roomDesc53, roomEnemy53, roomPuzzle53, room1_29Door1, room1_29Door4, roomItem53, room1_29Door3, room1_29Door2, roomLocked53);
+	Room room54 = new Room(roomId54, roomDesc54, roomEnemy54, roomPuzzle54, room1_29Door1, room1_29Door4, roomItem54, room1_29Door3, room1_29Door2, roomLocked54);
+	Room room55 = new Room(roomId55, roomDesc55, roomEnemy55, roomPuzzle55, room1_29Door1, room1_29Door4, roomItem55, room1_29Door3, room1_29Door2, roomLocked55);
+	Room room56 = new Room(roomId56, roomDesc56, roomEnemy56, roomPuzzle56, room1_29Door1, room1_29Door4, roomItem56, room1_29Door3, room1_29Door2, roomLocked56);
+	Room room61 = new Room(roomId61, roomDesc61, roomEnemy61, roomPuzzle61, room1_29Door1, room1_29Door4, roomItem61, room1_29Door3, room1_29Door2, roomLocked61);
+	Room room62 = new Room(roomId62, roomDesc62, roomEnemy62, roomPuzzle62, room1_29Door1, room1_29Door4, roomItem62, room1_29Door3, room1_29Door2, roomLocked62);
+	Room room63 = new Room(roomId63, roomDesc63, roomEnemy63, roomPuzzle63, room1_29Door1, room1_29Door4, roomItem63, room1_29Door3, room1_29Door2, roomLocked63);
+	Room room64 = new Room(roomId64, roomDesc64, roomEnemy64, roomPuzzle64, room1_29Door1, room1_29Door4, roomItem64, room1_29Door3, room1_29Door2, roomLocked64);
+	Room room65 = new Room(roomId65, roomDesc65, roomEnemy65, roomPuzzle65, room1_29Door1, room1_29Door4, roomItem65, room1_29Door3, room1_29Door2, roomLocked65);
 
 	public void getRoom(int roomID)
 	{
