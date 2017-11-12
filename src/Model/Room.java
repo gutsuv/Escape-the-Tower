@@ -1,7 +1,7 @@
 // Used for designing room object.
 
 package Model;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import View.Console;
 
 public class Room
@@ -18,7 +18,7 @@ public class Room
 	protected double south;
 	protected double east;
 	protected double west;
-	public static LinkedList<Room> rooms = new LinkedList<Room>();
+	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	protected boolean locked;
 
 	public Room()
@@ -130,12 +130,12 @@ public class Room
 		this.west = west;
 	}
 
-	public static LinkedList<Room> getRooms()
+	public static ArrayList<Room> getRooms()
 	{
 		return rooms;
 	}
 
-	public static void setRooms(LinkedList<Room> rooms)
+	public static void setRooms(ArrayList<Room> rooms)
 	{
 		Room.rooms = rooms;
 	}
@@ -182,18 +182,7 @@ public class Room
 			this.north = 12;
 		}
 	}
-
-	public void examineRoom(double roomId) 
-	{
-		view.println("The room contains:\tEnemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
-	}
-
-	public void showPaths(int north, int west, int south, int east)
-	{
-		view.println("Rooms avalible: " + north + " north room " + west + " west room " + south + " south room " + east + " east");
-		view.println("Enter which room?  North East South West");
-	}
-
+	
 	public void lockedRoom() 
 	{
 		if(locked == true)
@@ -207,11 +196,21 @@ public class Room
 		}
 	}
 
+	public void examineRoom(double roomId) 
+	{
+		view.println("The room contains:Enemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
+	}
+
+	public void showPaths(int north, int west, int south, int east)
+	{
+		view.println("Rooms avalible: " + north + " north room " + west + " west room " + south + " south room " + east + " east");
+		view.println("Enter which room?  North East South West");
+	}
+
+
 	@Override
 	public String toString()
 	{
-		return "Room [view=" + view + ", roomId=" + roomId + ", roomDesc=" + roomDesc + ", items=" + items
-				+ ", puzzles=" + puzzles + ", enemies=" + enemies + ", north=" + north + ", northName=" + northName
-				+ ", south=" + south + ", east=" + east + ", west=" + west + ", locked=" + locked + "]";
+		return getRoomDesc();
 	}
 }
