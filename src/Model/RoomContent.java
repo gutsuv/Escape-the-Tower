@@ -7,28 +7,6 @@ import View.Console;
 public class RoomContent 
 {
 	Console view = new Console();
-	
-	// Grid layout of rooms
-	protected double[][] FloorOne = 
-	{
-			{1, 2, 3, 0},
-			{0, 4, 0, 0},
-			{0, 5, 6, 0},
-			{7, 8, 0, 9},
-			{10, 11, 0, 0},
-	};
-
-	protected double[] FloorOneRooms = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-
-	public double[][] getFloorOne() 
-	{
-		return FloorOne;
-	}
-
-	public double[] getFloorOneRooms() 
-	{
-		return FloorOneRooms;
-	}
 
 	double roomId1 = 1;
 	double roomId2 = 2;
