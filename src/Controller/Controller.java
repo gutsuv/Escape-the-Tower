@@ -68,7 +68,7 @@ public class Controller
 		player.setDamage(5);
 		player.setHealth(100);
 		player.setPlayerName(name);
-		player.setPlayerPosition(11);
+		player.setPlayerPosition(1);
 
 		room.getRoom(player.getPlayerPosition());
 
