@@ -217,6 +217,7 @@ public class Controller
 		int exit2 = 0; 
 		int exit3 = 0; 
 		int exit4 = 0;
+		int exit5 = 0;
 
 		if (player.getExit1Room() != 0)
 		{
@@ -233,6 +234,10 @@ public class Controller
 		if (player.getExit4Room() != 0)
 		{
 			exit4 = 1;
+		}
+		if (player.getExit4Room() != 0)
+		{
+			exit5 = 1;
 		}
 
 		if (player.getExit1Room() == player.getPlayerPosition())
@@ -251,8 +256,13 @@ public class Controller
 		{
 			exit4 = 0;
 		}
+		if (player.getExit5Room() == player.getPlayerPosition())
+		{
+			exit5 = 0;
+		}
 
-		room.accessible(exit1, exit4, exit3, exit2, player.getPlayerPosition());
+
+		room.accessible(exit1, exit2, exit3, exit4, exit5, player.getPlayerPosition());
 
 		view.print("What room to enter?");
 		String userInput = input.nextLine();
@@ -266,7 +276,7 @@ public class Controller
 				player.setPlayerPosition(player.getExit1Room());
 				direction = false;
 			} 
-			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit4Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit2") && player.getExit4Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 21 && locked != true))
 				{
@@ -294,7 +304,7 @@ public class Controller
 				
 				direction = false;
 			}
-			else if ((userInput.equalsIgnoreCase("exit2") && player.getExit2Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit2Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 41 && locked != true))
 				{
@@ -311,7 +321,7 @@ public class Controller
 			else
 			{
 				view.println(userInput + "Can't go that way");
-				room.accessible(exit1, exit4, exit3, exit2, player.getPlayerPosition());
+				room.accessible(exit1, exit2, exit3, exit4, exit5, player.getPlayerPosition());
 				view.print("What room to enter?");
 				userInput = input.nextLine();
 			}

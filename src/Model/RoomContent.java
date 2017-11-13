@@ -447,38 +447,38 @@ public class RoomContent
 
 	public void examineRoom(int id) 
 	{
-		if (id == 11) 
+		if (id == 30) 
 		{ 
 			view.println("\nEnemies: " + room1_30.getEnemies() + " Puzzles: " + room1_30.getPuzzles() + " Items: " + room1_30.getItems());
 			// Addons to be made potentially
 		}
 		
-		if (id == 12) 
+		if (id == 29) 
 		{ 
 			view.println("\nEnemies: " + room1_29.getEnemies() + " Puzzles: " + room1_29.getPuzzles() + " Items: " + room1_29.getItems());
 		}
 
-		if (id == 13) 
+		if (id == 28) 
 		{ 
 			view.println("\nEnemies: " + room1_28.getEnemies() + " Puzzles: " + room1_28.getPuzzles() + " Items: " + room1_28.getItems());
 		}
 
-		if (id == 14) 
+		if (id == 27) 
 		{ 
 			view.println("\nEnemies: " + room1_27.getEnemies() + " Puzzles: " + room1_27.getPuzzles() + " Items: " + room1_27.getItems());
 		}
 		
-		if (id == 15) 
+		if (id == 26) 
 		{ 
 			view.println("\nEnemies: " + room1_26.getEnemies() + " Puzzles: " + room1_26.getPuzzles() + " Items: " + room1_26.getItems());
 		}
 		
-		if (id == 21) 
+		if (id == 25) 
 		{ 
 			view.println("\nEnemies: " + room2_25.getEnemies() + " Puzzles: " + room2_25.getPuzzles() + " Items: " + room2_25.getItems());
 		}
 		
-		if (id == 22) 
+		if (id == 24) 
 		{ 
 			view.println("\nEnemies: " + room2_24.getEnemies() + " Puzzles: " + room2_24.getPuzzles() + " Items: " + room2_24.getItems());
 		}
@@ -488,120 +488,120 @@ public class RoomContent
 			view.println("\nEnemies: " + room2_23.getEnemies() + " Puzzles: " + room2_23.getPuzzles() + " Items: " + room2_23.getItems());
 		}
 		
-		if (id == 24) 
+		if (id == 22) 
 		{ 
 			view.println("\nEnemies: " + room2_22.getEnemies() + " Puzzles: " + room2_22.getPuzzles() + " Items: " + room2_22.getItems());
 		}
 		
-		if (id == 31) 
+		if (id == 21) 
 		{ 
 			view.println("\nEnemies: " + room3_21.getEnemies() + " Puzzles: " + room3_21.getPuzzles() + " Items: " + room3_21.getItems());
 		}
 		
-		if (id == 32) 
+		if (id == 20) 
 		{ 
 			view.println("\nEnemies: " + room3_20.getEnemies() + " Puzzles: " + room3_20.getPuzzles() + " Items: " + room3_20.getItems());
 		}
 		
-		if (id == 33) 
+		if (id == 19) 
 		{ 
 			view.println("\nEnemies: " + room3_19.getEnemies() + " Puzzles: " + room3_19.getPuzzles() + " Items: " + room3_19.getItems());
 		}
 		
-		if (id == 34) 
+		if (id == 18) 
 		{ 
 			view.println("\nEnemies: " + room3_18.getEnemies() + " Puzzles: " + room3_18.getPuzzles() + " Items: " + room3_18.getItems());
 		}
 		
-		if (id == 35) 
+		if (id == 17) 
 		{ 
 			view.println("\nEnemies: " + room3_17.getEnemies() + " Puzzles: " + room3_17.getPuzzles() + " Items: " + room3_17.getItems());
 		}
 		
-		if (id == 41) 
+		if (id == 16) 
 		{ 
 			view.println("\nEnemies: " + room4_16.getEnemies() + " Puzzles: " + room4_16.getPuzzles() + " Items: " + room4_16.getItems());
 		}
 		
-		if (id == 42) 
+		if (id == 15) 
 		{ 
 			view.println("\nEnemies: " + room4_15.getEnemies() + " Puzzles: " + room4_15.getPuzzles() + " Items: " + room4_15.getItems());
 		}
 		
-		if (id == 43) 
+		if (id == 14) 
 		{ 
 			view.println("\nEnemies: " + room4_14.getEnemies() + " Puzzles: " + room4_14.getPuzzles() + " Items: " + room4_14.getItems());
 		}
 		
-		if (id == 44) 
+		if (id == 13) 
 		{ 
 			view.println("\nEnemies: " + room4_13.getEnemies() + " Puzzles: " + room4_13.getPuzzles() + " Items: " + room4_13.getItems());
 		}
 		
-		if (id == 45) 
+		if (id == 12) 
 		{ 
 			view.println("\nEnemies: " + room4_12.getEnemies() + " Puzzles: " + room4_12.getPuzzles() + " Items: " + room4_12.getItems());
 		}
 		
-		if (id == 51) 
+		if (id == 11) 
 		{ 
 			view.println("\nEnemies: " + room5_11.getEnemies() + " Puzzles: " + room5_11.getPuzzles() + " Items: " + room5_11.getItems());
 		}
 		
-		if (id == 52) 
+		if (id == 10) 
 		{ 
 			view.println("\nEnemies: " + room5_10.getEnemies() + " Puzzles: " + room5_10.getPuzzles() + " Items: " + room5_10.getItems());
 		}
 		
-		if (id == 53) 
+		if (id == 9) 
 		{ 
 			view.println("\nEnemies: " + room5_09.getEnemies() + " Puzzles: " + room5_09.getPuzzles() + " Items: " + room5_09.getItems());
 		}
 		
-		if (id == 54) 
+		if (id == 8) 
 		{ 
 			view.println("\nEnemies: " + room5_08.getEnemies() + " Puzzles: " + room5_08.getPuzzles() + " Items: " + room5_08.getItems());
 		}
 		
-		if (id == 55) 
+		if (id == 7) 
 		{ 
 			view.println("\nEnemies: " + room5_07.getEnemies() + " Puzzles: " + room5_07.getPuzzles() + " Items: " + room5_07.getItems());
 		}
 		
-		if (id == 56) 
+		if (id == 6) 
 		{ 
 			view.println("\nEnemies: " + room5_06.getEnemies() + " Puzzles: " + room5_06.getPuzzles() + " Items: " + room5_06.getItems());
 		}
 		
-		if (id == 61) 
+		if (id == 5) 
 		{ 
 			view.println("\nEnemies: " + room6_05.getEnemies() + " Puzzles: " + room6_05.getPuzzles() + " Items: " + room6_05.getItems());
 		}
 		
-		if (id == 62) 
+		if (id == 4) 
 		{ 
 			view.println("\nEnemies: " + room6_04.getEnemies() + " Puzzles: " + room6_04.getPuzzles() + " Items: " + room6_04.getItems());
 		}
 		
-		if (id == 63) 
+		if (id == 3) 
 		{ 
 			view.println("\nEnemies: " + room6_03.getEnemies() + " Puzzles: " + room6_03.getPuzzles() + " Items: " + room6_03.getItems());
 		}
 		
-		if (id == 64) 
+		if (id == 2) 
 		{ 
 			view.println("\nEnemies: " + room6_02.getEnemies() + " Puzzles: " + room6_02.getPuzzles() + " Items: " + room6_02.getItems());
 		}
 		
-		if (id == 65) 
+		if (id == 1) 
 		{ 
 			view.println("\nEnemies: " + room6_01.getEnemies() + " Puzzles: " + room6_01.getPuzzles() + " Items: " + room6_01.getItems());
 		}
 	}
 
-	public void accessible(int exit1, int exit2, int exit3, int exit4, int position)
+	public void accessible(int exit1, int exit2, int exit3, int exit4, int exit5, int position)
 	{
-		String exit1Option, exit4Option, exit2Option, exit3Option, up, down;
+		String exit1Option, exit2Option, exit3Option, exit4Option, exit5Option;
 
 		if (exit1 != 0) 
 		{
@@ -610,15 +610,6 @@ public class RoomContent
 		else 
 		{
 			exit1Option = "";
-		}
-
-		if (exit3 != 0)
-		{
-			exit3Option = "Exit 3: ";
-		}
-		else 
-		{
-			exit3Option = "";
 		}
 
 		if (exit2 != 0)
@@ -630,6 +621,15 @@ public class RoomContent
 			exit2Option = "";
 		}
 
+		if (exit3 != 0)
+		{
+			exit3Option = "Exit 3: ";
+		}
+		else 
+		{
+			exit3Option = "";
+		}
+
 		if (exit4 != 0)
 		{
 			exit4Option = "Exit 4: ";
@@ -638,25 +638,16 @@ public class RoomContent
 		{
 			exit4Option = "";
 		}
-	
-		if (position == 1 || position == 2 || position == 3)
+		
+		if (exit5 != 0)
 		{
-			up = "Up: ";
+			exit5Option = "Exit 5: ";
 		}
 		else 
 		{
-			up = "";
+			exit5Option = "";
 		}
-		
-		if (position == 4)
-		{
-			down = "Left: ";
-		}
-		else
-		{
-			down = "";
-		}
-		view.println("\nExits avalible: " + exit1Option + exit4Option + exit2Option + exit3Option + up + down);
+		view.println("\nExits avalible: " + exit1Option + " " + exit4Option + " " + exit2Option + " " + exit3Option + " " + exit5Option);
 	}
 
 	public void obtainItem(int item)
