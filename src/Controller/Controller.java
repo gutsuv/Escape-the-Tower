@@ -208,51 +208,51 @@ public class Controller
 	private void move(double position)
 	{
 
-		player.setDoor1Room((player.getPlayerPosition()));
-		player.setDoor2Room(player.getPlayerPosition());
-		player.setDoor3Room(player.getPlayerPosition());
-		player.setDoor4Room(player.getPlayerPosition());
+		player.setExit1Room((player.getPlayerPosition()));
+		player.setExit2Room(player.getPlayerPosition());
+		player.setExit3Room(player.getPlayerPosition());
+		player.setExit4Room(player.getPlayerPosition());
 
-		int door1 = 0; 
-		int door2 = 0; 
-		int door3 = 0; 
-		int door4 = 0;
+		int exit1 = 0; 
+		int exit2 = 0; 
+		int exit3 = 0; 
+		int exit4 = 0;
 
-		if (player.getDoor1Room() != 0)
+		if (player.getExit1Room() != 0)
 		{
-			door1 = 1;
+			exit1 = 1;
 		}
-		if (player.getDoor2Room() != 0)
+		if (player.getExit2Room() != 0)
 		{
-			door2 = 1;
+			exit2 = 1;
 		}
-		if (player.getDoor3Room() != 0)
+		if (player.getExit3Room() != 0)
 		{
-			door3 = 1;
+			exit3 = 1;
 		}
-		if (player.getDoor4Room() != 0)
+		if (player.getExit4Room() != 0)
 		{
-			door4 = 1;
-		}
-
-		if (player.getDoor1Room() == player.getPlayerPosition())
-		{
-			door1 = 0;
-		}
-		if (player.getDoor2Room() == player.getPlayerPosition())
-		{
-			door2 = 0;
-		}
-		if (player.getDoor3Room() == player.getPlayerPosition())
-		{
-			door3 = 0;
-		}
-		if (player.getDoor4Room() == player.getPlayerPosition())
-		{
-			door4 = 0;
+			exit4 = 1;
 		}
 
-		room.accessible(door1, door4, door3, door2, player.getPlayerPosition());
+		if (player.getExit1Room() == player.getPlayerPosition())
+		{
+			exit1 = 0;
+		}
+		if (player.getExit2Room() == player.getPlayerPosition())
+		{
+			exit2 = 0;
+		}
+		if (player.getExit3Room() == player.getPlayerPosition())
+		{
+			exit3 = 0;
+		}
+		if (player.getExit4Room() == player.getPlayerPosition())
+		{
+			exit4 = 0;
+		}
+
+		room.accessible(exit1, exit4, exit3, exit2, player.getPlayerPosition());
 
 		view.print("What room to enter?");
 		String userInput = input.nextLine();
@@ -261,49 +261,49 @@ public class Controller
 		while (direction)
 		{
 			boolean locked = false;
-			if ((userInput.equalsIgnoreCase("door1") && player.getDoor1Room() != player.getPlayerPosition()))
+			if ((userInput.equalsIgnoreCase("exit1") && player.getExit1Room() != player.getPlayerPosition()))
 			{
-				player.setPlayerPosition(player.getDoor1Room());
+				player.setPlayerPosition(player.getExit1Room());
 				direction = false;
 			} 
-			else if ((userInput.equalsIgnoreCase("door4") && player.getDoor4Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit4Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 21 && locked != true))
 				{
-					view.println("Door is locked");
+					view.println("Exit is locked");
 					move(player.getPlayerPosition());
 				} 
 				else
 				{	
-					player.setPlayerPosition(player.getDoor4Room());
+					player.setPlayerPosition(player.getExit4Room());
 				}
 				direction = false;
 			} 
-			else if ((userInput.equalsIgnoreCase("door3") && player.getDoor3Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit3") && player.getExit3Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 11 && locked != true) || (player.getPlayerPosition() == 31 && locked != true))
 				{
-					view.println("Door is locked");
+					view.println("Exit is locked");
 					move(player.getPlayerPosition());
 					
 				} 
 				else 
 				{	
-					player.setPlayerPosition(player.getDoor3Room()); 
+					player.setPlayerPosition(player.getExit3Room()); 
 				}
 				
 				direction = false;
 			}
-			else if ((userInput.equalsIgnoreCase("door2") && player.getDoor2Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit2") && player.getExit2Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 41 && locked != true))
 				{
-					view.println("Door is locked");
+					view.println("Exit is locked");
 					move(player.getPlayerPosition());
 				} 
 				else 
 				{	
-					player.setPlayerPosition(player.getDoor2Room());
+					player.setPlayerPosition(player.getExit2Room());
 				}
 				
 				direction = false;
@@ -311,7 +311,7 @@ public class Controller
 			else
 			{
 				view.println(userInput + "Can't go that way");
-				room.accessible(door1, door4, door3, door2, player.getPlayerPosition());
+				room.accessible(exit1, exit4, exit3, exit2, player.getPlayerPosition());
 				view.print("What room to enter?");
 				userInput = input.nextLine();
 			}

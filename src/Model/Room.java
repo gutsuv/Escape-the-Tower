@@ -13,10 +13,10 @@ public class Room
 	protected int items; 
 	protected int puzzles;
 	protected int enemies; 
-	protected int door1;
-	protected int door2;
-	protected int door3;
-	protected int door4;
+	protected int exit1;
+	protected int exit2;
+	protected int exit3;
+	protected int exit4;
 	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	protected boolean locked;
 
@@ -24,7 +24,7 @@ public class Room
 	{
 	}
 
-	public Room(int roomId, String roomDesc, int enemies, int puzzles, int door1, int door4, int items, int door2, int door3, boolean locked)
+	public Room(int roomId, String roomDesc, int enemies, int puzzles, int exit1, int exit4, int items, int exit2, int exit3, boolean locked)
 	{
 		this.roomId = roomId;
 		this.roomDesc = roomDesc;
@@ -32,10 +32,10 @@ public class Room
 		this.locked = locked;
 		this.enemies = enemies;
 		this.puzzles = puzzles;
-		this.door1 = door1;
-		this.door4 = door4;
-		this.door2 = door2;
-		this.door3 = door3;
+		this.exit1 = exit1;
+		this.exit4 = exit4;
+		this.exit2 = exit2;
+		this.exit3 = exit3;
 		Room.rooms.add(this);
 	}
 	
@@ -89,44 +89,44 @@ public class Room
 		this.enemies = enemies;
 	}
 
-	public int getDoor1()
+	public int getExit1()
 	{
-		return door1;
+		return exit1;
 	}
 
-	public void setDoor1(int door1)
+	public void setExit1(int exit1)
 	{
-		this.door1 = door1;
+		this.exit1 = exit1;
 	}
 
-	public int getDoor2()
+	public int getExit2()
 	{
-		return door2;
+		return exit2;
 	}
 
-	public void setDoor2(int door2)
+	public void setExit2(int exit2)
 	{
-		this.door2 = door2;
+		this.exit2 = exit2;
 	}
 
-	public int getDoor3()
+	public int getExit3()
 	{
-		return door3;
+		return exit3;
 	}
 
-	public void setDoor3(int door3)
+	public void setExit3(int exit3)
 	{
-		this.door3 = door3;
+		this.exit3 = exit3;
 	}
 
-	public int getDoor4()
+	public int getExit4()
 	{
-		return door4;
+		return exit4;
 	}
 
-	public void setDoor4(int door4)
+	public void setExit4(int exit4)
 	{
-		this.door4 = door4;
+		this.exit4 = exit4;
 	}
 
 	public boolean isLocked()
@@ -139,31 +139,31 @@ public class Room
 		this.locked = locked;
 	}
 
-	public void setDoor(int position) 
+	public void setExit(int position) 
 	{
 		if (position == 1)
 		{
-			this.door1 = 2;
+			this.exit1 = 2;
 		}
 		else if (position == 3)
 		{
-			this.door1 = 4;
+			this.exit1 = 4;
 		}
 		else if (position == 5)
 		{
-			this.door1 = 6;
+			this.exit1 = 6;
 		}
 		else if (position == 7)
 		{
-			this.door1 = 8;
+			this.exit1 = 8;
 		}
 		else if (position == 9)
 		{
-			this.door1 = 10;
+			this.exit1 = 10;
 		}
 		else if (position == 11)
 		{
-			this.door1 = 12;
+			this.exit1 = 12;
 		}
 	}
 	
@@ -171,7 +171,7 @@ public class Room
 	{
 		if(locked == true)
 		{
-			view.println("The door is locked!");
+			view.println("The exit is locked!");
 			view.println("It requires a key.");
 		}
 		else
@@ -185,10 +185,10 @@ public class Room
 		view.println("Enemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
 	}
 
-	public void showPaths(int door1, int door4, int door2, int door3)
+	public void showPaths(int exit1, int exit4, int exit2, int exit3)
 	{
-		view.println("Rooms avalible: " + door1 + " door1 room " + door4 + " door4 room " + door2 + " door2 room " + door3 + " door3 room");
-		view.println("Enter which room?  Door1 Door2 Door3 Door4");
+		view.println("Rooms avalible: " + exit1 + " exit1 room " + exit4 + " exit4 room " + exit2 + " exit2 room " + exit3 + " exit3 room");
+		view.println("Enter which room?  Exit1 Exit2 Exit3 Exit4");
 	}
 
 	@Override
