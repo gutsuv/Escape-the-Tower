@@ -197,9 +197,9 @@ public class Room
 		view.println("Enemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
 	}
 
-	public void showPaths(int exit1, int exit4, int exit2, int exit3)
+	public void showPaths(int exit1, int exit2, int exit3, int exit4, int exit5)
 	{
-		view.println("Rooms avalible: " + exit1 + " exit1 room " + exit4 + " exit4 room " + exit2 + " exit2 room " + exit3 + " exit3 room");
+		view.println("Rooms avalible: " + exit1 + " exit1 room " + exit2 + " exit2 room " + exit3 + " exit3 room" + exit4 + " exit4 room " + exit5 + " exit5 room ");
 		view.println("Enter which room?  Exit1 Exit2 Exit3 Exit4");
 	}
 

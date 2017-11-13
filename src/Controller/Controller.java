@@ -54,7 +54,7 @@ public class Controller
 		name = printAndPrompt1("Enter Name", " ");
 		view.println("Hello " + name + "\n");
 
-		view.println("Entrance Floor 6, Room 1\n");
+		view.println("Entrance Floor 6, Room 30\n");
 		boolean start = printAndPrompt2("Start?\n");
 
 		while (!start)
@@ -207,7 +207,6 @@ public class Controller
 
 	private void move(double position)
 	{
-
 		player.setExit1Room((player.getPlayerPosition()));
 		player.setExit2Room(player.getPlayerPosition());
 		player.setExit3Room(player.getPlayerPosition());
