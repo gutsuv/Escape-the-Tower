@@ -35,11 +35,11 @@ public class Room
 		//int roomId, String roomDescription, int exitRoomId, char direction, String doorDescription
 		try {
 			String[] splitString = loadedString.split("-_");
-			roomId = Integer.parseInt(splitString[2]);
+			roomId = Integer.parseInt(splitString[0]);
 			roomDescription = splitString[1];
 			//exits
-			String[] tempString1 = splitString[2].split("/");
-			String[] tempString2 = splitString[3].split("/");
+			String[] tempString1 = splitString[2].split("><");
+			String[] tempString2 = splitString[3].split("><");
 			int i = Array.getLength(tempString1);
 			doors = new int[i];
 			direction = new char[i];
@@ -48,7 +48,7 @@ public class Room
 				doors[i] = Integer.parseInt(tempString1[i]);
 				direction[i] = tempString2[i].charAt(0);;
 			}
-			doorDescription = splitString[4].split("/");
+			doorDescription = splitString[4].split("><");
 		}catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
@@ -83,7 +83,7 @@ public class Room
 		}
 	}
 
-	public double getRoomId()
+	public int getRoomId()
 	{
 		return roomId;
 	}
@@ -121,12 +121,30 @@ public class Room
 	{
 		this.doors = doors;
 	}
+	public String getDoorsString()
+	{
+		String r = "";int i = doors.length;
+		while(i>0) {
+			i--;
+			r = r + doors[i] + ", ";
+		}
+		return r;
+	}
 
 	public String[] getDoorDescription()
 	{
 		return doorDescription;
 	}
 
+	public void TestDoorDescriptionString()
+	{
+		int i = doorDescription.length;
+		while(i>0) {
+			i--;
+			System.out.println(doorDescription[i]);
+		}
+	}
+	
 	public void setDoorDescription(String[] doorDescription)
 	{
 		this.doorDescription = doorDescription;
