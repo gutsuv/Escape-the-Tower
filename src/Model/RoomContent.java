@@ -347,36 +347,36 @@ public class RoomContent
 			room6_05Exit3 = 0,
 			room6_05Exit4 = 0;
 			
-	Room room1_30 = new Room(roomId1_30, roomDesc1_30, roomEnemy1_30, roomPuzzle1_29, room1_30Exit1, room1_30Exit2, room1_30Exit3,  room1_30Exit4, room1_30Exit1, room6_05Exit4, roomLocked1_30);
-	Room room1_29 = new Room(roomId1_30, roomDesc1_29, roomEnemy1_29, roomPuzzle1_29, room1_29Exit1, room1_29Exit2, room1_29Exit3, room1_29Exit4, room1_29Exit1, room6_05Exit4, roomLocked1_29);
-	Room room1_28 = new Room(roomId1_30, roomDesc1_28, roomEnemy1_28, roomPuzzle1_28, room1_28Exit1, room1_28Exit2, room1_28Exit3, room1_28Exit4, room1_28Exit3, room6_05Exit4, roomLocked1_28);
-	Room room1_27 = new Room(roomId1_30, roomDesc1_27, roomEnemy1_27, roomPuzzle1_27, room1_27Exit1, room1_27Exit2, room1_27Exit3, room1_27Exit4, room1_29Exit3, room6_05Exit4, roomLocked1_27);
-	Room room1_26 = new Room(roomId1_30, roomDesc1_26, roomEnemy1_26, roomPuzzle1_26, room1_26Exit1, room1_26Exit2, room1_26Exit3, room1_26Exit4, room1_29Exit3, room6_05Exit4, roomLocked1_26);
-	Room room2_25 = new Room(roomId1_30, roomDesc2_25, roomEnemy2_25, roomPuzzle2_25, room2_25Exit1, room2_25Exit2, room2_25Exit3, room2_25Exit4, room1_29Exit3, room6_05Exit4, roomLocked2_25);
-	Room room2_24 = new Room(roomId1_30, roomDesc2_24, roomEnemy2_24, roomPuzzle2_24, room2_24Exit1, room2_24Exit2, room2_24Exit3, room2_24Exit4, room1_29Exit3, room6_05Exit4, roomLocked2_24);
-	Room room2_23 = new Room(roomId1_30, roomDesc2_23, roomEnemy2_23, roomPuzzle2_23, room2_23Exit1, room2_23Exit2, room2_23Exit3, room2_23Exit4, room1_29Exit3, room6_05Exit4, roomLocked2_23);
-	Room room2_22 = new Room(roomId1_30, roomDesc2_22, roomEnemy2_22, roomPuzzle2_22, room2_22Exit1, room2_22Exit2, room2_22Exit3, room2_22Exit4, room1_29Exit3, room6_05Exit4, roomLocked2_22);
-	Room room3_21 = new Room(roomId1_30, roomDesc3_21, roomEnemy3_21, roomPuzzle3_21, room3_21Exit1, room3_21Exit2, room3_21Exit3, room3_21Exit4, room1_29Exit3, room6_05Exit4, roomLocked3_21);
-	Room room3_20 = new Room(roomId1_30, roomDesc3_20, roomEnemy3_20, roomPuzzle3_20, room3_20Exit1, room3_20Exit2, room3_20Exit3, room3_20Exit4, room1_29Exit3, room6_05Exit4, roomLocked3_20);
-	Room room3_19 = new Room(roomId1_30, roomDesc3_19, roomEnemy3_19, roomPuzzle3_19, room3_19Exit1, room3_19Exit2, room3_19Exit3, room3_19Exit4, room1_29Exit3, room6_05Exit4, roomLocked3_19);
-	Room room3_18 = new Room(roomId1_30, roomDesc3_18, roomEnemy3_18, roomPuzzle3_18, room3_18Exit1, room3_18Exit2, room3_18Exit3, room3_18Exit4, room1_29Exit3, room3_18Exit5, roomLocked3_18);
-	Room room3_17 = new Room(roomId1_30, roomDesc3_17, roomEnemy3_17, roomPuzzle3_17, room3_17Exit1, room3_17Exit2, room3_17Exit3, room3_17Exit4, room1_29Exit3, room6_05Exit4, roomLocked3_17);
-	Room room4_16 = new Room(roomId1_30, roomDesc4_16, roomEnemy4_16, roomPuzzle4_16, room4_16Exit1, room4_16Exit2, room4_16Exit3, room4_16Exit4, room1_29Exit3, room6_05Exit4, roomLocked4_16);
-	Room room4_15 = new Room(roomId1_30, roomDesc4_15, roomEnemy4_15, roomPuzzle4_15, room4_15Exit1, room4_15Exit2, room4_15Exit3, room4_15Exit4, room1_29Exit3, room6_05Exit4, roomLocked4_15);
-	Room room4_14 = new Room(roomId1_30, roomDesc4_14, roomEnemy4_14, roomPuzzle4_14, room4_14Exit1, room4_14Exit2, room4_14Exit3, room4_14Exit4, room1_29Exit3, room6_05Exit4, roomLocked4_14);
-	Room room4_13 = new Room(roomId1_30, roomDesc4_13, roomEnemy4_13, roomPuzzle4_13, room4_13Exit1, room4_13Exit2, room4_13Exit3, room4_13Exit4, room1_29Exit3, room6_05Exit4, roomLocked4_13);
-	Room room4_12 = new Room(roomId1_30, roomDesc4_12, roomEnemy4_12, roomPuzzle4_12, room4_12Exit1, room4_12Exit2, room4_12Exit3, room4_12Exit4, room1_29Exit3, room6_05Exit4, roomLocked4_12);
-	Room room5_11 = new Room(roomId1_30, roomDesc5_11, roomEnemy5_11, roomPuzzle5_11, room5_11Exit1, room5_11Exit2, room5_11Exit3, room5_11Exit4, room1_29Exit3, room6_05Exit4, roomLocked5_11);
-	Room room5_10 = new Room(roomId1_30, roomDesc5_10, roomEnemy5_10, roomPuzzle5_10, room5_10Exit1, room5_10Exit2, room5_10Exit3, room5_10Exit4, room1_29Exit3, room6_05Exit4, roomLocked5_10);
-	Room room5_09 = new Room(roomId1_30, roomDesc5_09, roomEnemy5_09, roomPuzzle5_09, room5_09Exit1, room5_09Exit2, room5_09Exit3, room5_09Exit4, room1_29Exit3, room6_05Exit4, roomLocked5_09);
-	Room room5_08 = new Room(roomId1_30, roomDesc5_08, roomEnemy5_08, roomPuzzle5_08, room5_08Exit1, room5_08Exit2, room5_08Exit3, room5_08Exit4, room1_29Exit3, room6_05Exit4, roomLocked5_08);
-	Room room5_07 = new Room(roomId1_30, roomDesc5_07, roomEnemy5_07, roomPuzzle5_07, room5_07Exit1, room5_07Exit2, room5_07Exit3, room5_07Exit4, room1_29Exit3, room6_05Exit4, roomLocked5_07);
-	Room room5_06 = new Room(roomId1_30, roomDesc5_06, roomEnemy5_06, roomPuzzle5_06, room5_06Exit1, room5_06Exit2, room5_06Exit3, room5_06Exit4, room1_29Exit3, room5_06Exit5, roomLocked5_06);
-	Room room6_05 = new Room(roomId1_30, roomDesc6_05, roomEnemy6_05, roomPuzzle6_05, room6_05Exit1, room6_05Exit2, room6_05Exit3, room6_05Exit4, room1_29Exit3, room6_05Exit4, roomLocked6_05);
-	Room room6_04 = new Room(roomId1_30, roomDesc6_04, roomEnemy6_04, roomPuzzle6_04, room6_04Exit1, room6_04Exit2, room6_04Exit3, room6_04Exit4, room1_29Exit3, room6_05Exit4, roomLocked6_04);
-	Room room6_03 = new Room(roomId1_30, roomDesc6_03, roomEnemy6_03, roomPuzzle6_03, room6_03Exit1, room6_03Exit2, room6_03Exit3, room6_03Exit4, room1_29Exit3, room6_05Exit4, roomLocked6_03);
-	Room room6_02 = new Room(roomId1_30, roomDesc6_02, roomEnemy6_02, roomPuzzle6_02, room6_02Exit1, room6_02Exit2, room6_02Exit3, room6_02Exit4, room1_29Exit3, room6_05Exit4, roomLocked6_02);
-	Room room6_01 = new Room(roomId1_30, roomDesc6_01, roomEnemy6_01, roomPuzzle6_01, room6_01Exit1, room6_01Exit2, room6_01Exit3, room6_01Exit4, room1_29Exit3, room6_05Exit4, roomLocked6_01);
+	Room room1_30 = new Room(roomId1_30, roomDesc1_30, roomEnemy1_30, roomPuzzle1_29, roomItem1_30, room1_30Exit1, room1_30Exit2, room1_30Exit3,  room1_30Exit4, room6_05Exit4, roomLocked1_30);
+	Room room1_29 = new Room(roomId1_30, roomDesc1_29, roomEnemy1_29, roomPuzzle1_29, roomItem1_29, room1_29Exit1, room1_29Exit2, room1_29Exit3, room1_29Exit4, room6_05Exit4, roomLocked1_29);
+	Room room1_28 = new Room(roomId1_30, roomDesc1_28, roomEnemy1_28, roomPuzzle1_28, roomItem1_28, room1_28Exit1, room1_28Exit2, room1_28Exit3, room1_28Exit4, room6_05Exit4, roomLocked1_28);
+	Room room1_27 = new Room(roomId1_30, roomDesc1_27, roomEnemy1_27, roomPuzzle1_27, roomItem1_27, room1_27Exit1, room1_27Exit2, room1_27Exit3, room1_27Exit4, room6_05Exit4, roomLocked1_27);
+	Room room1_26 = new Room(roomId1_30, roomDesc1_26, roomEnemy1_26, roomPuzzle1_26, roomItem1_26, room1_26Exit1, room1_26Exit2, room1_26Exit3, room1_26Exit4, room6_05Exit4, roomLocked1_26);
+	Room room2_25 = new Room(roomId1_30, roomDesc2_25, roomEnemy2_25, roomPuzzle2_25, roomItem2_25, room2_25Exit1, room2_25Exit2, room2_25Exit3, room2_25Exit4, room6_05Exit4, roomLocked2_25);
+	Room room2_24 = new Room(roomId1_30, roomDesc2_24, roomEnemy2_24, roomPuzzle2_24, roomItem2_24, room2_24Exit1, room2_24Exit2, room2_24Exit3, room2_24Exit4, room6_05Exit4, roomLocked2_24);
+	Room room2_23 = new Room(roomId1_30, roomDesc2_23, roomEnemy2_23, roomPuzzle2_23, roomItem2_23, room2_23Exit1, room2_23Exit2, room2_23Exit3, room2_23Exit4, room6_05Exit4, roomLocked2_23);
+	Room room2_22 = new Room(roomId1_30, roomDesc2_22, roomEnemy2_22, roomPuzzle2_22, roomItem2_22, room2_22Exit1, room2_22Exit2, room2_22Exit3, room2_22Exit4, room6_05Exit4, roomLocked2_22);
+	Room room3_21 = new Room(roomId1_30, roomDesc3_21, roomEnemy3_21, roomPuzzle3_21, roomItem3_21, room3_21Exit1, room3_21Exit2, room3_21Exit3, room3_21Exit4, room6_05Exit4, roomLocked3_21);
+	Room room3_20 = new Room(roomId1_30, roomDesc3_20, roomEnemy3_20, roomPuzzle3_20, roomItem3_20, room3_20Exit1, room3_20Exit2, room3_20Exit3, room3_20Exit4, room6_05Exit4, roomLocked3_20);
+	Room room3_19 = new Room(roomId1_30, roomDesc3_19, roomEnemy3_19, roomPuzzle3_19, roomItem3_19, room3_19Exit1, room3_19Exit2, room3_19Exit3, room3_19Exit4, room6_05Exit4, roomLocked3_19);
+	Room room3_18 = new Room(roomId1_30, roomDesc3_18, roomEnemy3_18, roomPuzzle3_18, roomItem3_18, room3_18Exit1, room3_18Exit2, room3_18Exit3, room3_18Exit4, room3_18Exit5, roomLocked3_18);
+	Room room3_17 = new Room(roomId1_30, roomDesc3_17, roomEnemy3_17, roomPuzzle3_17, roomItem3_17, room3_17Exit1, room3_17Exit2, room3_17Exit3, room3_17Exit4, room6_05Exit4, roomLocked3_17);
+	Room room4_16 = new Room(roomId1_30, roomDesc4_16, roomEnemy4_16, roomPuzzle4_16, roomItem4_16, room4_16Exit1, room4_16Exit2, room4_16Exit3, room4_16Exit4, room6_05Exit4, roomLocked4_16);
+	Room room4_15 = new Room(roomId1_30, roomDesc4_15, roomEnemy4_15, roomPuzzle4_15, roomItem4_15, room4_15Exit1, room4_15Exit2, room4_15Exit3, room4_15Exit4, room6_05Exit4, roomLocked4_15);
+	Room room4_14 = new Room(roomId1_30, roomDesc4_14, roomEnemy4_14, roomPuzzle4_14, roomItem4_14, room4_14Exit1, room4_14Exit2, room4_14Exit3, room4_14Exit4, room6_05Exit4, roomLocked4_14);
+	Room room4_13 = new Room(roomId1_30, roomDesc4_13, roomEnemy4_13, roomPuzzle4_13, roomItem4_13, room4_13Exit1, room4_13Exit2, room4_13Exit3, room4_13Exit4, room6_05Exit4, roomLocked4_13);
+	Room room4_12 = new Room(roomId1_30, roomDesc4_12, roomEnemy4_12, roomPuzzle4_12, roomItem4_12, room4_12Exit1, room4_12Exit2, room4_12Exit3, room4_12Exit4, room6_05Exit4, roomLocked4_12);
+	Room room5_11 = new Room(roomId1_30, roomDesc5_11, roomEnemy5_11, roomPuzzle5_11, roomItem5_11, room5_11Exit1, room5_11Exit2, room5_11Exit3, room5_11Exit4, room6_05Exit4, roomLocked5_11);
+	Room room5_10 = new Room(roomId1_30, roomDesc5_10, roomEnemy5_10, roomPuzzle5_10, roomItem5_10, room5_10Exit1, room5_10Exit2, room5_10Exit3, room5_10Exit4, room6_05Exit4, roomLocked5_10);
+	Room room5_09 = new Room(roomId1_30, roomDesc5_09, roomEnemy5_09, roomPuzzle5_09, roomItem5_09, room5_09Exit1, room5_09Exit2, room5_09Exit3, room5_09Exit4, room6_05Exit4, roomLocked5_09);
+	Room room5_08 = new Room(roomId1_30, roomDesc5_08, roomEnemy5_08, roomPuzzle5_08, roomItem5_08, room5_08Exit1, room5_08Exit2, room5_08Exit3, room5_08Exit4, room6_05Exit4, roomLocked5_08);
+	Room room5_07 = new Room(roomId1_30, roomDesc5_07, roomEnemy5_07, roomPuzzle5_07, roomItem5_07, room5_07Exit1, room5_07Exit2, room5_07Exit3, room5_07Exit4, room6_05Exit4, roomLocked5_07);
+	Room room5_06 = new Room(roomId1_30, roomDesc5_06, roomEnemy5_06, roomPuzzle5_06, roomItem5_06, room5_06Exit1, room5_06Exit2, room5_06Exit3, room5_06Exit4, room5_06Exit5, roomLocked5_06);
+	Room room6_05 = new Room(roomId1_30, roomDesc6_05, roomEnemy6_05, roomPuzzle6_05, roomItem6_05, room6_05Exit1, room6_05Exit2, room6_05Exit3, room6_05Exit4, room6_05Exit4, roomLocked6_05);
+	Room room6_04 = new Room(roomId1_30, roomDesc6_04, roomEnemy6_04, roomPuzzle6_04, roomItem6_04, room6_04Exit1, room6_04Exit2, room6_04Exit3, room6_04Exit4, room6_05Exit4, roomLocked6_04);
+	Room room6_03 = new Room(roomId1_30, roomDesc6_03, roomEnemy6_03, roomPuzzle6_03, roomItem6_03, room6_03Exit1, room6_03Exit2, room6_03Exit3, room6_03Exit4, room6_05Exit4, roomLocked6_03);
+	Room room6_02 = new Room(roomId1_30, roomDesc6_02, roomEnemy6_02, roomPuzzle6_02, roomItem6_02, room6_02Exit1, room6_02Exit2, room6_02Exit3, room6_02Exit4, room6_05Exit4, roomLocked6_02);
+	Room room6_01 = new Room(roomId1_30, roomDesc6_01, roomEnemy6_01, roomPuzzle6_01, roomItem6_01, room6_01Exit1, room6_01Exit2, room6_01Exit3, room6_01Exit4, room6_05Exit4, roomLocked6_01);
 
 	public void getRoom(int roomID)
 	{
@@ -647,7 +647,7 @@ public class RoomContent
 		{
 			exit5Option = "";
 		}
-		view.println("\nExits avalible: " + exit1Option + " " + exit4Option + " " + exit2Option + " " + exit3Option + " " + exit5Option);
+		view.println("\nExits avalible: " + exit1Option + " \n" + exit4Option + " \n" + exit2Option + " \n" + exit3Option + " \n" + exit5Option);
 	}
 
 	public void obtainItem(int item)

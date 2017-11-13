@@ -25,7 +25,7 @@ public class Room
 	{
 	}
 
-	public Room(int roomId, String roomDesc, int enemies, int puzzles, int exit1, int exit2, int exit3, int exit4, int exit5, int items, boolean locked)
+	public Room(int roomId, String roomDesc, int enemies, int puzzles, int items, int exit1, int exit2, int exit3, int exit4, int exit5, boolean locked)
 	{
 		this.roomId = roomId;
 		this.roomDesc = roomDesc;
