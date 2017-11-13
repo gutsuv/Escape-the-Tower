@@ -54,13 +54,13 @@ public class Controller
 		name = printAndPrompt1("Enter Name", " ");
 		view.println("Hello " + name + "\n");
 
-		view.println("Entrance Floor 6, Room 30\n");
+		view.println("Current Position: Floor 6, Room 30\n");
 		boolean start = printAndPrompt2("Start?\n");
 
 		while (!start)
 		{
 			view.println("Intro");
-			start = printAndPrompt2("________");
+			start = printAndPrompt2("________\n");
 		}
 
 		player = new Player();
@@ -71,8 +71,6 @@ public class Controller
 		player.setPlayerPosition(1);
 
 		room.getRoom(player.getPlayerPosition());
-
-
 		view.println(MiscellaneousContent.displayDefaultMenu());
 		displayRoomContent();
 	}
@@ -169,7 +167,7 @@ public class Controller
 			{
 				
 				roomText = false;
-				view.print("Inventory Contents");
+				view.print("Inventory Contents\n");
 
 				for (int i = 0; i < inventory.size(); i++)
 				{
@@ -183,7 +181,7 @@ public class Controller
 			else if (userInput.equalsIgnoreCase("exit"))
 			{
 				roomText = false;
-				boolean endGame = printAndPrompt2("End game?");
+				boolean endGame = printAndPrompt2("End game?\n");
 
 				if (endGame)
 				{
@@ -191,7 +189,7 @@ public class Controller
 				}
 				else
 				{
-					view.println("Continue");
+					view.println("Continue\n");
 					view.println(MiscellaneousContent.displayDefaultMenu());
 					displayRoomContent();
 				}
@@ -262,7 +260,7 @@ public class Controller
 
 		room.accessible(exit1, exit2, exit3, exit4, exit5, player.getPlayerPosition());
 
-		view.print("What room to enter?");
+		view.print("What exit?\n");
 		String userInput = input.nextLine();
 
 		boolean direction = true;
@@ -276,7 +274,7 @@ public class Controller
 			} 
 			else if ((userInput.equalsIgnoreCase("exit2") && player.getExit2Room() != player.getPlayerPosition()))
 			{
-				if ((player.getPlayerPosition() == 21 && locked != true))
+				if ((player.getPlayerPosition() == 0 && locked != true))
 				{
 					view.println("Exit is locked");
 					move(player.getPlayerPosition());
@@ -289,7 +287,7 @@ public class Controller
 			} 
 			else if ((userInput.equalsIgnoreCase("exit3") && player.getExit3Room() != player.getPlayerPosition()))
 			{
-				if ((player.getPlayerPosition() == 11 && locked != true) || (player.getPlayerPosition() == 31 && locked != true))
+				if ((player.getPlayerPosition() == 0 && locked != true) || (player.getPlayerPosition() == 0 && locked != true))
 				{
 					view.println("Exit is locked");
 					move(player.getPlayerPosition());
@@ -304,7 +302,7 @@ public class Controller
 			}
 			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit4Room() != player.getPlayerPosition()))
 			{
-				if ((player.getPlayerPosition() == 41 && locked != true))
+				if ((player.getPlayerPosition() == 0 && locked != true))
 				{
 					view.println("Exit is locked");
 					move(player.getPlayerPosition());
@@ -317,7 +315,7 @@ public class Controller
 			} 
 			else if ((userInput.equalsIgnoreCase("exit5") && player.getExit5Room() != player.getPlayerPosition()))
 			{
-				if ((player.getPlayerPosition() == 41 && locked != true))
+				if ((player.getPlayerPosition() == 0 && locked != true))
 				{
 					view.println("Exit is locked");
 					move(player.getPlayerPosition());
