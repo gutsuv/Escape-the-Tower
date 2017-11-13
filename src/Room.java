@@ -90,15 +90,12 @@ public class Room
 
 	public void setRoomId(int roomId)
 	{
-<<<<<<< HEAD
 		fileName = "RoomsB_int roomId, int puzzleId, int enemyId, int itemId.txt";
 		this.line = line;
 		reader(fileName, line);
-=======
 	//	fileName = "RoomsB.txt";
 	//	this.line = line;
 	//	reader(fileName, line);
->>>>>>> 512881014aac632e49adfc1f3de4be389aecd681
 		this.roomId = roomId;
 	}
 
