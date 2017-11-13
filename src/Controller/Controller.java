@@ -130,9 +130,10 @@ public class Controller
 				room.examineRoom(player.getPlayerPosition());
 				view.println(MiscellaneousContent.displayDefaultMenu());
 				displayRoomContent();
-
+				// Test
+				System.out.println(player.getPlayerPosition());
 			} 
-			else if (userInput.equalsIgnoreCase("move"))
+			else if (userInput.equalsIgnoreCase("change room"))
 			{
 
 				roomText = false;
@@ -294,13 +295,13 @@ public class Controller
 				{
 					view.println("Exit is locked");
 					move(player.getPlayerPosition());
-					
+
 				} 
 				else 
 				{	
 					player.setPlayerPosition(player.getExit3Room()); 
 				}
-				
+
 				direction = false;
 			}
 			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit4Room() != player.getPlayerPosition()))
@@ -337,6 +338,7 @@ public class Controller
 				userInput = input.nextLine();
 			}
 		}
+		player.setPlayerPosition(29);
 		room.getRoom(player.getPlayerPosition());
 		view.println(MiscellaneousContent.displayDefaultMenu());
 		displayRoomContent();
