@@ -164,7 +164,7 @@ public class RoomContent
 	int roomItem6_01 = 0;
 
 
-	String roomDesc1_30 = "Room Name, Floor 1: Room 1 \nRoom Description";
+	String roomDesc1_30 = "Test";
 	String roomDesc1_29 = "Room Name, Floor 1: Room 2 \nRoom Description";
 	String roomDesc1_28 = "Room Name, Floor 1: Room 3 \nRoom Description";
 	String roomDesc1_27 = "Room Name, Floor 1: Room 4 \nRoom Description";

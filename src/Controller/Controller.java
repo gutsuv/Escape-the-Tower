@@ -205,7 +205,7 @@ public class Controller
 	}
 	
 
-	private void move(double position)
+	private void move(int position)
 	{
 		player.setExit1Room((player.getPlayerPosition()));
 		player.setExit2Room(player.getPlayerPosition());
@@ -275,7 +275,7 @@ public class Controller
 				player.setPlayerPosition(player.getExit1Room());
 				direction = false;
 			} 
-			else if ((userInput.equalsIgnoreCase("exit2") && player.getExit4Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit2") && player.getExit2Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 21 && locked != true))
 				{
@@ -284,7 +284,7 @@ public class Controller
 				} 
 				else
 				{	
-					player.setPlayerPosition(player.getExit4Room());
+					player.setPlayerPosition(player.getExit2Room());
 				}
 				direction = false;
 			} 
@@ -303,7 +303,7 @@ public class Controller
 				
 				direction = false;
 			}
-			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit2Room() != player.getPlayerPosition()))
+			else if ((userInput.equalsIgnoreCase("exit4") && player.getExit4Room() != player.getPlayerPosition()))
 			{
 				if ((player.getPlayerPosition() == 41 && locked != true))
 				{
@@ -312,14 +312,26 @@ public class Controller
 				} 
 				else 
 				{	
-					player.setPlayerPosition(player.getExit2Room());
+					player.setPlayerPosition(player.getExit4Room());
 				}
-				
+				direction = false;
+			} 
+			else if ((userInput.equalsIgnoreCase("exit5") && player.getExit5Room() != player.getPlayerPosition()))
+			{
+				if ((player.getPlayerPosition() == 41 && locked != true))
+				{
+					view.println("Exit is locked");
+					move(player.getPlayerPosition());
+				} 
+				else 
+				{	
+					player.setPlayerPosition(player.getExit4Room());
+				}
 				direction = false;
 			} 
 			else
 			{
-				view.println(userInput + "Can't go that way");
+				view.println(userInput + "\nCan't go that way");
 				room.accessible(exit1, exit2, exit3, exit4, exit5, player.getPlayerPosition());
 				view.print("What room to enter?");
 				userInput = input.nextLine();

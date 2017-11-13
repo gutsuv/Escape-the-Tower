@@ -20,7 +20,7 @@ public class Player extends Character
 	{
 		super(1, 100, 150, 0, false);
 		this.playerName = "";
-		this.position = 1;
+		this.position = 30;
 	}
 
 	public Player(String playerName, int position, int exit1Room, int exit2Room, int exit3Room, int exit4Room, int exit5Room, int monsterScore, int puzzleScore, int gameScore)
