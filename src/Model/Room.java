@@ -17,6 +17,7 @@ public class Room
 	protected int exit2;
 	protected int exit3;
 	protected int exit4;
+	protected int exit5;
 	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	protected boolean locked;
 
@@ -24,7 +25,7 @@ public class Room
 	{
 	}
 
-	public Room(int roomId, String roomDesc, int enemies, int puzzles, int exit1, int exit4, int items, int exit2, int exit3, boolean locked)
+	public Room(int roomId, String roomDesc, int enemies, int puzzles, int exit1, int exit2, int exit3, int exit4, int exit5, int items, boolean locked)
 	{
 		this.roomId = roomId;
 		this.roomDesc = roomDesc;
@@ -33,9 +34,10 @@ public class Room
 		this.enemies = enemies;
 		this.puzzles = puzzles;
 		this.exit1 = exit1;
-		this.exit4 = exit4;
 		this.exit2 = exit2;
 		this.exit3 = exit3;
+		this.exit4 = exit4;
+		this.exit5 = exit5;
 		Room.rooms.add(this);
 	}
 	
@@ -127,6 +129,16 @@ public class Room
 	public void setExit4(int exit4)
 	{
 		this.exit4 = exit4;
+	}
+	
+	public int getExit5()
+	{
+		return exit5;
+	}
+
+	public void setExit5(int exit5)
+	{
+		this.exit5 = exit5;
 	}
 
 	public boolean isLocked()
