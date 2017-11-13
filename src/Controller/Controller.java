@@ -331,9 +331,9 @@ public class Controller
 			} 
 			else
 			{
-				view.println(userInput + "\nCan't go that way");
+				view.println(userInput + "\nCan't go that way\n");
 				room.accessible(exit1, exit2, exit3, exit4, exit5, player.getPlayerPosition());
-				view.print("What room to enter?");
+				view.print("What room to enter?\n");
 				userInput = input.nextLine();
 			}
 		}

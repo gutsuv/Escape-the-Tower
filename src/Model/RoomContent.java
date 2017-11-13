@@ -647,7 +647,7 @@ public class RoomContent
 		{
 			exit5Option = "";
 		}
-		view.println("\nExits avalible: " + exit1Option + " \n" + exit4Option + " \n" + exit2Option + " \n" + exit3Option + " \n" + exit5Option);
+		view.println("\nExits avalible: " + exit1Option + " \n" + exit4Option + " \n" + exit2Option + " \n" + exit3Option + " \n" + exit5Option + " \n" );
 	}
 
 	public void obtainItem(int item)
