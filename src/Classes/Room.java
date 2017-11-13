@@ -12,6 +12,21 @@ public class Room
 
 	public Room() 
 	{
+		roomId = 0;
+		roomDescription = "";
+		exits = null;
+		direction = null;
+		exitDescription = null;
+	}
+	public Room(int roomId, boolean isLocked, String roomDescription, int[] exits, char[] direction, String[] exitDescription)
+	{
+		this.roomId = roomId;
+		this.roomDescription = roomDescription;
+		this.exits = exits;
+		this.direction = direction;
+		this.exitDescription = exitDescription;
+		//this.exitDescription = doorDescription;
+		//multiple exits. Doesn't make sense to have door as one description.
 	}
 	
 	public Room(String loadedString)
@@ -41,13 +56,6 @@ public class Room
 		}	
 	}
 
-	public Room(int roomId, boolean isLocked, String roomDescription, String doorDescription)
-	{
-		this.roomId = roomId;
-		this.roomDescription = roomDescription;
-		//this.exitDescription = doorDescription;
-		//multiple exits. Doesn't make sense to have door as one description.
-	}
 
 	public double getRoomId()
 	{
@@ -69,12 +77,21 @@ public class Room
 		this.roomDescription = roomDescription;
 	}
 
-	public int[] getDoors()
+	public int[] getExits()
 	{
 		return exits;
 	}
 
-	public void setDoors(int[] doors)
+	public void setDirection(char[] direction)
+	{
+		this.direction = direction;
+	}
+	public char[] getDirection()
+	{
+		return direction;
+	}
+
+	public void setExits(int[] exits)
 	{
 		this.exits = exits;
 	}

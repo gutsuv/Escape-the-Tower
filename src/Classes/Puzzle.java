@@ -7,6 +7,13 @@ public class Puzzle
 	private boolean solved;
 	private String solution;
 	
+	public Puzzle(){
+		puzzleId = 0;
+		puzzleDescription = "";
+		solved = false;
+		solution = "";
+	}
+	
 	public Puzzle(int puzzleId, String puzzleDescription, boolean solved, String solution) 
 	{
 		this.puzzleId = puzzleId;

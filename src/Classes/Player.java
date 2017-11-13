@@ -6,15 +6,12 @@ public class Player extends Character
 
 	public Player() 
 	{
-		super(
-				// Things
-				);	
-		this.playerName = "";
+		playerName = "";
 	}
 
-	public Player(int characterId, int health, int damage, int defense, boolean alive, String playerName) 
+	public Player(int characterId, int health, int damage, int defense, int acc, boolean alive, String playerName) 
 	{
-		super(characterId, health, damage, defense, alive);
+		super(characterId, health, damage, defense, acc, alive);
 		this.playerName = playerName;
 	}
 

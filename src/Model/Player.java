@@ -18,7 +18,7 @@ public class Player extends Character
 
 	public Player() 
 	{
-		super(1, 100, 150, 0, false);
+		super(1, 100, 150, 0, 0, false);
 		this.playerName = "";
 		this.position = 30;
 	}

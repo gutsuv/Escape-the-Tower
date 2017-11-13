@@ -7,13 +7,13 @@ public class Enemy extends Character
 	
 	public Enemy() 
 	{
-		super(2, 0, 0, 0, false);
-		this.enemyDesc = "";
+		super(2, 0, 0, 0, 0, false);
+		enemyDesc = "";
 	}
 
-	public Enemy(int characterId, int health, int damage, int defense, boolean alive)
+	public Enemy(int characterId, int health, int damage, int defense, int acc, boolean alive, String enemyDesc)
 	{
-		super(characterId, health, damage, defense, alive);
+		super(characterId, health, damage, defense, acc, alive);
 		this.enemyDesc = enemyDesc;
 	}
 

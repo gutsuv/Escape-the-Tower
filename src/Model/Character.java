@@ -12,6 +12,7 @@ public class Character
 	protected int health;
 	protected int damage;
 	protected int defense;
+	protected int acc;
 	protected boolean alive;
 	
 	public Character()
@@ -20,16 +21,18 @@ public class Character
 		this.health = 0;
 		this.damage = 0;
 		this.defense = 0;
+		this.acc = 0;
 		this.alive = false;
 	}
 
-	public Character(int characterId, int health, int damage, int defense, boolean alive)
+	public Character(int characterId, int health, int damage, int defense, int acc, boolean alive)
 	{
 		this.characterId = characterId;
 		this.health = health;
 		this.damage = damage;
 		this.defense = defense;
-		this.alive = false;
+		this.acc = acc;
+		this.alive = alive;
 	}
 
 	public int getCharacterId()
