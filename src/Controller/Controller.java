@@ -130,8 +130,6 @@ public class Controller
 				room.examineRoom(player.getPlayerPosition());
 				view.println(MiscellaneousContent.displayDefaultMenu());
 				displayRoomContent();
-				// Test
-				System.out.println(player.getPlayerPosition());
 			} 
 			else if (userInput.equalsIgnoreCase("change room"))
 			{
@@ -338,7 +336,6 @@ public class Controller
 				userInput = input.nextLine();
 			}
 		}
-		player.setPlayerPosition(29);
 		room.getRoom(player.getPlayerPosition());
 		view.println(MiscellaneousContent.displayDefaultMenu());
 		displayRoomContent();
