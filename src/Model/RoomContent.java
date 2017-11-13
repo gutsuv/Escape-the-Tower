@@ -347,100 +347,100 @@ public class RoomContent
 			room6_05Exit3 = 0,
 			room6_05Exit4 = 0;
 			
-	Room room11 = new Room(roomId1_30, roomDesc11, roomEnemy1_30, roomPuzzle12, room1_26Exit1, room1_26Exit4, roomItem11, room1_26Exit3, room1_26Exit1, roomLocked1_30);
-	Room room12 = new Room(roomId1_30, roomDesc12, roomEnemy1_29, roomPuzzle12, room1_27Exit1, room1_27Exit4, roomItem12, room1_27Exit3, room1_27Exit2, roomLocked1_29);
-	Room room13 = new Room(roomId1_30, roomDesc13, roomEnemy1_28, roomPuzzle13, room1_28Exit1, room1_28Exit4, roomItem13, room1_28Exit3, room1_28Exit2, roomLocked1_28);
-	Room room14 = new Room(roomId1_30, roomDesc14, roomEnemy1_27, roomPuzzle14, room1_29Exit1, room1_29Exit4, roomItem14, room1_29Exit3, room1_29Exit2, roomLocked1_27);
-	Room room15 = new Room(roomId1_30, roomDesc15, roomEnemy1_26, roomPuzzle15, room1_29Exit1, room1_29Exit4, roomItem15, room1_29Exit3, room1_29Exit2, roomLocked1_26);
-	Room room21 = new Room(roomId1_30, roomDesc21, roomEnemy2_25, roomPuzzle21, room1_29Exit1, room1_29Exit4, roomItem21, room1_29Exit3, room1_29Exit2, roomLocked2_25);
-	Room room22 = new Room(roomId1_30, roomDesc22, roomEnemy2_24, roomPuzzle22, room1_29Exit1, room1_29Exit4, roomItem22, room1_29Exit3, room1_29Exit2, roomLocked2_24);
-	Room room23 = new Room(roomId1_30, roomDesc23, roomEnemy2_23, roomPuzzle23, room1_29Exit1, room1_29Exit4, roomItem23, room1_29Exit3, room1_29Exit2, roomLocked2_23);
-	Room room24 = new Room(roomId1_30, roomDesc24, roomEnemy2_22, roomPuzzle24, room1_29Exit1, room1_29Exit4, roomItem24, room1_29Exit3, room1_29Exit2, roomLocked2_22);
-	Room room31 = new Room(roomId1_30, roomDesc31, roomEnemy3_21, roomPuzzle31, room1_29Exit1, room1_29Exit4, roomItem31, room1_29Exit3, room1_29Exit2, roomLocked3_21);
-	Room room32 = new Room(roomId1_30, roomDesc32, roomEnemy3_20, roomPuzzle32, room1_29Exit1, room1_29Exit4, roomItem32, room1_29Exit3, room1_29Exit2, roomLocked3_20);
-	Room room33 = new Room(roomId1_30, roomDesc33, roomEnemy3_19, roomPuzzle33, room1_29Exit1, room1_29Exit4, roomItem33, room1_29Exit3, room1_29Exit2, roomLocked3_19);
-	Room room34 = new Room(roomId1_30, roomDesc34, roomEnemy3_18, roomPuzzle34, room1_29Exit1, room1_29Exit4, roomItem34, room1_29Exit3, room1_29Exit2, roomLocked3_18);
-	Room room35 = new Room(roomId1_30, roomDesc35, roomEnemy3_17, roomPuzzle35, room1_29Exit1, room1_29Exit4, roomItem35, room1_29Exit3, room1_29Exit2, roomLocked3_17);
-	Room room41 = new Room(roomId1_30, roomDesc41, roomEnemy4_16, roomPuzzle41, room1_29Exit1, room1_29Exit4, roomItem41, room1_29Exit3, room1_29Exit2, roomLocked4_16);
-	Room room42 = new Room(roomId1_30, roomDesc42, roomEnemy4_15, roomPuzzle42, room1_29Exit1, room1_29Exit4, roomItem42, room1_29Exit3, room1_29Exit2, roomLocked4_15);
-	Room room43 = new Room(roomId1_30, roomDesc43, roomEnemy4_14, roomPuzzle43, room1_29Exit1, room1_29Exit4, roomItem43, room1_29Exit3, room1_29Exit2, roomLocked4_14);
-	Room room44 = new Room(roomId1_30, roomDesc44, roomEnemy4_13, roomPuzzle44, room1_29Exit1, room1_29Exit4, roomItem44, room1_29Exit3, room1_29Exit2, roomLocked4_13);
-	Room room45 = new Room(roomId1_30, roomDesc45, roomEnemy4_12, roomPuzzle45, room1_29Exit1, room1_29Exit4, roomItem45, room1_29Exit3, room1_29Exit2, roomLocked4_12);
-	Room room51 = new Room(roomId1_30, roomDesc51, roomEnemy5_11, roomPuzzle51, room1_29Exit1, room1_29Exit4, roomItem51, room1_29Exit3, room1_29Exit2, roomLocked5_11);
-	Room room52 = new Room(roomId1_30, roomDesc52, roomEnemy5_10, roomPuzzle52, room1_29Exit1, room1_29Exit4, roomItem52, room1_29Exit3, room1_29Exit2, roomLocked5_10);
-	Room room53 = new Room(roomId1_30, roomDesc53, roomEnemy5_09, roomPuzzle53, room1_29Exit1, room1_29Exit4, roomItem53, room1_29Exit3, room1_29Exit2, roomLocked5_09);
-	Room room54 = new Room(roomId1_30, roomDesc54, roomEnemy5_08, roomPuzzle54, room1_29Exit1, room1_29Exit4, roomItem54, room1_29Exit3, room1_29Exit2, roomLocked5_08);
-	Room room55 = new Room(roomId1_30, roomDesc55, roomEnemy5_07, roomPuzzle55, room1_29Exit1, room1_29Exit4, roomItem55, room1_29Exit3, room1_29Exit2, roomLocked5_07);
-	Room room56 = new Room(roomId1_30, roomDesc56, roomEnemy5_06, roomPuzzle56, room1_29Exit1, room1_29Exit4, roomItem56, room1_29Exit3, room1_29Exit2, roomLocked5_06);
-	Room room61 = new Room(roomId1_30, roomDesc61, roomEnemy6_05, roomPuzzle61, room1_29Exit1, room1_29Exit4, roomItem61, room1_29Exit3, room1_29Exit2, roomLocked6_05);
-	Room room62 = new Room(roomId1_30, roomDesc62, roomEnemy6_04, roomPuzzle62, room1_29Exit1, room1_29Exit4, roomItem62, room1_29Exit3, room1_29Exit2, roomLocked6_04);
-	Room room63 = new Room(roomId1_30, roomDesc63, roomEnemy6_03, roomPuzzle63, room1_29Exit1, room1_29Exit4, roomItem63, room1_29Exit3, room1_29Exit2, roomLocked6_03);
-	Room room64 = new Room(roomId1_30, roomDesc64, roomEnemy6_02, roomPuzzle64, room1_29Exit1, room1_29Exit4, roomItem64, room1_29Exit3, room1_29Exit2, roomLocked6_02);
-	Room room65 = new Room(roomId1_30, roomDesc65, roomEnemy6_01, roomPuzzle65, room1_29Exit1, room1_29Exit4, roomItem65, room1_29Exit3, room1_29Exit2, roomLocked6_01);
+	Room room1_30 = new Room(roomId1_30, roomDesc11, roomEnemy1_30, roomPuzzle12, room1_26Exit1, room1_26Exit4, roomItem11, room1_26Exit3, room1_26Exit1, roomLocked1_30);
+	Room room1_29 = new Room(roomId1_30, roomDesc12, roomEnemy1_29, roomPuzzle12, room1_27Exit1, room1_27Exit4, roomItem12, room1_27Exit3, room1_27Exit2, roomLocked1_29);
+	Room room1_28 = new Room(roomId1_30, roomDesc13, roomEnemy1_28, roomPuzzle13, room1_28Exit1, room1_28Exit4, roomItem13, room1_28Exit3, room1_28Exit2, roomLocked1_28);
+	Room room1_27 = new Room(roomId1_30, roomDesc14, roomEnemy1_27, roomPuzzle14, room1_29Exit1, room1_29Exit4, roomItem14, room1_29Exit3, room1_29Exit2, roomLocked1_27);
+	Room room1_26 = new Room(roomId1_30, roomDesc15, roomEnemy1_26, roomPuzzle15, room1_29Exit1, room1_29Exit4, roomItem15, room1_29Exit3, room1_29Exit2, roomLocked1_26);
+	Room room2_25 = new Room(roomId1_30, roomDesc21, roomEnemy2_25, roomPuzzle21, room1_29Exit1, room1_29Exit4, roomItem21, room1_29Exit3, room1_29Exit2, roomLocked2_25);
+	Room room2_24 = new Room(roomId1_30, roomDesc22, roomEnemy2_24, roomPuzzle22, room1_29Exit1, room1_29Exit4, roomItem22, room1_29Exit3, room1_29Exit2, roomLocked2_24);
+	Room room2_23 = new Room(roomId1_30, roomDesc23, roomEnemy2_23, roomPuzzle23, room1_29Exit1, room1_29Exit4, roomItem23, room1_29Exit3, room1_29Exit2, roomLocked2_23);
+	Room room2_22 = new Room(roomId1_30, roomDesc24, roomEnemy2_22, roomPuzzle24, room1_29Exit1, room1_29Exit4, roomItem24, room1_29Exit3, room1_29Exit2, roomLocked2_22);
+	Room room3_21 = new Room(roomId1_30, roomDesc31, roomEnemy3_21, roomPuzzle31, room1_29Exit1, room1_29Exit4, roomItem31, room1_29Exit3, room1_29Exit2, roomLocked3_21);
+	Room room3_20 = new Room(roomId1_30, roomDesc32, roomEnemy3_20, roomPuzzle32, room1_29Exit1, room1_29Exit4, roomItem32, room1_29Exit3, room1_29Exit2, roomLocked3_20);
+	Room room3_19 = new Room(roomId1_30, roomDesc33, roomEnemy3_19, roomPuzzle33, room1_29Exit1, room1_29Exit4, roomItem33, room1_29Exit3, room1_29Exit2, roomLocked3_19);
+	Room room3_18 = new Room(roomId1_30, roomDesc34, roomEnemy3_18, roomPuzzle34, room1_29Exit1, room1_29Exit4, roomItem34, room1_29Exit3, room1_29Exit2, roomLocked3_18);
+	Room room3_17 = new Room(roomId1_30, roomDesc35, roomEnemy3_17, roomPuzzle35, room1_29Exit1, room1_29Exit4, roomItem35, room1_29Exit3, room1_29Exit2, roomLocked3_17);
+	Room room4_16 = new Room(roomId1_30, roomDesc41, roomEnemy4_16, roomPuzzle41, room1_29Exit1, room1_29Exit4, roomItem41, room1_29Exit3, room1_29Exit2, roomLocked4_16);
+	Room room4_15 = new Room(roomId1_30, roomDesc42, roomEnemy4_15, roomPuzzle42, room1_29Exit1, room1_29Exit4, roomItem42, room1_29Exit3, room1_29Exit2, roomLocked4_15);
+	Room room4_14 = new Room(roomId1_30, roomDesc43, roomEnemy4_14, roomPuzzle43, room1_29Exit1, room1_29Exit4, roomItem43, room1_29Exit3, room1_29Exit2, roomLocked4_14);
+	Room room4_13 = new Room(roomId1_30, roomDesc44, roomEnemy4_13, roomPuzzle44, room1_29Exit1, room1_29Exit4, roomItem44, room1_29Exit3, room1_29Exit2, roomLocked4_13);
+	Room room4_12 = new Room(roomId1_30, roomDesc45, roomEnemy4_12, roomPuzzle45, room1_29Exit1, room1_29Exit4, roomItem45, room1_29Exit3, room1_29Exit2, roomLocked4_12);
+	Room room5_11 = new Room(roomId1_30, roomDesc51, roomEnemy5_11, roomPuzzle51, room1_29Exit1, room1_29Exit4, roomItem51, room1_29Exit3, room1_29Exit2, roomLocked5_11);
+	Room room5_10 = new Room(roomId1_30, roomDesc52, roomEnemy5_10, roomPuzzle52, room1_29Exit1, room1_29Exit4, roomItem52, room1_29Exit3, room1_29Exit2, roomLocked5_10);
+	Room room5_09 = new Room(roomId1_30, roomDesc53, roomEnemy5_09, roomPuzzle53, room1_29Exit1, room1_29Exit4, roomItem53, room1_29Exit3, room1_29Exit2, roomLocked5_09);
+	Room room5_08 = new Room(roomId1_30, roomDesc54, roomEnemy5_08, roomPuzzle54, room1_29Exit1, room1_29Exit4, roomItem54, room1_29Exit3, room1_29Exit2, roomLocked5_08);
+	Room room5_07 = new Room(roomId1_30, roomDesc55, roomEnemy5_07, roomPuzzle55, room1_29Exit1, room1_29Exit4, roomItem55, room1_29Exit3, room1_29Exit2, roomLocked5_07);
+	Room room5_06 = new Room(roomId1_30, roomDesc56, roomEnemy5_06, roomPuzzle56, room1_29Exit1, room1_29Exit4, roomItem56, room1_29Exit3, room1_29Exit2, roomLocked5_06);
+	Room room6_05 = new Room(roomId1_30, roomDesc61, roomEnemy6_05, roomPuzzle61, room1_29Exit1, room1_29Exit4, roomItem61, room1_29Exit3, room1_29Exit2, roomLocked6_05);
+	Room room6_04 = new Room(roomId1_30, roomDesc62, roomEnemy6_04, roomPuzzle62, room1_29Exit1, room1_29Exit4, roomItem62, room1_29Exit3, room1_29Exit2, roomLocked6_04);
+	Room room6_03 = new Room(roomId1_30, roomDesc63, roomEnemy6_03, roomPuzzle63, room1_29Exit1, room1_29Exit4, roomItem63, room1_29Exit3, room1_29Exit2, roomLocked6_03);
+	Room room6_02 = new Room(roomId1_30, roomDesc64, roomEnemy6_02, roomPuzzle64, room1_29Exit1, room1_29Exit4, roomItem64, room1_29Exit3, room1_29Exit2, roomLocked6_02);
+	Room room6_01 = new Room(roomId1_30, roomDesc65, roomEnemy6_01, roomPuzzle65, room1_29Exit1, room1_29Exit4, roomItem65, room1_29Exit3, room1_29Exit2, roomLocked6_01);
 
 	public void getRoom(int roomID)
 	{
 		switch (String.valueOf(roomID)) 
 		{
-			case "11": view.println(room11.toString()); 
+			case "11": view.println(room1_30.toString()); 
 			break;
-			case "12": view.println(room12.toString()); 
+			case "12": view.println(room1_29.toString()); 
 			break;
-			case "13": view.println(room13.toString());
+			case "13": view.println(room1_28.toString());
 			break;
-			case "14": view.println(room14.toString()); 
+			case "14": view.println(room1_27.toString()); 
 			break;
-			case "15": view.println(room15.toString()); 
+			case "15": view.println(room1_26.toString()); 
 			break;
-			case "21": view.println(room21.toString()); 
+			case "21": view.println(room2_25.toString()); 
 			break;
-			case "22": view.println(room22.toString()); 
+			case "22": view.println(room2_24.toString()); 
 			break;
-			case "23": view.println(room23.toString()); 
+			case "23": view.println(room2_23.toString()); 
 			break;
-			case "24": view.println(room24.toString()); 
+			case "24": view.println(room2_22.toString()); 
 			break;
-			case "31": view.println(room31.toString()); 
+			case "31": view.println(room3_21.toString()); 
 			break;
-			case "32": view.println(room32.toString()); 
+			case "32": view.println(room3_20.toString()); 
 			break;
-			case "33": view.println(room33.toString()); 
+			case "33": view.println(room3_19.toString()); 
 			break;
-			case "34": view.println(room34.toString()); 
+			case "34": view.println(room3_18.toString()); 
 			break;
-			case "35": view.println(room35.toString()); 
+			case "35": view.println(room3_17.toString()); 
 			break;
-			case "41": view.println(room41.toString()); 
+			case "41": view.println(room4_16.toString()); 
 			break;
-			case "42": view.println(room42.toString()); 
+			case "42": view.println(room4_15.toString()); 
 			break;
-			case "43": view.println(room43.toString()); 
+			case "43": view.println(room4_14.toString()); 
 			break;
-			case "44": view.println(room44.toString()); 
+			case "44": view.println(room4_13.toString()); 
 			break;
-			case "45": view.println(room45.toString()); 
+			case "45": view.println(room4_12.toString()); 
 			break;
-			case "51": view.println(room51.toString()); 
+			case "51": view.println(room5_11.toString()); 
 			break;
-			case "52": view.println(room52.toString()); 
+			case "52": view.println(room5_10.toString()); 
 			break;
-			case "53": view.println(room53.toString()); 
+			case "53": view.println(room5_09.toString()); 
 			break;
-			case "54": view.println(room54.toString()); 
+			case "54": view.println(room5_08.toString()); 
 			break;
-			case "55": view.println(room55.toString()); 
+			case "55": view.println(room5_07.toString()); 
 			break;
-			case "56": view.println(room56.toString()); 
+			case "56": view.println(room5_06.toString()); 
 			break;
-			case "61": view.println(room61.toString()); 
+			case "61": view.println(room6_05.toString()); 
 			break;
-			case "62": view.println(room62.toString()); 
+			case "62": view.println(room6_04.toString()); 
 			break;
-			case "63": view.println(room63.toString()); 
+			case "63": view.println(room6_03.toString()); 
 			break;
-			case "64": view.println(room64.toString()); 
+			case "64": view.println(room6_02.toString()); 
 			break;
-			case "65": view.println(room65.toString()); 
+			case "65": view.println(room6_01.toString()); 
 			break;
 		}
 	}
@@ -449,153 +449,153 @@ public class RoomContent
 	{
 		if (id == 11) 
 		{ 
-			view.println("\nEnemies: " + room11.getEnemies() + " Puzzles: " + room11.getPuzzles() + " Items: " + room11.getItems());
+			view.println("\nEnemies: " + room1_30.getEnemies() + " Puzzles: " + room1_30.getPuzzles() + " Items: " + room1_30.getItems());
 			// Addons to be made potentially
 		}
 		
 		if (id == 12) 
 		{ 
-			view.println("\nEnemies: " + room12.getEnemies() + " Puzzles: " + room12.getPuzzles() + " Items: " + room12.getItems());
+			view.println("\nEnemies: " + room1_29.getEnemies() + " Puzzles: " + room1_29.getPuzzles() + " Items: " + room1_29.getItems());
 		}
 
 		if (id == 13) 
 		{ 
-			view.println("\nEnemies: " + room13.getEnemies() + " Puzzles: " + room13.getPuzzles() + " Items: " + room13.getItems());
+			view.println("\nEnemies: " + room1_28.getEnemies() + " Puzzles: " + room1_28.getPuzzles() + " Items: " + room1_28.getItems());
 		}
 
 		if (id == 14) 
 		{ 
-			view.println("\nEnemies: " + room14.getEnemies() + " Puzzles: " + room14.getPuzzles() + " Items: " + room14.getItems());
+			view.println("\nEnemies: " + room1_27.getEnemies() + " Puzzles: " + room1_27.getPuzzles() + " Items: " + room1_27.getItems());
 		}
 		
 		if (id == 15) 
 		{ 
-			view.println("\nEnemies: " + room15.getEnemies() + " Puzzles: " + room15.getPuzzles() + " Items: " + room15.getItems());
+			view.println("\nEnemies: " + room1_26.getEnemies() + " Puzzles: " + room1_26.getPuzzles() + " Items: " + room1_26.getItems());
 		}
 		
 		if (id == 21) 
 		{ 
-			view.println("\nEnemies: " + room21.getEnemies() + " Puzzles: " + room21.getPuzzles() + " Items: " + room21.getItems());
+			view.println("\nEnemies: " + room2_25.getEnemies() + " Puzzles: " + room2_25.getPuzzles() + " Items: " + room2_25.getItems());
 		}
 		
 		if (id == 22) 
 		{ 
-			view.println("\nEnemies: " + room22.getEnemies() + " Puzzles: " + room22.getPuzzles() + " Items: " + room22.getItems());
+			view.println("\nEnemies: " + room2_24.getEnemies() + " Puzzles: " + room2_24.getPuzzles() + " Items: " + room2_24.getItems());
 		}
 		
 		if (id == 23) 
 		{ 
-			view.println("\nEnemies: " + room23.getEnemies() + " Puzzles: " + room23.getPuzzles() + " Items: " + room23.getItems());
+			view.println("\nEnemies: " + room2_23.getEnemies() + " Puzzles: " + room2_23.getPuzzles() + " Items: " + room2_23.getItems());
 		}
 		
 		if (id == 24) 
 		{ 
-			view.println("\nEnemies: " + room24.getEnemies() + " Puzzles: " + room24.getPuzzles() + " Items: " + room24.getItems());
+			view.println("\nEnemies: " + room2_22.getEnemies() + " Puzzles: " + room2_22.getPuzzles() + " Items: " + room2_22.getItems());
 		}
 		
 		if (id == 31) 
 		{ 
-			view.println("\nEnemies: " + room31.getEnemies() + " Puzzles: " + room31.getPuzzles() + " Items: " + room31.getItems());
+			view.println("\nEnemies: " + room3_21.getEnemies() + " Puzzles: " + room3_21.getPuzzles() + " Items: " + room3_21.getItems());
 		}
 		
 		if (id == 32) 
 		{ 
-			view.println("\nEnemies: " + room32.getEnemies() + " Puzzles: " + room32.getPuzzles() + " Items: " + room32.getItems());
+			view.println("\nEnemies: " + room3_20.getEnemies() + " Puzzles: " + room3_20.getPuzzles() + " Items: " + room3_20.getItems());
 		}
 		
 		if (id == 33) 
 		{ 
-			view.println("\nEnemies: " + room33.getEnemies() + " Puzzles: " + room33.getPuzzles() + " Items: " + room33.getItems());
+			view.println("\nEnemies: " + room3_19.getEnemies() + " Puzzles: " + room3_19.getPuzzles() + " Items: " + room3_19.getItems());
 		}
 		
 		if (id == 34) 
 		{ 
-			view.println("\nEnemies: " + room34.getEnemies() + " Puzzles: " + room34.getPuzzles() + " Items: " + room34.getItems());
+			view.println("\nEnemies: " + room3_18.getEnemies() + " Puzzles: " + room3_18.getPuzzles() + " Items: " + room3_18.getItems());
 		}
 		
 		if (id == 35) 
 		{ 
-			view.println("\nEnemies: " + room35.getEnemies() + " Puzzles: " + room35.getPuzzles() + " Items: " + room35.getItems());
+			view.println("\nEnemies: " + room3_17.getEnemies() + " Puzzles: " + room3_17.getPuzzles() + " Items: " + room3_17.getItems());
 		}
 		
 		if (id == 41) 
 		{ 
-			view.println("\nEnemies: " + room41.getEnemies() + " Puzzles: " + room41.getPuzzles() + " Items: " + room41.getItems());
+			view.println("\nEnemies: " + room4_16.getEnemies() + " Puzzles: " + room4_16.getPuzzles() + " Items: " + room4_16.getItems());
 		}
 		
 		if (id == 42) 
 		{ 
-			view.println("\nEnemies: " + room42.getEnemies() + " Puzzles: " + room42.getPuzzles() + " Items: " + room42.getItems());
+			view.println("\nEnemies: " + room4_15.getEnemies() + " Puzzles: " + room4_15.getPuzzles() + " Items: " + room4_15.getItems());
 		}
 		
 		if (id == 43) 
 		{ 
-			view.println("\nEnemies: " + room43.getEnemies() + " Puzzles: " + room43.getPuzzles() + " Items: " + room43.getItems());
+			view.println("\nEnemies: " + room4_14.getEnemies() + " Puzzles: " + room4_14.getPuzzles() + " Items: " + room4_14.getItems());
 		}
 		
 		if (id == 44) 
 		{ 
-			view.println("\nEnemies: " + room44.getEnemies() + " Puzzles: " + room44.getPuzzles() + " Items: " + room44.getItems());
+			view.println("\nEnemies: " + room4_13.getEnemies() + " Puzzles: " + room4_13.getPuzzles() + " Items: " + room4_13.getItems());
 		}
 		
 		if (id == 45) 
 		{ 
-			view.println("\nEnemies: " + room45.getEnemies() + " Puzzles: " + room45.getPuzzles() + " Items: " + room45.getItems());
+			view.println("\nEnemies: " + room4_12.getEnemies() + " Puzzles: " + room4_12.getPuzzles() + " Items: " + room4_12.getItems());
 		}
 		
 		if (id == 51) 
 		{ 
-			view.println("\nEnemies: " + room51.getEnemies() + " Puzzles: " + room51.getPuzzles() + " Items: " + room51.getItems());
+			view.println("\nEnemies: " + room5_11.getEnemies() + " Puzzles: " + room5_11.getPuzzles() + " Items: " + room5_11.getItems());
 		}
 		
 		if (id == 52) 
 		{ 
-			view.println("\nEnemies: " + room52.getEnemies() + " Puzzles: " + room52.getPuzzles() + " Items: " + room52.getItems());
+			view.println("\nEnemies: " + room5_10.getEnemies() + " Puzzles: " + room5_10.getPuzzles() + " Items: " + room5_10.getItems());
 		}
 		
 		if (id == 53) 
 		{ 
-			view.println("\nEnemies: " + room53.getEnemies() + " Puzzles: " + room53.getPuzzles() + " Items: " + room53.getItems());
+			view.println("\nEnemies: " + room5_09.getEnemies() + " Puzzles: " + room5_09.getPuzzles() + " Items: " + room5_09.getItems());
 		}
 		
 		if (id == 54) 
 		{ 
-			view.println("\nEnemies: " + room54.getEnemies() + " Puzzles: " + room54.getPuzzles() + " Items: " + room54.getItems());
+			view.println("\nEnemies: " + room5_08.getEnemies() + " Puzzles: " + room5_08.getPuzzles() + " Items: " + room5_08.getItems());
 		}
 		
 		if (id == 55) 
 		{ 
-			view.println("\nEnemies: " + room55.getEnemies() + " Puzzles: " + room55.getPuzzles() + " Items: " + room55.getItems());
+			view.println("\nEnemies: " + room5_07.getEnemies() + " Puzzles: " + room5_07.getPuzzles() + " Items: " + room5_07.getItems());
 		}
 		
 		if (id == 56) 
 		{ 
-			view.println("\nEnemies: " + room56.getEnemies() + " Puzzles: " + room56.getPuzzles() + " Items: " + room56.getItems());
+			view.println("\nEnemies: " + room5_06.getEnemies() + " Puzzles: " + room5_06.getPuzzles() + " Items: " + room5_06.getItems());
 		}
 		
 		if (id == 61) 
 		{ 
-			view.println("\nEnemies: " + room61.getEnemies() + " Puzzles: " + room61.getPuzzles() + " Items: " + room61.getItems());
+			view.println("\nEnemies: " + room6_05.getEnemies() + " Puzzles: " + room6_05.getPuzzles() + " Items: " + room6_05.getItems());
 		}
 		
 		if (id == 62) 
 		{ 
-			view.println("\nEnemies: " + room62.getEnemies() + " Puzzles: " + room62.getPuzzles() + " Items: " + room62.getItems());
+			view.println("\nEnemies: " + room6_04.getEnemies() + " Puzzles: " + room6_04.getPuzzles() + " Items: " + room6_04.getItems());
 		}
 		
 		if (id == 63) 
 		{ 
-			view.println("\nEnemies: " + room63.getEnemies() + " Puzzles: " + room63.getPuzzles() + " Items: " + room63.getItems());
+			view.println("\nEnemies: " + room6_03.getEnemies() + " Puzzles: " + room6_03.getPuzzles() + " Items: " + room6_03.getItems());
 		}
 		
 		if (id == 64) 
 		{ 
-			view.println("\nEnemies: " + room64.getEnemies() + " Puzzles: " + room64.getPuzzles() + " Items: " + room64.getItems());
+			view.println("\nEnemies: " + room6_02.getEnemies() + " Puzzles: " + room6_02.getPuzzles() + " Items: " + room6_02.getItems());
 		}
 		
 		if (id == 65) 
 		{ 
-			view.println("\nEnemies: " + room65.getEnemies() + " Puzzles: " + room65.getPuzzles() + " Items: " + room65.getItems());
+			view.println("\nEnemies: " + room6_01.getEnemies() + " Puzzles: " + room6_01.getPuzzles() + " Items: " + room6_01.getItems());
 		}
 	}
 
