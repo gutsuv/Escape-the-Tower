@@ -164,36 +164,36 @@ public class RoomContent
 	int roomItem6_01 = 0;
 
 
-	String roomDesc1_30 = "Test";
-	String roomDesc1_29 = "Room Name, Floor 1: Room 2 \nRoom Description";
-	String roomDesc1_28 = "Room Name, Floor 1: Room 3 \nRoom Description";
-	String roomDesc1_27 = "Room Name, Floor 1: Room 4 \nRoom Description";
-	String roomDesc1_26 = "Room Name, Floor 1: Room 5 \nRoom Description";
-	String roomDesc2_25 = "Room Name, Floor 1: Room 1 \nRoom Description";
-	String roomDesc2_24 = "Room Name, Floor 1: Room 2 \nRoom Description";
-	String roomDesc2_23 = "Room Name, Floor 1: Room 3 \nRoom Description";
-	String roomDesc2_22 = "Room Name, Floor 1: Room 4 \nRoom Description";
-	String roomDesc3_21 = "Room Name, Floor 1: Room 1 \nRoom Description";
-	String roomDesc3_20 = "Room Name, Floor 1: Room 2 \nRoom Description";
-	String roomDesc3_19 = "Room Name, Floor 1: Room 3 \nRoom Description";
-	String roomDesc3_18 = "Room Name, Floor 1: Room 4 \nRoom Description";
-	String roomDesc3_17 = "Room Name, Floor 1: Room 5 \nRoom Description";
-	String roomDesc4_16 = "Room Name, Floor 1: Room 1 \nRoom Description";
-	String roomDesc4_15 = "Room Name, Floor 1: Room 2 \nRoom Description";
-	String roomDesc4_14 = "Room Name, Floor 1: Room 3 \nRoom Description";
-	String roomDesc4_13 = "Room Name, Floor 1: Room 4 \nRoom Description";
-	String roomDesc4_12 = "Room Name, Floor 1: Room 5 \nRoom Description";
-	String roomDesc5_11 = "Room Name, Floor 1: Room 1 \nRoom Description";
-	String roomDesc5_10 = "Room Name, Floor 1: Room 2 \nRoom Description";
-	String roomDesc5_09 = "Room Name, Floor 1: Room 3 \nRoom Description";
-	String roomDesc5_08 = "Room Name, Floor 1: Room 4 \nRoom Description";
-	String roomDesc5_07 = "Room Name, Floor 1: Room 5 \nRoom Description";
-	String roomDesc5_06 = "Room Name, Floor 1: Room 6 \nRoom Description";
-	String roomDesc6_05 = "Room Name, Floor 1: Room 1 \nRoom Description";
-	String roomDesc6_04 = "Room Name, Floor 1: Room 2 \nRoom Description";
-	String roomDesc6_03 = "Room Name, Floor 1: Room 3 \nRoom Description";
-	String roomDesc6_02 = "Room Name, Floor 1: Room 4 \nRoom Description";
-	String roomDesc6_01 = "Room Name, Floor 1: Room 5 \nRoom Description";
+	String roomDesc1_30 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc1_29 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc1_28 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc1_27 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc1_26 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc2_25 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc2_24 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc2_23 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc2_22 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc3_21 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc3_20 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc3_19 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc3_18 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc3_17 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc4_16 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc4_15 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc4_14 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc4_13 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc4_12 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc5_11 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc5_10 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc5_09 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc5_08 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc5_07 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc5_06 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc6_05 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc6_04 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc6_03 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc6_02 = "Room Name\nFloor #, Room # \nRoom Description\n";
+	String roomDesc6_01 = "Room Name\nFloor #, Room # \nRoom Description\n";
 
 	int 	room1_26Exit1 = 25, 
 			room1_26Exit2 = 29,
@@ -382,9 +382,9 @@ public class RoomContent
 	{
 		switch (String.valueOf(roomID)) 
 		{
-			case "11": view.println(room1_30.toString()); 
+			case "30": view.println(room1_30.toString()); 
 			break;
-			case "12": view.println(room1_29.toString()); 
+			case "1": view.println(room1_29.toString()); 
 			break;
 			case "13": view.println(room1_28.toString());
 			break;
@@ -449,153 +449,153 @@ public class RoomContent
 	{
 		if (id == 30) 
 		{ 
-			view.println("\nEnemies: " + room1_30.getEnemies() + " Puzzles: " + room1_30.getPuzzles() + " Items: " + room1_30.getItems());
+			view.println("\nEnemies: " + room1_30.getEnemies() + " Puzzles: " + room1_30.getPuzzles() + " Items: " + room1_30.getItems() + "\n");
 			// Addons to be made potentially
 		}
 		
 		if (id == 29) 
 		{ 
-			view.println("\nEnemies: " + room1_29.getEnemies() + " Puzzles: " + room1_29.getPuzzles() + " Items: " + room1_29.getItems());
+			view.println("\nEnemies: " + room1_29.getEnemies() + " Puzzles: " + room1_29.getPuzzles() + " Items: " + room1_29.getItems() + "\n");
 		}
 
 		if (id == 28) 
 		{ 
-			view.println("\nEnemies: " + room1_28.getEnemies() + " Puzzles: " + room1_28.getPuzzles() + " Items: " + room1_28.getItems());
+			view.println("\nEnemies: " + room1_28.getEnemies() + " Puzzles: " + room1_28.getPuzzles() + " Items: " + room1_28.getItems() + "\n");
 		}
 
 		if (id == 27) 
 		{ 
-			view.println("\nEnemies: " + room1_27.getEnemies() + " Puzzles: " + room1_27.getPuzzles() + " Items: " + room1_27.getItems());
+			view.println("\nEnemies: " + room1_27.getEnemies() + " Puzzles: " + room1_27.getPuzzles() + " Items: " + room1_27.getItems() + "\n");
 		}
 		
 		if (id == 26) 
 		{ 
-			view.println("\nEnemies: " + room1_26.getEnemies() + " Puzzles: " + room1_26.getPuzzles() + " Items: " + room1_26.getItems());
+			view.println("\nEnemies: " + room1_26.getEnemies() + " Puzzles: " + room1_26.getPuzzles() + " Items: " + room1_26.getItems() + "\n");
 		}
 		
 		if (id == 25) 
 		{ 
-			view.println("\nEnemies: " + room2_25.getEnemies() + " Puzzles: " + room2_25.getPuzzles() + " Items: " + room2_25.getItems());
+			view.println("\nEnemies: " + room2_25.getEnemies() + " Puzzles: " + room2_25.getPuzzles() + " Items: " + room2_25.getItems() + "\n");
 		}
 		
 		if (id == 24) 
 		{ 
-			view.println("\nEnemies: " + room2_24.getEnemies() + " Puzzles: " + room2_24.getPuzzles() + " Items: " + room2_24.getItems());
+			view.println("\nEnemies: " + room2_24.getEnemies() + " Puzzles: " + room2_24.getPuzzles() + " Items: " + room2_24.getItems() + "\n");
 		}
 		
 		if (id == 23) 
 		{ 
-			view.println("\nEnemies: " + room2_23.getEnemies() + " Puzzles: " + room2_23.getPuzzles() + " Items: " + room2_23.getItems());
+			view.println("\nEnemies: " + room2_23.getEnemies() + " Puzzles: " + room2_23.getPuzzles() + " Items: " + room2_23.getItems() + "\n");
 		}
 		
 		if (id == 22) 
 		{ 
-			view.println("\nEnemies: " + room2_22.getEnemies() + " Puzzles: " + room2_22.getPuzzles() + " Items: " + room2_22.getItems());
+			view.println("\nEnemies: " + room2_22.getEnemies() + " Puzzles: " + room2_22.getPuzzles() + " Items: " + room2_22.getItems() + "\n");
 		}
 		
 		if (id == 21) 
 		{ 
-			view.println("\nEnemies: " + room3_21.getEnemies() + " Puzzles: " + room3_21.getPuzzles() + " Items: " + room3_21.getItems());
+			view.println("\nEnemies: " + room3_21.getEnemies() + " Puzzles: " + room3_21.getPuzzles() + " Items: " + room3_21.getItems() + "\n");
 		}
 		
 		if (id == 20) 
 		{ 
-			view.println("\nEnemies: " + room3_20.getEnemies() + " Puzzles: " + room3_20.getPuzzles() + " Items: " + room3_20.getItems());
+			view.println("\nEnemies: " + room3_20.getEnemies() + " Puzzles: " + room3_20.getPuzzles() + " Items: " + room3_20.getItems() + "\n");
 		}
 		
 		if (id == 19) 
 		{ 
-			view.println("\nEnemies: " + room3_19.getEnemies() + " Puzzles: " + room3_19.getPuzzles() + " Items: " + room3_19.getItems());
+			view.println("\nEnemies: " + room3_19.getEnemies() + " Puzzles: " + room3_19.getPuzzles() + " Items: " + room3_19.getItems() + "\n");
 		}
 		
 		if (id == 18) 
 		{ 
-			view.println("\nEnemies: " + room3_18.getEnemies() + " Puzzles: " + room3_18.getPuzzles() + " Items: " + room3_18.getItems());
+			view.println("\nEnemies: " + room3_18.getEnemies() + " Puzzles: " + room3_18.getPuzzles() + " Items: " + room3_18.getItems() + "\n");
 		}
 		
 		if (id == 17) 
 		{ 
-			view.println("\nEnemies: " + room3_17.getEnemies() + " Puzzles: " + room3_17.getPuzzles() + " Items: " + room3_17.getItems());
+			view.println("\nEnemies: " + room3_17.getEnemies() + " Puzzles: " + room3_17.getPuzzles() + " Items: " + room3_17.getItems() + "\n");
 		}
 		
 		if (id == 16) 
 		{ 
-			view.println("\nEnemies: " + room4_16.getEnemies() + " Puzzles: " + room4_16.getPuzzles() + " Items: " + room4_16.getItems());
+			view.println("\nEnemies: " + room4_16.getEnemies() + " Puzzles: " + room4_16.getPuzzles() + " Items: " + room4_16.getItems() + "\n");
 		}
 		
 		if (id == 15) 
 		{ 
-			view.println("\nEnemies: " + room4_15.getEnemies() + " Puzzles: " + room4_15.getPuzzles() + " Items: " + room4_15.getItems());
+			view.println("\nEnemies: " + room4_15.getEnemies() + " Puzzles: " + room4_15.getPuzzles() + " Items: " + room4_15.getItems() + "\n");
 		}
 		
 		if (id == 14) 
 		{ 
-			view.println("\nEnemies: " + room4_14.getEnemies() + " Puzzles: " + room4_14.getPuzzles() + " Items: " + room4_14.getItems());
+			view.println("\nEnemies: " + room4_14.getEnemies() + " Puzzles: " + room4_14.getPuzzles() + " Items: " + room4_14.getItems() + "\n");
 		}
 		
 		if (id == 13) 
 		{ 
-			view.println("\nEnemies: " + room4_13.getEnemies() + " Puzzles: " + room4_13.getPuzzles() + " Items: " + room4_13.getItems());
+			view.println("\nEnemies: " + room4_13.getEnemies() + " Puzzles: " + room4_13.getPuzzles() + " Items: " + room4_13.getItems() + "\n");
 		}
 		
 		if (id == 12) 
 		{ 
-			view.println("\nEnemies: " + room4_12.getEnemies() + " Puzzles: " + room4_12.getPuzzles() + " Items: " + room4_12.getItems());
+			view.println("\nEnemies: " + room4_12.getEnemies() + " Puzzles: " + room4_12.getPuzzles() + " Items: " + room4_12.getItems() + "\n");
 		}
 		
 		if (id == 11) 
 		{ 
-			view.println("\nEnemies: " + room5_11.getEnemies() + " Puzzles: " + room5_11.getPuzzles() + " Items: " + room5_11.getItems());
+			view.println("\nEnemies: " + room5_11.getEnemies() + " Puzzles: " + room5_11.getPuzzles() + " Items: " + room5_11.getItems() + "\n");
 		}
 		
 		if (id == 10) 
 		{ 
-			view.println("\nEnemies: " + room5_10.getEnemies() + " Puzzles: " + room5_10.getPuzzles() + " Items: " + room5_10.getItems());
+			view.println("\nEnemies: " + room5_10.getEnemies() + " Puzzles: " + room5_10.getPuzzles() + " Items: " + room5_10.getItems() + "\n");
 		}
 		
 		if (id == 9) 
 		{ 
-			view.println("\nEnemies: " + room5_09.getEnemies() + " Puzzles: " + room5_09.getPuzzles() + " Items: " + room5_09.getItems());
+			view.println("\nEnemies: " + room5_09.getEnemies() + " Puzzles: " + room5_09.getPuzzles() + " Items: " + room5_09.getItems() + "\n");
 		}
 		
 		if (id == 8) 
 		{ 
-			view.println("\nEnemies: " + room5_08.getEnemies() + " Puzzles: " + room5_08.getPuzzles() + " Items: " + room5_08.getItems());
+			view.println("\nEnemies: " + room5_08.getEnemies() + " Puzzles: " + room5_08.getPuzzles() + " Items: " + room5_08.getItems() + "\n");
 		}
 		
 		if (id == 7) 
 		{ 
-			view.println("\nEnemies: " + room5_07.getEnemies() + " Puzzles: " + room5_07.getPuzzles() + " Items: " + room5_07.getItems());
+			view.println("\nEnemies: " + room5_07.getEnemies() + " Puzzles: " + room5_07.getPuzzles() + " Items: " + room5_07.getItems() + "\n");
 		}
 		
 		if (id == 6) 
 		{ 
-			view.println("\nEnemies: " + room5_06.getEnemies() + " Puzzles: " + room5_06.getPuzzles() + " Items: " + room5_06.getItems());
+			view.println("\nEnemies: " + room5_06.getEnemies() + " Puzzles: " + room5_06.getPuzzles() + " Items: " + room5_06.getItems() + "\n");
 		}
 		
 		if (id == 5) 
 		{ 
-			view.println("\nEnemies: " + room6_05.getEnemies() + " Puzzles: " + room6_05.getPuzzles() + " Items: " + room6_05.getItems());
+			view.println("\nEnemies: " + room6_05.getEnemies() + " Puzzles: " + room6_05.getPuzzles() + " Items: " + room6_05.getItems() + "\n");
 		}
 		
 		if (id == 4) 
 		{ 
-			view.println("\nEnemies: " + room6_04.getEnemies() + " Puzzles: " + room6_04.getPuzzles() + " Items: " + room6_04.getItems());
+			view.println("\nEnemies: " + room6_04.getEnemies() + " Puzzles: " + room6_04.getPuzzles() + " Items: " + room6_04.getItems() + "\n");
 		}
 		
 		if (id == 3) 
 		{ 
-			view.println("\nEnemies: " + room6_03.getEnemies() + " Puzzles: " + room6_03.getPuzzles() + " Items: " + room6_03.getItems());
+			view.println("\nEnemies: " + room6_03.getEnemies() + " Puzzles: " + room6_03.getPuzzles() + " Items: " + room6_03.getItems() + "\n");
 		}
 		
 		if (id == 2) 
 		{ 
-			view.println("\nEnemies: " + room6_02.getEnemies() + " Puzzles: " + room6_02.getPuzzles() + " Items: " + room6_02.getItems());
+			view.println("\nEnemies: " + room6_02.getEnemies() + " Puzzles: " + room6_02.getPuzzles() + " Items: " + room6_02.getItems() + "\n");
 		}
 		
 		if (id == 1) 
 		{ 
-			view.println("\nEnemies: " + room6_01.getEnemies() + " Puzzles: " + room6_01.getPuzzles() + " Items: " + room6_01.getItems());
+			view.println("\nEnemies: " + room6_01.getEnemies() + " Puzzles: " + room6_01.getPuzzles() + " Items: " + room6_01.getItems() + "\n");
 		}
 	}
 
