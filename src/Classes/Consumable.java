@@ -6,11 +6,9 @@ public class Consumable extends Item
 	protected int maxHealthEffect;
 	
 	public Consumable() 
-	{
-		super(// Some things here
-				);
-		this.healthEffect = 0;
-		this.maxHealthEffect = 0;
+	{	
+		healthEffect = 0;
+		maxHealthEffect = 0;
 	}
 	public Consumable(String loadedString) {
 		//loaded from file
@@ -30,9 +28,9 @@ public class Consumable extends Item
 					+ "I can fix it in like 30 minutes. Include Consumable in the text message");
 		}
 	}
-	public Consumable(int itemID, String itemName, String itemDesc, int healthEffect, int maxHealthEffect) 
+	public Consumable(int itemID, String itemName, String itemDescShort, String itemDescLong, int healthEffect, int maxHealthEffect) 
 	{
-		super(itemID, itemName, itemDesc);
+		super(itemID, itemName, itemDescShort, itemDescLong);
 		this.healthEffect = healthEffect;
 		this.maxHealthEffect = maxHealthEffect;
 	}

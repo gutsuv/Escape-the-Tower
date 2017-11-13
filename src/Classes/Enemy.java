@@ -6,15 +6,12 @@ public class Enemy extends Character
 	
 	public Enemy()
 	{
-		super(// Things
-				);
-		this.enemyDescription = "";
+		enemyDescription = "";
 	}
 
-	public Enemy(int characterId, int health, int damage, int defense, boolean alive, String enemyDescription) 
+	public Enemy(int characterId, int health, int damage, int defense, int acc, boolean alive, String enemyDescription) 
 	{
-		//super(characterId, health, damage, defense, alive);
-		// ^^^ I got an error here ^^^
+		super(characterId, health, damage, defense, acc, alive);
 		this.enemyDescription = enemyDescription;
 	}
 

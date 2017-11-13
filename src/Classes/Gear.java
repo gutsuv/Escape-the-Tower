@@ -7,14 +7,28 @@ public class Gear extends Item
 	protected int attackMax;
 	protected int acc;
 	protected char itemslot;
+	
 	public Gear() 
 	{
-		super(// Some things here
-				);
+
 		this.defense = 0;
 		this.attackMin = 0;
+		this.attackMin = 0;
+		this.acc = 0;
+		this.itemslot = 0;
+
+
 	}
-	
+	public Gear(int itemId, String itemName, String itemDesc, int defense, int attackMin, int attackMax, int acc, char itemslot)
+	{
+		super(itemId, itemName, itemDesc);
+		this.defense = defense;
+		this.attackMin = attackMin;
+		this.attackMax = attackMax;
+		this.itemslot = itemslot;
+		this.acc = acc;
+		this.itemslot = itemslot;
+	}
 	public Gear(String loadedString)
 	{
 		//loaded from file
@@ -47,21 +61,6 @@ public class Gear extends Item
 					+ "I can fix it in like 30 minutes. Include Gear in the text message");
 		}
 		
-		
-	}
-	public Gear(int itemId, String itemName, String itemDesc, int defense, int attack)
-	{
-		super(itemId, itemName, itemDesc);
-		this.defense = defense;
-		this.attackMin = attack;
-	}
-
-	public Gear(int itemId, String itemName, String itemDesc, int defense, int attack, char itemslot)
-	{
-		super(itemId, itemName, itemDesc);
-		this.defense = defense;
-		this.attackMin = attack;
-		this.itemslot = itemslot;
 	}
 	
 	public int getDefense() 

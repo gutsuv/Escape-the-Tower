@@ -1,20 +1,20 @@
-/*
-
 import java.util.*;
 
+import Model.Item;
+
 public class Model {
-	
-	// * This class holds game stuff
-	 //* when the game is loaded,
-	// * load rooms and other variables here
-	 //* format I recommend is something along the lines of
-	 //*<roomId/array[1],array[2],array[3]/other>
-	// *it's an example of how to do it
-	 //* use the split command for "/" and ","
-	// * divide it into from 1 to 1/1/1 to 1/1,1,1,/1
-	 //* 
-	 //* loaded from file
-	 
+	/*
+	 * This class holds game stuff
+	 * when the game is loaded,
+	 * load rooms and other variables here
+	 * format I recommend is something along the lines of
+	 *<roomId/array[1],array[2],array[3]/other>
+	 *it's an example of how to do it
+	 * use the split command for "/" and ","
+	 * divide it into from 1 to 1/1/1 to 1/1,1,1,/1
+	 * 
+	 * loaded from file
+	 */
 	Map<Double,Room> roomsmap = new HashMap<>();
 	ArrayList<Item> inventory = new ArrayList<Item>();
 	Room currentRoom;
@@ -24,21 +24,9 @@ public class Model {
 		//delete this code vvvv
 		inventory.add(new Item());
 		inventory.add(new Item());
-		
-		
-		
-		
-		
-		
-
-		
-		
-		
 		inventory.add(new Item());
 		ViewInventoryGUI v =new ViewInventoryGUI(inventory);
 		//delete this code ^^^^
 	}
 	
 }
-
-*/
