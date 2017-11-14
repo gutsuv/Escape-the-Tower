@@ -2,12 +2,30 @@
 
 package Model;
 
+import java.util.*;
+import java.io.*;
 import View.Console;
 
 public class RoomContent 
 {
 	Console view = new Console();
+	
+	File file = new File("src/TextFiles/RoomsA.txt");
+	ArrayList<Room> rooms = new ArrayList<Room>();
+	Scanner fileread;
 
+	public RoomContent() 
+	{
+		try {
+			fileread = new Scanner(file);
+		}catch(Exception E) {System.out.println(
+				"file not found. Text Spencer to fix locaion");}
+	while(fileread.hasNextLine()) {
+		try {
+			rooms.add(new Room(fileread.nextLine()));
+		}catch(Exception E) {
+			System.out.println("error ");}}
+	}
 	int roomId1_30 = 30;
 	int roomId1_29 = 29;
 	int roomId1_28 = 28;

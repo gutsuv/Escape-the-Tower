@@ -1,6 +1,7 @@
 // Used for designing room object.
 
 package Model;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import View.Console;
 
@@ -20,10 +21,42 @@ public class Room
 	protected int exit5;
 	public static ArrayList<Room> rooms = new ArrayList<Room>();
 	protected boolean locked;
-
+	
+	protected int[] exits;
+	protected char[] direction;
+	protected String[] doorDescription;
+	
 	public Room()
 	{
 	}
+	
+	public Room(String loadedString)
+	{
+		// loaded from file
+		//int roomId, String roomDescription, int exitRoomId, char direction, String doorDescription
+		try {	
+			String[] splitString = loadedString.split("-_");
+			roomId = Integer.parseInt(splitString[0]);
+			roomDesc = splitString[1];
+			//exits
+			String[] tempString1 = splitString[2].split("><");
+			String[] tempString2 = splitString[3].split("><");
+			int i = Array.getLength(tempString1);
+			exits = new int[i];
+			direction = new char[i];
+			while(i>0) {
+				i--;
+				exits[i] = Integer.parseInt(tempString1[i]);
+				direction[i] = tempString2[i].charAt(0);;
+			}
+			doorDescription = splitString[4].split("><");
+		}catch(Exception E)
+		{
+			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+					+ "I can fix it in like 30 minutes. Include RoomsA in the text message");
+		}
+	}
+
 
 	public Room(int roomId, String roomDesc, int enemies, int puzzles, int items, int exit1, int exit2, int exit3, int exit4, int exit5, boolean locked)
 	{
