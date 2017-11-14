@@ -26,7 +26,7 @@ public class Controller
 	
 	public String printAndPrompt1(String q1, String q2)
 	{
-		view.println(q1);
+		view.print(q1);
 		view.println(q2);
 		return input.nextLine();
 	}
@@ -54,8 +54,7 @@ public class Controller
 		name = printAndPrompt1("Enter Name", " ");
 		view.println("Hello " + name + "\n");
 
-		view.println("Current Position: Floor 6, Room 30\n");
-		boolean start = printAndPrompt2("Start?\n");
+		boolean start = printAndPrompt2("Start new game?\n");
 
 		while (!start)
 		{
@@ -122,7 +121,7 @@ public class Controller
 		{
 			String userInput = input.nextLine();
 
-			if (userInput.equalsIgnoreCase("examine"))
+			if (userInput.equalsIgnoreCase("examine") || userInput.equalsIgnoreCase("examine room"))
 			{
 				roomText = false;
 				room.examineRoom(player.getPlayerPosition());
@@ -136,28 +135,28 @@ public class Controller
 				move(player.getPlayerPosition());
 
 			} 
-			else if (userInput.equalsIgnoreCase("help"))
+			else if (userInput.equalsIgnoreCase("help") || userInput.equalsIgnoreCase("help menu"))
 			{
 
 				roomText = false;
 				//help();
 
 			} 
-			else if (userInput.equalsIgnoreCase("pick up"))
+			else if (userInput.equalsIgnoreCase("search"))
 			{
 
 				roomText = false;
 				//addItem(player.getPlayerPosition());
 
 			}
-			else if (userInput.equalsIgnoreCase("engage enemy"))
+			else if (userInput.equalsIgnoreCase("engage enemy") || userInput.equalsIgnoreCase("engage"))
 			{
 
 				roomText = false;
 				//engageEnemy(player.getPlayerPosition());
 
 			} 
-			else if (userInput.equalsIgnoreCase("puzzle"))
+			else if (userInput.equalsIgnoreCase("puzzle") || userInput.equalsIgnoreCase("view puzzle"))
 			{
 				roomText = false;
 				//displayPuzzle(player.getPlayerPosition());
@@ -178,6 +177,10 @@ public class Controller
 				view.println(MiscellaneousContent.displayDefaultMenu());
 				displayRoomContent();
 			}
+			else if (userInput.equalsIgnoreCase("save") || userInput.equalsIgnoreCase("save game"))
+			{
+				System.out.println("Don't work yet.");
+			} 
 			else if (userInput.equalsIgnoreCase("exit"))
 			{
 				roomText = false;

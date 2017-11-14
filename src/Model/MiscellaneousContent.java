@@ -4,26 +4,26 @@ public class MiscellaneousContent
 {
 	public static String displayIntro()
 	{
-		return  "Welcome\n";
+		return  "Welcome, I guess.\n";
 	}
 
 	public static String displayMainMenu()
 	{
 		return  "New Game\n"
 				+ "Load Game\n"
-				+ "Save Game\n"
-				+ "Exit\n";
+				+ "Exit Game\n";
 	}
 
 	public static String displayDefaultMenu()
 	{
 		return  "Examine Room\n"
-				+ "Pick Up\n"
+				+ "Search\n"
 				+ "Engage Enemy\n"
 				+ "View Puzzle\n"
 				+ "View Inventory\n"
 				+ "Help Menu\n"
 				+ "Change Room\n"
+				+ "Save Game\n"
 				+ "Exit\n";
 	}
 
