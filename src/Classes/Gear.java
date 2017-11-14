@@ -52,8 +52,8 @@ public class Gear extends Item
 			attackMin = Integer.parseInt(splitString[4]);
 			attackMax = Integer.parseInt(splitString[5]);
 			acc = Integer.parseInt(splitString[6]);
-			itemDescShort = splitString[7];
-			itemDescLong = splitString[8];
+			itemDesc = splitString[7];
+			
 			
 		}catch(Exception E)
 		{

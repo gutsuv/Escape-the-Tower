@@ -7,20 +7,27 @@ public class Player extends Character
 {
 	private Console view;
 
-	private String playerName;
-	private int position;
-	private int exit1Room;
-	private int exit2Room;
-	private int exit3Room;
-	private int exit4Room;
-	private int exit5Room;
-	private String puzzle;
+	protected String playerName;
+	protected int position;
+	protected int exit1Room;
+	protected int exit2Room;
+	protected int exit3Room;
+	protected int exit4Room;
+	protected int exit5Room;
+	protected String puzzle;
 
 	public Player() 
 	{
-		super(1, 100, 150, 0, 0, false);
-		this.playerName = "";
-		this.position = 30;
+		super(1, 100, 150, 0, 100, true);
+		playerName = "";
+		position = 30;
+		exit1Room = 0;
+		exit2Room = 0;
+		exit3Room = 0;
+		exit4Room = 0;
+		exit5Room = 0;
+		puzzle = "";
+		
 	}
 
 	public Player(String playerName, int position, int exit1Room, int exit2Room, int exit3Room, int exit4Room, int exit5Room, int monsterScore, int puzzleScore, int gameScore)
