@@ -15,7 +15,7 @@ public class Controller
 	GearContent gear = new GearContent();
 	EnemyContent enemy = new EnemyContent();
 	PuzzleContent puzzle = new PuzzleContent();
-	RoomContent room = new RoomContent();
+	RoomContent room = new RoomContent();               
 	
 	public Controller(Model model, Console view)
 	{

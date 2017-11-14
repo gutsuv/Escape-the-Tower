@@ -21,12 +21,12 @@ public class Model {
 	public Model() throws Exception 
 	{
 
-		//delete this code vvvv
+		/*delete this code vvvv
 		inventory.add(new Item());
 		inventory.add(new Item());
 		inventory.add(new Item());
 		ViewInventoryGUI v =new ViewInventoryGUI(inventory);
-		//delete this code ^^^^
+		delete this code ^^^^*/
 	}
 	
 }

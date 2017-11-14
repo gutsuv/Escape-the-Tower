@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*;import Model.*;
 import java.io.*;
 public class TestingVariables {
 
@@ -19,6 +19,8 @@ public class TestingVariables {
 			i++;
 			System.out.println("------------------");
 		}catch(Exception E) {System.out.println("error "+i);}}
+		
+		RoomContent room = new RoomContent();
+		System.out.println("no compiler error RoomContent");
 	}
-
 }
