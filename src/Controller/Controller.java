@@ -128,7 +128,6 @@ public class Controller
 				room.examineRoom(player.getPlayerPosition());
 				view.println(MiscellaneousContent.displayDefaultMenu());
 				displayRoomContent();
-							
 			} 
 			else if (userInput.equalsIgnoreCase("change room"))
 			{
