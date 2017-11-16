@@ -1,0 +1,3 @@
+﻿10-_Bandages-_10-_0-_Restores HP-_“Cloth bandages that can be used to treat minor wounds”
+11-_Tourniquet-_40-_-10-_Restores HP at the cost of a lower max HP-_“Leather straps that can be tightened to cut off blood flow. It can be used to treat serious injuries.”
+12-_Turkey Leg-_15-_0-_Restores HP-_“A ridiculously large turkey leg. This will restore some stamina” 
