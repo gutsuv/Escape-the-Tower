@@ -10,7 +10,6 @@ public class ObjectHolder {
 	Room currentRoom;
 	referenceIdentities library = new referenceIdentities();
 	
-	
 	public ObjectHolder(View v) throws FileNotFoundException {
 		view = v;
 		file = new File("TextFiles/RoomsA.txt");
@@ -27,7 +26,9 @@ public class ObjectHolder {
 			rooms.get(30).setLocked(true);
 		}catch(Exception E){System.out.println("Final door error");}
 		fileread.close();
+		library.setLibray(library);
 		library.loaditems();
+		library.loadEnemys();
 	}
 	
 	
@@ -45,10 +46,9 @@ public class ObjectHolder {
 		while(i>0) {
 			i--;
 			if(direction==currentRoom.getDirection(i)) {
-				if(rooms.get(i).isLocked()) {
+				if(rooms.get(currentRoom.getExit(i)-1).isLocked()) {
 					view.print("locked");
 				}else {setCurrentRoom(currentRoom.getExit(i));}
-				
 			}
 		}
 	}

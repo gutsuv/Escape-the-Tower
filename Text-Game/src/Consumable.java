@@ -1,5 +1,3 @@
-// Subclass
-
 
 public class Consumable extends Item
 {

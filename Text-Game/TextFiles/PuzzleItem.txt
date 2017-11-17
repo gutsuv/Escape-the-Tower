@@ -1,3 +1,4 @@
+
 100-_Rusted Key-_00-_A key for the torture room 
 101-_Water Bucket-_02-_A bucket full of water!
 102-_Antidote-_06-_This looks like medicine.

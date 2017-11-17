@@ -21,7 +21,7 @@ public class Room
 	{
 		// loaded from file
 		//int roomId, String roomDescription, int exitRoomId, char direction, String doorDescription
-		locked = true;
+		locked = false;
 		try {	
 			String[] splitString = loadedString.split("-_");
 			roomId = Integer.parseInt(splitString[0]);
