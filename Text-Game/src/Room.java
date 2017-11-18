@@ -116,18 +116,16 @@ public class Room
 		}
 	}
 	public void display() throws Exception{
-		view.line(50);
-		view.print(getRoomDesc());
+		view.line(100);
+		view.printString(getRoomDesc(),125);
+		if(enemy!=null) {view.printString(enemy.toString(),125);}
+		view.printStrO(items,125);
 		view.line();
+		view.print("Commands:");
 		try {
 			for(int i=0; i<directions[i]; i++) {
-				view.print(directions[i],doorDescriptions[i]);}
+				view.printString(directions[i],doorDescriptions[i],125);}
 			}catch(Exception E) {}
-		view.line();
-		view.print(enemy);
-		view.line();
-		view.print(items);
-		view.line();
 	}
 	
 	@Override
