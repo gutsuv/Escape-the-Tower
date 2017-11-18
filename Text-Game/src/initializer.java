@@ -11,8 +11,6 @@ public class initializer {
 			newGame();
 		} catch (FileNotFoundException e) {
 			System.out.println("failed to load");}
-		view.print(main.getCurrentRoom().toString());
-		main.getCurrentRoom().showPaths();
 		
 		cont = new controller(main);
 		

@@ -1,5 +1,6 @@
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.Array;
 public class ObjectHolder {
 	View view;
 	
@@ -19,12 +20,10 @@ public class ObjectHolder {
 			try {
 				rooms.add(new Room(fileread.nextLine()));
 				rooms.get(i).setView(view);
+				//rooms.get(i).display();
 				i++;
 			}catch(Exception E) {
 				System.out.println("error " + i);}}
-		try {
-			rooms.get(30).setLocked(true);
-		}catch(Exception E){System.out.println("Final door error");}
 		fileread.close();
 		library.setLibray(library);
 		library.loaditems();
@@ -33,15 +32,77 @@ public class ObjectHolder {
 	
 	
 	public void initializeNew() {
+		//load new game
 		currentRoom = rooms.get(0);
+		try {File file = new File("TextFiles/RoomsBEnemy.txt");
+		loadEnemys(file);
+		file = new File("TextFiles/RoomsBItem.txt");
+		loadItems(file);}
+		catch(Exception E) {view.print("RoomsB didn't load");}
 		
-		
-		
-		//ey code here
-		
-		
+		//after load
+			try {currentRoom.display();} catch (Exception e) {}
+			
 	}
-	public void navigate(char direction) {
+	public void loadEnemys(File EnemyFile) {
+		//loads a file formated like RoomsBEnemy.txt
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(EnemyFile));
+			buff.readLine();
+			String loadedString;
+			int i = 0;
+		while(buff.ready()) {
+			//int enemyId
+			try {
+				loadedString=buff.readLine();
+				if(!loadedString.matches(".")) {
+				rooms.get(i).setEnemy(library.cloneEnemy(Integer.parseInt(loadedString)));
+					}
+				i++;
+			}catch(Exception E)
+			{
+				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+						+ "I	 can fix it in like 30 minutes. Include RoomBEnemy or Load in the text message");
+			}
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("load error enemy");}
+	}
+	
+	public void loadItems(File ItemFile) {
+		//loads a file formated like RoomsBEnemy.txt
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(ItemFile));
+			buff.readLine();
+			String loadedString;
+			int i = 0;
+		while(buff.ready()) {
+			//int ItemId
+			try {
+				loadedString=buff.readLine();
+				if(!loadedString.matches(".")) {
+					try {rooms.get(i).addItem(library.cloneItem(Integer.parseInt(loadedString)));}
+					catch(Exception E) {
+						String[] splitString = loadedString.split("><");
+						for (int j=0;j<splitString.length;j++) {
+							rooms.get(i).addItem(library.cloneItem(Integer.parseInt(splitString[j])));
+						}
+					}
+					}
+				i++;
+			}catch(Exception E)
+			{
+				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+						+ "I	 can fix it in like 30 minutes. Include RoomBItem or Load in the text message");
+			}
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("load error enemy");}
+	}
+	
+	public void navigate(char direction) throws Exception {
 		int i = currentRoom.getDirections().length;
 		while(i>0) {
 			i--;
@@ -53,13 +114,12 @@ public class ObjectHolder {
 		}
 	}
 	
-	public void setCurrentRoom(int i) {
+	public void setCurrentRoom(int i) throws Exception {
 		currentRoom = rooms.get(i-1);
 		if(currentRoom.getRoomId()==31) {
 			view.print("You won");
 			System.exit(0);}
-		view.print(getCurrentRoom().toString());
-		currentRoom.showPaths();
+		currentRoom.display();
 	}
 	
 	public Room getCurrentRoom() {

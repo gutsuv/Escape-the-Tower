@@ -26,3 +26,14 @@ Rooms B is default thing that are initated on new game.
 Load Game will use a different file formated the same way.
 There is a good chance room ID will not be used in RoomsB
 file but it is left there for clarity. 
+probably won't use
+
+I have new files to keep track(RoomsB*)
+
+RoomsBEnemy
+int enemyId
+contains enemy ids for each floor
+
+RoomsBItem
+int ItemId
+contains Item ids for each floor

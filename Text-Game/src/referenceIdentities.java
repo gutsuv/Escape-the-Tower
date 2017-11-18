@@ -25,10 +25,10 @@ public class referenceIdentities {
 		return (Enemy) getEnemy(i).clone();
 	}
 	//this method clones an enemy
-	public Item getEnemy(int i) throws Exception{
+	public Enemy getEnemy(int i) throws Exception{
 		for (int j=0; j<items.size();j++) {
 			if(enemys.get(j).getEnemyId()==i) {
-				return items.get(j);
+				return enemys.get(j);
 			}
 		}
 		return null;
@@ -52,7 +52,7 @@ public class referenceIdentities {
 			buff.readLine();
 		while(buff.ready()) {
 				items.add(new Gear(buff.readLine()));
-				System.out.println(items.get(items.size()-1));
+				//System.out.println(items.get(items.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -65,7 +65,7 @@ public class referenceIdentities {
 			buff.readLine();
 		while(buff.ready()) {
 				items.add(new Consumable(buff.readLine()));
-				System.out.println(items.get(items.size()-1));
+				//System.out.println(items.get(items.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -78,7 +78,7 @@ public class referenceIdentities {
 			buff.readLine();
 		while(buff.ready()) {
 				items.add(new PuzzleItem(buff.readLine()));
-				System.out.println(items.get(items.size()-1));
+				//System.out.println(items.get(items.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -92,8 +92,8 @@ public class referenceIdentities {
 			buff.readLine();
 		while(buff.ready()) {
 				enemys.add(new Enemy(buff.readLine(),library));
-				System.out.println(enemys.get(enemys.size()-1));
-				System.out.println(enemys.get(enemys.size()-1).getItems());
+				//System.out.println(enemys.get(enemys.size()-1));
+				//System.out.println(enemys.get(enemys.size()-1).getItems());
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}

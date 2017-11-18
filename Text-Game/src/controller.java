@@ -11,7 +11,7 @@ public class controller {
 	}
 	private void determine(String input) {
 		if(input.length()==1) {
-			navigate(input);
+			try {navigate(input);}catch(Exception E) {}
 		}else if(false){
 			
 		}else if(false){
@@ -28,7 +28,7 @@ public class controller {
 			
 		}
 	}
-	private void navigate(String input) {
+	private void navigate(String input) throws Exception {
 		model.navigate(input.charAt(0));
 	}
 	

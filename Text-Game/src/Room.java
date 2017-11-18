@@ -8,14 +8,15 @@ public class Room
 	View view;
 	protected int roomId;
 	protected String roomDesc;
-	protected int items; 
 //	protected int puzzles;
-//	protected int enemies; 
-	public static ArrayList<Room> rooms = new ArrayList<Room>();
-	protected boolean locked;
+	
 	protected int[] exitIDs;
 	protected char[] directions;
 	protected String[] doorDescriptions;
+	
+	protected boolean locked;
+	protected Enemy enemy; 
+	protected ArrayList<Item> items = new ArrayList<Item>();
 	
 	public Room(String loadedString)
 	{
@@ -80,6 +81,26 @@ public class Room
 		this.locked = locked;
 	}
 	
+	public Enemy getEnemy() {return enemy;}
+	
+	public void setEnemy(Enemy enemy) {
+		this.enemy=enemy;
+	}
+	
+	
+	public ArrayList<Item> getItems() {return items;}
+	public void addItem(Item item) {
+		items.add(item);}
+	public void removeItem(int i) {
+		items.remove(i);}
+	public Item pickUp(int i) {
+		Item item = items.get(i);
+		items.remove(i);
+		return item;
+	}
+
+
+	
 	public void setView(View v) {
 		view = v;
 	}
@@ -94,8 +115,23 @@ public class Room
 					" "+doorDescriptions[i]);
 		}
 	}
-
+	public void display() throws Exception{
+		view.line(50);
+		view.print(getRoomDesc());
+		view.line();
+		try {
+			for(int i=0; i<directions[i]; i++) {
+				view.print(directions[i],doorDescriptions[i]);}
+			}catch(Exception E) {}
+		view.line();
+		view.print(enemy);
+		view.line();
+		view.print(items);
+		view.line();
+	}
+	
 	@Override
 	public String toString(){
 		return getRoomDesc();}
+
 }
