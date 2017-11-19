@@ -99,9 +99,18 @@ public class Room
 		return item;
 	}
 
-
+	public void enemyDeathEffects() {
+		view.print("enemy has died");
+		for(int i = 0; i<enemy.getItems().size();i++) 
+		{
+			addItem(enemy.getItems().get(i));
+		}
+		enemy = null;
+		try {display();} catch (Exception e) {}
+	}
 	
-	public void setView(View v) {
+	public void setView(View v) 
+	{
 		view = v;
 	}
 	

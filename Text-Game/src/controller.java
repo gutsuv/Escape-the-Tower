@@ -4,22 +4,34 @@ public class controller {
 	Scanner control = new Scanner(System.in);
 	ObjectHolder model;
 	View menuView = new View();
+	
 	public controller(ObjectHolder main) {
 		model = main;
 		while(true) {
 			determine(control.nextLine());
 		}
 	}
+	
+	public void controllerEnemy() {
+		while(true) {
+			menuView.print("Health: "+model.getUser().getHealth()+"/"+model.getUser().getMaxHealth());
+			if(model.getCurrentRoom().getEnemy()!=null) {model.getCurrentRoom().getEnemy().display();}
+			if(determineEnemy(control.next())==true) {break;}
+		}
+	}
+	
 	public void controllerItem() {
 		while(true) {
 			model.getUser().displayInventory();
 			if(determineItem(control.next())==true) {break;}
 		}
 	}
+	
 	public void controllerItem(int i) {
 		model.getUser().getItem(i).displayCommands();
 		determineItem(control.next(),i);
 	}
+	
 	private void determine(String input) {
 		if(input.length()==1) {
 			try {navigate(input);}catch(Exception E) {}}
@@ -31,7 +43,14 @@ public class controller {
 			model.getUser().displayStats();
 			model.getUser().displayEquippedItems();
 		}
+		else if(input.matches("combat")
+				&&
+				model.getCurrentRoom().getEnemy()!=null
+				) {
+			controllerEnemy();
+		}
 	}
+	
 	private boolean determineItem(String input) {
 		if(input.matches("[0-9]+")) {
 			try{controllerItem(Integer.parseInt(input));}
@@ -44,6 +63,7 @@ public class controller {
 		}
 		return false;
 	}
+	
 	private boolean determineItem(String input, int i) {
 		try {
 		if(input.matches("exit")) {return true;}
@@ -71,15 +91,47 @@ public class controller {
 		}catch(Exception E) {}
 		return false;
 	}
+	
 	private boolean determineEnemy(String input) {
 		if(input.matches("exit")) {
+			try{model.getCurrentRoom().display();}catch(Exception E) {}
 			return true;}
-		
+		else if(input.matches("attack")) {
+			int j = model.getCurrentRoom().getEnemy().getDefense();
+			int i = model.getUser().dealDamage()-j;
+			if(i<=0) {menuView.print("The attack Missed");}
+			else{model.getCurrentRoom().getEnemy().receiveDamage(i);
+				if(model.getCurrentRoom().getEnemy().isAlive()) {
+					menuView.print("Player attack: "+i+" damage");
+				}
+			}
+			if(!model.getCurrentRoom().getEnemy().isAlive()) {
+				model.getCurrentRoom().enemyDeathEffects();
+				return true;
+			}else {
+				
+				int f = model.getUser().getDefense();
+				int g = model.getCurrentRoom().getEnemy().dealDamage()-f;
+				if(g<=0) {menuView.print("Enemy attack Missed");}
+				else{
+					menuView.print("Enemy attack: "+g+" damage");
+					model.getUser().receiveDamage(g);
+					if(!model.getUser().isAlive()) {
+						menuView.print("player died");
+						menuView.print("game over");
+						System.exit(0);
+					}
+				}
+			}
+		}
+		else if(input.matches("inventory")) {controllerItem();}
 		return false;
 	}
+	
 	private void navigate(String input) throws Exception {
 		model.navigate(input.charAt(0));
 	}
+	
 	private void pickUpAll() {
 		while(model.getCurrentRoom().getItems().size()>0) {
 			model.getUser().pickUp(

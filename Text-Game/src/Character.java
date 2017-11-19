@@ -3,10 +3,9 @@ public abstract class Character
 {
 	protected int health;
 	protected int maxHealth;
-	protected int damage;
 	protected int defense;
 	protected int acc;
-	protected boolean alive;
+	protected boolean alive = true;
 	
 	public abstract int dealDamage();
 	
@@ -15,12 +14,19 @@ public abstract class Character
 		health = health - damage;
 		if(health>maxHealth) {health = maxHealth;}
 		//if statement is for healing items doing negative damage
+		
+		if(health<=0){alive=false;}
 	}
 	
 	
 	public int getHealth()
 	{
 		return health;
+	}
+	
+	public int getMaxHealth() 
+	{
+		return  maxHealth;
 	}
 	
 	public int getDefense()

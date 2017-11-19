@@ -36,25 +36,26 @@ public class Player extends Character
 	{
 		maxAttack=0;minAttack=0;defense=0;acc=100;
 		for(int i=0;i<equippedItems.size();i++) {
-			maxAttack=+equippedItems.get(i).getAttackMax();
-			minAttack=+equippedItems.get(i).getAttackMin();
-			defense= equippedItems.get(i).getDefense();
-			acc= 100 - equippedItems.get(i).getAcc();
+			System.out.println(i);
+			maxAttack= maxAttack + equippedItems.get(i).getAttackMax();
+			minAttack= minAttack + equippedItems.get(i).getAttackMin();
+			defense= defense + equippedItems.get(i).getDefense();
+			acc= acc - equippedItems.get(i).getAcc();
 		}
 		displayEquippedItems();
 		displayStats();
 	}
 	@Override
 	public int dealDamage() {
-		if((Math.random()*100)>acc){
+		if((Math.random()*100)<acc){
 			return (int) (minAttack +
-					(Math.random()*(maxAttack - minAttack)));
+					(Math.random()*(1+maxAttack - minAttack)));
 		}
 		else return 0;
 	}
 	public void updateMaxHealth(int i) 
 	{
-		maxHealth =+ i;
+		maxHealth = maxHealth + i;
 	}
 	//Inventory Exists on player so methods for item based things exist here to interact with player items.
 	public Item getItem(int i){
