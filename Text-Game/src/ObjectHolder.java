@@ -7,6 +7,7 @@ public class ObjectHolder {
 	ArrayList<Room> rooms = new ArrayList<Room>();
 	File file;
 	Scanner fileread;
+	Player user;
 	
 	Room currentRoom;
 	referenceIdentities library = new referenceIdentities();
@@ -39,7 +40,7 @@ public class ObjectHolder {
 		file = new File("TextFiles/RoomsBItem.txt");
 		loadItems(file);}
 		catch(Exception E) {view.print("RoomsB didn't load");}
-		
+		user = new Player(view);
 		//after load
 			try {currentRoom.display();} catch (Exception e) {}
 			
@@ -122,7 +123,16 @@ public class ObjectHolder {
 		currentRoom.display();
 	}
 	
-	public Room getCurrentRoom() {
+	public Room getCurrentRoom() 
+	{
 		return currentRoom;
+	}
+	public Player getUser() 
+	{
+		return user;
+	}
+	public View getView()
+	{
+		return view;
 	}
 }

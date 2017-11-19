@@ -18,11 +18,12 @@ public class View<e> {
 		int j=0,k=0,m=a.length();
 		while(k<m) {
 			j++;
-			if(j>i) {System.out.print("-");System.out.println();j=0;System.out.print("-");}
+			if(j>i) {System.out.print("-");System.out.println();j=0;System.out.print("    -");}
 			System.out.print(a.charAt(k));
 			k++;
 		}System.out.println();
 	}
+	
 	public void printStringO (Object o, int i) {
 		printString(o.toString(),i);
 	}

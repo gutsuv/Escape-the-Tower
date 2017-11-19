@@ -1,9 +1,11 @@
+import javafx.scene.control.Button;
 
-public class Item implements Cloneable, Comparable<Item>{
+public abstract class Item implements Cloneable, Comparable<Item>{
 	protected int itemId;
 	protected String itemName;
 	protected String itemDescLong;
 	protected String itemDescShort;
+	protected View view;
 	
 	public int getItemId()
 	{
@@ -24,6 +26,17 @@ public class Item implements Cloneable, Comparable<Item>{
 	{
 		return itemDescShort;
 	}
+	
+	public void setView(View view)
+	{
+		this.view = view;
+	}
+	
+	public abstract void use();
+	public abstract void drop();
+	public abstract void examine();
+	public abstract String getDisplay();
+	public abstract void displayCommands();
 	
 	protected Object clone() throws CloneNotSupportedException {
         return super.clone();

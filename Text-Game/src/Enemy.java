@@ -4,6 +4,7 @@ public class Enemy extends Character implements Cloneable
 	private String name;
 	private String enemyDesc;
 	private int enemyId;
+	View view;
 	protected ArrayList<Item> item = new ArrayList<Item>();
 	public Enemy(String loadedString, referenceIdentities library)
 	{
@@ -47,6 +48,10 @@ public class Enemy extends Character implements Cloneable
 	{
 		return enemyId;
 	}
+	public void setView(View view) 
+	{
+		this.view = view;
+	}
 	
 	public ArrayList<Item> getItems(){
 		return item;
@@ -54,10 +59,18 @@ public class Enemy extends Character implements Cloneable
 	@Override
 	public String toString()
 	{
-		return "Enemy [" + enemyId +", "+name + ", " +enemyDesc+"]";
+		return "Enemy [" + name + ", " +enemyDesc+"]";
 	}
 	
 	protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
+	@Override
+	public int dealDamage() {
+		if((Math.random()*10)>acc){
+			return damage;
+		}
+		else return 0;
+	}
 }

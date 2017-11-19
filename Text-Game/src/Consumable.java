@@ -33,9 +33,38 @@ public class Consumable extends Item
 	{
 		return healthEffect;
 	}
-
+	
 	public int getMaxHealthEffect()
 	{
 		return maxHealthEffect;
+	}
+
+	@Override
+	public void use() {}
+	//code moved because I can't make an object delete itself without using outside method
+	@Override
+	public void drop() {}
+	//code moved because I can't make an object delete itself without using outside method
+
+	@Override
+	public void examine() {
+		view.printString((healthEffect+": "+itemDescLong),125);
+	}
+
+	@Override
+	public String getDisplay() 
+	{
+		return itemName + "-> use, drop, examine:";
+	}
+
+	@Override
+	public void displayCommands()
+	{
+		view.line(125);
+		view.print(itemName);
+		view.print("use:");
+		view.print("drop:");
+		view.print("examine:");
+		view.print("exit:");
 	}
 }

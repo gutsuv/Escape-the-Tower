@@ -121,7 +121,12 @@ public class Room
 		if(enemy!=null) {view.printString(enemy.toString(),125);}
 		view.printStrO(items,125);
 		view.line();
-		view.print("Commands:");
+		view.print("---Commands---");
+		view.print("stats:");
+		view.print("inventory:");
+		if(items.size()>0) {view.print("pick up:");}
+		if(enemy!=null) {view.print("combat:");}
+		view.print("-Move Commands-");
 		try {
 			for(int i=0; i<directions[i]; i++) {
 				view.printString(directions[i],doorDescriptions[i],125);}
@@ -131,5 +136,4 @@ public class Room
 	@Override
 	public String toString(){
 		return getRoomDesc();}
-
 }
