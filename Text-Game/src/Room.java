@@ -17,6 +17,7 @@ public class Room
 	protected boolean locked;
 	protected Enemy enemy; 
 	protected ArrayList<Item> items = new ArrayList<Item>();
+	protected Puzzle puzzle;
 	
 	public Room(String loadedString)
 	{
@@ -83,10 +84,20 @@ public class Room
 	
 	public Enemy getEnemy() {return enemy;}
 	
-	public void setEnemy(Enemy enemy) {
+	public void setEnemy(Enemy enemy) 
+	{
 		this.enemy=enemy;
 	}
 	
+	public Puzzle getPuzzle() 
+	{
+		return puzzle;
+	}
+	
+	public void setPuzzle(Puzzle puzzle) 
+	{
+		this.puzzle = puzzle;
+	}
 	
 	public ArrayList<Item> getItems() {return items;}
 	public void addItem(Item item) {
@@ -128,6 +139,7 @@ public class Room
 		view.line(100);
 		view.printString(getRoomDesc(),125);
 		if(enemy!=null) {view.printString(enemy.toString(),125);}
+		if(puzzle!=null) {view.printString(puzzle.toString(),125);}
 		view.printStrO(items,125);
 		view.line();
 		view.print("---Commands---");
@@ -135,6 +147,7 @@ public class Room
 		view.print("inventory:");
 		if(items.size()>0) {view.print("pick up:");}
 		if(enemy!=null) {view.print("combat:");}
+		if(puzzle!=null) {view.print("puzzle");}
 		view.print("-Move Commands-");
 		try {
 			for(int i=0; i<directions[i]; i++) {

@@ -29,17 +29,21 @@ public class ObjectHolder {
 		library.setLibray(library);
 		library.loaditems();
 		library.loadEnemys();
+		library.loadPuzzles();
 	}
 	
 	
 	public void initializeNew() {
 		//load new game
 		currentRoom = rooms.get(0);
-		try {File file = new File("TextFiles/RoomsBEnemy.txt");
-		loadEnemys(file);
-		file = new File("TextFiles/RoomsBItem.txt");
-		loadItems(file);}
-		catch(Exception E) {view.print("RoomsB didn't load");}
+		try {
+			File file = new File("TextFiles/RoomsBEnemy.txt");
+			loadEnemys(file);
+			file = new File("TextFiles/RoomsBItem.txt");
+			loadItems(file);
+			file = new File("TextFiles/RoomsBPuzzle");
+			loadPuzzles(file);
+		}catch(Exception E) {view.print("RoomsB didn't load");}
 		user = new Player(view);
 		//after load
 			try {currentRoom.display();} catch (Exception e) {}
@@ -100,7 +104,40 @@ public class ObjectHolder {
 			}
 			}buff.close();
 		}catch(Exception E) {
-				System.out.println("load error enemy");}
+				System.out.println("load error item");}
+	}
+	
+	public void loadPuzzles(File PuzzleFile) {
+		//loads a file formated like RoomsBPuzzle.txt
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(PuzzleFile));
+			buff.readLine();
+			String loadedString;
+			int i = 0;
+		while(buff.ready()) {
+			//int ItemId
+			try {
+				loadedString=buff.readLine();
+				if(!loadedString.matches(".")) {
+					try {
+						rooms.get(i).setPuzzle(library.clonePuzzle(Integer.parseInt(loadedString)));
+						if(rooms.get(i).getPuzzle() instanceof DoorPuzzle)
+						{
+							((DoorPuzzle) rooms.get(i).getPuzzle()).setRoom(rooms.get(i));
+							rooms.get(i).getPuzzle().initialize();
+						}
+					}catch(Exception E) {}	
+					}
+				i++;
+			}catch(Exception E)
+			{
+				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+						+ "I	 can fix it in like 30 minutes. Include RoomBPuzzle or Load in the text message");
+			}
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("load error puzzle");}
 	}
 	
 	public void navigate(char direction) throws Exception {

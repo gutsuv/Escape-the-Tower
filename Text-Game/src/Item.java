@@ -39,8 +39,7 @@ public abstract class Item implements Cloneable, Comparable<Item>{
 	public abstract void displayCommands();
 	
 	protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+        return super.clone();}
 	
 	@Override
 	public String toString()

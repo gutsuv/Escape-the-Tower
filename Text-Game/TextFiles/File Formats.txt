@@ -13,7 +13,18 @@ PuzzleItem
 int ID, String name, int puzzleId, String description
 PuzzleItem extends item and shares Id ranges
 Don't work with this file. It'll need to be changed later.
+puzzleId is not used but it is loaded onto the item.
 Your fault if code has to be redone. #NoComplaining
+
+DoorPuzzle
+int puzzleId String name, int itemId, int roomId, String puzzleDesc, String hint
+these puzzles prevent access to a room by setting it to locked
+
+ObjectPuzzle
+int puzzleId String name, int itemId, String puzzleDesc, String hint
+
+WordPuzzle
+int puzzleId String name, int itemId, String answer, String puzzleDesc, String hint
 
 RoomsA
 int roomId, String roomDescription, int exitRoomId, char direction, String description

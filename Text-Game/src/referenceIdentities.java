@@ -4,10 +4,14 @@ public class referenceIdentities {
 	referenceIdentities library; 
 	ArrayList<Item> items = new ArrayList<Item>();
 	ArrayList<Enemy> enemys = new ArrayList<Enemy>();
+	ArrayList<Puzzle> puzzles = new ArrayList<Puzzle>();
 	File file;
 	Scanner fileread;
 	View itemView = new View();
 	View enemyView = new View();
+	View puzzleView = new View();
+	//redundant views are for if classes are changed to accomadate unforseen changes in requirements
+	// the unforeseen requirements probably do not include view
 	
 	public Item cloneItem(int i) throws Exception {
 		return (Item) getItem(i).clone();
@@ -37,6 +41,20 @@ public class referenceIdentities {
 	}
 	// the method searches for an enemy based off of enemy Id
 	
+	public Puzzle clonePuzzle(int i) throws Exception {
+		return (Puzzle) getPuzzle(i).clone();
+	}
+	// this method clones an item
+	public Puzzle getPuzzle(int i) throws Exception{
+		for (int j=0; j<puzzles.size();j++) {
+			if(puzzles.get(j).getPuzzleID()==i){
+				return puzzles.get(j);
+			}
+		}
+		return null;
+	}
+	// the method searches for an puzzle based off of puzzle Id
+	
 	public void loaditems() throws FileNotFoundException {
 		loadGearItems();
 		loadConsumables();
@@ -45,10 +63,16 @@ public class referenceIdentities {
 	public void loadEnemys() throws FileNotFoundException {
 		loadEnemyTable();
 	}
+	public void loadPuzzles() throws FileNotFoundException {
+		loadDoorPuzzles();
+		loadObjectPuzzles();
+		loadWordPuzzles();
+		
+	}
 	// item load methods
 	private void loadGearItems() throws FileNotFoundException {
 		file = new File("TextFiles/Gear.txt");
-		fileread = new Scanner(file);
+		
 		try {
 			BufferedReader buff = new BufferedReader(new FileReader(file));
 			buff.readLine();
@@ -61,7 +85,7 @@ public class referenceIdentities {
 	}
 	private void loadConsumables() throws FileNotFoundException {
 		file = new File("TextFiles/Consumable.txt");
-		fileread = new Scanner(file);
+		
 		try {
 			BufferedReader buff = new BufferedReader(new FileReader(file));
 			buff.readLine();
@@ -74,7 +98,7 @@ public class referenceIdentities {
 	}
 	private void loadPuzzleItems() throws FileNotFoundException {
 		file = new File("TextFiles/PuzzleItem.txt");
-		fileread = new Scanner(file);
+		
 		try {
 			BufferedReader buff = new BufferedReader(new FileReader(file));
 			buff.readLine();
@@ -85,16 +109,61 @@ public class referenceIdentities {
 		}catch(Exception E) {
 				System.out.println("error");}
 	}
-	// enemy load method
+	
+	// enemy load methods
 	private void loadEnemyTable()throws FileNotFoundException {
 		file = new File("TextFiles/EnemyTable.txt");
-		fileread = new Scanner(file);
+		
 		try {
 			BufferedReader buff = new BufferedReader(new FileReader(file));
 			buff.readLine();
 		while(buff.ready()) {
 				enemys.add(new Enemy(buff.readLine(),library));
 				enemys.get(enemys.size()-1).setView(enemyView);
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("error");}
+	}
+	
+	// Puzzle load methods
+	private void loadDoorPuzzles()throws FileNotFoundException {
+		file = new File("TextFiles/PuzzleDoor.txt");
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			buff.readLine();
+		while(buff.ready()) {
+				puzzles.add(new DoorPuzzle(buff.readLine()));
+				puzzles.get(puzzles.size()-1).setView(puzzleView);
+				System.out.println(puzzles.get(puzzles.size()-1));
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("error");}
+	}
+	private void loadObjectPuzzles()throws FileNotFoundException {
+		file = new File("TextFiles/ObjectPuzzle.txt");
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			buff.readLine();
+		while(buff.ready()) {
+				puzzles.add(new ObjectPuzzle(buff.readLine()));
+				puzzles.get(puzzles.size()-1).setView(puzzleView);
+				System.out.println(puzzles.get(puzzles.size()-1));
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("error");}
+	}
+	private void loadWordPuzzles()throws FileNotFoundException {
+		file = new File("TextFiles/WordPuzzle.txt");
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			buff.readLine();
+		while(buff.ready()) {
+				puzzles.add(new WordPuzzle(buff.readLine(),library));
+				puzzles.get(puzzles.size()-1).setView(puzzleView);
+				System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
