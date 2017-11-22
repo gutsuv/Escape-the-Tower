@@ -59,9 +59,31 @@ public class DoorPuzzle extends Puzzle{
 	{
 		if(this.itemId==itemId) 
 		{
+			view.line(125);
+			view.print("puzzled passed");
 			lockedRoom.setLocked(false);
 			solved=true;
+		}else {view.print("puzzle not solved by item");}
+	}
+
+	@Override
+	public void display() {
+		view.line(125);
+		view.print(puzzleName);
+		view.printString(puzzleDesc);
+	}
+	
+	public void display(ArrayList<Item> items) {
+		view.line(125);
+		view.print(puzzleName);
+		view.printString(puzzleDesc);
+		view.print("---secect item---");
+		for(int i = 0; i<items.size(); i++) {
+			view.print(i+": "+items.get(i));
 		}
+		view.print("hint:");
+		view.print("exit:");
+		
 	}
 	
 }

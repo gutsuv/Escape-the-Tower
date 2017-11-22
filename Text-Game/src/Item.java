@@ -44,7 +44,7 @@ public abstract class Item implements Cloneable, Comparable<Item>{
 	@Override
 	public String toString()
 	{
-		return "Item [" + itemId +", "+itemName + ", " +itemDescShort+"]";
+		return "Item ["+itemName + ", " +itemDescShort+"]";
 	}
 
 	@Override

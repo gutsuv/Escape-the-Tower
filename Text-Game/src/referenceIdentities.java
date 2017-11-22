@@ -137,7 +137,7 @@ public class referenceIdentities {
 		while(buff.ready()) {
 				puzzles.add(new DoorPuzzle(buff.readLine()));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
-				System.out.println(puzzles.get(puzzles.size()-1));
+				//System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -151,7 +151,7 @@ public class referenceIdentities {
 		while(buff.ready()) {
 				puzzles.add(new ObjectPuzzle(buff.readLine()));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
-				System.out.println(puzzles.get(puzzles.size()-1));
+				//System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -165,7 +165,7 @@ public class referenceIdentities {
 		while(buff.ready()) {
 				puzzles.add(new WordPuzzle(buff.readLine(),library));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
-				System.out.println(puzzles.get(puzzles.size()-1));
+				//System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -179,7 +179,7 @@ public class referenceIdentities {
 		while(buff.ready()) {
 				puzzles.add(new PuzzleNumber(buff.readLine()));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
-				System.out.println(puzzles.get(puzzles.size()-1));
+				//System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -193,7 +193,7 @@ public class referenceIdentities {
 		while(buff.ready()) {
 				puzzles.add(new PuzzleRiddle(buff.readLine()));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
-				System.out.println(puzzles.get(puzzles.size()-1));
+				//System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}
@@ -207,7 +207,7 @@ public class referenceIdentities {
 		while(buff.ready()) {
 				puzzles.add(new PuzzleDebuff(buff.readLine()));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
-				System.out.println(puzzles.get(puzzles.size()-1));
+				//System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();
 		}catch(Exception E) {
 				System.out.println("error");}

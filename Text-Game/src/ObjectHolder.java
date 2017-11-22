@@ -115,15 +115,20 @@ public class ObjectHolder {
 			int i = 0;
 		while(buff.ready()) {
 			//int ItemId
-			System.out.println(i);
+			
 			try {
 				loadedString=buff.readLine();
 				if(!loadedString.matches(".")) {
+					
 					try {
 						rooms.get(i).setPuzzle(library.clonePuzzle(Integer.parseInt(loadedString)));
 						if(rooms.get(i).getPuzzle() instanceof DoorPuzzle)
 						{
 							((DoorPuzzle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
+							rooms.get(i).getPuzzle().initialize();
+						}else if(rooms.get(i).getPuzzle() instanceof PuzzleRiddle) 
+						{
+							((PuzzleRiddle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
 							rooms.get(i).getPuzzle().initialize();
 						}
 					}catch(Exception E) {}	

@@ -26,10 +26,57 @@ public class controller {
 			if(determineItem(control.next())==true) {break;}
 		}
 	}
-	
 	public void controllerItem(int i) {
 		model.getUser().getItem(i).displayCommands();
 		determineItem(control.next(),i);
+	}
+	
+	//Puzzle controller
+	public void controllerObjectPuzzle() {
+		while(true) {
+			model.getCurrentRoom().getPuzzle().display();
+			if(true) {break;}
+		}
+	}
+	public void controllerPuzzleDebuff() {
+		while(true) {
+			model.getCurrentRoom().getPuzzle().display();
+			if(true) {break;}
+		}
+	}
+	public void controllerPuzzleNumber() {
+		while(true) {
+			model.getCurrentRoom().getPuzzle().display();
+			if(true) {break;}
+		}
+	}
+	public void controllerPuzzleRiddle() {
+		while(true) {
+			model.getCurrentRoom().getPuzzle().display();
+			if(true) {break;}
+		}
+	}
+	public void controllerDoorPuzzle() {
+		String itemNumber;
+		while(true) {
+			((DoorPuzzle)model.getCurrentRoom().getPuzzle()).display(model.getUser().getInventory());
+			itemNumber=control.nextLine();
+			if(itemNumber.matches("exit")) {break;}
+			if(itemNumber.matches("hint")) {model.getCurrentRoom().getPuzzle().printHint();}
+			if(itemNumber.matches("[0-9]+")) {
+				model.getCurrentRoom().getPuzzle().attemptSolve(
+						model.getUser().getItem(Integer.parseInt(itemNumber)).getItemId());
+			}
+			if(model.getCurrentRoom().getPuzzle().isSolved()) {
+				model.getCurrentRoom().setPuzzle(null);
+				break;}
+		}
+	}
+	public void controllerWordPuzzle() {
+		while(true) {
+			model.getCurrentRoom().getPuzzle().display();
+			if(true) {break;}
+		}
 	}
 	
 	private void determine(String input) {
@@ -41,14 +88,27 @@ public class controller {
 			controllerItem();}
 		else if(input.matches("stats")) {
 			model.getUser().displayStats();
-			model.getUser().displayEquippedItems();
-		}
-		else if(input.matches("combat")
-				&&
+			model.getUser().displayEquippedItems();}
+		else if(input.matches("combat")&&
 				model.getCurrentRoom().getEnemy()!=null
+				) {controllerEnemy();}
+		else if(input.matches("puzzle")&&
+				model.getCurrentRoom().getPuzzle()!=null
 				) {
-			controllerEnemy();
-		}
+			if(model.getCurrentRoom().getPuzzle() instanceof DoorPuzzle) 
+			{controllerDoorPuzzle();}
+			if(model.getCurrentRoom().getPuzzle() instanceof ObjectPuzzle) 
+			{controllerObjectPuzzle();}
+			if(model.getCurrentRoom().getPuzzle() instanceof PuzzleDebuff)
+			{controllerPuzzleDebuff();}
+			if(model.getCurrentRoom().getPuzzle() instanceof PuzzleNumber)
+			{controllerPuzzleNumber();}
+			if(model.getCurrentRoom().getPuzzle() instanceof PuzzleRiddle)
+			{controllerPuzzleRiddle();}
+			if(model.getCurrentRoom().getPuzzle() instanceof WordPuzzle)
+			{controllerWordPuzzle();}
+			try{model.getCurrentRoom().display();}catch(Exception E) {}
+			}
 	}
 	
 	private boolean determineItem(String input) {

@@ -147,7 +147,7 @@ public class Room
 		view.print("inventory:");
 		if(items.size()>0) {view.print("pick up:");}
 		if(enemy!=null) {view.print("combat:");}
-		if(puzzle!=null) {view.print("puzzle");}
+		if(puzzle!=null) {view.print("puzzle:");}
 		view.print("-Move Commands-");
 		try {
 			for(int i=0; i<directions[i]; i++) {

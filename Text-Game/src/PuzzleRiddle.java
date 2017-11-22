@@ -63,4 +63,11 @@ public class PuzzleRiddle extends Puzzle{
 	{
 		//no effect
 	}
+	
+	@Override
+	public void display() {
+		view.line(125);
+		view.print(puzzleName);
+		view.printString(puzzleDesc);
+	}
 }

@@ -58,6 +58,9 @@ public class Player extends Character
 		maxHealth = maxHealth + i;
 	}
 	//Inventory Exists on player so methods for item based things exist here to interact with player items.
+	public ArrayList<Item> getInventory(){
+		return inventory;
+	}
 	public Item getItem(int i){
 		return inventory.get(i);
 	}

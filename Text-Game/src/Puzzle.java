@@ -20,6 +20,7 @@ public abstract class Puzzle implements Cloneable
 	
 	public void printHint()
 	{
+		view.line(125);
 		view.printString(hint,125);
 	}
 	
@@ -56,6 +57,7 @@ public abstract class Puzzle implements Cloneable
 	public abstract void initialize(); 
 	public abstract void attemptSolve(String answer);
 	public abstract void attemptSolve(int itemId);
+	public abstract void display();
 	//I'm aware of redundancy but I did it this way for a reason
 	@Override
 	public String toString()

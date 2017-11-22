@@ -38,5 +38,12 @@ public class ObjectPuzzle extends Puzzle{
 			solved=true;
 		}
 	}
+	
+	@Override
+	public void display() {
+		view.line(125);
+		view.print(puzzleName);
+		view.printString(puzzleDesc);
+	}
 
 }
