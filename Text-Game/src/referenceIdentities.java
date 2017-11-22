@@ -67,7 +67,9 @@ public class referenceIdentities {
 		loadDoorPuzzles();
 		loadObjectPuzzles();
 		loadWordPuzzles();
-		
+		loadNumberPuzzles();
+		loadPuzzleRiddle();
+		loadPuzzleDebuff();
 	}
 	// item load methods
 	private void loadGearItems() throws FileNotFoundException {
@@ -162,6 +164,48 @@ public class referenceIdentities {
 			buff.readLine();
 		while(buff.ready()) {
 				puzzles.add(new WordPuzzle(buff.readLine(),library));
+				puzzles.get(puzzles.size()-1).setView(puzzleView);
+				System.out.println(puzzles.get(puzzles.size()-1));
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("error");}
+	}
+	private void loadNumberPuzzles()throws FileNotFoundException {
+		file = new File("TextFiles/PuzzleNumber.txt");
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			buff.readLine();
+		while(buff.ready()) {
+				puzzles.add(new PuzzleNumber(buff.readLine()));
+				puzzles.get(puzzles.size()-1).setView(puzzleView);
+				System.out.println(puzzles.get(puzzles.size()-1));
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("error");}
+	}
+	private void loadPuzzleRiddle()throws FileNotFoundException {
+		file = new File("TextFiles/PuzzleRiddle.txt");
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			buff.readLine();
+		while(buff.ready()) {
+				puzzles.add(new PuzzleRiddle(buff.readLine()));
+				puzzles.get(puzzles.size()-1).setView(puzzleView);
+				System.out.println(puzzles.get(puzzles.size()-1));
+			}buff.close();
+		}catch(Exception E) {
+				System.out.println("error");}
+	}
+	private void loadPuzzleDebuff()throws FileNotFoundException {
+		file = new File("TextFiles/PuzzleDebuff.txt");
+		
+		try {
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			buff.readLine();
+		while(buff.ready()) {
+				puzzles.add(new PuzzleDebuff(buff.readLine()));
 				puzzles.get(puzzles.size()-1).setView(puzzleView);
 				System.out.println(puzzles.get(puzzles.size()-1));
 			}buff.close();

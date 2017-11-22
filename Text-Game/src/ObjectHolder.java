@@ -41,7 +41,7 @@ public class ObjectHolder {
 			loadEnemys(file);
 			file = new File("TextFiles/RoomsBItem.txt");
 			loadItems(file);
-			file = new File("TextFiles/RoomsBPuzzle");
+			file = new File("TextFiles/RoomsBPuzzle.txt");
 			loadPuzzles(file);
 		}catch(Exception E) {view.print("RoomsB didn't load");}
 		user = new Player(view);
@@ -58,7 +58,6 @@ public class ObjectHolder {
 			String loadedString;
 			int i = 0;
 		while(buff.ready()) {
-			//int enemyId
 			try {
 				loadedString=buff.readLine();
 				if(!loadedString.matches(".")) {
@@ -112,11 +111,11 @@ public class ObjectHolder {
 		
 		try {
 			BufferedReader buff = new BufferedReader(new FileReader(PuzzleFile));
-			buff.readLine();
 			String loadedString;
 			int i = 0;
 		while(buff.ready()) {
 			//int ItemId
+			System.out.println(i);
 			try {
 				loadedString=buff.readLine();
 				if(!loadedString.matches(".")) {
@@ -124,7 +123,7 @@ public class ObjectHolder {
 						rooms.get(i).setPuzzle(library.clonePuzzle(Integer.parseInt(loadedString)));
 						if(rooms.get(i).getPuzzle() instanceof DoorPuzzle)
 						{
-							((DoorPuzzle) rooms.get(i).getPuzzle()).setRoom(rooms.get(i));
+							((DoorPuzzle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
 							rooms.get(i).getPuzzle().initialize();
 						}
 					}catch(Exception E) {}	

@@ -20,8 +20,19 @@ DoorPuzzle
 int puzzleId String name, int itemId, int roomId, String puzzleDesc, String hint
 these puzzles prevent access to a room by setting it to locked
 
+Number Game
+int puzzleId String name, int roomId String puzzleDesc, String hint
+there is one instance of this puzzle type and it locks the player in a room.
+
 ObjectPuzzle
 int puzzleId String name, int itemId, String puzzleDesc, String hint
+
+PuzzleDebuf
+I can handle this later
+
+RiddlePuzzle
+int puzzleId String name, int roomId String puzzleDesc, String hint, String answer1, String answer2
+this acts like a door puzzle with a String instead of a key
 
 WordPuzzle
 int puzzleId String name, int itemId, String answer, String puzzleDesc, String hint

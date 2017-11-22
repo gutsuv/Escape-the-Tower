@@ -1,29 +1,29 @@
 import java.util.ArrayList;
 
-public class DoorPuzzle extends Puzzle{
-	
-	int itemId;
+public class PuzzleRiddle extends Puzzle{
+	String answer1;
+	String answer2;
 	int roomId;
 	Room lockedRoom;
 	
-	public DoorPuzzle(String loadedString) {
+	public PuzzleRiddle(String loadedString) {
 		//loaded from file
-		//int puzzleId String name, int itemId, int roomId
-		//String puzzleDesc, String hint
+		//int puzzleId String name, int roomId String puzzleDesc,
+		//String hint, String answer1, String answer2
 		try 
 		{
 			String[] splitString = loadedString.split("-_");
 			puzzleId = Integer.parseInt(splitString[0]);
 			puzzleName = splitString[1];
-			itemId = Integer.parseInt(splitString[2]);
-			roomId = Integer.parseInt(splitString[3]);
-			puzzleDesc = splitString[4];
-			hint = splitString[5];
-
+			roomId = Integer.parseInt(splitString[2]);
+			puzzleDesc = splitString[3];
+			hint = splitString[4];
+			answer1 = splitString[5];
+			answer2 = splitString[6];
 		}catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include DoorPuzzle in the text message");
+					+ "I can fix it in like 30 minutes. Include PuzzleRiddle in the text message");
 		}
 	}
 	
@@ -51,17 +51,16 @@ public class DoorPuzzle extends Puzzle{
 	@Override
 	public void attemptSolve(String answer) 
 	{
-		//no effect
+		if(answer.matches(answer1)||answer.matches(answer2)) 
+		{
+			solved=true;
+			view.print("solved");
+		}
 	}
 
 	@Override
 	public void attemptSolve(int itemId) 
 	{
-		if(this.itemId==itemId) 
-		{
-			lockedRoom.setLocked(false);
-			solved=true;
-		}
+		//no effect
 	}
-	
 }
