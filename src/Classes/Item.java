@@ -4,25 +4,22 @@ public class Item
 {
 	protected int itemId;
 	protected String itemName;
-	protected String itemDescLong;
-	protected String itemDescShort;
+	protected String itemDesc;
 
 	
 	public Item() 
 	{
 		itemId = 0;
 		itemName = "";
-		itemDescLong = "";
-		itemDescShort = "";
+		itemDesc = "";
 
 	}
 
-	public Item(int itemId, String itemName, String itemDescShort, String itemDescLong) 
+	public Item(int itemId, String itemName, String itemDesc) 
 	{
 		this.itemId = itemId;
 		this.itemName = itemName;
-		this.itemDescShort = itemDescShort;
-		this.itemDescLong = itemDescLong;
+		this.itemDesc = itemDesc;
 
 
 	}
@@ -47,28 +44,20 @@ public class Item
 		this.itemName = itemName;
 	}
 
-	public String getItemDescShort()
+	public String getItemDesc()
 	{
-		return itemDescShort;
+		return itemDesc;
 	}
 
-	public void setItemDescShort(String itemDescShort) 
+	public void setItemDescShort(String itemDesc) 
 	{
-		this.itemDescShort = itemDescShort;
-	}
-	public String getItemDescLong()
-	{
-		return itemDescLong;
+		this.itemDesc = itemDesc;
 	}
 
-	public void setItemDescLong(String itemDescLong) 
-	{
-		this.itemDescLong = itemDescLong;
-	}
 
 	@Override
 	public String toString()
 	{
-		return "Item [itemID=" + itemId + ", itemName=" + itemName + "itemDescShort=" + itemDescShort + "itemDescLong=" + itemDescLong + "]";
+		return "Item [itemID=" + itemId + ", itemName=" + itemName + "itemDesc=" + itemDesc + "]";
 	}
 }

@@ -20,17 +20,16 @@ public class Consumable extends Item
 			itemName = splitString[1];
 			healthEffect = Integer.parseInt(splitString[2]);
 			maxHealthEffect = Integer.parseInt(splitString[3]);
-			itemDescShort = splitString[4];
-			itemDescLong = splitString[5];
+			itemDesc = splitString[4];
 		}catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include Consumable in the text message");
 		}
 	}
-	public Consumable(int itemID, String itemName, String itemDescShort, String itemDescLong, int healthEffect, int maxHealthEffect) 
+	public Consumable(int itemID, String itemName, String itemDesc, int healthEffect, int maxHealthEffect) 
 	{
-		super(itemID, itemName, itemDescShort, itemDescLong);
+		super(itemID, itemName, itemDesc);
 		this.healthEffect = healthEffect;
 		this.maxHealthEffect = maxHealthEffect;
 	}

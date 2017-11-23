@@ -22,7 +22,7 @@ public class Character
 		this.damage = 0;
 		this.defense = 0;
 		this.acc = 0;
-		this.alive = false;
+		this.alive = true;
 	}
 
 	public Character(int characterId, int health, int damage, int defense, int acc, boolean alive)

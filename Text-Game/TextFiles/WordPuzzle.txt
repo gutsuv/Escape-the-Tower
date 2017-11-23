@@ -1,0 +1,2 @@
+
+03-_Safe Lock-_104-_22, 46, 77, 8-_(numbers seperated by a comma and a space)Get the numbers right to open safe. You see a safe and test the handle. It’s locked, but there’s a small four number combination lock under the handle.-_"There's probably a code lying around somewhere. These guards aren't the smartest bunch"

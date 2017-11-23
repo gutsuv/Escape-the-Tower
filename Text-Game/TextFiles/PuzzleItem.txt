@@ -1,0 +1,11 @@
+
+100-_Rusted Key-_00-_A key for the torture room 
+101-_Water Bucket-_02-_A bucket full of water!
+102-_Antidote-_06-_This looks like medicine.
+103-_Boots-_07-_Boots!
+104-_Final Key-_08-_Golly the final key! Now I can escape.
+105-_Oil can-_04-_A can of oil!
+106-_A slip of paper 1-_03-_A piece of paper! It says 22
+107-_A slip of paper 2-_03-_A piece of paper! It says 46
+108-_A slip of paper 3-_03-_A piece of paper! It says 77
+109-_A slip of paper 4-_03-_A piece of paper! It says 8

@@ -1,0 +1,61 @@
+Consumable
+int itemID, String itemName, int healthEffect, int maxHealthEffect, String itemDescShort, String itemDescLong
+extends item and shares Id ranges
+
+EnemyTable
+int characterId, String name, int health, int damage, int defense, int acc, Item itemId, String enemyDescription
+
+Gear
+int itemId, String itemName, char slot, int defense, int attackMin, int attackMax,int acc, String itemDescShort, String itemDescLong
+Gear extends item shares Id ranges
+
+PuzzleItem
+int ID, String name, int puzzleId, String description
+PuzzleItem extends item and shares Id ranges
+Don't work with this file. It'll need to be changed later.
+puzzleId is not used but it is loaded onto the item.
+Your fault if code has to be redone. #NoComplaining
+
+DoorPuzzle
+int puzzleId String name, int itemId, int roomId, String puzzleDesc, String hint
+these puzzles prevent access to a room by setting it to locked
+
+Number Game
+int puzzleId String name, int roomId String puzzleDesc, String hint
+there is one instance of this puzzle type and it locks the player in a room.
+
+ObjectPuzzle
+int puzzleId String name, int itemId, String puzzleDesc, String hint
+
+PuzzleDebuf
+I can handle this later
+
+RiddlePuzzle
+int puzzleId String name, int roomId String puzzleDesc, String hint, String answer1, String answer2
+this acts like a door puzzle with a String instead of a key
+
+WordPuzzle
+int puzzleId String name, int itemId, String answer, String puzzleDesc, String hint
+
+RoomsA
+int roomId, String roomDescription, int exitRoomId, char direction, String description
+Permanent room features. This file does not change
+unless rooms start moving or some nonsense
+
+RoomsB
+int roomId, int puzzleId, int enemyId, int itemId
+Rooms B is default thing that are initated on new game.
+Load Game will use a different file formated the same way.
+There is a good chance room ID will not be used in RoomsB
+file but it is left there for clarity. 
+probably won't use
+
+I have new files to keep track(RoomsB*)
+
+RoomsBEnemy
+int enemyId
+contains enemy ids for each floor
+
+RoomsBItem
+int ItemId
+contains Item ids for each floor

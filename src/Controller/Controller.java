@@ -62,7 +62,7 @@ public class Controller
 			start = printAndPrompt2("________\n");
 		}
 
-		player = new Player();
+		//player = new Player();
 		player.setCharacterId(1);
 		player.setDamage(5);
 		player.setHealth(100);
