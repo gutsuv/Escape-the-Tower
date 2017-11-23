@@ -67,7 +67,7 @@ public class ObjectHolder {
 			}catch(Exception E)
 			{
 				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-						+ "I	 can fix it in like 30 minutes. Include RoomBEnemy or Load in the text message");
+						+ "I can fix it in like 30 minutes. Include RoomsBenemy or Load in the text message");
 			}
 			}buff.close();
 		}catch(Exception E) {

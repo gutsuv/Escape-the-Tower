@@ -33,14 +33,25 @@ public class controller {
 	
 	//Puzzle controller
 	public void controllerObjectPuzzle() {
+		String itemNumber;
 		while(true) {
-			model.getCurrentRoom().getPuzzle().display();
-			if(true) {break;}
+			((ObjectPuzzle)model.getCurrentRoom().getPuzzle()).display(model.getUser().getInventory());
+			itemNumber=control.nextLine();
+			if(itemNumber.matches("exit")) {break;}
+			if(itemNumber.matches("hint")) {model.getCurrentRoom().getPuzzle().printHint();}
+			if(itemNumber.matches("[0-9]+")) {
+				model.getCurrentRoom().getPuzzle().attemptSolve(
+						model.getUser().getItem(Integer.parseInt(itemNumber)).getItemId());
+			}
+			if(model.getCurrentRoom().getPuzzle().isSolved()) {
+				model.getCurrentRoom().setPuzzle(null);
+				break;}
 		}
 	}
 	public void controllerPuzzleDebuff() {
 		while(true) {
 			model.getCurrentRoom().getPuzzle().display();
+			//solve later
 			if(true) {break;}
 		}
 	}
@@ -73,9 +84,18 @@ public class controller {
 		}
 	}
 	public void controllerWordPuzzle() {
+		String answer;
 		while(true) {
 			model.getCurrentRoom().getPuzzle().display();
-			if(true) {break;}
+			answer = control.nextLine();
+			if(answer.matches("exit")) {break;}
+			model.getCurrentRoom().getPuzzle().attemptSolve(answer);
+			if(model.getCurrentRoom().getPuzzle().isSolved())
+			{
+				model.getCurrentRoom().addItem(((WordPuzzle) model.getCurrentRoom().getPuzzle()).getItem());
+				model.getCurrentRoom().setPuzzle(null);
+				break;
+			}
 		}
 	}
 	

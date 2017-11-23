@@ -37,6 +37,12 @@ public class WordPuzzle extends Puzzle{
 		if(this.answer.matches(answer)) 
 		{
 			solved = true;
+			view.line(125);
+			view.print("Puzzle solved");
+			view.print("Item available");
+		}else {
+			view.line(125);
+			view.print("incorrect solution");
 		}
 	}
 
@@ -50,6 +56,7 @@ public class WordPuzzle extends Puzzle{
 	public void display() {
 		view.line(125);
 		view.print(puzzleName);
-		view.printString(puzzleDesc);
+		view.printString(puzzleDesc,125);
+		view.printString("Input solution to puzzle or type 'exit'",125);
 	}
 }

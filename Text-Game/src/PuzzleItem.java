@@ -45,7 +45,6 @@ public class PuzzleItem extends Item{
 	public void displayCommands() {
 		view.line(125);
 		view.print(itemName);
-		view.print("use:");
 		view.print("drop:");
 		view.print("examine:");	
 		view.print("exit:");

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class ObjectPuzzle extends Puzzle{
 	int itemId;
@@ -35,8 +36,15 @@ public class ObjectPuzzle extends Puzzle{
 	{
 		if(this.itemId==itemId) 
 		{
+			view.line(125);
+			view.print("Puzzle passed");
 			solved=true;
+			//the only puzzle of this type is fire
+		}else {
+			view.line(125);
+			view.print("Item doesn't solve puzzle");
 		}
+		
 	}
 	
 	@Override
@@ -44,6 +52,19 @@ public class ObjectPuzzle extends Puzzle{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
+	}
+	
+	public void display(ArrayList<Item> items) {
+		view.line(125);
+		view.print(puzzleName);
+		view.printString(puzzleDesc);
+		view.print("---secect item---");
+		for(int i = 0; i<items.size(); i++) {
+			view.print(i+": "+items.get(i));
+		}
+		view.print("hint:");
+		view.print("exit:");
+		
 	}
 
 }

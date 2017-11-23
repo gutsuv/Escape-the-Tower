@@ -36,7 +36,7 @@ public class Consumable extends Item
 	
 	public int getMaxHealthEffect()
 	{
-		return maxHealthEffect;
+		return -maxHealthEffect;
 	}
 
 	@Override
