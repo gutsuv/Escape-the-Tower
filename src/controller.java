@@ -62,9 +62,16 @@ public class controller {
 		}
 	}
 	public void controllerPuzzleRiddle() {
+		String answer;
 		while(true) {
 			model.getCurrentRoom().getPuzzle().display();
-			if(true) {break;}
+			answer = control.nextLine();
+			if(answer.matches("exit")) {break;}
+			else if(answer.matches("hint")) {model.getCurrentRoom().getPuzzle().printHint();}
+			else {model.getCurrentRoom().getPuzzle().attemptSolve(answer);}
+			if(model.getCurrentRoom().getPuzzle().isSolved()) {
+				model.getCurrentRoom().setPuzzle(null);
+				break;}
 		}
 	}
 	public void controllerDoorPuzzle() {

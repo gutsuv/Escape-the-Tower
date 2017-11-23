@@ -57,6 +57,7 @@ public class PuzzleNumber extends Puzzle{
 	@Override
 	public void attemptSolve(String stringAnswer) 
 	{
+		initialize();
 		int guess = Integer.parseInt(stringAnswer);
 		if(guess>answer) {view.print("wrong anser: too high");}
 		else if(guess<answer) {view.print("wrong answer: too low");}

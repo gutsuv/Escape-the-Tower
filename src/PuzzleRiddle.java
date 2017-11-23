@@ -53,9 +53,14 @@ public class PuzzleRiddle extends Puzzle{
 	{
 		if(answer.matches(answer1)||answer.matches(answer2)) 
 		{
+			view.line(125);
+			view.print("Puzzle solved: Exit is no longer obstructed");
+			lockedRoom.setLocked(false);
 			solved=true;
-			view.print("solved");
-		}
+		}else {
+			view.line(125);
+			view.print("incorrect answer");
+			}
 	}
 
 	@Override
@@ -69,5 +74,6 @@ public class PuzzleRiddle extends Puzzle{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
+		view.print("type exit or attempt to answer puzzle");
 	}
 }

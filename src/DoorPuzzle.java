@@ -60,7 +60,7 @@ public class DoorPuzzle extends Puzzle{
 		if(this.itemId==itemId) 
 		{
 			view.line(125);
-			view.print("Puzzle passed: The exit is no longer obstructed");
+			view.print("Puzzle solved: The exit is no longer obstructed");
 			lockedRoom.setLocked(false);
 			solved=true;
 		}else {
