@@ -11,10 +11,10 @@ public class initializer {
 			newGame();
 		} catch (FileNotFoundException e) {
 			System.out.println("failed to load");}
-		
+
 		cont = new controller(main);
-		
-		
+
+
 	}
 	public static void newGame() throws FileNotFoundException {
 		main = new ObjectHolder(view);

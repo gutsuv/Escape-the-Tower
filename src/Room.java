@@ -1,85 +1,49 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+// Used for designing room object.
+
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Room
 {
+	View view;
 	protected int roomId;
-	protected String roomDescription;
-	int[] doors;
-	char[] direction;
-	String[] doorDescription;
-	protected int puzzles;
-	protected int enemies;
-	protected int items;
-	protected boolean locked;
-	//I'm not using these but they could be used later
-	protected String fileName;
-	protected String line;
-	//
+	protected String roomDesc;
+//	protected int puzzles;
 	
-	public Room() 
-	{
-	 roomId = 0;
-	 roomDescription = null;
-	 doors = null;
-	 doorDescription = null;
-	 //fileName = null;
-	 line = null;
-	}
+	protected int[] exitIDs;
+	protected char[] directions;
+	protected String[] doorDescriptions;
+	
+	protected boolean locked;
+	protected Enemy enemy; 
+	protected ArrayList<Item> items = new ArrayList<Item>();
+	protected Puzzle puzzle;
+	
 	public Room(String loadedString)
 	{
 		// loaded from file
 		//int roomId, String roomDescription, int exitRoomId, char direction, String doorDescription
-		try {
+		locked = false;
+		try {	
 			String[] splitString = loadedString.split("-_");
 			roomId = Integer.parseInt(splitString[0]);
-			roomDescription = splitString[1];
+			roomDesc = splitString[1];
 			//exits
 			String[] tempString1 = splitString[2].split("><");
 			String[] tempString2 = splitString[3].split("><");
 			int i = Array.getLength(tempString1);
-			doors = new int[i];
-			direction = new char[i];
+			exitIDs = new int[i];
+			directions = new char[i];
 			while(i>0) {
 				i--;
-				doors[i] = Integer.parseInt(tempString1[i]);
-				direction[i] = tempString2[i].charAt(0);;
+				exitIDs[i] = Integer.parseInt(tempString1[i]);
+				directions[i] = tempString2[i].charAt(0);;
 			}
-			doorDescription = splitString[4].split("><");
+			doorDescriptions = splitString[4].split("><");
 		}catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include RoomsA in the text message");
-		}
-	}
-
-	public Room(int roomId, boolean isLocked, String roomDescription, String doorDescription[], String fileName, String line)
-	{
-		this.roomId = roomId;
-		this.roomDescription = roomDescription;
-		this.doorDescription = doorDescription;
-		//this.fileName = fileName;
-		this.line = line;
-	}
-	public void reader(String fileName, String line){
-		try{
-			FileReader fileReader = new FileReader("RoomsA.txt");
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
-			
-//			while(bufferedReader.readLine() != null){
-//				line = bufferedReader.readLine();
-//				System.out.println(line);
-//			}
-//			bufferedReader.close();
-		}
-		catch(FileNotFoundException ex){
-//			System.out.println("Unable to open file '" + fileName + "'");
-		}
-		catch(IOException ex){
-	//		ex.printStackTrace();
 		}
 	}
 
@@ -88,110 +52,28 @@ public class Room
 		return roomId;
 	}
 
-	public void setRoomId(int roomId)
+	public String getRoomDesc()
 	{
-		fileName = "RoomsB_int roomId, int puzzleId, int enemyId, int itemId.txt";
-		this.line = line;
-		reader(fileName, line);
-	//	fileName = "RoomsB.txt";
-	//	this.line = line;
-	//	reader(fileName, line);
-		this.roomId = roomId;
-	}
-
-	public String getRoomDescription()
-	{
-		return roomDescription;
-	}
-
-	public void setRoomDescription(String roomDescription)
-	{
-	//	fileName = "RoomsA.txt";
-	//	this.line = line;
-	//	reader(fileName, line);
-		this.roomDescription = roomDescription;
-	}
-
-	public int[] getDoors()
-	{
-		return doors;
-	}
-
-	public void setDoors(int[] doors)
-	{
-		this.doors = doors;
-	}
-	public String getDoorsString()
-	{
-		String r = "";int i = doors.length;
-		while(i>0) {
-			i--;
-			r = r + doors[i] + ", ";
-		}
-		return r;
-	}
-
-	public String[] getDoorDescription()
-	{
-		return doorDescription;
-	}
-
-	public void TestDoorDescriptionString()
-	{
-		int i = doorDescription.length;
-		while(i>0) {
-			i--;
-			System.out.println(doorDescription[i]);
-		}
+		return roomDesc;
 	}
 	
-	public void setDoorDescription(String[] doorDescription)
-	{
-		this.doorDescription = doorDescription;
-	}
+	public int[] getExits() {
+		return exitIDs;}
+	public int getExit(int i) {
+		return exitIDs[i];}
 	
-	public int getItems()
-	{
-		return items;
-	}
-
-	public void setItems(int items)
-	{
-		this.items = items;
-	}
-
-	public int getPuzzles()
-	{
-		return puzzles;
-	}
-
-	public void setPuzzles(int puzzles)
-	{
-		this.puzzles = puzzles;
-	}
+	public String[] getExitDescriptions() {
+		return doorDescriptions;}
+	public String getExitDescription(int i) {
+		return doorDescriptions[i];}
 	
-	public int getEnemies()
-	{
-		return enemies;
-	}
-
-	public void setEnemies(int enemies)
-	{
-		this.enemies = enemies;
-	}
+	public char[] getDirections() {
+		return directions;}
+	public char getDirection(int i){
+		try{return directions[i];}
+		catch(Exception E) {return ' ';}}
 	
-	public int getDoor(int i)
-	{
-		return doors[i];
-	}
-	
-	public void setDoor1(int i, int door1)
-	{
-		doors[i] = door1;
-	}
-	
-	public boolean isLocked()
-	{
+	public boolean isLocked(){
 		return locked;
 	}
 
@@ -200,43 +82,80 @@ public class Room
 		this.locked = locked;
 	}
 	
-	public void lockedRoom() 
+	public Enemy getEnemy() {return enemy;}
+	
+	public void setEnemy(Enemy enemy) 
 	{
-		if(locked == true)
+		this.enemy=enemy;
+	}
+	
+	public Puzzle getPuzzle() 
+	{
+		return puzzle;
+	}
+	
+	public void setPuzzle(Puzzle puzzle) 
+	{
+		this.puzzle = puzzle;
+	}
+	
+	public ArrayList<Item> getItems() {return items;}
+	public void addItem(Item item) {
+		items.add(item);}
+	public void removeItem(int i) {
+		items.remove(i);}
+	public Item pickUp(int i) {
+		Item item = items.get(i);
+		items.remove(i);
+		return item;
+	}
+
+	public void enemyDeathEffects() {
+		view.print("enemy has died");
+		for(int i = 0; i<enemy.getItems().size();i++) 
 		{
-		//	view.println("The door is locked!");
-		//	view.println("It requires a key.");
+			addItem(enemy.getItems().get(i));
 		}
-		else
-		{
-		//	view.println("Entering room.");
+		enemy = null;
+		try {display();} catch (Exception e) {}
+	}
+	
+	public void setView(View v) 
+	{
+		view = v;
+	}
+	
+	public void examineRoom() {}
+
+	public void showPaths(){
+		int i = directions.length;
+		while(i>0) {
+			i--;
+			System.out.println(directions[i]+
+					" "+doorDescriptions[i]);
 		}
 	}
-	
-	public void examineRoom(int roomId) 
-	{
-		//view.println("Enemies: " + enemies + " Puzzles: " + puzzles + " Items: " + items);
-	}
-	
-	public void showPaths(int door1, int door4, int door2, int door3)
-	{
-		//view.println("Rooms avalible: " + door1 + " door1 room " + door4 + " door4 room " + door2 + " door2 room " + door3 + " door3 room");
-		//view.println("Enter which room?  Door1 Door2 Door3 Door4");
-	}
-	
-	public void enterRoom()
-	{
-		
-	}
-	
-	public void exitRoom()
-	{
-		
+	public void display() throws Exception{
+		view.line(100);
+		view.printString(getRoomDesc(),125);
+		if(enemy!=null) {view.printString(enemy.toString(),125);}
+		if(puzzle!=null) {view.printString(puzzle.toString(),125);}
+		view.printStrO(items,125);
+		view.line();
+		view.print("---Commands---");
+		view.print("stats:");
+		view.print("inventory:");
+		if(items.size()>0) {view.print("pick up:");}
+		if(enemy!=null) {view.print("combat:");}
+		if(puzzle!=null) {view.print("puzzle:");}
+		view.print("-Move Commands-");
+		try {
+			for(int i=0; i<directions[i]; i++) {
+				view.printString(directions[i],doorDescriptions[i],125);}
+			}catch(Exception E) {}
 	}
 	
 	@Override
-	public String toString()
-	{
-		return getRoomDescription();
-	}
+	public String toString(){
+		return getRoomDesc();}
 }
