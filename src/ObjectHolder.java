@@ -1,7 +1,8 @@
 import java.util.*;
 import java.io.*;
 import java.lang.reflect.Array;
-public class ObjectHolder {
+public class ObjectHolder 
+{
 	View view;
 	
 	ArrayList<Room> rooms = new ArrayList<Room>();
@@ -13,19 +14,26 @@ public class ObjectHolder {
 	Room previousRoom;
 	referenceIdentities library = new referenceIdentities();
 	
-	public ObjectHolder(View v) throws FileNotFoundException {
+	public ObjectHolder(View v) throws FileNotFoundException 
+	{
 		view = v;
 		file = new File("TextFiles/RoomsA.txt");
 		fileread = new Scanner(file);
 		int i = 0;
-		while(fileread.hasNextLine()) {
-			try {
+		while(fileread.hasNextLine()) 
+		{
+			try 
+			{
 				rooms.add(new Room(fileread.nextLine()));
 				rooms.get(i).setView(view);
 				//rooms.get(i).display();
 				i++;
-			}catch(Exception E) {
-				System.out.println("error " + i);}}
+			}
+			catch(Exception E) 
+			{
+				System.out.println("error " + i);
+			}
+		}
 		fileread.close();
 		library.setLibray(library);
 		library.loaditems();
@@ -34,141 +42,209 @@ public class ObjectHolder {
 	}
 	
 	
-	public void initializeNew() {
+	public void initializeNew() 
+	{
 		//load new game
 		currentRoom = rooms.get(0);
-		try {
+		try 
+		{
 			File file = new File("TextFiles/RoomsBEnemy.txt");
 			loadEnemys(file);
 			file = new File("TextFiles/RoomsBItem.txt");
 			loadItems(file);
 			file = new File("TextFiles/RoomsBPuzzle.txt");
 			loadPuzzles(file);
-		}catch(Exception E) {view.print("RoomsB didn't load");}
+		}
+		catch(Exception E) 
+		{
+			view.print("RoomsB didn't load");
+		}
 		user = new Player(view);
 		//after load
-			try {currentRoom.display();} catch (Exception e) {}
-			
+		try 
+		{
+			currentRoom.display();
+		} 
+		catch (Exception e) 
+		{
+		}	
 	}
-	public void loadEnemys(File EnemyFile) {
+	public void loadEnemys(File EnemyFile) 
+	{
 		//loads a file formated like RoomsBEnemy.txt
 		
-		try {
+		try 
+		{
 			BufferedReader buff = new BufferedReader(new FileReader(EnemyFile));
 			buff.readLine();
 			String loadedString;
 			int i = 0;
-		while(buff.ready()) {
-			try {
-				loadedString=buff.readLine();
-				if(!loadedString.matches(".")) {
-				rooms.get(i).setEnemy(library.cloneEnemy(Integer.parseInt(loadedString)));
-					}
-				i++;
-			}catch(Exception E)
+			while(buff.ready())
 			{
-				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-						+ "I can fix it in like 30 minutes. Include RoomsBenemy or Load in the text message");
+				try 
+				{
+					loadedString=buff.readLine();
+					if(!loadedString.matches(".")) 
+					{
+						rooms.get(i).setEnemy(library.cloneEnemy(Integer.parseInt(loadedString)));
+					}
+					i++;
+				}
+				catch(Exception E)
+				{
+					System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+							+ "I can fix it in like 30 minutes. Include RoomsBenemy or Load in the text message");
+				}
 			}
-			}buff.close();
-		}catch(Exception E) {
-				System.out.println("load error enemy");}
+			buff.close();
+		}
+		catch(Exception E) 
+		{
+			System.out.println("load error enemy");
+		}
 	}
 	
-	public void loadItems(File ItemFile) {
+	public void loadItems(File ItemFile) 
+	{
 		//loads a file formated like RoomsBEnemy.txt
 		
-		try {
+		try 
+		{
 			BufferedReader buff = new BufferedReader(new FileReader(ItemFile));
 			buff.readLine();
 			String loadedString;
 			int i = 0;
-		while(buff.ready()) {
-			//int ItemId
-			try {
-				loadedString=buff.readLine();
-				if(!loadedString.matches(".")) {
-					try {rooms.get(i).addItem(library.cloneItem(Integer.parseInt(loadedString)));}
-					catch(Exception E) {
-						String[] splitString = loadedString.split("><");
-						for (int j=0;j<splitString.length;j++) {
-							rooms.get(i).addItem(library.cloneItem(Integer.parseInt(splitString[j])));
+			while(buff.ready()) 
+			{
+				//int ItemId
+				try 
+				{
+					loadedString=buff.readLine();
+					if(!loadedString.matches(".")) 
+					{
+						try 
+						{
+							rooms.get(i).addItem(library.cloneItem(Integer.parseInt(loadedString)));
+						}
+						catch(Exception E) 
+						{
+							String[] splitString = loadedString.split("><");
+							for (int j=0;j<splitString.length;j++) 
+							{
+								rooms.get(i).addItem(library.cloneItem(Integer.parseInt(splitString[j])));
+							}
 						}
 					}
-					}
-				i++;
-			}catch(Exception E)
-			{
-				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-						+ "I	 can fix it in like 30 minutes. Include RoomBItem or Load in the text message");
+					i++;
+				}
+				catch(Exception E)
+				{
+					System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+							+ "I	 can fix it in like 30 minutes. Include RoomBItem or Load in the text message");
+				}
 			}
-			}buff.close();
-		}catch(Exception E) {
-				System.out.println("load error item");}
+			buff.close();
+		}
+		catch(Exception E) 
+		{
+			System.out.println("load error item");
+		}
 	}
 	
-	public void loadPuzzles(File PuzzleFile) {
+	public void loadPuzzles(File PuzzleFile) 
+	{
 		//loads a file formated like RoomsBPuzzle.txt
 		
-		try {
+		try 
+		{
 			BufferedReader buff = new BufferedReader(new FileReader(PuzzleFile));
 			String loadedString;
 			int i = 0;
-		while(buff.ready()) {
-			//int ItemId
-			
-			try {
-				loadedString=buff.readLine();
-				if(!loadedString.matches(".")) {
-					
-					try {
-						rooms.get(i).setPuzzle(library.clonePuzzle(Integer.parseInt(loadedString)));
-						if(rooms.get(i).getPuzzle() instanceof DoorPuzzle)
-						{
-							((DoorPuzzle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
-							rooms.get(i).getPuzzle().initialize();
-						}else if(rooms.get(i).getPuzzle() instanceof PuzzleRiddle) 
-						{
-							((PuzzleRiddle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
-							rooms.get(i).getPuzzle().initialize();
-						}
-					}catch(Exception E) {}	
-					}
-				i++;
-			}catch(Exception E)
+			while(buff.ready()) 
 			{
-				System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-						+ "I	 can fix it in like 30 minutes. Include RoomBPuzzle or Load in the text message");
+				//int ItemId
+				
+				try 
+				{
+					loadedString=buff.readLine();
+					if(!loadedString.matches(".")) 
+					{
+						
+						try 
+						{
+							rooms.get(i).setPuzzle(library.clonePuzzle(Integer.parseInt(loadedString)));
+							if(rooms.get(i).getPuzzle() instanceof DoorPuzzle)
+							{
+								((DoorPuzzle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
+								rooms.get(i).getPuzzle().initialize();
+							}
+							else if(rooms.get(i).getPuzzle() instanceof PuzzleRiddle) 
+							{
+								((PuzzleRiddle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
+								rooms.get(i).getPuzzle().initialize();
+							}
+						}
+						catch(Exception E) 
+						{
+							
+						}	
+					}
+					i++;
+				}
+				catch(Exception E)
+				{
+					System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
+							+ "I	 can fix it in like 30 minutes. Include RoomBPuzzle or Load in the text message");
+				}
 			}
-			}buff.close();
-		}catch(Exception E) {
-				System.out.println("load error puzzle");}
+			buff.close();
+		}
+		catch(Exception E) 
+		{
+			System.out.println("load error puzzle");
+		}
 	}
 	
-	public void navigate(char direction) throws Exception {
+	public void navigate(char direction) throws Exception 
+	{
 		int i = currentRoom.getDirections().length;
-		while(i>0) {
+		while(i > 0) 
+		{
 			i--;
-			if(direction==currentRoom.getDirection(i)) {
-				if(rooms.get(currentRoom.getExit(i)-1).isLocked()) {
+			if(direction == currentRoom.getDirection(i)) 
+			{
+				if(rooms.get(currentRoom.getExit(i)-1).isLocked()) 
+				{
 					view.print("locked");
-				}else if(currentRoom.getEnemy()!=null){
-					if(previousRoom.getRoomId()==currentRoom.getExit(i)) {
+				}
+				else if(currentRoom.getEnemy() != null)
+				{
+					if(previousRoom.getRoomId()==currentRoom.getExit(i)) 
+					{
 						setCurrentRoom(currentRoom.getExit(i));
-					}else {
+					}
+					else 
+					{
 						view.print("Exit Obstructed by enemy");
 					}
-				}else {setCurrentRoom(currentRoom.getExit(i));}
+				}
+				else 
+				{
+					setCurrentRoom(currentRoom.getExit(i));
+				}
 			}
 		}
 	}
 	
-	public void setCurrentRoom(int i) throws Exception {
+	public void setCurrentRoom(int i) throws Exception 
+	{
 		previousRoom = currentRoom;
-		currentRoom = rooms.get(i-1);
-		if(currentRoom.getRoomId()==31) {
+		currentRoom = rooms.get(i - 1);
+		if(currentRoom.getRoomId() == 31) 
+		{
 			view.print("You won");
-			System.exit(0);}
+			System.exit(0);
+		}
 		currentRoom.display();
 	}
 	
