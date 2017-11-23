@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
-public class ObjectPuzzle extends Puzzle{
+public class ObjectPuzzle extends Puzzle
+{
 	int itemId;
 	
-	public ObjectPuzzle(String loadedString) {
+	public ObjectPuzzle(String loadedString) 
+	{
 		//loaded from file
 		//int puzzleId String name, int itemId, String puzzleDesc, String hint
 		try 
@@ -15,7 +17,8 @@ public class ObjectPuzzle extends Puzzle{
 			puzzleDesc = splitString[3];
 			hint = splitString[4];
 
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include DoorPuzzle in the text message");
@@ -40,7 +43,9 @@ public class ObjectPuzzle extends Puzzle{
 			view.print("Puzzle passed");
 			solved=true;
 			//the only puzzle of this type is fire
-		}else {
+		}
+		else 
+		{
 			view.line(125);
 			view.print("Item doesn't solve puzzle");
 		}
@@ -48,23 +53,24 @@ public class ObjectPuzzle extends Puzzle{
 	}
 	
 	@Override
-	public void display() {
+	public void display()
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
 	}
 	
-	public void display(ArrayList<Item> items) {
+	public void display(ArrayList<Item> items) 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
 		view.print("---secect item---");
-		for(int i = 0; i<items.size(); i++) {
+		for(int i = 0; i<items.size(); i++)
+		{
 			view.print(i+": "+items.get(i));
 		}
 		view.print("hint:");
 		view.print("exit:");
-		
 	}
-
 }
