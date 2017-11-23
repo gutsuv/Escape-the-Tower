@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class controller 
+public class Controller 
 {
 	Scanner control = new Scanner(System.in);
 	ObjectHolder model;
 	View menuView = new View();
 
-	public controller(ObjectHolder main) 
+	public Controller(ObjectHolder main) 
 	{
 		model = main;
 		while(true) 

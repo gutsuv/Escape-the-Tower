@@ -7,7 +7,7 @@ public class Enemy extends Character implements Cloneable
 	protected int damage;
 	View view;
 	protected ArrayList<Item> item = new ArrayList<Item>();
-	public Enemy(String loadedString, referenceIdentities library)
+	public Enemy(String loadedString, ReferenceIdentities library)
 	{
 		//loaded from file
 		//int enemyId, String name, int health, int damage, int defense, 

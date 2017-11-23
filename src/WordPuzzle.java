@@ -3,7 +3,7 @@ public class WordPuzzle extends Puzzle
 {
 	String answer;
 	Item item;
-	public WordPuzzle(String loadedString, referenceIdentities library) 
+	public WordPuzzle(String loadedString, ReferenceIdentities library) 
 	{
 		//loaded from file
 		//int puzzleId String name, int itemId, 

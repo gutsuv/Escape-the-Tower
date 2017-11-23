@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.*;
-public class referenceIdentities 
+public class ReferenceIdentities 
 {
-	referenceIdentities library; 
+	ReferenceIdentities library; 
 	ArrayList<Item> items = new ArrayList<Item>();
 	ArrayList<Enemy> enemys = new ArrayList<Enemy>();
 	ArrayList<Puzzle> puzzles = new ArrayList<Puzzle>();
@@ -300,7 +300,7 @@ public class referenceIdentities
 	}
 	
 	// this exists for self reference
-	public void setLibray(referenceIdentities library)
+	public void setLibray(ReferenceIdentities library)
 	{
 		this.library = library;
 	}

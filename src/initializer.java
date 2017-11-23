@@ -1,13 +1,13 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class initializer 
+public class Initializer 
 {
 	static ObjectHolder main;
 	static View view;
 	public static void main(String[] args) 
 	{
-		controller cont;
+		Controller cont;
 		view = new View();
 		try 
 		{
@@ -17,7 +17,7 @@ public class initializer
 		{
 			System.out.println("failed to load");
 		}
-		cont = new controller(main);
+		cont = new Controller(main);
 	}
 	public static void newGame() throws FileNotFoundException 
 	{

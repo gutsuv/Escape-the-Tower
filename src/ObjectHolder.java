@@ -12,7 +12,7 @@ public class ObjectHolder
 	
 	Room currentRoom;
 	Room previousRoom;
-	referenceIdentities library = new referenceIdentities();
+	ReferenceIdentities library = new ReferenceIdentities();
 	
 	public ObjectHolder(View v) throws FileNotFoundException 
 	{
