@@ -213,157 +213,157 @@ public class RoomContent
 	String roomDesc6_02 = "Room Name\nFloor #, Room # \nRoom Description\n";
 	String roomDesc6_01 = "Room Name\nFloor #, Room # \nRoom Description\n";
 
-	int 	room1_26Exit1 = 25, 
-			room1_26Exit2 = 29,
-			room1_26Exit3 = 27, 
-			room1_26Exit4 = 0, // 0 can represent a nonexistent exit. 
-			
-		    room1_27Exit1 = 31, // Finish?
-			room1_27Exit2 = 26,
-			room1_27Exit3 = 29,
-			room1_27Exit4 = 0,
-			
-			room1_28Exit1 = 26, 
-			room1_28Exit2 = 0,
-			room1_28Exit3 = 0,
-			room1_28Exit4 = 0,
-			
-			room1_29Exit1 = 30, 
-			room1_29Exit2 = 27,
-			room1_29Exit3 = 0,
-			room1_29Exit4 = 0,
-	
-			room1_30Exit1 = 29, 
-			room1_30Exit2 = 0,
-			room1_30Exit3 = 0,
-			room1_30Exit4 = 0,
+	int room1_26Exit1 = 25;
+	int	room1_26Exit2 = 29;
+	int	room1_26Exit3 = 27; 
+	int	room1_26Exit4 = 0; // 0 can represent a nonexistent exit. 
 
-			room2_22Exit1 = 18, 
-			room2_22Exit2 = 24,
-			room2_22Exit3 = 23,
-			room2_22Exit4 = 25,	
+	int	room1_27Exit1 = 31; // Finish?
+	int	room1_27Exit2 = 26;
+	int	room1_27Exit3 = 29;
+	int	room1_27Exit4 = 0;
+
+	int	room1_28Exit1 = 26; 
+	int	room1_28Exit2 = 0;
+	int	room1_28Exit3 = 0;
+	int	room1_28Exit4 = 0;
+
+	int	room1_29Exit1 = 30; 
+	int	room1_29Exit2 = 27;
+	int	room1_29Exit3 = 0;
+	int	room1_29Exit4 = 0;
+
+	int	room1_30Exit1 = 29; 
+	int	room1_30Exit2 = 0;
+	int	room1_30Exit3 = 0;
+	int	room1_30Exit4 = 0;
+
+	int	room2_22Exit1 = 18; 
+	int	room2_22Exit2 = 24;
+	int	room2_22Exit3 = 23;
+	int	room2_22Exit4 = 25;	
+
+	int	room2_23Exit1 = 22; 
+	int	room2_23Exit2 = 0;
+	int	room2_23Exit3 = 0;
+	int	room2_23Exit4 = 0;
+
+	int	room2_24Exit1 = 22; 
+	int	room2_24Exit2 = 0;
+	int	room2_24Exit3 = 0;
+	int	room2_24Exit4 = 0;
+
+	int	room2_25Exit1 = 22;
+	int	room2_25Exit2 = 26;
+	int	room2_25Exit3 = 0;
+	int	room2_25Exit4 = 0;
 			
-			room2_23Exit1 = 22, 
-			room2_23Exit2 = 0,
-			room2_23Exit3 = 0,
-			room2_23Exit4 = 0,
-				
-			room2_24Exit1 = 22, 
-			room2_24Exit2 = 0,
-			room2_24Exit3 = 0,
-			room2_24Exit4 = 0,
-			
-			room2_25Exit1 = 22, 
-			room2_25Exit2 = 26,
-			room2_25Exit3 = 0,
-			room2_25Exit4 = 0,
-			
-			room3_17Exit1 = 16, 
-			room3_17Exit2 = 0,
-			room3_17Exit3 = 0,
-			room3_17Exit4 = 0,
-			
-			room3_18Exit1 = 22, 
-			room3_18Exit2 = 19,
-			room3_18Exit3 = 21,
-			room3_18Exit4 = 20,
-			room3_18Exit5 = 13, // ?
-			
-			room3_19Exit1 = 18, 
-			room3_19Exit2 = 0,
-			room3_19Exit3 = 0,
-			room3_19Exit4 = 0,
-							
-			room3_20Exit1 = 18, 
-			room3_20Exit2 = 0,
-			room3_20Exit3 = 0,
-			room3_20Exit4 = 0,
-									
-			room3_21Exit1 = 18, 
-			room3_21Exit2 = 0,
-			room3_21Exit3 = 0,
-			room3_21Exit4 = 0,
-			
-			room4_12Exit1 = 10, 
-			room4_12Exit2 = 13,
-			room4_12Exit3 = 0,
-			room4_12Exit4 = 0,
-			
-			room4_13Exit1 = 18, 
-			room4_13Exit2 = 14,
-			room4_13Exit3 = 15,
-			room4_13Exit4 = 12,	
-			
-			room4_14Exit1 = 13, 
-			room4_14Exit2 = 0,
-			room4_14Exit3 = 0,
-			room4_14Exit4 = 0,
-					
-			room4_15Exit1 = 13, 
-			room4_15Exit2 = 16,
-			room4_15Exit3 = 0,
-			room4_15Exit4 = 0,
-							
-			room4_16Exit1 = 15, 
-			room4_16Exit2 = 17,
-			room4_16Exit3 = 0,
-			room4_16Exit4 = 0,
-			
-			room5_06Exit1 = 5, 
-			room5_06Exit2 = 7,
-			room5_06Exit3 = 8,
-			room5_06Exit4 = 9,
-			room5_06Exit5 = 10,
-			
-			room5_07Exit1 = 6, 
-			room5_07Exit2 = 0,
-			room5_07Exit3 = 0,
-			room5_07Exit4 = 0,
-					
-			room5_08Exit1 = 6, 
-			room5_08Exit2 = 0,
-			room5_08Exit3 = 0,
-			room5_08Exit4 = 0,
-							
-			room5_09Exit1 = 6, 
-			room5_09Exit2 = 0,
-			room5_09Exit3 = 0,
-			room5_09Exit4 = 0,
-									
-			room5_10Exit1 = 11, 
-			room5_10Exit2 = 12,
-			room5_10Exit3 = 0,
-			room5_10Exit4 = 0,
-									
-			room5_11Exit1 = 10, 
-			room5_11Exit2 = 0,
-			room5_11Exit3 = 0,
-			room5_11Exit4 = 0,
-			
-			room6_01Exit1 = 3, 
-			room6_01Exit2 = 0,
-			room6_01Exit3 = 0,
-			room6_01Exit4 = 0,
-			
-			room6_02Exit1 = 3, 
-			room6_02Exit2 = 0,
-			room6_02Exit3 = 0,
-			room6_02Exit4 = 0,
-					
-			room6_03Exit1 = 1, 
-			room6_03Exit2 = 2,
-			room6_03Exit3 = 4,
-			room6_03Exit4 = 0,
-			
-			room6_04Exit1 = 3, 
-			room6_04Exit2 = 5,
-			room6_04Exit3 = 0,
-			room6_04Exit4 = 0,
-					
-			room6_05Exit1 = 4, 
-			room6_05Exit2 = 6,
-			room6_05Exit3 = 0,
-			room6_05Exit4 = 0;
+	int	room3_17Exit1 = 16;
+	int	room3_17Exit2 = 0;
+	int	room3_17Exit3 = 0;
+	int	room3_17Exit4 = 0;
+
+	int	room3_18Exit1 = 22;
+	int	room3_18Exit2 = 19;
+	int	room3_18Exit3 = 21;
+	int	room3_18Exit4 = 20;
+	int	room3_18Exit5 = 13; // ?
+
+	int	room3_19Exit1 = 18; 
+	int	room3_19Exit2 = 0;
+	int	room3_19Exit3 = 0;
+	int	room3_19Exit4 = 0;
+
+	int	room3_20Exit1 = 18; 
+	int	room3_20Exit2 = 0;
+	int	room3_20Exit3 = 0;
+	int	room3_20Exit4 = 0;
+
+	int	room3_21Exit1 = 18; 
+	int	room3_21Exit2 = 0;
+	int	room3_21Exit3 = 0;
+	int	room3_21Exit4 = 0;
+
+	int	room4_12Exit1 = 10;
+	int	room4_12Exit2 = 13;
+	int	room4_12Exit3 = 0;
+	int	room4_12Exit4 = 0;
+
+	int	room4_13Exit1 = 18;
+	int	room4_13Exit2 = 14;
+	int	room4_13Exit3 = 15;
+	int	room4_13Exit4 = 12;	
+
+	int	room4_14Exit1 = 13;
+	int	room4_14Exit2 = 0;
+	int	room4_14Exit3 = 0;
+	int	room4_14Exit4 = 0;
+
+	int	room4_15Exit1 = 13;
+	int	room4_15Exit2 = 16;
+	int	room4_15Exit3 = 0;
+	int	room4_15Exit4 = 0;
+
+	int	room4_16Exit1 = 15; 
+	int	room4_16Exit2 = 17;
+	int	room4_16Exit3 = 0;
+	int	room4_16Exit4 = 0;
+
+	int	room5_06Exit1 = 5;
+	int	room5_06Exit2 = 7;
+	int	room5_06Exit3 = 8;
+	int	room5_06Exit4 = 9;
+	int	room5_06Exit5 = 10;
+
+	int	room5_07Exit1 = 6; 
+	int	room5_07Exit2 = 0;
+	int	room5_07Exit3 = 0;
+	int	room5_07Exit4 = 0;
+
+	int	room5_08Exit1 = 6; 
+	int	room5_08Exit2 = 0;
+	int	room5_08Exit3 = 0;
+	int	room5_08Exit4 = 0;
+
+	int	room5_09Exit1 = 6; 
+	int	room5_09Exit2 = 0;
+	int	room5_09Exit3 = 0;
+	int	room5_09Exit4 = 0;
+
+	int	room5_10Exit1 = 11; 
+	int	room5_10Exit2 = 12;
+	int	room5_10Exit3 = 0;
+	int	room5_10Exit4 = 0;
+
+	int	room5_11Exit1 = 10; 
+	int	room5_11Exit2 = 0;
+	int	room5_11Exit3 = 0;
+	int	room5_11Exit4 = 0;
+
+	int	room6_01Exit1 = 3; 
+	int	room6_01Exit2 = 0;
+	int	room6_01Exit3 = 0;
+	int	room6_01Exit4 = 0;
+
+	int	room6_02Exit1 = 3; 
+	int	room6_02Exit2 = 0;
+	int	room6_02Exit3 = 0;
+	int	room6_02Exit4 = 0;
+
+	int	room6_03Exit1 = 1; 
+	int	room6_03Exit2 = 2;
+	int	room6_03Exit3 = 4;
+	int	room6_03Exit4 = 0;
+
+	int	room6_04Exit1 = 3; 
+	int	room6_04Exit2 = 5;
+	int	room6_04Exit3 = 0;
+	int	room6_04Exit4 = 0;
+
+	int	room6_05Exit1 = 4;
+	int	room6_05Exit2 = 6;
+	int	room6_05Exit3 = 0;
+	int	room6_05Exit4 = 0;
 			
 	Room room1_30 = new Room(roomId1_30, roomDesc1_30, roomEnemy1_30, roomPuzzle1_29, roomItem1_30, room1_30Exit1, room1_30Exit2, room1_30Exit3,  room1_30Exit4, room6_05Exit4, roomLocked1_30);
 	Room room1_29 = new Room(roomId1_30, roomDesc1_29, roomEnemy1_29, roomPuzzle1_29, roomItem1_29, room1_29Exit1, room1_29Exit2, room1_29Exit3, room1_29Exit4, room6_05Exit4, roomLocked1_29);

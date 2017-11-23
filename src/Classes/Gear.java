@@ -21,7 +21,7 @@ public class Gear extends Item
 	}
 	public Gear(int itemId, String itemName, String itemDesc, int defense, int attackMin, int attackMax, int acc, char itemslot)
 	{
-		super(itemId, itemName, itemDesc);
+		//super(itemId, itemName, itemDesc);
 		this.defense = defense;
 		this.attackMin = attackMin;
 		this.attackMax = attackMax;

@@ -119,6 +119,8 @@ public class Controller
 
 		while (roomText)
 		{
+			Room room = new Room();
+			
 			String userInput = input.nextLine();
 
 			if (userInput.equalsIgnoreCase("examine") || userInput.equalsIgnoreCase("examine room"))
