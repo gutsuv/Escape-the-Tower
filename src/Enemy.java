@@ -22,18 +22,24 @@ public class Enemy extends Character implements Cloneable
 			damage = Integer.parseInt(splitString[3]);
 			defense = Integer.parseInt(splitString[4]);
 			acc = Integer.parseInt(splitString[5]);
-			if(splitString[6].equalsIgnoreCase("")) {}
-			else {
+			if(splitString[6].equalsIgnoreCase("")) 
+			{
+			}
+			else 
+			{
 				String [] ints = splitString[6].split("><");
 				int i = ints.length;
-				while(i>0) {
+				while(i>0) 
+				{
 					i--;
-					item.add(library.cloneItem(Integer.parseInt(ints[i])));}
+					item.add(library.cloneItem(Integer.parseInt(ints[i])));
 				}
+			}
 			enemyDesc = splitString[7];
 			
 			
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include Gear in the text message");
@@ -67,22 +73,27 @@ public class Enemy extends Character implements Cloneable
 		view.print("exit:");
 	}
 	
-	public ArrayList<Item> getItems(){
+	public ArrayList<Item> getItems()
+	{
 		return item;
 	}
+	
 	@Override
 	public String toString()
 	{
 		return "Enemy [" + name + ", " +enemyDesc+"]";
 	}
 	
-	protected Object clone() throws CloneNotSupportedException {
+	protected Object clone() throws CloneNotSupportedException 
+	{
         return super.clone();
     }
 
 	@Override
-	public int dealDamage() {
-		if((Math.random()*10)<acc){
+	public int dealDamage() 
+	{
+		if((Math.random()*10)<acc)
+		{
 			return damage;
 		}
 		else return 0;

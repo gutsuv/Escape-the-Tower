@@ -1,6 +1,7 @@
 import javafx.scene.control.Button;
 
-public abstract class Item implements Cloneable, Comparable<Item>{
+public abstract class Item implements Cloneable, Comparable<Item>
+{
 	protected int itemId;
 	protected String itemName;
 	protected String itemDescLong;
@@ -38,8 +39,10 @@ public abstract class Item implements Cloneable, Comparable<Item>{
 	public abstract String getDisplay();
 	public abstract void displayCommands();
 	
-	protected Object clone() throws CloneNotSupportedException {
-        return super.clone();}
+	protected Object clone() throws CloneNotSupportedException 
+	{
+        return super.clone();
+    }
 	
 	@Override
 	public String toString()
@@ -48,9 +51,19 @@ public abstract class Item implements Cloneable, Comparable<Item>{
 	}
 
 	@Override
-	public int compareTo(Item o) {
-		if(itemId>o.getItemId()) {return 1;}
-		else if(itemId<o.getItemId()){return -1;}
-		else {return 0;}
+	public int compareTo(Item o) 
+	{
+		if(itemId>o.getItemId()) 
+		{
+			return 1;
+		}
+		else if(itemId<o.getItemId())
+		{
+			return -1;
+		}
+		else 
+		{
+			return 0;
+		}
 	}
 }

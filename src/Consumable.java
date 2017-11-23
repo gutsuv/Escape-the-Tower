@@ -1,7 +1,6 @@
 
 public class Consumable extends Item
 {
-	
 	protected int healthEffect;
 	protected int maxHealthEffect;
 	
@@ -21,7 +20,8 @@ public class Consumable extends Item
 			itemDescShort = splitString[4];
 			itemDescLong= splitString[5];
 			
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include Consumable in the text message");
@@ -47,7 +47,8 @@ public class Consumable extends Item
 	//code moved because I can't make an object delete itself without using outside method
 
 	@Override
-	public void examine() {
+	public void examine() 
+	{
 		view.printString((healthEffect+": "+itemDescLong),125);
 	}
 

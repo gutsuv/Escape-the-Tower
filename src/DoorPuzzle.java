@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 
-public class DoorPuzzle extends Puzzle{
-	
+public class DoorPuzzle extends Puzzle
+{
 	int itemId;
 	int roomId;
 	Room lockedRoom;
 	
-	public DoorPuzzle(String loadedString) {
+	public DoorPuzzle(String loadedString) 
+	{
 		//loaded from file
 		//int puzzleId String name, int itemId, int roomId
 		//String puzzleDesc, String hint
@@ -20,7 +21,8 @@ public class DoorPuzzle extends Puzzle{
 			puzzleDesc = splitString[4];
 			hint = splitString[5];
 
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include DoorPuzzle in the text message");
@@ -63,30 +65,33 @@ public class DoorPuzzle extends Puzzle{
 			view.print("Puzzle solved: The exit is no longer obstructed");
 			lockedRoom.setLocked(false);
 			solved=true;
-		}else {
+		}
+		else 
+		{
 			view.line(125);
 			view.print("puzzle not solved by item");
-			}
+		}
 	}
 
 	@Override
-	public void display() {
+	public void display() 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
 	}
 	
-	public void display(ArrayList<Item> items) {
+	public void display(ArrayList<Item> items) 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
 		view.print("---secect item---");
-		for(int i = 0; i<items.size(); i++) {
+		for(int i = 0; i<items.size(); i++) 
+		{
 			view.print(i+": "+items.get(i));
 		}
 		view.print("hint:");
 		view.print("exit:");
-		
 	}
-	
 }

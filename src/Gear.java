@@ -27,7 +27,8 @@ public class Gear extends Item
 			itemDescShort = splitString[7];
 			itemDescLong = splitString[8];
 
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include Gear in the text message");
@@ -64,7 +65,8 @@ public class Gear extends Item
 	//code moved because I can't make an object delete itself without using outside method
 
 	@Override
-	public void examine() {
+	public void examine() 
+	{
 		if(itemslot=='w') 
 		{
 			view.print(itemName+", MinDamage: "+attackMin+", MaxDamage: "+attackMax+", Accuracy: "+acc+", "+itemDescLong);
