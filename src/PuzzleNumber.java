@@ -75,5 +75,8 @@ public class PuzzleNumber extends Puzzle{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
+		view.print("guess a number:");
+		view.print("hint:");
+		view.print("exit:");
 	}
 }

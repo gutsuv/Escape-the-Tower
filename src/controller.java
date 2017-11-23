@@ -56,9 +56,25 @@ public class controller {
 		}
 	}
 	public void controllerPuzzleNumber() {
+		String answer;
 		while(true) {
 			model.getCurrentRoom().getPuzzle().display();
-			if(true) {break;}
+			answer = control.nextLine();
+			if(answer.matches("exit")) {break;}
+			if(answer.matches("hint")) {model.getCurrentRoom().getPuzzle().printHint();}
+			if(answer.matches("[0-9]+")) {
+				model.getCurrentRoom().getPuzzle().attemptSolve(answer);
+				if(!model.getCurrentRoom().getPuzzle().isSolved()) 
+				{
+					model.getUser().receiveDamage(
+							((PuzzleNumber) model.getCurrentRoom().getPuzzle()).getDamage());
+				}
+				
+			}
+			if(model.getCurrentRoom().getPuzzle().isSolved()) {
+				model.getCurrentRoom().setPuzzle(null);
+				break;}
+			
 		}
 	}
 	public void controllerPuzzleRiddle() {
@@ -225,6 +241,8 @@ public class controller {
 					model.getCurrentRoom().getItems().get(0));
 			model.getCurrentRoom().getItems().remove(0);
 		}
+		menuView.line(125);
+		menuView.print("Items Picked Up");
 		try {model.getCurrentRoom().display();} catch (Exception e) {}
 	}
 	

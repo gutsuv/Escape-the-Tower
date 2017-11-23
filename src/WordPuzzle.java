@@ -57,6 +57,6 @@ public class WordPuzzle extends Puzzle{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc,125);
-		view.printString("Input solution to puzzle or type 'exit'",125);
+		view.printString("Input solution to puzzle or type 'exit' or type 'hint'",125);
 	}
 }

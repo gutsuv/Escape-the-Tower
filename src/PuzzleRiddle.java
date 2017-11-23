@@ -74,6 +74,8 @@ public class PuzzleRiddle extends Puzzle{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
-		view.print("type exit or attempt to answer puzzle");
+		view.print("hint: ");
+		view.print("attempt to answer puzzle:");
+		view.print("exit:");
 	}
 }

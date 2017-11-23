@@ -60,6 +60,7 @@ public class Enemy extends Character implements Cloneable
 	{
 		view.line(125);
 		view.print(name);
+		view.printString(enemyDesc,125);
 		view.line();
 		view.print("attack:");
 		view.print("inventory:");
