@@ -1,8 +1,10 @@
 
-public class WordPuzzle extends Puzzle{
+public class WordPuzzle extends Puzzle
+{
 	String answer;
 	Item item;
-	public WordPuzzle(String loadedString, referenceIdentities library) {
+	public WordPuzzle(String loadedString, referenceIdentities library) 
+	{
 		//loaded from file
 		//int puzzleId String name, int itemId, 
 		//String answer, String puzzleDesc, String hint
@@ -16,8 +18,8 @@ public class WordPuzzle extends Puzzle{
 			answer = splitString[3];
 			puzzleDesc = splitString[4];
 			hint = splitString[5];
-
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include WordPuzzle in the text message");
@@ -40,7 +42,9 @@ public class WordPuzzle extends Puzzle{
 			view.line(125);
 			view.print("Puzzle solved");
 			view.print("Item available");
-		}else {
+		}
+		else 
+		{
 			view.line(125);
 			view.print("incorrect solution");
 		}
@@ -53,7 +57,8 @@ public class WordPuzzle extends Puzzle{
 	}
 	
 	@Override
-	public void display() {
+	public void display() 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc,125);

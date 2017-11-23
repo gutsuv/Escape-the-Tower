@@ -21,7 +21,7 @@ public class View<e>
 	}
 	public void printString (String a, int i) 
 	{
-		int j=0, k=0, m=a.length();
+		int j = 0, k = 0, m = a.length();
 		while(k < m) 
 		{
 			j++;
@@ -29,7 +29,7 @@ public class View<e>
 			{
 				System.out.print("-");
 				System.out.println();
-				j=0;
+				j = 0;
 				System.out.print("    -");
 			}
 			System.out.print(a.charAt(k));
@@ -40,7 +40,7 @@ public class View<e>
 	
 	public void printStringO (Object o, int i) 
 	{
-		printString(o.toString(),i);
+		printString(o.toString(), i);
 	}
 	public void print (String[] a) 
 	{
@@ -63,7 +63,7 @@ public class View<e>
 			{
 				return;
 			}
-			for(int i = 0;i < ((ArrayList) o).size(); i++) 
+			for(int i = 0; i < ((ArrayList) o).size(); i++) 
 			{
 				System.out.println(((ArrayList) o).get(i));
 			}
@@ -71,7 +71,7 @@ public class View<e>
 		}
 		System.out.println(o);
 	}
-	public void printStrO (Object o,int j) 
+	public void printStrO (Object o, int j) 
 	{
 		if(o == null)
 		{
@@ -85,11 +85,11 @@ public class View<e>
 			}
 			for(int i = 0; i < ((ArrayList) o).size(); i++) 
 			{
-				printStringO(((ArrayList) o).get(i),j);
+				printStringO(((ArrayList) o).get(i), j);
 			}
 			return;
 		}
-		printStringO(o,j);
+		printStringO(o, j);
 	}
 	
 	public void print (Object[] o) 
@@ -107,8 +107,8 @@ public class View<e>
 		System.out.print(o);
 		System.out.println(": " + e);
 	}
-	public void printString (Object o, Object e,int i) 
+	public void printString (Object o, Object e, int i) 
 	{
-		printString((o.toString() + ": " + e.toString()),i);
+		printString((o.toString() + ": " + e.toString()), i);
 	}
 }
