@@ -10,6 +10,7 @@ public class ObjectHolder {
 	Player user;
 	
 	Room currentRoom;
+	Room previousRoom;
 	referenceIdentities library = new referenceIdentities();
 	
 	public ObjectHolder(View v) throws FileNotFoundException {
@@ -151,12 +152,19 @@ public class ObjectHolder {
 			if(direction==currentRoom.getDirection(i)) {
 				if(rooms.get(currentRoom.getExit(i)-1).isLocked()) {
 					view.print("locked");
+				}else if(currentRoom.getEnemy()!=null){
+					if(previousRoom.getRoomId()==currentRoom.getExit(i)) {
+						setCurrentRoom(currentRoom.getExit(i));
+					}else {
+						view.print("Exit Obstructed by enemy");
+					}
 				}else {setCurrentRoom(currentRoom.getExit(i));}
 			}
 		}
 	}
 	
 	public void setCurrentRoom(int i) throws Exception {
+		previousRoom = currentRoom;
 		currentRoom = rooms.get(i-1);
 		if(currentRoom.getRoomId()==31) {
 			view.print("You won");
