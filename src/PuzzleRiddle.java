@@ -1,12 +1,14 @@
 import java.util.ArrayList;
 
-public class PuzzleRiddle extends Puzzle{
+public class PuzzleRiddle extends Puzzle
+{
 	String answer1;
 	String answer2;
 	int roomId;
 	Room lockedRoom;
 	
-	public PuzzleRiddle(String loadedString) {
+	public PuzzleRiddle(String loadedString) 
+	{
 		//loaded from file
 		//int puzzleId String name, int roomId String puzzleDesc,
 		//String hint, String answer1, String answer2
@@ -20,7 +22,8 @@ public class PuzzleRiddle extends Puzzle{
 			hint = splitString[4];
 			answer1 = splitString[5];
 			answer2 = splitString[6];
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include PuzzleRiddle in the text message");
@@ -39,7 +42,7 @@ public class PuzzleRiddle extends Puzzle{
 	
 	public void setLockedRoom(ArrayList<Room> rooms) 
 	{
-		setRoom(rooms.get(roomId-1));
+		setRoom(rooms.get(roomId - 1));
 	}
 	
 	@Override
@@ -51,16 +54,18 @@ public class PuzzleRiddle extends Puzzle{
 	@Override
 	public void attemptSolve(String answer) 
 	{
-		if(answer.matches(answer1)||answer.matches(answer2)) 
+		if(answer.matches(answer1) || answer.matches(answer2)) 
 		{
 			view.line(125);
 			view.print("Puzzle solved: Exit is no longer obstructed");
 			lockedRoom.setLocked(false);
 			solved=true;
-		}else {
+		}
+		else 
+		{
 			view.line(125);
 			view.print("incorrect answer");
-			}
+		}
 	}
 
 	@Override
@@ -70,7 +75,8 @@ public class PuzzleRiddle extends Puzzle{
 	}
 	
 	@Override
-	public void display() {
+	public void display() 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);

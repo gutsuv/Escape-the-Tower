@@ -1,5 +1,6 @@
 
-public class PuzzleItem extends Item{
+public class PuzzleItem extends Item
+{
 	protected int puzzleId;
 	
 	public PuzzleItem(String loadedString)
@@ -17,13 +18,18 @@ public class PuzzleItem extends Item{
 			itemDescLong = splitString[3];
 			//Other Item classes have two descriptions. Double casting it makes some sense 
 			
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include Gear in the text message");
 		}
 	}
-	public int getPuzzleId() {return puzzleId;}
+	
+	public int getPuzzleId()
+	{
+		return puzzleId;
+	}
 
 	@Override
 	public void use() {}
@@ -33,16 +39,20 @@ public class PuzzleItem extends Item{
 	//code moved because I can't make an object delete itself without using outside method		
 	
 	@Override
-	public void examine() {
+	public void examine() 
+	{
 		view.print(itemDescShort);
 	}
+	
 	@Override
 	public String getDisplay() 
 	{
 		return itemName + "-> use, drop, examine:";
 	}
+	
 	@Override
-	public void displayCommands() {
+	public void displayCommands() 
+	{
 		view.line(125);
 		view.print(itemName);
 		view.print("drop:");

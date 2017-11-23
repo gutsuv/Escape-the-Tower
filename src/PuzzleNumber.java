@@ -1,12 +1,14 @@
 import java.util.ArrayList;
 
-public class PuzzleNumber extends Puzzle{
+public class PuzzleNumber extends Puzzle
+{
 	int answer;
 	int roomId;
 	Room lockedRoom;
 	int damage = 5;
 	
-	public PuzzleNumber(String loadedString) {
+	public PuzzleNumber(String loadedString) 
+	{
 		//loaded from file
 		//int puzzleId String name, int roomId
 		//String puzzleDesc, String hint
@@ -20,7 +22,8 @@ public class PuzzleNumber extends Puzzle{
 			puzzleDesc = splitString[3];
 			hint = splitString[4];
 
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include PuzzleNumber in the text message");
@@ -40,7 +43,7 @@ public class PuzzleNumber extends Puzzle{
 	
 	public void setLockedRoom(ArrayList<Room> rooms) 
 	{
-		setRoom(rooms.get(roomId-1));
+		setRoom(rooms.get(roomId - 1));
 	}
 	
 	public int getDamage()
@@ -59,9 +62,18 @@ public class PuzzleNumber extends Puzzle{
 	{
 		initialize();
 		int guess = Integer.parseInt(stringAnswer);
-		if(guess>answer) {view.print("wrong anser: too high");}
-		else if(guess<answer) {view.print("wrong answer: too low");}
-		else{solved=true;lockedRoom.setLocked(false);}
+		if(guess > answer) 
+		{
+			view.print("wrong anser: too high");
+		}
+		else if(guess < answer) 
+		{
+			view.print("wrong answer: too low");
+		}
+		else
+		{
+			solved = true;lockedRoom.setLocked(false);
+		}
 	}
 	
 	@Override
@@ -71,7 +83,8 @@ public class PuzzleNumber extends Puzzle{
 	}
 	
 	@Override
-	public void display() {
+	public void display() 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);

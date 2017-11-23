@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
-public class PuzzleDebuff extends Puzzle{
+public class PuzzleDebuff extends Puzzle
+{
 	private int debuff;
 	private int itemId;
-	public PuzzleDebuff(String loadedString) {
+	public PuzzleDebuff(String loadedString) 
+	{
 		//loaded from file
 		//int puzzleId String name, int roomId String puzzleDesc,
 		//String hint, String answer1, String answer2
@@ -16,7 +18,8 @@ public class PuzzleDebuff extends Puzzle{
 			itemId = Integer.parseInt(splitString[3]);
 			puzzleDesc = splitString[4];
 			hint = splitString[5];
-		}catch(Exception E)
+		}
+		catch(Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include PuzzleDebuff in the text message");
@@ -42,7 +45,8 @@ public class PuzzleDebuff extends Puzzle{
 	}
 	
 	@Override
-	public void display() {
+	public void display() 
+	{
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
