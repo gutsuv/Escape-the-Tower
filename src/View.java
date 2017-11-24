@@ -1,31 +1,34 @@
 import java.util.ArrayList;
 
-public class View<e> 
+public class View<e>
 {
-	public void line() 
+	public void line()
 	{
 		System.out.println();
 	}
-	public void line(int i) 
+
+	public void line(int i)
 	{
-		while(i > 0) 
+		while (i > 0)
 		{
 			i--;
 			System.out.print("-");
 		}
 		line();
 	}
-	public void printString (String a) 
+
+	public void printString(String a)
 	{
 		System.out.println(a);
 	}
-	public void printString (String a, int i) 
+
+	public void printString(String a, int i)
 	{
 		int j = 0, k = 0, m = a.length();
-		while(k < m) 
+		while (k < m)
 		{
 			j++;
-			if(j > i) 
+			if (j > i)
 			{
 				System.out.print("-");
 				System.out.println();
@@ -37,33 +40,35 @@ public class View<e>
 		}
 		System.out.println();
 	}
-	
-	public void printStringO (Object o, int i) 
+
+	public void printStringO(Object o, int i)
 	{
 		printString(o.toString(), i);
 	}
-	public void print (String[] a) 
+
+	public void print(String[] a)
 	{
 		int i = a.length;
-		while(i > 0) 
+		while (i > 0)
 		{
 			System.out.println(a[i]);
 			i--;
 		}
 	}
-	public void print (Object o) 
+
+	public void print(Object o)
 	{
-		if(o == null)
+		if (o == null)
 		{
 			return;
 		}
-		if(o instanceof ArrayList) 
+		if (o instanceof ArrayList)
 		{
-			if(((ArrayList) o).size() == 0) 
+			if (((ArrayList) o).size() == 0)
 			{
 				return;
 			}
-			for(int i = 0; i < ((ArrayList) o).size(); i++) 
+			for (int i = 0; i < ((ArrayList) o).size(); i++)
 			{
 				System.out.println(((ArrayList) o).get(i));
 			}
@@ -71,19 +76,20 @@ public class View<e>
 		}
 		System.out.println(o);
 	}
-	public void printStrO (Object o, int j) 
+
+	public void printStrO(Object o, int j)
 	{
-		if(o == null)
+		if (o == null)
 		{
 			return;
 		}
-		if(o instanceof ArrayList) 
+		if (o instanceof ArrayList)
 		{
-			if(((ArrayList) o).size() == 0) 
+			if (((ArrayList) o).size() == 0)
 			{
 				return;
 			}
-			for(int i = 0; i < ((ArrayList) o).size(); i++) 
+			for (int i = 0; i < ((ArrayList) o).size(); i++)
 			{
 				printStringO(((ArrayList) o).get(i), j);
 			}
@@ -91,23 +97,24 @@ public class View<e>
 		}
 		printStringO(o, j);
 	}
-	
-	public void print (Object[] o) 
+
+	public void print(Object[] o)
 	{
 		int i = o.length;
-		while(i > 0)
+		while (i > 0)
 		{
 			System.out.println(o[i]);
 			i--;
 		}
 	}
 
-	public void print (Object o, Object e)
+	public void print(Object o, Object e)
 	{
 		System.out.print(o);
 		System.out.println(": " + e);
 	}
-	public void printString (Object o, Object e, int i) 
+
+	public void printString(Object o, Object e, int i)
 	{
 		printString((o.toString() + ": " + e.toString()), i);
 	}

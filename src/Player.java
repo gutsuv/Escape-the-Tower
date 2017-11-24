@@ -7,7 +7,8 @@ public class Player extends Character
 	int minAttack;
 	ArrayList<Item> inventory = new ArrayList<Item>();
 	ArrayList<Gear> equippedItems = new ArrayList<Gear>();
-	public Player(View view) 
+
+	public Player(View view)
 	{
 		health = 100;
 		maxHealth = 100;
@@ -15,18 +16,20 @@ public class Player extends Character
 		defense = 0;
 		acc = 100;
 		alive = true;
-		this.view=view;
+		this.view = view;
 	}
-	public Player(int health, int minAttack, int defense, int acc, boolean alive, View view) 
+
+	public Player(int health, int minAttack, int defense, int acc, boolean alive, View view)
 	{
 		this.health = health;
-		minAttack = minAttack;
+		this.minAttack = minAttack;
 		this.defense = defense;
 		this.acc = acc;
 		this.alive = alive;
 		this.view = view;
 	}
-	public void displayStats() 
+
+	public void displayStats()
 	{
 		view.line(125);
 		view.print("Health: " + health + "/" + maxHealth);
@@ -35,13 +38,14 @@ public class Player extends Character
 		view.print("Defense: " + defense);
 		view.print("Accuracy: " + acc + "/100");
 	}
+
 	private void updateStats()
 	{
 		maxAttack = 0;
 		minAttack = 0;
 		defense = 0;
 		acc = 100;
-		for(int i = 0; i < equippedItems.size(); i++) 
+		for (int i = 0; i < equippedItems.size(); i++)
 		{
 			System.out.println(i);
 			maxAttack = maxAttack + equippedItems.get(i).getAttackMax();
@@ -52,62 +56,72 @@ public class Player extends Character
 		displayEquippedItems();
 		displayStats();
 	}
+
 	@Override
-	public int dealDamage() 
+	public int dealDamage()
 	{
-		if((Math.random()*100) < acc)
+		if ((Math.random() * 100) < acc)
 		{
-			return (int) (minAttack + (Math.random()*(1 + maxAttack - minAttack)));
+			return (int) (minAttack + (Math.random() * (1 + maxAttack - minAttack)));
 		}
-		else return 0;
+		else
+			return 0;
 	}
-	public void updateMaxHealth(int i) 
+
+	public void updateMaxHealth(int i)
 	{
 		maxHealth = maxHealth + i;
 	}
-	//Inventory Exists on player so methods for item based things exist here to interact with player items.
+
+	// Inventory Exists on player so methods for item based things exist here to
+	// interact with player items.
 	public ArrayList<Item> getInventory()
 	{
 		return inventory;
 	}
+
 	public Item getItem(int i)
 	{
 		return inventory.get(i);
 	}
-	public void pickUp(Item item) 
+
+	public void pickUp(Item item)
 	{
 		inventory.add(item);
 	}
-	public void drop(int i) 
+
+	public void drop(int i)
 	{
-		for(int j = 0; j < equippedItems.size(); j++) 
+		for (int j = 0; j < equippedItems.size(); j++)
 		{
-			if (inventory.get(i)==equippedItems.get(j)) 
+			if (inventory.get(i) == equippedItems.get(j))
 			{
 				unequip(j);
 			}
 		}
 		inventory.remove(i);
 	}
+
 	public void equip(int i) throws Exception
 	{
 		equip(inventory.get(i));
 	}
+
 	public void equip(Item item) throws Exception
 	{
-		for(int i = 0; i < equippedItems.size(); i++) 
+		for (int i = 0; i < equippedItems.size(); i++)
 		{
-			if(((Gear)item).getItemslot() == equippedItems.get(i).getItemslot())
+			if (((Gear) item).getItemslot() == equippedItems.get(i).getItemslot())
 			{
-				if(equippedItems.get(i).getItemslot() != 'e')
+				if (equippedItems.get(i).getItemslot() != 'e')
 				{
 					unequip(i);
 				}
 			}
 		}
-		for(int i = 0; i < equippedItems.size(); i++) 
+		for (int i = 0; i < equippedItems.size(); i++)
 		{
-			if (equippedItems.get(i).getItemId() == item.getItemId()) 
+			if (equippedItems.get(i).getItemId() == item.getItemId())
 			{
 				unequip(i);
 			}
@@ -115,21 +129,24 @@ public class Player extends Character
 		equippedItems.add((Gear) item);
 		updateStats();
 	}
-	public void unequip(int i) 
+
+	public void unequip(int i)
 	{
 		equippedItems.remove(i);
 	}
-	public void displayInventory() 
+
+	public void displayInventory()
 	{
 		view.line(125);
 		view.print("Items");
-		for(int i = 0; i < inventory.size(); i++)
+		for (int i = 0; i < inventory.size(); i++)
 		{
 			view.print(i + ": " + inventory.get(i).getDisplay());
 		}
 		view.print("exit: ");
 	}
-	public void displayEquippedItems() 
+
+	public void displayEquippedItems()
 	{
 		view.line(125);
 		view.print(equippedItems);

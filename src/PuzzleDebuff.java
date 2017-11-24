@@ -4,12 +4,13 @@ public class PuzzleDebuff extends Puzzle
 {
 	private int debuff;
 	private int itemId;
-	public PuzzleDebuff(String loadedString) 
+
+	public PuzzleDebuff(String loadedString)
 	{
-		//loaded from file
-		//int puzzleId String name, int roomId String puzzleDesc,
-		//String hint, String answer1, String answer2
-		try 
+		// loaded from file
+		// int puzzleId String name, int roomId String puzzleDesc,
+		// String hint, String answer1, String answer2
+		try
 		{
 			String[] splitString = loadedString.split("-_");
 			puzzleId = Integer.parseInt(splitString[0]);
@@ -19,33 +20,33 @@ public class PuzzleDebuff extends Puzzle
 			puzzleDesc = splitString[4];
 			hint = splitString[5];
 		}
-		catch(Exception E)
+		catch (Exception E)
 		{
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include PuzzleDebuff in the text message");
 		}
 	}
-	
+
 	@Override
-	public void initialize() 
+	public void initialize()
 	{
-		//idk
-	}
-	
-	@Override
-	public void attemptSolve(String answer) 
-	{
-		//no effect
+		// idk
 	}
 
 	@Override
-	public void attemptSolve(int itemId) 
+	public void attemptSolve(String answer)
 	{
-		//no effect
+		// no effect
 	}
-	
+
 	@Override
-	public void display() 
+	public void attemptSolve(int itemId)
+	{
+		// no effect
+	}
+
+	@Override
+	public void display()
 	{
 		view.line(125);
 		view.print(puzzleName);

@@ -1,34 +1,39 @@
 
-public abstract class Character 
+public abstract class Character
 {
 	protected int health;
 	protected int maxHealth;
 	protected int defense;
 	protected int acc;
 	protected boolean alive = true;
-	
+
 	public abstract int dealDamage();
-	
-	public void receiveDamage(int damage) 
+
+	public void receiveDamage(int damage)
 	{
 		health = health - damage;
-		if(health>maxHealth) {health = maxHealth;}
-		//if statement is for healing items doing negative damage
-		
-		if(health<=0){alive=false;}
+		if (health > maxHealth)
+		{
+			health = maxHealth;
+		}
+		// if statement is for healing items doing negative damage
+
+		if (health <= 0)
+		{
+			alive = false;
+		}
 	}
-	
-	
+
 	public int getHealth()
 	{
 		return health;
 	}
-	
-	public int getMaxHealth() 
+
+	public int getMaxHealth()
 	{
-		return  maxHealth;
+		return maxHealth;
 	}
-	
+
 	public int getDefense()
 	{
 		return defense;

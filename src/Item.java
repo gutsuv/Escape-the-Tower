@@ -7,13 +7,13 @@ public abstract class Item implements Cloneable, Comparable<Item>
 	protected String itemDescLong;
 	protected String itemDescShort;
 	protected View view;
-	
+
 	public int getItemId()
 	{
 		return itemId;
 	}
 
-	public String getItemName() 
+	public String getItemName()
 	{
 		return itemName;
 	}
@@ -22,46 +22,50 @@ public abstract class Item implements Cloneable, Comparable<Item>
 	{
 		return itemDescLong;
 	}
-	
+
 	public String getItemDescShort()
 	{
 		return itemDescShort;
 	}
-	
+
 	public void setView(View view)
 	{
 		this.view = view;
 	}
-	
+
 	public abstract void use();
+
 	public abstract void drop();
+
 	public abstract void examine();
+
 	public abstract String getDisplay();
+
 	public abstract void displayCommands();
-	
-	protected Object clone() throws CloneNotSupportedException 
+
+	protected Object clone() throws CloneNotSupportedException
 	{
-        return super.clone();
-    }
-	
-	@Override
-	public String toString()
-	{
-		return "Item ["+itemName + ", " +itemDescShort+"]";
+		return super.clone();
 	}
 
 	@Override
-	public int compareTo(Item o) 
+	public String toString()
 	{
-		if(itemId>o.getItemId()) 
+		return "Item [" + itemName + ", " + itemDescShort + "]";
+	}
+
+	@Override
+	public int compareTo(Item o)
+	{
+		if (itemId > o.getItemId())
 		{
 			return 1;
 		}
-		else if(itemId<o.getItemId())
+		else if (itemId < o.getItemId())
 		{
 			return -1;
 		}
-		else 
+		else
 		{
 			return 0;
 		}
