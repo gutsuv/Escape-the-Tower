@@ -60,6 +60,7 @@ public class PuzzleNumber extends Puzzle
 	public void attemptSolve(String stringAnswer)
 	{
 		initialize();
+		
 		int guess = Integer.parseInt(stringAnswer);
 		if (guess > answer)
 		{
@@ -73,6 +74,11 @@ public class PuzzleNumber extends Puzzle
 		{
 			solved = true;
 			lockedRoom.setLocked(false);
+			view.print("puzzle solved");
+			if(puzzleId==5)
+			{
+				view.print("Answer to puzzle 01 is 'A horseshoe nail'(copy paste)");
+			}
 		}
 	}
 
