@@ -1,7 +1,7 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class initializer
+public class Initializer
 {
 	static ObjectHolder main;
 	static View view;
