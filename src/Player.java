@@ -47,7 +47,6 @@ public class Player extends Character
 		acc = 100;
 		for (int i = 0; i < equippedItems.size(); i++)
 		{
-			System.out.println(i);
 			maxAttack = maxAttack + equippedItems.get(i).getAttackMax();
 			minAttack = minAttack + equippedItems.get(i).getAttackMin();
 			defense = defense + equippedItems.get(i).getDefense();
