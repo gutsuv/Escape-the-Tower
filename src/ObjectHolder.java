@@ -184,6 +184,10 @@ public class ObjectHolder
 								((PuzzleRiddle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
 								rooms.get(i).getPuzzle().initialize();
 							}
+							else if (rooms.get(i).getPuzzle() instanceof PuzzleNumber)
+							{
+								((PuzzleNumber) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
+							}
 						}
 						catch (Exception E)
 						{
