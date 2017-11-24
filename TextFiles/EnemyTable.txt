@@ -1,12 +1,12 @@
 ﻿
-00-_Prison Guard-_10-_5-_0-_8-_10-_Pretty lazy. Sleeps often. Has a club. (If you start fight with guard he laughs at you and then eats the key)
-01-_Guard Dog-_15-_5-_0-_9-_12-_Not very strong but has a strong sense of smell and pretty darn fast
-02-_Interrogator-_30-_7-_1-_7-_04-_Loves to torture, pretty darn sadistic and has a whip 
-03-_Injured guard-_40-_10-_3-_6-_02><11-_Was injured badly, has only one arm carries a Morning Star other arm is missing and bleeding. Was waiting on doctor to help him
-04-_Drunk guard-_65-_9-_1-_3-_06-_He was supposed to guard the alcohol but well let's just say he snuck some down. Pretty woozy right now. Carries a club
-05-_Deranged Prisoner-_45-_10-_5-_8-_12-_Not sure what I'm seeing here. He has an eye patch, a peg leg and one of his hand is a hook but he seems to be way out of place. The only thing I can see when looking at him is a pirate. Fights with hook
-06-_Heavily Armored soldier-_35-_25-_15-_5-_03-_Oh boy stumbled upon a big one. Is wearing armor from head to toe. Doesn't appear to be fast. Yells a lot. Appear to be carrying an important item. Wields a two handed battle axe
-07-_Warden-_100-_20-_15-_9-_13-_Looks like a pretty important person in this tower. Seems to be guarding the treasure room. Its armored from head to toes but doesn't seem to be slow. Carries a 2 handed sword and looks highly experience.
-08-_Archer-_50-_12-_5-_9-_05-_Not much to say. Carries a bow and likes to fire them arrows
+00-_Prison Guard-_10-_4-_0-_8-_10-_Pretty lazy. Sleeps often. Has a club. (If you start fight with guard he laughs at you and then eats the key)
+01-_Guard Dog-_15-_4-_0-_9-_12-_Not very strong but has a strong sense of smell and pretty darn fast
+02-_Interrogator-_30-_5-_1-_7-_04-_Loves to torture, pretty darn sadistic and has a whip 
+03-_Injured guard-_40-_7-_2-_6-_02><11-_Was injured badly, has only one arm carries a Morning Star other arm is missing and bleeding. Was waiting on doctor to help him
+04-_Drunk guard-_45-_6-_0-_3-_06-_He was supposed to guard the alcohol but well let's just say he snuck some down. Pretty woozy right now. Carries a club
+05-_Deranged Prisoner-_45-_6-_2-_8-_12-_Not sure what I'm seeing here. He has an eye patch, a peg leg and one of his hand is a hook but he seems to be way out of place. The only thing I can see when looking at him is a pirate. Fights with hook
+06-_Heavily Armored soldier-_35-_15-_5-_5-_03-_Oh boy stumbled upon a big one. Is wearing armor from head to toe. Doesn't appear to be fast. Yells a lot. Appear to be carrying an important item. Wields a two handed battle axe
+07-_Warden-_100-_20-_10-_9-_13-_Looks like a pretty important person in this tower. Seems to be guarding the treasure room. Its armored from head to toes but doesn't seem to be slow. Carries a 2 handed sword and looks highly experience.
+08-_Archer-_40-_9-_1-_9-_05-_Not much to say. Carries a bow and likes to fire them arrows
 09-_Innocent Servant-_100-_0-_0-_10-_10-_Was in the middle of cleaning. It can't be help, if I let him live he will tell the others. It's either him or me. Wields a butter knife
 10-_Servant Cook-_100-_0-_0-_10-_12-_Looks like he is carrying some food. Oh well time to end his misery. Wields a plate.
