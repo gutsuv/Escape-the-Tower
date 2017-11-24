@@ -3,11 +3,11 @@ import java.util.*;
 public class Player extends Character
 {
 	View view;
-	int maxAttack;
-	int minAttack;
-	ArrayList<Item> inventory = new ArrayList<Item>();
-	ArrayList<Gear> equippedItems = new ArrayList<Gear>();
-	boolean poisoned = false;
+	private int maxAttack;
+	private int minAttack;
+	private ArrayList<Item> inventory = new ArrayList<Item>();
+	private ArrayList<Gear> equippedItems = new ArrayList<Gear>();
+	private boolean poisoned = false;
 	public Player(View view)
 	{
 		health = 100;
@@ -77,6 +77,11 @@ public class Player extends Character
 	public void updateMaxHealth(int i)
 	{
 		maxHealth = maxHealth + i;
+	}
+	
+	public boolean isPoisoned()
+	{
+		return poisoned;
 	}
 
 	// Inventory Exists on player so methods for item based things exist here to
