@@ -203,7 +203,7 @@ public class Room
 		}
 		view.printStrO(items, 125);
 		view.line();
-		view.print("-----[Commands]-----");
+		view.print("=======[Commands]========");
 		view.print("stats:");
 		view.print("inventory:");
 		if (items.size() > 0)
@@ -218,7 +218,7 @@ public class Room
 		{
 			view.print("puzzle:");
 		}
-		view.print("-Move Commands-");
+		view.print("=====[Move Commands]=====");
 		try
 		{
 			for (int i = 0; i < directions[i]; i++)
