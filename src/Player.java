@@ -7,7 +7,7 @@ public class Player extends Character
 	int minAttack;
 	ArrayList<Item> inventory = new ArrayList<Item>();
 	ArrayList<Gear> equippedItems = new ArrayList<Gear>();
-
+	boolean poisoned = false;
 	public Player(View view)
 	{
 		health = 100;
@@ -51,6 +51,13 @@ public class Player extends Character
 			minAttack = minAttack + equippedItems.get(i).getAttackMin();
 			defense = defense + equippedItems.get(i).getDefense();
 			acc = acc - equippedItems.get(i).getAcc();
+		}
+		if(poisoned)
+		{
+			minAttack = (minAttack*3)/4;
+			maxAttack = (maxAttack*3)/4;
+			defense = (defense*3)/4;
+			acc = (acc*3)/4;
 		}
 		displayEquippedItems();
 		displayStats();
