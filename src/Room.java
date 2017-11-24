@@ -191,7 +191,7 @@ public class Room
 
 	public void display() throws Exception
 	{
-		view.line(100);
+		view.line(125);
 		view.printString(getRoomDesc(), 125);
 		if (enemy != null)
 		{
@@ -203,7 +203,7 @@ public class Room
 		}
 		view.printStrO(items, 125);
 		view.line();
-		view.print("---Commands---");
+		view.print("-----[Commands]-----");
 		view.print("stats:");
 		view.print("inventory:");
 		if (items.size() > 0)
