@@ -54,12 +54,15 @@ public class PuzzleNumber extends Puzzle
 	public void initialize()
 	{
 		lockedRoom.setLocked(true);
+		view.line(125);
+		view.printString("You walk inside cell to inspect the seemingly empty room."
+				+ " Immediately, a prisoner slams the door shut and challenges you to"
+				+ " guess the number on his mind.",125);
 	}
 
 	@Override
 	public void attemptSolve(String stringAnswer)
 	{
-		initialize();
 		
 		int guess = Integer.parseInt(stringAnswer);
 		if (guess > answer)

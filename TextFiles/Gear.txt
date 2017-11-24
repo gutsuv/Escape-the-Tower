@@ -1,12 +1,12 @@
-﻿
-00-_Flaying Knife-_w-_0-_5-_7-_9-_“A dull knife used to skin victims alive.”-_“A knife used to re-move layers of prisoners’ skin, expos-ing nerve and muscle tissue as a form of torture”
-01-_Short Sword-_w-_0-_7-_10-_8-_“A well-kept short sword that needs to be sharpened”-_“A double-edged short sword, about 60 cm, in length. The sword shows no sign of rust, but has not been sharpened recently”
-02-_Morning Star-_w-_0-_10-_15-_8-_“A club like weapon with spikes”-_“A spiked ball attached to a wood shaft. It looks deadly.”
-03-_Flail-_w-_0-_5-_25-_-8-_“A spiked metal ball attached to a shaft by chain”-_“A 3 foot shaft with a chain connection to a spiked steel ball. It looks like it can do some serious damage if handled correctly”
-04-_Mail Coif-_e-_1-_0-_0-_0-_“A mail hood.”-_“A simple mail hood, designed to offer minimal protection to the head”
-05-_Barbute-_h-_2-_0-_0-_0-_“An iron helmet”-_“A well crafted helmet with a T-shaped slit for vision and breathing. This can be worn over a Mail Coif.”
-06-_Hauberk-_e-_3-_0-_0-_0-_“A mail shirt”-_“A long mail shirt that reaches down to the knees. It will offer some protection.”
-07-_Cuirass-_t-_7-_0-_0-_0-_“Iron armor that covers your torso.”-_“A piece of iron armor designed to cover your torso. It provides no protection to your back but can be worn over a Hauberk.”
-08-_Buckler-_s-_1-_0-_0-_0-_“A small wooden shield.”-_“A poorly made wooden shield. It looks like it will break easily.”
-09-_Heater Shield-_s-_4-_0-_0-_0-_“A shield made of wood braced by steel.”-_“A strong looking shield that is braced with steel. This will offer excellent protection.”
-13-_Chair-_w-_0-_2-_3-_0-_“An ordinary chair.”-_“This isn’t much of a weapon but it will have to do for now”
+﻿	
+00-_Flaying Knife-_w-_0-_5-_7-_9-_A dull knife used to skin victims alive.-_A knife used to re-move layers of prisoners’ skin, expos-ing nerve and muscle tissue as a form of torture
+01-_Short Sword-_w-_0-_7-_10-_8-_A well-kept short sword that needs to be sharpened-_A double-edged short sword, about 60 cm, in length. The sword shows no sign of rust, but has not been sharpened recently
+02-_Morning Star-_w-_0-_10-_15-_8-_A club like weapon with spikes-_A spiked ball attached to a wood shaft. It looks deadly.
+03-_Flail-_w-_0-_5-_25-_-8-_A spiked metal ball attached to a shaft by chain-_A 3 foot shaft with a chain connection to a spiked steel ball. It looks like it can do some serious damage if handled correctly
+04-_Mail Coif-_e-_1-_0-_0-_0-_A mail hood.-_A simple mail hood, designed to offer minimal protection to the head
+05-_Barbute-_h-_2-_0-_0-_0-_An iron helmet-_A well crafted helmet with a T-shaped slit for vision and breathing. This can be worn over a Mail Coif.
+06-_Hauberk-_e-_3-_0-_0-_0-_A mail shirt-_A long mail shirt that reaches down to the knees. It will offer some protection.
+07-_Cuirass-_t-_7-_0-_0-_0-_Iron armor that covers your torso.-_A piece of iron armor designed to cover your torso. It provides no protection to your back but can be worn over a Hauberk.
+08-_Buckler-_s-_1-_0-_0-_0-_A small wooden shield.-_A poorly made wooden shield. It looks like it will break easily.
+09-_Heater Shield-_s-_4-_0-_0-_0-_A shield made of wood braced by steel.-_A strong looking shield that is braced with steel. This will offer excellent protection.
+13-_Chair-_w-_0-_2-_3-_0-_An ordinary chair.-_This isn’t much of a weapon but it will have to do for now

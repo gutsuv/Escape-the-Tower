@@ -177,12 +177,10 @@ public class ObjectHolder
 							if (rooms.get(i).getPuzzle() instanceof DoorPuzzle)
 							{
 								((DoorPuzzle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
-								rooms.get(i).getPuzzle().initialize();
 							}
 							else if (rooms.get(i).getPuzzle() instanceof PuzzleRiddle)
 							{
 								((PuzzleRiddle) rooms.get(i).getPuzzle()).setLockedRoom(rooms);
-								rooms.get(i).getPuzzle().initialize();
 							}
 							else if (rooms.get(i).getPuzzle() instanceof PuzzleNumber)
 							{
@@ -245,6 +243,10 @@ public class ObjectHolder
 	{
 		previousRoom = currentRoom;
 		currentRoom = rooms.get(i - 1);
+		if(currentRoom.getPuzzle()!=null)
+		{
+			currentRoom.getPuzzle().initialize();
+		}
 		if (currentRoom.getRoomId() == 31)
 		{
 			view.print("You won");
