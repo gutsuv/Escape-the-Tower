@@ -1,5 +1,5 @@
 ﻿	
-00-_Flaying Knife-_w-_0-_5-_7-_9-_A dull knife used to skin victims alive.-_A knife used to re-move layers of prisoners’ skin, expos-ing nerve and muscle tissue as a form of torture
+00-_Flaying Knife-_w-_0-_5-_7-_9-_A dull knife used to skin victims alive.-_A knife used to re-move layers of prisoners' skin, expos-ing nerve and muscle tissue as a form of torture
 01-_Short Sword-_w-_0-_7-_10-_8-_A well-kept short sword that needs to be sharpened-_A double-edged short sword, about 60 cm, in length. The sword shows no sign of rust, but has not been sharpened recently
 02-_Morning Star-_w-_0-_10-_15-_8-_A club like weapon with spikes-_A spiked ball attached to a wood shaft. It looks deadly.
 03-_Flail-_w-_0-_5-_25-_-8-_A spiked metal ball attached to a shaft by chain-_A 3 foot shaft with a chain connection to a spiked steel ball. It looks like it can do some serious damage if handled correctly
@@ -9,4 +9,4 @@
 07-_Cuirass-_t-_7-_0-_0-_0-_Iron armor that covers your torso.-_A piece of iron armor designed to cover your torso. It provides no protection to your back but can be worn over a Hauberk.
 08-_Buckler-_s-_1-_0-_0-_0-_A small wooden shield.-_A poorly made wooden shield. It looks like it will break easily.
 09-_Heater Shield-_s-_4-_0-_0-_0-_A shield made of wood braced by steel.-_A strong looking shield that is braced with steel. This will offer excellent protection.
-13-_Chair-_w-_0-_2-_3-_0-_An ordinary chair.-_This isn’t much of a weapon but it will have to do for now
+13-_Chair-_w-_0-_2-_3-_0-_An ordinary chair.-_This isn't much of a weapon but it will have to do for now

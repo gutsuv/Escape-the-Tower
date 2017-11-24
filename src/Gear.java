@@ -85,14 +85,14 @@ public class Gear extends Item
 		} 
 		else
 		{
-			view.print(itemName + ", " + itemDescLong);
+			view.print(itemName + ", Armor, " + defense + ", " + itemDescLong);
 		}
 	}
 
 	@Override
 	public String getDisplay()
 	{
-		return itemName + "-> equip, drop, examine:";
+			return itemName + "-> equip, drop, examine:";
 	}
 
 	@Override
@@ -100,6 +100,15 @@ public class Gear extends Item
 	{
 		view.line(125);
 		view.print(itemName);
+		if(itemslot=='w') 
+		{
+			view.print("Max Damage, " + attackMax + " Min Damage, " 
+			+ attackMin + " Accuracy, " + (100-acc));
+		}
+		else 
+		{
+			view.print("Armor " + defense);
+		}
 		view.print("equip:");
 		view.print("drop:");
 		view.print("examine:");

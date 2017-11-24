@@ -1,5 +1,5 @@
 
 00-_Locked Door-_100-_05-_A locked door. I must find the key.-_"The door is locked. Once the key is found try the USE command"
 04-_Stuck door-_105-_14-_The door is stuck. You inspect it and see the hinges are rusty.-_The door could use a little grease to get it moving.
-07-_Broken glass-_103-_16-_Broken glass on the floor. Can’t cross-_"All this broken glass would seriously cut up bare feet."
+07-_Broken glass-_103-_16-_Broken glass on the floor. Can't cross-_"All this broken glass would seriously cut up bare feet."
 08-_Final locked door-_104-_31-_The exit of the tower is locked!-_"I doubt the key is just laying around."
