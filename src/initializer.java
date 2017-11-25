@@ -25,7 +25,7 @@ public class Initializer
 			view.print("Close Game:");
 			view.line(12);
 			String input = scan.nextLine();
-			if(input.matches("New Game"))
+			if(input.equalsIgnoreCase("New Game"))
 			{
 				try
 				{
@@ -36,7 +36,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.matches("Load Game One"))
+			if(input.equalsIgnoreCase("Load Game One"))
 			{
 				try
 				{
@@ -47,7 +47,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.matches("Load Game Two"))
+			if(input.equalsIgnoreCase("Load Game Two"))
 			{
 				try
 				{
@@ -58,7 +58,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.matches("Load Game Three"))
+			if(input.equalsIgnoreCase("Load Game Three"))
 			{
 				try
 				{
@@ -69,7 +69,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.matches("Close Game"))
+			if(input.equalsIgnoreCase("Close Game"))
 			{
 				System.exit(0);
 			}
