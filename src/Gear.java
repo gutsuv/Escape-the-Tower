@@ -102,8 +102,9 @@ public class Gear extends Item
 		view.print(itemName);
 		if(itemslot=='w') 
 		{
-			view.print("Max Damage, " + attackMax + " Min Damage, " 
-			+ attackMin + " Accuracy, " + (100-acc));
+			view.print("Max Damage " + attackMax + 
+					", Min Damage " + attackMin +
+					", Accuracy, " + (100-acc));
 		}
 		else 
 		{
