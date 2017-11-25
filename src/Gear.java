@@ -80,12 +80,12 @@ public class Gear extends Item
 	{
 		if (itemslot == 'w')
 		{
-			view.print(itemName + ", MinDamage: " + attackMin + ", MaxDamage: " + attackMax + ", Accuracy: " + acc
-					+ ", " + itemDescLong);
+			view.printString(itemName + ", MinDamage " + attackMin + ", MaxDamage " + attackMax + ", Accuracy " + acc
+					+ ", " + itemDescLong,125);
 		} 
 		else
 		{
-			view.print(itemName + ", Armor, " + defense + ", " + itemDescLong);
+			view.printString(itemName + ", Armor " + defense + ", " + itemDescLong,125);
 		}
 	}
 
