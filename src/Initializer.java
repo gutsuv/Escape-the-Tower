@@ -42,7 +42,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.equalsIgnoreCase("Load Game One"))
+			if(input.equalsIgnoreCase("Load Game 1")||input.matches("1"))
 			{
 				try
 				{
@@ -53,7 +53,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.equalsIgnoreCase("Load Game Two"))
+			if(input.equalsIgnoreCase("Load Game 2")||input.matches("2"))
 			{
 				try
 				{
@@ -64,7 +64,7 @@ public class Initializer
 					System.out.println("failed to load");
 				}
 			}
-			if(input.equalsIgnoreCase("Load Game Three"))
+			if(input.equalsIgnoreCase("Load Game 3")||input.matches("3"))
 			{
 				try
 				{
