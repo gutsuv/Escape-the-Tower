@@ -90,6 +90,11 @@ public class Controller
 			{
 				break;
 			}
+			if(model.getCurrentRoom().getPuzzle().isSolved())
+			{
+				 model.getCurrentRoom().setPuzzle(null);
+				 break;
+			}
 			if (answer.matches("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
@@ -427,7 +432,7 @@ public class Controller
 						model.getUser().removeItem(i);
 						model.getUser().setPoisoned(false);
 						model.getUser().updateStats();
-						model.getCurrentRoom().setPuzzle(null);
+						model.getRoom(12).setPuzzle(null);
 						menuView.line(125);
 						menuView.print("puzzle solved");
 						
