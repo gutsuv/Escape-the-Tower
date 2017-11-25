@@ -7,7 +7,7 @@ public class Controller
 	ObjectHolder model;
 	View menuView = new View();
 
-	public Controller(ObjectHolder main)
+	public Controller(ObjectHolder main) 
 	{
 		model = main;
 		while (true)
@@ -335,21 +335,26 @@ public class Controller
 			{
 				
 			}
-			if(input.matches("Save One"))
+			if(input.equalsIgnoreCase("Save One"))
 			{
 				
 			}
-			if(input.matches("Save Two"))
+			if(input.equalsIgnoreCase("Save Two"))
 			{
 				
 			}
-			if(input.matches("Save Three"))
+			if(input.equalsIgnoreCase("Save Three"))
 			{
 				
 			}
-			if(input.matches("Leave Game"))
+			if(input.equalsIgnoreCase("Leave Game"))
 			{
-				
+				int exit = 1/0;
+				/*
+				 * Controller throws itself
+				 * The Code will pick back up Initializer
+				 * Main Menu*
+				 */
 			}
 		}
 	}

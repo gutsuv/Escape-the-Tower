@@ -41,6 +41,10 @@ public class Initializer
 				{
 					System.out.println("failed to load");
 				}
+				catch (ArithmeticException e)
+				{
+					
+				}
 			}
 			if(input.equalsIgnoreCase("Load Game 1")||input.matches("1"))
 			{
@@ -51,6 +55,10 @@ public class Initializer
 				catch (FileNotFoundException e)
 				{
 					System.out.println("failed to load");
+				}
+				catch (ArithmeticException e)
+				{
+					
 				}
 			}
 			if(input.equalsIgnoreCase("Load Game 2")||input.matches("2"))
@@ -63,6 +71,10 @@ public class Initializer
 				{
 					System.out.println("failed to load");
 				}
+				catch (ArithmeticException e)
+				{
+					
+				}
 			}
 			if(input.equalsIgnoreCase("Load Game 3")||input.matches("3"))
 			{
@@ -73,6 +85,10 @@ public class Initializer
 				catch (FileNotFoundException e)
 				{
 					System.out.println("failed to load");
+				}
+				catch (ArithmeticException e)
+				{
+					
 				}
 			}
 			if(input.equalsIgnoreCase("Close Game"))

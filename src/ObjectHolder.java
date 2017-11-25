@@ -235,6 +235,17 @@ public class ObjectHolder
 			System.out.println("load error puzzle");
 		}
 	}
+	
+	public void saveItems(String number) {
+		try 
+		{
+			PrintWriter print = new PrintWriter("TextFiles/Save" + number + "/RoomsBEnemy.txt");
+			
+		} catch (FileNotFoundException e) 
+		{
+			view.print("Items Save fail");
+		}
+	}
 
 	public void navigate(char direction) throws Exception
 	{
