@@ -245,6 +245,32 @@ public class Controller
 			}
 		}
 	}
+	
+	private void controllerMenu()
+	{
+		String input;
+		
+		while(true)
+		{
+			menuView.line(125);
+			menuView.print("New Game:");
+			menuView.print("Load Game:");
+			menuView.print("Exit");
+			input = control.nextLine();
+			if(input.matches("exit")) 
+			{
+				break;
+			}
+			if(input.matches("New Game"))
+			{
+				
+			}
+			if(input.matches("Load Game"))
+			{
+				
+			}
+		}
+	}
 
 	private void determine(String input)
 	{
@@ -304,6 +330,10 @@ public class Controller
 			else if (input.matches("help"))
 			{
 				controllerHelp();
+			}
+			else if (input.matches("menu"))
+			{
+				controllerMenu();
 			}
 			try
 			{

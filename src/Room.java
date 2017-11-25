@@ -205,6 +205,8 @@ public class Room
 		view.line();
 		view.print("=======[Commands]========");
 		view.print("stats:");
+		//view.print("help");
+		//view.print("menu");
 		view.print("inventory:");
 		if (items.size() > 0)
 		{
