@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Controller
 {
-	Scanner control = new Scanner(System.in);
+	//Scanner control = new Scanner(System.in);
+	Scanner control;
 	ObjectHolder model;
 	View menuView = new View();
 
@@ -15,6 +16,16 @@ public class Controller
 		}
 	}
 
+	public Controller(ObjectHolder main, Scanner control)
+	{
+		model = main;
+		this.control = control;
+		while (true)
+		{
+			determine(control.nextLine());
+		}
+	}
+	
 	public void controllerEnemy()
 	{
 		while (true)
@@ -89,6 +100,12 @@ public class Controller
 			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
+			}
+
+			if(model.getCurrentRoom().getPuzzle().isSolved())
+			{
+				 model.getCurrentRoom().setPuzzle(null);
+				 break;
 			}
 			if (answer.equalsIgnoreCase("hint"))
 			{
@@ -274,9 +291,14 @@ public class Controller
 		while(true)
 		{
 			menuView.line(125);
-			menuView.print("New Game:");
-			menuView.print("Load Game:");
+			//menuView.print("New Game:");
+			menuView.print("Save One:");
+			menuView.print("Save Two:");
+			menuView.print("Save Three:");
+			//menuView.print("Load Game:");
+			menuView.print("Leave Game:");
 			menuView.print("Exit");
+
 			input = control.nextLine();
 			if(input.equalsIgnoreCase("exit")) 
 			{
@@ -295,6 +317,22 @@ public class Controller
 				
 			}
 			if(input.equalsIgnoreCase("Load Game"))
+			{
+				
+			}
+			if(input.matches("Save One"))
+			{
+				
+			}
+			if(input.matches("Save Two"))
+			{
+				
+			}
+			if(input.matches("Save Three"))
+			{
+				
+			}
+			if(input.matches("Leave Game"))
 			{
 				
 			}
@@ -427,7 +465,7 @@ public class Controller
 						model.getUser().removeItem(i);
 						model.getUser().setPoisoned(false);
 						model.getUser().updateStats();
-						model.getCurrentRoom().setPuzzle(null);
+						model.getRoom(12).setPuzzle(null);
 						menuView.line(125);
 						menuView.print("puzzle solved");
 						

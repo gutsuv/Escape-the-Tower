@@ -69,6 +69,34 @@ public class ObjectHolder
 		{
 		}
 	}
+	
+	public void initializeLoad(String number)
+	{
+		// load new game
+		currentRoom = rooms.get(0);
+		try
+		{
+			File file = new File("TextFiles/RoomsBEnemy.txt");
+			loadEnemys(file);
+			file = new File("TextFiles/RoomsBItem.txt");
+			loadItems(file);
+			file = new File("TextFiles/RoomsBPuzzle.txt");
+			loadPuzzles(file);
+		}
+		catch (Exception E)
+		{
+			view.print("RoomsB didn't load");
+		}
+		user = new Player(view);
+		// after load
+		try
+		{
+			currentRoom.display();
+		}
+		catch (Exception e)
+		{
+		}
+	}
 
 	public void loadEnemys(File EnemyFile)
 	{
