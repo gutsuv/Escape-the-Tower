@@ -224,8 +224,10 @@ public class Controller
 		{
 			model.getUser().displayStats();
 			model.getUser().displayEquippedItems();
+			menuView.print("exit:");
 			input = control.nextLine();
-			if(input.matches("exit"))
+			//if(input.matches("exit"))
+			if(true)
 			{
 				try
 				{
