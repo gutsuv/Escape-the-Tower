@@ -17,13 +17,19 @@ public class Initializer
 		{
 			Scanner scan = new Scanner(System.in);
 			view = new View();
-			view.line(12);
-			view.print("New Game:");
-			view.print("Load Game One:");
-			view.print("Load Game Two:");
-			view.print("Load Game Three:");
-			view.print("Close Game:");
-			view.line(12);
+			view.line(50);
+			view.line(50);
+			//view.print("");
+			
+			view.print("	[ 		 New Game 		 ]\n"
+					 + "	[ 		Load Game 1		 ]\n"
+					 + "	[ 		Load Game 2		 ]\n"
+				     + "	[ 		Load Game 3		 ]\n"
+					 + "	[ 		Close Game		 ]"
+					);
+			
+			view.line(50);
+			view.line(50);
 			String input = scan.nextLine();
 			if(input.equalsIgnoreCase("New Game"))
 			{
