@@ -312,7 +312,7 @@ public class Controller
 			menuView.print("Save Three:");
 			//menuView.print("Load Game:");
 			menuView.print("Leave Game:");
-			menuView.print("Exit");
+			menuView.print("Exit:");
 
 			input = control.nextLine();
 			if(input.equalsIgnoreCase("exit")) 
@@ -329,23 +329,38 @@ public class Controller
 			}
 			if(input.equalsIgnoreCase("New Game"))
 			{
-				
+				// no code. It's done from main menu
 			}
 			if(input.equalsIgnoreCase("Load Game"))
 			{
-				
+				// no code. It's done from main menu
 			}
 			if(input.equalsIgnoreCase("Save One"))
 			{
-				
+				String number = "One";
+				model.saveItems(number);
+				/*model.saveEnemys(number);
+				model.savePuzzles(number);
+				model.saveInventory(number);
+				model.savePlayer(number);*/
 			}
 			if(input.equalsIgnoreCase("Save Two"))
 			{
-				
+				String number = "Two";
+				model.saveItems(number);
+				/*model.saveEnemys(number);
+				model.savePuzzles(number);
+				model.saveInventory(number);
+				model.savePlayer(number);*/
 			}
 			if(input.equalsIgnoreCase("Save Three"))
 			{
-				
+				String number = "Three";
+				model.saveItems(number);
+				/*model.saveEnemys(number);
+				model.savePuzzles(number);
+				model.saveInventory(number);
+				model.savePlayer(number);*/
 			}
 			if(input.equalsIgnoreCase("Leave Game"))
 			{
