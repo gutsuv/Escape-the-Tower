@@ -76,16 +76,16 @@ public class ObjectHolder
 		currentRoom = rooms.get(0);
 		try
 		{
-			File file = new File("TextFiles/RoomsBEnemy.txt");
+			File file = new File("TextFiles/Save" + number + "/RoomsBEnemy.txt");
 			loadEnemys(file);
-			file = new File("TextFiles/RoomsBItem.txt");
+			file = new File("TextFiles/Save" + number + "/RoomsBItem.txt");
 			loadItems(file);
-			file = new File("TextFiles/RoomsBPuzzle.txt");
+			file = new File("TextFiles/Save" + number + "/RoomsBPuzzle.txt");
 			loadPuzzles(file);
 		}
 		catch (Exception E)
 		{
-			view.print("RoomsB didn't load");
+			view.print("RoomsB didn't load:" + number);
 		}
 		user = new Player(view);
 		// after load
