@@ -239,6 +239,9 @@ public class Controller
 		while(true)
 		{
 			input = control.nextLine();
+			menuView.line(125);
+			menuView.print("No help for the weak");
+			menuView.print("exit:");
 			if(input.matches("exit"))
 			{
 				break;
@@ -255,7 +258,7 @@ public class Controller
 			menuView.line(125);
 			menuView.print("New Game:");
 			menuView.print("Load Game:");
-			menuView.print("Exit");
+			menuView.print("exit");
 			input = control.nextLine();
 			if(input.matches("exit")) 
 			{
@@ -323,18 +326,6 @@ public class Controller
 			{
 				controllerWordPuzzle();
 			}
-			else if (input.matches("stats"))
-			{
-				controllerStats();
-			} 
-			else if (input.matches("help"))
-			{
-				controllerHelp();
-			}
-			else if (input.matches("menu"))
-			{
-				controllerMenu();
-			}
 			try
 			{
 				model.getCurrentRoom().display();
@@ -343,6 +334,18 @@ public class Controller
 			{
 				
 			}
+		}
+		else if (input.matches("stats"))
+		{
+			controllerStats();
+		} 
+		else if (input.matches("help"))
+		{
+			controllerHelp();
+		}
+		else if (input.matches("menu"))
+		{
+			controllerMenu();
 		}
 	}
 
