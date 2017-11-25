@@ -231,6 +231,11 @@ public class Room
 
 		}
 	}
+	public void helpMessage() throws Exception{
+		view.print("=====[Help Menu]=====");
+		view.print("Enter 'help' for help");
+	}
+	
 
 	@Override
 	public String toString()

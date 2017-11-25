@@ -225,6 +225,26 @@ public class Controller
 			}
 		}
 	}
+	public void controllerHelpMenu(){
+		menuView.print("To view your stats (health, min & max attack, defense, accuracy, equipped items), enter 'stats' ");
+		menuView.print("To view your inventory (items tht have been picked up), enter 'inventory/inv' ");
+		menuView.print("To navigate (corresponding letters or numbers near descriptions), enter 'n, s, w, e, 1, 2, 3, 4, 5, etc.'");
+		menuView.print("To view an item (whilst viewing inventory) , enter 'use'");
+		menuView.print("To use an item (whilst viewing item) , enter 'use'");
+		menuView.print("To equip an item (whilst viewing item) , enter 'equip'");
+		menuView.print("To drop an item (whilst viewing item) , enter 'drop'");
+		menuView.print("To examine an item (whilst viewing item) , enter 'examine'");
+		menuView.print("To exit item examination (whilst viewing item) , enter 'exit'");
+		menuView.print("To exit inventory view (whilst viewing inventory) , enter 'exit'");
+		menuView.print("To enter combat, enter 'combat'");
+		menuView.print("To attack an enemy, enter 'attack'");
+		menuView.print("To flee from an enemy (whilst in combat), enter 'exit'");
+		menuView.print("To enter a puzzle, enter 'puzzle' ");
+		menuView.print("To view a puzzle hint (whilst in puzzle sequence), enter 'hint' ");
+		menuView.print("To leave a puzzle (whilst in puzzle sequence), enter 'exit'");
+		menuView.print("To view player stats (health, min & max attack, defense, accuracy), enter 'stats' ");
+		menuView.print("To view player stats (health, min & max attack, defense, accuracy), enter 'stats' ");
+	}
 
 	private void determine(String input)
 	{
@@ -461,4 +481,10 @@ public class Controller
 			
 		}
 	}
+	private void helpRequest(String input){
+		if(input.matches("help")){
+			controllerHelpMenu();
+		}
+	}
+	
 }
