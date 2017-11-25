@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Controller
 {
-	Scanner control = new Scanner(System.in);
+	//Scanner control = new Scanner(System.in);
+	Scanner control;
 	ObjectHolder model;
 	View menuView = new View();
 
@@ -15,6 +16,16 @@ public class Controller
 		}
 	}
 
+	public Controller(ObjectHolder main, Scanner control)
+	{
+		model = main;
+		this.control = control;
+		while (true)
+		{
+			determine(control.nextLine());
+		}
+	}
+	
 	public void controllerEnemy()
 	{
 		while (true)
@@ -279,8 +290,12 @@ public class Controller
 		while(true)
 		{
 			menuView.line(125);
-			menuView.print("New Game:");
-			menuView.print("Load Game:");
+			//menuView.print("New Game:");
+			menuView.print("Save One:");
+			menuView.print("Save Two:");
+			menuView.print("Save Three:");
+			//menuView.print("Load Game:");
+			menuView.print("Leave Game:");
 			menuView.print("exit");
 			input = control.nextLine();
 			if(input.matches("exit")) 
@@ -300,6 +315,22 @@ public class Controller
 				
 			}
 			if(input.matches("Load Game"))
+			{
+				
+			}
+			if(input.matches("Save One"))
+			{
+				
+			}
+			if(input.matches("Save Two"))
+			{
+				
+			}
+			if(input.matches("Save Three"))
+			{
+				
+			}
+			if(input.matches("Leave Game"))
 			{
 				
 			}
