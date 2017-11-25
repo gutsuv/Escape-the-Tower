@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Controller
 {
-	Scanner control = new Scanner(System.in);
+	//Scanner control = new Scanner(System.in);
+	Scanner control;
 	ObjectHolder model;
 	View menuView = new View();
 
@@ -15,6 +16,16 @@ public class Controller
 		}
 	}
 
+	public Controller(ObjectHolder main, Scanner control)
+	{
+		model = main;
+		this.control = control;
+		while (true)
+		{
+			determine(control.nextLine());
+		}
+	}
+	
 	public void controllerEnemy()
 	{
 		while (true)
@@ -57,11 +68,11 @@ public class Controller
 		{
 			((ObjectPuzzle) model.getCurrentRoom().getPuzzle()).display(model.getUser().getInventory());
 			itemNumber = control.nextLine();
-			if (itemNumber.matches("exit"))
+			if (itemNumber.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (itemNumber.matches("hint"))
+			if (itemNumber.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
@@ -86,28 +97,25 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (answer.matches("hint"))
+
+			if(model.getCurrentRoom().getPuzzle().isSolved())
+			{
+				 model.getCurrentRoom().setPuzzle(null);
+				 break;
+			}
+			if (answer.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
-			if(answer.matches("drink"))
+			if(answer.equalsIgnoreCase("drink"))
 			{
 				((PuzzleDebuff) model.getCurrentRoom().getPuzzle()).printPoison();
 				model.getUser().setPoisoned(true);
 				model.getUser().updateStats();
-			}
-			if(answer.matches("ignore"))
-			{
-				model.getCurrentRoom().getPuzzle().attemptSolve(answer);
-			}
-			if(model.getCurrentRoom().getPuzzle().isSolved())
-			{
-				model.getCurrentRoom().setPuzzle(null);
-				break;
 			}
 		}
 	}
@@ -119,11 +127,11 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (answer.matches("hint"))
+			if (answer.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
@@ -150,11 +158,11 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			} 
-			else if (answer.matches("hint"))
+			else if (answer.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			} 
@@ -177,11 +185,11 @@ public class Controller
 		{
 			((DoorPuzzle) model.getCurrentRoom().getPuzzle()).display(model.getUser().getInventory());
 			itemNumber = control.nextLine();
-			if (itemNumber.matches("exit"))
+			if (itemNumber.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (itemNumber.matches("hint"))
+			if (itemNumber.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
@@ -212,7 +220,7 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
@@ -225,25 +233,125 @@ public class Controller
 			}
 		}
 	}
-	public void controllerHelpMenu(){
-		menuView.print("To view your stats (health, min & max attack, defense, accuracy, equipped items), enter 'stats' ");
-		menuView.print("To view your inventory (items tht have been picked up), enter 'inventory/inv' ");
-		menuView.print("To navigate (corresponding letters or numbers near descriptions), enter 'n, s, w, e, 1, 2, 3, 4, 5, etc.'");
-		menuView.print("To view an item (whilst viewing inventory) , enter 'use'");
-		menuView.print("To use an item (whilst viewing item) , enter 'use'");
-		menuView.print("To equip an item (whilst viewing item) , enter 'equip'");
-		menuView.print("To drop an item (whilst viewing item) , enter 'drop'");
-		menuView.print("To examine an item (whilst viewing item) , enter 'examine'");
-		menuView.print("To exit item examination (whilst viewing item) , enter 'exit'");
-		menuView.print("To exit inventory view (whilst viewing inventory) , enter 'exit'");
-		menuView.print("To enter combat, enter 'combat'");
-		menuView.print("To attack an enemy, enter 'attack'");
-		menuView.print("To flee from an enemy (whilst in combat), enter 'exit'");
-		menuView.print("To enter a puzzle, enter 'puzzle' ");
-		menuView.print("To view a puzzle hint (whilst in puzzle sequence), enter 'hint' ");
-		menuView.print("To leave a puzzle (whilst in puzzle sequence), enter 'exit'");
-		menuView.print("To view player stats (health, min & max attack, defense, accuracy), enter 'stats' ");
-		menuView.print("To view player stats (health, min & max attack, defense, accuracy), enter 'stats' ");
+	
+	private void controllerStats()
+	{
+		String input;
+		while(true)
+		{
+			model.getUser().displayStats();
+			model.getUser().displayEquippedItems();
+			menuView.print("exit:");
+			input = control.nextLine();
+			//if(input.equalsIgnoreCase("exit"))
+			if(true)
+			{
+				try
+				{
+					model.getCurrentRoom().display();
+				}
+				catch(Exception E)
+				{
+					
+				}
+				break;
+			}
+		}
+	}
+	
+	private void controllerHelp()
+	{
+		String input;
+		
+		while(true)
+		{
+			menuView.line(125);
+			menuView.print("To view your stats (health, min & max attack, defense, accuracy, equipped items), enter 'stats' ");
+			menuView.print("To view your inventory (items tht have been picked up), enter 'inventory/inv' ");
+			menuView.print("To navigate (corresponding letters or numbers near descriptions), enter 'n, s, w, e, 1, 2, 3, 4, 5, etc.'");
+			menuView.print("To view an item (whilst viewing inventory) , enter corresponding number of item '0-9'");
+			menuView.print("To use an item (whilst viewing item) , enter 'use'");
+			menuView.print("To equip an item (whilst viewing item) , enter 'equip'");
+			menuView.print("To drop an item (whilst viewing item) , enter 'drop'");
+			menuView.print("To examine an item (whilst viewing item) , enter 'examine'");
+			menuView.print("To exit item examination (whilst viewing item) , enter 'exit'");
+			menuView.print("To exit inventory view (whilst viewing inventory) , enter 'exit'");
+			menuView.print("To enter combat, enter 'combat'");
+			menuView.print("To attack an enemy, enter 'attack'");
+			menuView.print("To flee from an enemy (whilst in combat), enter 'exit'");
+			menuView.print("To enter a puzzle, enter 'puzzle' ");
+			menuView.print("To view a puzzle hint (whilst in puzzle sequence), enter 'hint' ");
+			menuView.print("To leave a puzzle (whilst in puzzle sequence), enter 'exit'");
+			menuView.print("Exit:");
+			input = control.nextLine();
+			if(input.equalsIgnoreCase("exit"))
+			{
+				try
+				{
+					model.getCurrentRoom().display();
+				}
+				catch(Exception E)
+				{
+					
+				}
+				break;
+			}
+		}
+	}
+	
+	private void controllerMenu()
+	{
+		String input;
+		
+		while(true)
+		{
+			menuView.line(125);
+			//menuView.print("New Game:");
+			menuView.print("Save One:");
+			menuView.print("Save Two:");
+			menuView.print("Save Three:");
+			//menuView.print("Load Game:");
+			menuView.print("Leave Game:");
+			menuView.print("Exit");
+
+			input = control.nextLine();
+			if(input.equalsIgnoreCase("exit")) 
+			{
+				try
+				{
+					model.getCurrentRoom().display();
+				}
+				catch(Exception E)
+				{
+					
+				}
+				break;
+			}
+			if(input.equalsIgnoreCase("New Game"))
+			{
+				
+			}
+			if(input.equalsIgnoreCase("Load Game"))
+			{
+				
+			}
+			if(input.matches("Save One"))
+			{
+				
+			}
+			if(input.matches("Save Two"))
+			{
+				
+			}
+			if(input.matches("Save Three"))
+			{
+				
+			}
+			if(input.matches("Leave Game"))
+			{
+				
+			}
+		}
 	}
 
 	private void determine(String input)
@@ -259,24 +367,19 @@ public class Controller
 				
 			}
 		} 
-		else if (input.matches("pick up") || input.matches("pickup"))
+		else if (input.equalsIgnoreCase("pick up") || input.equalsIgnoreCase("pickup"))
 		{
 			pickUpAll();
 		} 
-		else if (input.matches("inventory") || input.matches("inv"))
+		else if (input.equalsIgnoreCase("inventory") || input.equalsIgnoreCase("inv"))
 		{
 			controllerItem();
 		} 
-		else if (input.matches("stats"))
-		{
-			model.getUser().displayStats();
-			model.getUser().displayEquippedItems();
-		} 
-		else if (input.matches("combat") && model.getCurrentRoom().getEnemy() != null)
+		else if (input.equalsIgnoreCase("combat") && model.getCurrentRoom().getEnemy() != null)
 		{
 			controllerEnemy();
 		} 
-		else if (input.matches("puzzle") && model.getCurrentRoom().getPuzzle() != null)
+		else if (input.equalsIgnoreCase("puzzle") && model.getCurrentRoom().getPuzzle() != null)
 		{
 			if (model.getCurrentRoom().getPuzzle() instanceof DoorPuzzle)
 			{
@@ -311,6 +414,18 @@ public class Controller
 				
 			}
 		}
+		else if (input.equalsIgnoreCase("stats"))
+		{
+			controllerStats();
+		} 
+		else if (input.equalsIgnoreCase("help"))
+		{
+			controllerHelp();
+		}
+		else if (input.equalsIgnoreCase("menu"))
+		{
+			controllerMenu();
+		}
 	}
 
 	private boolean determineItem(String input)
@@ -326,7 +441,7 @@ public class Controller
 
 			}
 		}
-		if (input.matches("exit"))
+		if (input.equalsIgnoreCase("exit"))
 		{
 			try
 			{
@@ -345,11 +460,11 @@ public class Controller
 	{
 		try
 		{
-			if (input.matches("exit"))
+			if (input.equalsIgnoreCase("exit"))
 			{
 				return true;
 			} 
-			else if (input.matches("use"))
+			else if (input.equalsIgnoreCase("use"))
 			{
 				if (model.getUser().getItem(i) instanceof Consumable)
 				{
@@ -359,30 +474,35 @@ public class Controller
 				}
 				if (model.getUser().getItem(i) instanceof PuzzleItem)
 				{
-					if(model.getUser().getItem(i).getItemId() == 102)
+					if(model.getUser().getItem(i).getItemId() == 102
+							&& ((PuzzleDebuff) model.getRoom(12).getPuzzle()).isActive())
 					{
 						model.getUser().removeItem(i);
 						model.getUser().setPoisoned(false);
 						model.getUser().updateStats();
+						model.getRoom(12).setPuzzle(null);
+						menuView.line(125);
+						menuView.print("puzzle solved");
+						
 					}
 				}
 				// model.getUser().getItem(i).use();
 				// ran into problem. AoK work around
 				return true;
 			} 
-			else if (input.matches("drop"))
+			else if (input.equalsIgnoreCase("drop"))
 			{
 				model.currentRoom.addItem(model.getUser().getItem(i));
 				model.getUser().getItem(i).drop();// this part of code does nothing most of the time
 				model.getUser().drop(i);
 				return true;
 			} 
-			else if (input.matches("equip"))
+			else if (input.equalsIgnoreCase("equip"))
 			{
 				model.getUser().equip(i);
 				return true;
 			} 
-			else if (input.matches("examine"))
+			else if (input.equalsIgnoreCase("examine"))
 			{
 				model.getUser().getItem(i).examine();
 				return true;
@@ -395,7 +515,7 @@ public class Controller
 
 	private boolean determineEnemy(String input)
 	{
-		if (input.matches("exit"))
+		if (input.equalsIgnoreCase("exit"))
 		{
 			try
 			{
@@ -407,7 +527,7 @@ public class Controller
 			}
 			return true;
 		} 
-		else if (input.matches("attack"))
+		else if (input.equalsIgnoreCase("attack"))
 		{
 			int j = model.getCurrentRoom().getEnemy().getDefense();
 			int i = model.getUser().dealDamage() - j;
@@ -451,7 +571,7 @@ public class Controller
 				}
 			}
 		} 
-		else if (input.matches("inventory"))
+		else if (input.equalsIgnoreCase("inventory"))
 		{
 			controllerItem();
 		}
@@ -479,11 +599,6 @@ public class Controller
 		catch (Exception e)
 		{
 			
-		}
-	}
-	private void helpRequest(String input){
-		if(input.matches("help")){
-			controllerHelpMenu();
 		}
 	}
 	
