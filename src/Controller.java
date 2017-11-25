@@ -7,7 +7,7 @@ public class Controller
 	ObjectHolder model;
 	View menuView = new View();
 
-	public Controller(ObjectHolder main)
+	public Controller(ObjectHolder main) 
 	{
 		model = main;
 		while (true)
@@ -266,7 +266,22 @@ public class Controller
 		while(true)
 		{
 			menuView.line(125);
-			menuView.print("No help for the weak");
+			menuView.print("To view your stats (health, min & max attack, defense, accuracy, equipped items), enter 'stats' ");
+			menuView.print("To view your inventory (items tht have been picked up), enter 'inventory/inv' ");
+			menuView.print("To navigate (corresponding letters or numbers near descriptions), enter 'n, s, w, e, 1, 2, 3, 4, 5, etc.'");
+			menuView.print("To view an item (whilst viewing inventory) , enter corresponding number of item '0-9'");
+			menuView.print("To use an item (whilst viewing item) , enter 'use'");
+			menuView.print("To equip an item (whilst viewing item) , enter 'equip'");
+			menuView.print("To drop an item (whilst viewing item) , enter 'drop'");
+			menuView.print("To examine an item (whilst viewing item) , enter 'examine'");
+			menuView.print("To exit item examination (whilst viewing item) , enter 'exit'");
+			menuView.print("To exit inventory view (whilst viewing inventory) , enter 'exit'");
+			menuView.print("To enter combat, enter 'combat'");
+			menuView.print("To attack an enemy, enter 'attack'");
+			menuView.print("To flee from an enemy (whilst in combat), enter 'exit'");
+			menuView.print("To enter a puzzle, enter 'puzzle' ");
+			menuView.print("To view a puzzle hint (whilst in puzzle sequence), enter 'hint' ");
+			menuView.print("To leave a puzzle (whilst in puzzle sequence), enter 'exit'");
 			menuView.print("Exit:");
 			input = control.nextLine();
 			if(input.equalsIgnoreCase("exit"))
@@ -297,7 +312,7 @@ public class Controller
 			menuView.print("Save Three:");
 			//menuView.print("Load Game:");
 			menuView.print("Leave Game:");
-			menuView.print("Exit");
+			menuView.print("Exit:");
 
 			input = control.nextLine();
 			if(input.equalsIgnoreCase("exit")) 
@@ -314,27 +329,47 @@ public class Controller
 			}
 			if(input.equalsIgnoreCase("New Game"))
 			{
-				
+				// no code. It's done from main menu
 			}
 			if(input.equalsIgnoreCase("Load Game"))
 			{
-				
+				// no code. It's done from main menu
 			}
-			if(input.matches("Save One"))
+			if(input.equalsIgnoreCase("Save One"))
 			{
-				
+				String number = "One";
+				model.saveItems(number);
+				/*model.saveEnemys(number);
+				model.savePuzzles(number);
+				model.saveInventory(number);
+				model.savePlayer(number);*/
 			}
-			if(input.matches("Save Two"))
+			if(input.equalsIgnoreCase("Save Two"))
 			{
-				
+				String number = "Two";
+				model.saveItems(number);
+				/*model.saveEnemys(number);
+				model.savePuzzles(number);
+				model.saveInventory(number);
+				model.savePlayer(number);*/
 			}
-			if(input.matches("Save Three"))
+			if(input.equalsIgnoreCase("Save Three"))
 			{
-				
+				String number = "Three";
+				model.saveItems(number);
+				/*model.saveEnemys(number);
+				model.savePuzzles(number);
+				model.saveInventory(number);
+				model.savePlayer(number);*/
 			}
-			if(input.matches("Leave Game"))
+			if(input.equalsIgnoreCase("Leave Game"))
 			{
-				
+				int exit = 1/0;
+				/*
+				 * Controller throws itself
+				 * The Code will pick back up Initializer
+				 * Main Menu*
+				 */
 			}
 		}
 	}
@@ -586,4 +621,5 @@ public class Controller
 			
 		}
 	}
+	
 }

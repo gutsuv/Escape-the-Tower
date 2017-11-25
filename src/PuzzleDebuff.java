@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class PuzzleDebuff extends Puzzle
 {
 	private int itemId;
-	private boolean active = false;
+	private boolean active = true;
 	
 	public PuzzleDebuff(String loadedString)
 	{
