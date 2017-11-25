@@ -259,6 +259,11 @@ public class ObjectHolder
 	{
 		return currentRoom;
 	}
+	
+	public Room getRoom(int i)
+	{
+		return rooms.get(i-1);
+	}
 
 	public Player getUser()
 	{

@@ -100,15 +100,6 @@ public class Controller
 				model.getUser().setPoisoned(true);
 				model.getUser().updateStats();
 			}
-			if(answer.matches("ignore"))
-			{
-				model.getCurrentRoom().getPuzzle().attemptSolve(answer);
-			}
-			if(model.getCurrentRoom().getPuzzle().isSolved())
-			{
-				model.getCurrentRoom().setPuzzle(null);
-				break;
-			}
 		}
 	}
 
@@ -225,6 +216,35 @@ public class Controller
 			}
 		}
 	}
+	
+	private void controllerStats()
+	{
+		String input;
+		while(true)
+		{
+			model.getUser().displayStats();
+			model.getUser().displayEquippedItems();
+			input = control.nextLine();
+			if(input.matches("exit"))
+			{
+				break;
+			}
+		}
+	}
+	
+	private void controllerHelp()
+	{
+		String input;
+		
+		while(true)
+		{
+			input = control.nextLine();
+			if(input.matches("exit"))
+			{
+				break;
+			}
+		}
+	}
 
 	private void determine(String input)
 	{
@@ -246,11 +266,6 @@ public class Controller
 		else if (input.matches("inventory") || input.matches("inv"))
 		{
 			controllerItem();
-		} 
-		else if (input.matches("stats"))
-		{
-			model.getUser().displayStats();
-			model.getUser().displayEquippedItems();
 		} 
 		else if (input.matches("combat") && model.getCurrentRoom().getEnemy() != null)
 		{
@@ -281,6 +296,14 @@ public class Controller
 			if (model.getCurrentRoom().getPuzzle() instanceof WordPuzzle)
 			{
 				controllerWordPuzzle();
+			}
+			else if (input.matches("stats"))
+			{
+				controllerStats();
+			} 
+			else if (input.matches("help"))
+			{
+				controllerHelp();
 			}
 			try
 			{
@@ -339,11 +362,16 @@ public class Controller
 				}
 				if (model.getUser().getItem(i) instanceof PuzzleItem)
 				{
-					if(model.getUser().getItem(i).getItemId() == 102)
+					if(model.getUser().getItem(i).getItemId() == 102
+							&& ((PuzzleDebuff) model.getRoom(12).getPuzzle()).isActive())
 					{
 						model.getUser().removeItem(i);
 						model.getUser().setPoisoned(false);
 						model.getUser().updateStats();
+						model.getCurrentRoom().setPuzzle(null);
+						menuView.line(125);
+						menuView.print("puzzle solved");
+						
 					}
 				}
 				// model.getUser().getItem(i).use();
