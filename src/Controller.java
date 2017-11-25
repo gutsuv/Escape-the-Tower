@@ -227,6 +227,14 @@ public class Controller
 			input = control.nextLine();
 			if(input.matches("exit"))
 			{
+				try
+				{
+					model.getCurrentRoom().display();
+				}
+				catch(Exception E)
+				{
+					
+				}
 				break;
 			}
 		}
@@ -238,12 +246,20 @@ public class Controller
 		
 		while(true)
 		{
-			input = control.nextLine();
 			menuView.line(125);
 			menuView.print("No help for the weak");
 			menuView.print("exit:");
+			input = control.nextLine();
 			if(input.matches("exit"))
 			{
+				try
+				{
+					model.getCurrentRoom().display();
+				}
+				catch(Exception E)
+				{
+					
+				}
 				break;
 			}
 		}
@@ -262,6 +278,14 @@ public class Controller
 			input = control.nextLine();
 			if(input.matches("exit")) 
 			{
+				try
+				{
+					model.getCurrentRoom().display();
+				}
+				catch(Exception E)
+				{
+					
+				}
 				break;
 			}
 			if(input.matches("New Game"))
