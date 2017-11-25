@@ -238,11 +238,11 @@ public class Controller
 				
 			}
 		} 
-		else if (input.matches("pick up"))
+		else if (input.matches("pick up") || input.matches("pickup"))
 		{
 			pickUpAll();
 		} 
-		else if (input.matches("inventory"))
+		else if (input.matches("inventory") || input.matches("inv"))
 		{
 			controllerItem();
 		} 
