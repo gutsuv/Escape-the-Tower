@@ -57,11 +57,11 @@ public class Controller
 		{
 			((ObjectPuzzle) model.getCurrentRoom().getPuzzle()).display(model.getUser().getInventory());
 			itemNumber = control.nextLine();
-			if (itemNumber.matches("exit"))
+			if (itemNumber.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (itemNumber.matches("hint"))
+			if (itemNumber.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
@@ -86,15 +86,15 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (answer.matches("hint"))
+			if (answer.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
-			if(answer.matches("drink"))
+			if(answer.equalsIgnoreCase("drink"))
 			{
 				((PuzzleDebuff) model.getCurrentRoom().getPuzzle()).printPoison();
 				model.getUser().setPoisoned(true);
@@ -110,11 +110,11 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (answer.matches("hint"))
+			if (answer.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
@@ -141,11 +141,11 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			} 
-			else if (answer.matches("hint"))
+			else if (answer.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			} 
@@ -168,11 +168,11 @@ public class Controller
 		{
 			((DoorPuzzle) model.getCurrentRoom().getPuzzle()).display(model.getUser().getInventory());
 			itemNumber = control.nextLine();
-			if (itemNumber.matches("exit"))
+			if (itemNumber.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
-			if (itemNumber.matches("hint"))
+			if (itemNumber.equalsIgnoreCase("hint"))
 			{
 				model.getCurrentRoom().getPuzzle().printHint();
 			}
@@ -203,7 +203,7 @@ public class Controller
 		{
 			model.getCurrentRoom().getPuzzle().display();
 			answer = control.nextLine();
-			if (answer.matches("exit"))
+			if (answer.equalsIgnoreCase("exit"))
 			{
 				break;
 			}
@@ -226,7 +226,7 @@ public class Controller
 			model.getUser().displayEquippedItems();
 			menuView.print("exit:");
 			input = control.nextLine();
-			//if(input.matches("exit"))
+			//if(input.equalsIgnoreCase("exit"))
 			if(true)
 			{
 				try
@@ -250,9 +250,9 @@ public class Controller
 		{
 			menuView.line(125);
 			menuView.print("No help for the weak");
-			menuView.print("exit:");
+			menuView.print("Exit:");
 			input = control.nextLine();
-			if(input.matches("exit"))
+			if(input.equalsIgnoreCase("exit"))
 			{
 				try
 				{
@@ -276,9 +276,9 @@ public class Controller
 			menuView.line(125);
 			menuView.print("New Game:");
 			menuView.print("Load Game:");
-			menuView.print("exit");
+			menuView.print("Exit");
 			input = control.nextLine();
-			if(input.matches("exit")) 
+			if(input.equalsIgnoreCase("exit")) 
 			{
 				try
 				{
@@ -290,11 +290,11 @@ public class Controller
 				}
 				break;
 			}
-			if(input.matches("New Game"))
+			if(input.equalsIgnoreCase("New Game"))
 			{
 				
 			}
-			if(input.matches("Load Game"))
+			if(input.equalsIgnoreCase("Load Game"))
 			{
 				
 			}
@@ -314,19 +314,19 @@ public class Controller
 				
 			}
 		} 
-		else if (input.matches("pick up") || input.matches("pickup"))
+		else if (input.equalsIgnoreCase("pick up") || input.equalsIgnoreCase("pickup"))
 		{
 			pickUpAll();
 		} 
-		else if (input.matches("inventory") || input.matches("inv"))
+		else if (input.equalsIgnoreCase("inventory") || input.equalsIgnoreCase("inv"))
 		{
 			controllerItem();
 		} 
-		else if (input.matches("combat") && model.getCurrentRoom().getEnemy() != null)
+		else if (input.equalsIgnoreCase("combat") && model.getCurrentRoom().getEnemy() != null)
 		{
 			controllerEnemy();
 		} 
-		else if (input.matches("puzzle") && model.getCurrentRoom().getPuzzle() != null)
+		else if (input.equalsIgnoreCase("puzzle") && model.getCurrentRoom().getPuzzle() != null)
 		{
 			if (model.getCurrentRoom().getPuzzle() instanceof DoorPuzzle)
 			{
@@ -361,15 +361,15 @@ public class Controller
 				
 			}
 		}
-		else if (input.matches("stats"))
+		else if (input.equalsIgnoreCase("stats"))
 		{
 			controllerStats();
 		} 
-		else if (input.matches("help"))
+		else if (input.equalsIgnoreCase("help"))
 		{
 			controllerHelp();
 		}
-		else if (input.matches("menu"))
+		else if (input.equalsIgnoreCase("menu"))
 		{
 			controllerMenu();
 		}
@@ -388,7 +388,7 @@ public class Controller
 
 			}
 		}
-		if (input.matches("exit"))
+		if (input.equalsIgnoreCase("exit"))
 		{
 			try
 			{
@@ -407,11 +407,11 @@ public class Controller
 	{
 		try
 		{
-			if (input.matches("exit"))
+			if (input.equalsIgnoreCase("exit"))
 			{
 				return true;
 			} 
-			else if (input.matches("use"))
+			else if (input.equalsIgnoreCase("use"))
 			{
 				if (model.getUser().getItem(i) instanceof Consumable)
 				{
@@ -437,19 +437,19 @@ public class Controller
 				// ran into problem. AoK work around
 				return true;
 			} 
-			else if (input.matches("drop"))
+			else if (input.equalsIgnoreCase("drop"))
 			{
 				model.currentRoom.addItem(model.getUser().getItem(i));
 				model.getUser().getItem(i).drop();// this part of code does nothing most of the time
 				model.getUser().drop(i);
 				return true;
 			} 
-			else if (input.matches("equip"))
+			else if (input.equalsIgnoreCase("equip"))
 			{
 				model.getUser().equip(i);
 				return true;
 			} 
-			else if (input.matches("examine"))
+			else if (input.equalsIgnoreCase("examine"))
 			{
 				model.getUser().getItem(i).examine();
 				return true;
@@ -462,7 +462,7 @@ public class Controller
 
 	private boolean determineEnemy(String input)
 	{
-		if (input.matches("exit"))
+		if (input.equalsIgnoreCase("exit"))
 		{
 			try
 			{
@@ -474,7 +474,7 @@ public class Controller
 			}
 			return true;
 		} 
-		else if (input.matches("attack"))
+		else if (input.equalsIgnoreCase("attack"))
 		{
 			int j = model.getCurrentRoom().getEnemy().getDefense();
 			int i = model.getUser().dealDamage() - j;
@@ -518,7 +518,7 @@ public class Controller
 				}
 			}
 		} 
-		else if (input.matches("inventory"))
+		else if (input.equalsIgnoreCase("inventory"))
 		{
 			controllerItem();
 		}
