@@ -7,7 +7,8 @@ public class Gear extends Item
 	protected int attackMax;
 	protected int acc;
 	protected char itemslot;
-
+	protected boolean equipped = false;
+	
 	public Gear(String loadedString)
 	{
 		// loaded from file
@@ -35,7 +36,12 @@ public class Gear extends Item
 		}
 
 	}
-
+	
+	public void setEquipped(boolean equip)
+	{
+		equipped = equip;
+	}
+	
 	public int getDefense()
 	{
 		return defense;
@@ -100,6 +106,10 @@ public class Gear extends Item
 	{
 		view.line(125);
 		view.print(itemName);
+		if(equipped)
+		{
+			view.print("equipped");
+		}
 		if(itemslot=='w') 
 		{
 			view.print("Max Damage " + attackMax + 

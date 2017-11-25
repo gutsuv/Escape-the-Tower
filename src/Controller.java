@@ -73,6 +73,7 @@ public class Controller
 			if (model.getCurrentRoom().getPuzzle().isSolved())
 			{
 				model.getCurrentRoom().setPuzzle(null);
+				model.user.getInventory().remove(Integer.parseInt(itemNumber));
 				break;
 			}
 		}
@@ -181,12 +182,19 @@ public class Controller
 			}
 			if (itemNumber.matches("[0-9]+"))
 			{
-				model.getCurrentRoom().getPuzzle()
+				try {
+					model.getCurrentRoom().getPuzzle()
 						.attemptSolve(model.getUser().getItem(Integer.parseInt(itemNumber)).getItemId());
+				}
+				catch(Exception E)
+				{
+					
+				}
 			}
 			if (model.getCurrentRoom().getPuzzle().isSolved())
 			{
 				model.getCurrentRoom().setPuzzle(null);
+				model.user.getInventory().remove(Integer.parseInt(itemNumber));
 				break;
 			}
 		}

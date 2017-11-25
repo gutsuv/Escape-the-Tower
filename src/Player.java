@@ -142,12 +142,14 @@ public class Player extends Character
 				unequip(i);
 			}
 		}
+		((Gear) item).setEquipped(true);
 		equippedItems.add((Gear) item);
 		updateStats();
 	}
 
 	public void unequip(int i)
 	{
+		equippedItems.get(i).setEquipped(false);
 		equippedItems.remove(i);
 	}
 
