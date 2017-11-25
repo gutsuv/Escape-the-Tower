@@ -40,7 +40,7 @@ public class Initializer
 			{
 				try
 				{
-					loadGame(scan,"one");
+					loadGame(scan,"One");
 				}
 				catch (FileNotFoundException e)
 				{
@@ -51,7 +51,7 @@ public class Initializer
 			{
 				try
 				{
-					loadGame(scan,"two");
+					loadGame(scan,"Two");
 				}
 				catch (FileNotFoundException e)
 				{
@@ -62,7 +62,7 @@ public class Initializer
 			{
 				try
 				{
-					loadGame(scan,"three");
+					loadGame(scan,"Three");
 				}
 				catch (FileNotFoundException e)
 				{
