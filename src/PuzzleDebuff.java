@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class PuzzleDebuff extends Puzzle
 {
 	private int itemId;
-	private boolean poisonTaken = false;
 	
 	public PuzzleDebuff(String loadedString)
 	{
@@ -26,16 +25,7 @@ public class PuzzleDebuff extends Puzzle
 					+ "I can fix it in like 30 minutes. Include PuzzleDebuff in the text message");
 		}
 	}
-	public void setPoisonTaken(Boolean poison)
-	{
-		poisonTaken = true;
-	}
 	
-	public boolean getPoisonTaken()
-	{
-		return poisonTaken;
-	}
-
 	@Override
 	public void initialize()
 	{
@@ -45,10 +35,13 @@ public class PuzzleDebuff extends Puzzle
 	@Override
 	public void attemptSolve(String answer)
 	{
-		if(answer.matches("yes"))
-		{
-			solved = true;
-		}
+		solved = true;
+	}
+	public void printPoison()
+	{
+		view.line(125);
+		view.printString("You drink the vial and begin to fall sick."
+				+ " It was poison! Where’s the antidote?",125);
 	}
 
 	@Override
@@ -63,5 +56,9 @@ public class PuzzleDebuff extends Puzzle
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
+		view.print("drink:");
+		view.print("ignore");
+		view.print("hint:");
+		view.print("exit:");
 	}
 }

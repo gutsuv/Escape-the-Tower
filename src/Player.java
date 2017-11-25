@@ -39,7 +39,7 @@ public class Player extends Character
 		view.print("Accuracy: " + acc + "/100");
 	}
 
-	private void updateStats()
+	public void updateStats()
 	{
 		maxAttack = 0;
 		minAttack = 0;
@@ -77,6 +77,11 @@ public class Player extends Character
 	public void updateMaxHealth(int i)
 	{
 		maxHealth = maxHealth + i;
+	}
+	
+	public void setPoisoned(boolean poison)
+	{
+		poisoned = poison;
 	}
 	
 	public boolean isPoisoned()

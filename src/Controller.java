@@ -80,13 +80,28 @@ public class Controller
 
 	public void controllerPuzzleDebuff()
 	{
+		String answer;
 		while (true)
 		{
 			model.getCurrentRoom().getPuzzle().display();
-			// solve later
-			if (true)
+			answer = control.nextLine();
+			if (answer.matches("exit"))
 			{
 				break;
+			}
+			if (answer.matches("hint"))
+			{
+				model.getCurrentRoom().getPuzzle().printHint();
+			}
+			if(answer.matches("drink"))
+			{
+				((PuzzleDebuff) model.getCurrentRoom().getPuzzle()).printPoison();
+				model.getUser().setPoisoned(true);
+				model.getUser().updateStats();
+			}
+			if(answer.matches("ignore"))
+			{
+				model.getCurrentRoom().getPuzzle().attemptSolve(answer);
 			}
 		}
 	}
@@ -311,7 +326,12 @@ public class Controller
 				}
 				if (model.getUser().getItem(i) instanceof PuzzleItem)
 				{
-
+					if(model.getUser().getItem(i).getItemId() == 102)
+					{
+						model.getUser().getInventory().remove(i);
+						model.getUser().setPoisoned(false);
+						model.getUser().updateStats();
+					}
 				}
 				// model.getUser().getItem(i).use();
 				// ran into problem. AoK work around
