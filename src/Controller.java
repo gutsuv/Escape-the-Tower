@@ -73,7 +73,7 @@ public class Controller
 			if (model.getCurrentRoom().getPuzzle().isSolved())
 			{
 				model.getCurrentRoom().setPuzzle(null);
-				model.user.getInventory().remove(Integer.parseInt(itemNumber));
+				model.user.removeItem(Integer.parseInt(itemNumber));
 				break;
 			}
 		}
@@ -103,6 +103,10 @@ public class Controller
 			if(answer.matches("ignore"))
 			{
 				model.getCurrentRoom().getPuzzle().attemptSolve(answer);
+			}
+			if(model.getCurrentRoom().getPuzzle().isSolved())
+			{
+				model.getCurrentRoom().setPuzzle(null);
 			}
 		}
 	}
@@ -336,7 +340,7 @@ public class Controller
 				{
 					if(model.getUser().getItem(i).getItemId() == 102)
 					{
-						model.getUser().getInventory().remove(i);
+						model.getUser().removeItem(i);
 						model.getUser().setPoisoned(false);
 						model.getUser().updateStats();
 					}

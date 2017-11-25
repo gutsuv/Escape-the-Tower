@@ -108,7 +108,7 @@ public class Gear extends Item
 		view.print(itemName);
 		if(equipped)
 		{
-			view.print("equipped");
+			view.print("[equipped]");
 		}
 		if(itemslot=='w') 
 		{
@@ -120,7 +120,10 @@ public class Gear extends Item
 		{
 			view.print("Armor " + defense);
 		}
-		view.print("equip:");
+		if(equipped == false)
+		{
+			view.print("equip:");
+		}
 		view.print("drop:");
 		view.print("examine:");
 		view.print("exit:");

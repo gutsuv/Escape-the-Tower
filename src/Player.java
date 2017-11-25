@@ -100,6 +100,11 @@ public class Player extends Character
 	{
 		return inventory.get(i);
 	}
+	
+	public void removeItem(int i)
+	{
+		inventory.remove(i);
+	}
 
 	public void pickUp(Item item)
 	{
