@@ -107,6 +107,7 @@ public class Controller
 			if(model.getCurrentRoom().getPuzzle().isSolved())
 			{
 				model.getCurrentRoom().setPuzzle(null);
+				break;
 			}
 		}
 	}

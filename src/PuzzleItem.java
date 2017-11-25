@@ -54,7 +54,7 @@ public class PuzzleItem extends Item
 	@Override
 	public String getDisplay()
 	{
-		return itemName + "-> use, drop, examine:";
+		return itemName + "-> [use], drop, examine:";
 	}
 
 	@Override
@@ -62,6 +62,10 @@ public class PuzzleItem extends Item
 	{
 		view.line(125);
 		view.print(itemName);
+		if(itemId == 102)
+		{
+			
+		}
 		view.print("drop:");
 		view.print("examine:");
 		view.print("exit:");
