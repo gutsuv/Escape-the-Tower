@@ -297,6 +297,10 @@ public class Controller
 			menuView.print("To enter a puzzle, enter 'puzzle' ");
 			menuView.print("To view a puzzle hint (whilst in puzzle sequence), enter 'hint' ");
 			menuView.print("To leave a puzzle (whilst in puzzle sequence), enter 'exit'");
+			menuView.print("To enter main menu, enter 'menu'");
+			menuView.print("To save progress (whilst in main menu), enter 'save one/save two/save three'");
+			menuView.print("To leave game (whilst in main menu), enter 'leave game'");
+			menuView.print("To exit main menu (whilst in main menu), enter 'exit'");
 			menuView.print("Exit:");
 			input = control.nextLine();
 			if(input.equalsIgnoreCase("exit"))
