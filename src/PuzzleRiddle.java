@@ -54,7 +54,7 @@ public class PuzzleRiddle extends Puzzle
 	@Override
 	public void attemptSolve(String answer)
 	{
-		if (answer.matches(answer1) || answer.matches(answer2))
+		if (answer.equalsIgnoreCase(answer1) || answer.equalsIgnoreCase(answer2))
 		{
 			view.line(125);
 			view.print("Puzzle solved: Exit is no longer obstructed");
