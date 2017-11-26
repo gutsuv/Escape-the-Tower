@@ -79,6 +79,16 @@ public class Player extends Character
 		maxHealth = maxHealth + i;
 	}
 	
+	public void setMaxHealth(int i)
+	{
+		maxHealth = i;
+	}
+	
+	public void setHealth(int i)
+	{
+		health = i;
+	}
+	
 	public void setPoisoned(boolean poison)
 	{
 		poisoned = poison;

@@ -82,25 +82,101 @@ public class ObjectHolder
 			loadItems(file);
 			file = new File("TextFiles/Save" + number + "/RoomsBPuzzle.txt");
 			loadPuzzles(file);
+			user = new Player(view);
+			file = new File("TextFiles/Save" + number + "Player/.txt");
+			loadPlayer(file);
+			file = new File("TextFiles/Save" + number + "/Inventory.txt");
+			loadInventory(file);
+			file = new File("TextFiles/Save" + number + "/Equipped Items.txt");
+			loadEquippedItems(file);
+			file = new File("TextFiles/Save" + number + "/CurrentRoom.txt");
+			loadCurrentRoom(file);
 		}
 		catch (Exception E)
 		{
-			view.print("RoomsB didn't load:" + number);
+			view.print("Didn't load properly: Save" + number);
 		}
-		user = new Player(view);
-		// after load
+		
+	}
+	
+	public void loadCurrentRoom(File CurrentRoom)
+	{
+		// loads a file formatted with one number
 		try
 		{
-			currentRoom.display();
+			BufferedReader buff = new BufferedReader(new FileReader(CurrentRoom));
+			setCurrentRoom(Integer.parseInt(buff.readLine()));
+			buff.close();
 		}
-		catch (Exception e)
+		catch(Exception E)
 		{
+			view.print("load error CurrentRoom");
 		}
 	}
-
+	
+	public void loadPlayer(File Player)
+	{
+		// loads a file formatted with player health
+		try
+		{
+			BufferedReader buff = new BufferedReader(new FileReader(Player));
+			user.setMaxHealth(Integer.parseInt(buff.readLine()));
+			user.setHealth(Integer.parseInt(buff.readLine()));
+			user.setPoisoned(Boolean.parseBoolean(buff.readLine()));
+			buff.close();
+		}
+		catch(Exception E)
+		{
+			view.print("load error PlayerHealth");
+		}
+	}
+	
+	public void loadInventory(File Inventory)
+	{
+		// loads a file formatted item Ids
+		try
+		{
+			BufferedReader buff = new BufferedReader(new FileReader(Inventory));
+			while(buff.ready())
+			{
+				user.pickUp(library.cloneItem(Integer.parseInt(buff.readLine())));
+			}
+			buff.close();
+		}
+		catch(Exception E)
+		{
+			view.print("load error CurrentRoom");
+		}
+	}
+	
+	public void loadEquippedItems(File Equipped)
+	{
+		// loads a file formatted with item Ids
+		try
+		{
+			BufferedReader buff = new BufferedReader(new FileReader(Equipped));
+			while(buff.ready())
+			{
+				int itemId = Integer.parseInt(buff.readLine());
+				for(int i = 0; i < user.getInventory().size(); i++)
+				{
+					if(itemId==user.getItem(i).getItemId())
+					{
+						user.equip(i);
+					}
+				}
+			}
+			buff.close();
+		}
+		catch(Exception E)
+		{
+			view.print("load error CurrentRoom");
+		}
+	}
+	
 	public void loadEnemys(File EnemyFile)
 	{
-		// loads a file formated like RoomsBEnemy.txt
+		// loads a file formatted like RoomsBEnemy.txt
 
 		try
 		{
