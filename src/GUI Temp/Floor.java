@@ -23,7 +23,7 @@ public class Floor
 	private JButton btnNewButton;
 	private String name;
 	private JLabel lblP;
-	private ImagePanel panel_2;
+	//private ImagePanel panel_2;
 	public static JComboBox comboBox;
 	static String gender;
 	static String nickName;
@@ -46,6 +46,7 @@ public class Floor
 					window = new Floor();
 					window.frame.setVisible(true);
 				}
+				
 				catch (Exception e)
 				{
 					e.printStackTrace();
@@ -64,10 +65,6 @@ public class Floor
 		initialize();
 	}
 
-	public static void startStory() throws InterruptedException
-	{
-
-	}
 
 	/**
 	 * Initialize the contents of the frame.
@@ -82,23 +79,11 @@ public class Floor
 			name = JOptionPane.showInputDialog("Err, no name entered. Kindly Enter Your Name Please");
 		}
 		
-		Controller.eInstance().setPlayerGender(gender);
-
-		Controller.eInstance().setPlayerName(name);
-		JOptionPane.showMessageDialog(frame,
-				"Nice to finally meet the cold blooded warrior " + name + ", lets Get Started");
 		frame = new JFrame();
 		frame.setBounds(100, 100, 834, 532);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		frame.getContentPane().setLayout(null);
-
-		btnNewButton = new JButton("Name: " + name);
-		btnNewButton.setForeground(Color.DARK_GRAY);
-		btnNewButton.setBackground(Color.WHITE);
-		btnNewButton.setEnabled(false);
-		btnNewButton.setBounds(6, 3, 150, 38);
-		
 		frame.getContentPane().add(btnNewButton);
 
 		JButton button = new JButton("HIT POINTS: 0");
@@ -128,18 +113,10 @@ public class Floor
 
 		JButton button4 = new JButton("Help");
 		button4.setForeground(Color.DARK_GRAY);
-		// button4.setEnabled(false);
 		button4.setBackground(Color.WHITE);
 		button4.setBounds(10, 40, 40, 20);
 		
 		frame.getContentPane().add(button4);
-		
-		// JButton button5 = new JButton("Inventory");
-		// button5.setForeground(Color.DARK_GRAY);
-		// //button5.setEnabled(false);
-		// button5.setBackground(Color.WHITE);
-		// button5.setBounds(60, 40, 100, 20);
-		// frame.getContentPane().add(button5);
 
 		JButton btnMenu = new JButton("MENU");
 		btnMenu.setForeground(Color.GRAY);
@@ -406,6 +383,8 @@ public class Floor
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
+									
+									
 									else
 									{
 										lblP.setText(name);
@@ -952,6 +931,8 @@ public class Floor
 					}
 
 				} 
+				
+				
 				else if (selectedItem.equalsIgnoreCase("Inventory"))
 				{
 					String resp = Controller.eInstance().inventaryList();
