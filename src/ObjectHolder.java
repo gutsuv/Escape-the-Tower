@@ -235,6 +235,39 @@ public class ObjectHolder
 			System.out.println("load error puzzle");
 		}
 	}
+	public void saveItems(String number) {
+		try 
+		{
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/RoomsBItem.txt");
+			writer.println();
+			for(int i = 0;i < rooms.size(); i++)
+			{
+				if(rooms.get(i).getItems().size()==0)
+				{
+					writer.println(".");
+				}
+				else
+				{
+					String itemString = "";
+					for(int j = 0; j < rooms.get(i).getItems().size();j++)
+					{
+						itemString = itemString + rooms.get(i).getItems().get(j).getItemId();
+						if(rooms.get(i).getItems().size()!=j)
+						{
+							itemString = itemString + "><";
+						}
+					}
+					writer.println(itemString);
+				}
+			}
+			
+			writer.close();
+		} catch (Exception e) 
+		{
+			view.print("Item Save fail");
+		}
+	}
 	
 	public void saveEnemys(String number) {
 		try 
@@ -267,6 +300,7 @@ public class ObjectHolder
 			view.print("Enemys Save fail");
 		}
 	}
+	
 	public void savePuzzles(String number) {
 		try 
 		{
