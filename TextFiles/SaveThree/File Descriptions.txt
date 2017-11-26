@@ -1,0 +1,15 @@
+Item Files
+Inventory and Equipped Items share a format
+int itemId
+
+Current Room
+[1]int CurrentRoom
+
+Player Health
+[1]int maxHealth, int currentHealth, boolean poisoned
+
+RoomsBEnemy/RoomsBItem/RoomsBPuzzle
+these items are formatted the same as the files in the main textFiles folder
+they use enemy/item/puzzle Ids
+
+other files may be added later to meet load requirements
