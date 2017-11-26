@@ -656,48 +656,7 @@ public class Floor
 								break;
 							}
 
-							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
-									&& selectedItem.toLowerCase().contains("staircase".toLowerCase()))
-							{
-								if (selectedItem.toLowerCase().contains("floor 2".toLowerCase()))
-								{
-									String resp = "Moving to " + nr.toLowerCase() + "\n";
-									textPane.setText(textPane.getText() + "\n\n" + resp);
-									lblP.setBounds(250, 350, 61, 16);
-									;
-									
-									
-									Controller.eInstance().setInRoom(22);
-									Controller.eInstance().setOnFloor(2);
-									
-									
-									panel_2.hide();
-									panel_2 = new ImagePanel(new ImageIcon("_f2.png").getImage());
-									panel_2.setBackground(Color.WHITE);
-									panel_2.setBounds(379, 63, 449, 441);
-									
-									
-									frame.getContentPane().add(panel_2);
-
-									lblP = new JLabel("");
-									lblP.setForeground(Color.YELLOW);
-									lblP.setBounds(80, 350, 61, 16);
-									
-									
-									panel_2.add(lblP);
-									
-									if (name.length() > 3)
-									{
-										lblP.setText(name.substring(0, 3));
-									} 
-									
-									else
-									{
-										lblP.setText(name);
-									}
-									break;
-								} 
-								
+															
 								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
@@ -1130,6 +1089,69 @@ public class Floor
 			}
 		});
 		
+/*		else if (selectedItem.contains("Get Hint"))
+		{
+			if (!Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
+					.getRoom(Controller.eInstance().getInRoom()).getPuzzles().isEmpty())
+			{
+				String resp = "\n" + Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
+						.getRoom(Controller.eInstance().getInRoom()).getPuzzles().get(0).getHint();
+				textPane.setText("" + textPane.getText() + resp);
+			} 
+			
+			else
+			{
+				textPane.setText("" + textPane.getText() + "\nThere is no puzzle");
+			}
+
+		}
+		// else if(selectedItem.contains("Engage Combat"))
+		// {
+		//
+		// }
+		else if (selectedItem.contains("Flee battle"))
+		{
+			textPane.setText("" + textPane.getText() + "\nFleeing battle, Running away");
+		} 
+		
+		else if (selectedItem.contains("Attack Monster"))
+		{
+			if (!Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
+					.getRoom(Controller.eInstance().getInRoom()).getMonsters().isEmpty())
+			{
+				Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
+						.getRoom(Controller.eInstance().getInRoom())
+						.attackMonster(Controller.eInstance().getPlayer());
+				button2.setText("Health: " + Controller.eInstance().getPlayer().getHealthPoints());
+				button.setText("Points: " + Controller.eInstance().getPlayer().getGameScore());
+				button3.setText("Attack: " + Controller.eInstance().getPlayer().getAttackPoints()
+						+ "\n Defence: " + Controller.eInstance().getPlayer().getDefencePoints());
+			}
+			
+			else
+			{
+				textPane.setText("" + textPane.getText() + "\nThere is no monster to attack");
+			}
+		}
+		
+		else if (selectedItem.contains("Start Puzzle"))
+		{
+
+		} 
+		
+		else if (selectedItem.contains("Leave Puzzle"))
+		{
+
+		} 
+		
+		else if (selectedItem.contains("Answer"))
+		{
+
+		}
+
+	}
+});*/
+		
 		
 		
 		btnNewButton_1.setBounds(108, 67, 117, 29);
@@ -1157,29 +1179,7 @@ public class Floor
 		lblConsole.setBounds(6, 80, 129, 16);
 		panel.add(lblConsole);
 
-		JButton btnNewButton_2 = new JButton("Start");
-		btnNewButton_2.addActionListener(new ActionListener()
-		{
-
-			public void actionPerformed(ActionEvent e)
-			{
-				btnNewButton_2.setEnabled(false);
-				btnNewButton_2.hide();
-				btnNewButton_1.setEnabled(true);
-				updateUI("", 6);
-				updateUI("", 0);
-				textPane.setText("");
-			}
-		});
 		
-		
-		
-		btnNewButton_2.setBounds(124, 412, 117, 29);
-		panel.add(btnNewButton_2);
-
-		Panel panel_1 = new Panel();
-		panel_1.setBackground(Color.WHITE);
-		panel_1.setBounds(401, 110, 289, 210);
 
 		JLabel lblNewLabel = new JLabel("New label");
 
