@@ -99,19 +99,13 @@ public class GUI
 		btnLoadgame.setBounds(149, 160, 147, 43);
 		frame.getContentPane().add(btnLoadgame);
 		
-		JButton btnHelpMenu = new JButton("Help Menu");
-		btnHelpMenu.addActionListener(new ActionListener() 
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				helpView.main(null);
-			}
-		});
+
 		
-		
-		btnHelpMenu.setBounds(149, 215, 147, 43);
-		frame.getContentPane().add(btnHelpMenu);
 	}
+	
+	
+	
+	
 
 }
 

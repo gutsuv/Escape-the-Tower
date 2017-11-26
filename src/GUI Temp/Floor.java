@@ -443,7 +443,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(40, 54, 61, 16);
-								Controller.eInstance().setInRoom(12);
+								//Controller.eInstance().setInRoom(12);
 
 								break;
 							}
@@ -658,6 +658,7 @@ public class Floor
 									
 									frame.getContentPane().add(panel_2);
 
+									
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(80, 350, 61, 16);
@@ -674,6 +675,7 @@ public class Floor
 									{
 										lblP.setText(name);
 									}
+									
 									break;
 								} 
 								
@@ -692,6 +694,8 @@ public class Floor
 									panel_2 = new ImagePanel(new ImageIcon("_f4.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
@@ -710,6 +714,8 @@ public class Floor
 									{
 										lblP.setText(name);
 									}
+									
+									
 									break;
 								}
 							}
@@ -751,6 +757,8 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								
 								textPane.setText(textPane.getText() + "\n\n" + resp);
+								
+								
 								lblP.setBounds(370, 350, 61, 16);
 								
 								Controller.eInstance().setInRoom(24);
@@ -772,51 +780,7 @@ public class Floor
 								break;
 							}
 
-							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
-									&& selectedItem.toLowerCase().contains("staircase".toLowerCase()))
-							{
-								
-								if (Controller.eInstance().getInRoom() == 25)
-								{
-									String resp = "Moving to " + nr.toLowerCase() + "\n";
-									textPane.setText(textPane.getText() + "\n\n" + resp);
-									lblP.setBounds(250, 350, 61, 16);
-									
-									
-									Controller.eInstance().setInRoom(26);
-									Controller.eInstance().setOnFloor(1);
-									
-									
-									
-									panel_2.hide();
-									panel_2 = new ImagePanel(new ImageIcon("_f1.png").getImage());
-									panel_2.setBackground(Color.WHITE);
-									panel_2.setBounds(379, 63, 449, 441);
-									
-									
-									frame.getContentPane().add(panel_2);
-
-									lblP = new JLabel("");
-									lblP.setForeground(Color.YELLOW);
-									lblP.setBounds(80, 40, 61, 16);
-									
-									
-									panel_2.add(lblP);
-									
-									
-									if (name.length() > 3)
-									{
-										lblP.setText(name.substring(0, 3));
-									} 
-									
-									else
-									{
-										lblP.setText(name);
-									}
-									
-									
-									break;
-								} 
+					
 								
 								else
 								{
@@ -837,6 +801,7 @@ public class Floor
 									
 									frame.getContentPane().add(panel_2);
 
+									
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(250, 350, 61, 16);
@@ -857,7 +822,7 @@ public class Floor
 									break;
 								}
 							}
-						}
+						
 						
 						else if (Controller.eInstance().getOnFloor() == 1)
 						{
@@ -907,15 +872,6 @@ public class Floor
 								break;
 							}
 
-							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
-									&& selectedItem.toLowerCase().contains("safe".toLowerCase()))
-							{
-								String resp = "Moving to " + nr.toLowerCase() + "\n";
-								textPane.setText(textPane.getText() + "\n\n" + resp);
-								lblP.setBounds(250, 300, 61, 16);
-								
-								Controller.eInstance().setInRoom(30);
-							}
 
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("exit".toLowerCase()))
@@ -938,16 +894,7 @@ public class Floor
 					String resp = Controller.eInstance().inventaryList();
 					textPane.setText(textPane.getText() + "\n\n" + resp);
 				}
-				
-				else if (selectedItem.contains("Inspect"))
-				{
-					if (selectedItem.contains("Exit"))
-					{
-						String resp = Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
-								.getRoom(Controller.eInstance().getInRoom()).doors();
-						textPane.setText(textPane.getText() + "\n\n" + resp);
-					}
-				} 
+
 				
 				else if (selectedItem.contains("Use"))
 				{
@@ -965,23 +912,7 @@ public class Floor
 					}
 				}
 
-				else if (selectedItem.contains("Drop"))
-				{
-					if (Controller.eInstance().drop(selectedItem))
-					{
-						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(5, selectedItem.length())
-								+ "is dropped");
-					}
-
-					else
-					{
-						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(5, selectedItem.length())
-								+ "is not found");
-
-					}
-
-				}
-
+			
 				else if (selectedItem.contains("drop"))
 				{
 					if (Controller.eInstance().drop(selectedItem))
@@ -1019,26 +950,7 @@ public class Floor
 
 				} 
 				
-				else if (selectedItem.contains("pick up"))
-				{
-					Artifact artifact = Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
-							.getRoom(Controller.eInstance().getInRoom()).getArtifact(selectedItem);
-					if (artifact != null)
-					{
-						Controller.eInstance().getPlayer().getInventary().add(artifact);
-						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
-								+ " is picked up");
-					} 
-					
-					else
-					{
-						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
-								+ " is not found");
-
-					}
-
-				}
-
+			
 				else if (selectedItem.contains("Equip"))
 				{
 					if (Controller.eInstance().use(selectedItem))
@@ -1117,14 +1029,6 @@ public class Floor
 		textPane = new TextArea();
 		textPane.setBackground(Color.LIGHT_GRAY);
 		textPane.setBounds(6, 107, 358, 300);
-		
-		
-		panel.add(textPane);
-		textPane.setText(name + " was born in the Wackdro kingdom of Littlevinelle. "
-				+ "He had a detached temperament, \nwhich the queen disapproved of, "
-				+ "so he went off on his own to discover the outskirts of his own kingdom \n"
-				+ "at the age of 7. He defeated numerous monsters that crossed his path "
-				+ "and found a great power in \nall of them.");
 		
 		
 		
@@ -1241,15 +1145,6 @@ public class Floor
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 /*class ImagePanel extends JPanel
 {
 
@@ -1280,25 +1175,7 @@ public class Floor
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
 
 
 
