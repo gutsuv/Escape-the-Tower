@@ -1037,5 +1037,48 @@ public class Floor
 		panel_1.add(lblNewLabel);
 
 	}
+	
 
+	public void updateUI(String menu,int room) 
+	{
+		
+		if(room == 6)
+		{
+			comboBox.addItem("Look");
+			comboBox.addItem("Go to ");
+			comboBox.addItem("Inventory");
+			
+			comboBox.addItem("Inspect ");
+			
+			comboBox.addItem("Use ");	
+			
+			comboBox.addItem("Drop ");
+
+			comboBox.addItem("Pickup ");
+
+			comboBox.addItem("Equip  ");
+
+			comboBox.addItem("Get Hint  ");
+
+		}
+		
+		else if(room == 0)
+		{
+			comboBox.addItem("Start Puzzle ");
+			
+			comboBox.addItem("Leave Puzzle ");
+			
+			comboBox.addItem("Answer ");
+			
+			//comboBox.addItem("Engage Combat");
+			
+			comboBox.addItem("Attack Monster");
+			
+			comboBox.addItem("Flee battle");
+
+		}
+		
+		
+	}
 }
+
