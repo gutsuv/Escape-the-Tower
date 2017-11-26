@@ -492,17 +492,6 @@ public class Floor
 								break;
 							}
 
-							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
-									&& selectedItem.toLowerCase().contains("kitchen".toLowerCase()))
-							{
-								String resp = "Moving to " + nr.toLowerCase() + "\n";
-								textPane.setText(textPane.getText() + "\n\n" + resp);
-								lblP.setBounds(380, 350, 61, 16);
-								;
-								Controller.eInstance().setInRoom(15);
-
-								break;
-							}
 
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("pantry".toLowerCase()))
@@ -712,6 +701,8 @@ public class Floor
 									panel_2 = new ImagePanel(new ImageIcon("_f4.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
@@ -836,43 +827,10 @@ public class Floor
 									break;
 								} 
 								
-								else
-								{
-									String resp = "Moving to " + nr.toLowerCase() + "\n";
-									textPane.setText(textPane.getText() + "\n\n" + resp);
-									lblP.setBounds(250, 350, 61, 16);
-									;
-									Controller.eInstance().setInRoom(5);
-									Controller.eInstance().setOnFloor(6);
-									
-									
-									
-									panel_2.hide();
-									panel_2 = new ImagePanel(new ImageIcon("_f3.png").getImage());
-									panel_2.setBackground(Color.WHITE);
-									panel_2.setBounds(379, 63, 449, 441);
-									frame.getContentPane().add(panel_2);
-
-									lblP = new JLabel("");
-									lblP.setForeground(Color.YELLOW);
-									lblP.setBounds(250, 350, 61, 16);
-									
-									
-									panel_2.add(lblP);
-									
-									if (name.length() > 3)
-									{
-										lblP.setText(name.substring(0, 3));
-									} 
-									
-									else
-									{
-										lblP.setText(name);
-									}
-									break;
+								
 								}
 							}
-						}
+						
 						
 						else if (Controller.eInstance().getOnFloor() == 1)
 						{
@@ -1112,20 +1070,6 @@ public class Floor
 					}
 				}
 				
-				else if (selectedItem.contains("Start Puzzle"))
-				{
-
-				} 
-				
-				else if (selectedItem.contains("Leave Puzzle"))
-				{
-
-				} 
-				
-				else if (selectedItem.contains("Answer"))
-				{
-
-				}
 
 			}
 		});
@@ -1187,6 +1131,7 @@ public class Floor
 
 		panel_2.setBackground(Color.WHITE);
 		panel_2.setBounds(379, 63, 449, 441);
+		
 		frame.getContentPane().add(panel_2);
 
 		lblP = new JLabel("");
@@ -1311,4 +1256,13 @@ public class Floor
 
 
 }
+
+
+
+
+
+
+
+
+
 

@@ -48,6 +48,9 @@ public class helpView
 	{
 		initialize();
 	}
+	
+	
+	
 
 	/**
 	 * Initialize the contents of the frame.
@@ -84,6 +87,8 @@ public class helpView
 
 		TextArea textArea = new TextArea();
 		textArea.setBounds(6, 32, 445, 302);
+		
+		
 		frame.getContentPane().add(textArea);
 		// textArea.setText(Text.help());
 		textArea.setEditable(false);
