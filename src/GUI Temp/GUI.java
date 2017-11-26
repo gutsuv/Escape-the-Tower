@@ -1,4 +1,3 @@
-package View;
 
 import java.awt.EventQueue;
 
@@ -9,20 +8,24 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class GUI {
-
+public class GUI 
+{
 	private JFrame frame;
-	public static Floor f1;
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	//public static Floor f1;
+
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				try 
+				{
 					GUI window = new GUI();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} 
+				catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -32,14 +35,16 @@ public class GUI {
 	/**
 	 * Create the application.
 	 */
-	public GUI() {
+	public GUI() 
+	{
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize() 
+	{
 		frame = new JFrame();
 		frame.setBounds(100, 100, 459, 369);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,27 +57,34 @@ public class GUI {
 
 		frame.setResizable(false);
 		JButton btnNewButton = new JButton("New Game");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				
-				try {
+				try 
+				{
 					f1 = new Floor();
 					f1.window.frame.setVisible(true);
-					//f1.main(null);
-				} catch (InterruptedException e1) {
+					f1.main(null);
+				} 
+				catch (InterruptedException e1) 
+				{
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				frame.setVisible(false);
-				//
+				
 			}
 		});
 		btnNewButton.setBounds(149, 105, 147, 43);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnExit = new JButton("Exit");
-		btnExit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnExit.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				System.exit(0);
 			}
 		});
@@ -84,8 +96,10 @@ public class GUI {
 		frame.getContentPane().add(btnLoadgame);
 		
 		JButton btnHelpMenu = new JButton("Help Menu");
-		btnHelpMenu.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnHelpMenu.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				helpView.main(null);
 			}
 		});
@@ -94,3 +108,11 @@ public class GUI {
 	}
 
 }
+
+
+
+
+
+
+
+
