@@ -98,9 +98,23 @@ public class Gear extends Item
 	@Override
 	public String getDisplay()
 	{
-			return itemName + "-> equip, drop, examine:";
+		if(equipped)
+		{
+			return "[Equipped]" + itemName + "-> equip, drop, examine:";
+		}
+		return "[Gear]" + itemName + "-> equip, drop, examine:";
 	}
-
+	
+	@Override
+	public String toString()
+	{
+		if(equipped)
+		{
+			return "[Equipped] Gear [" + itemName + ", " + itemDescShort + "]";
+		}
+		return "Gear [" + itemName + ", " + itemDescShort + "]";
+	}
+	
 	@Override
 	public void displayCommands()
 	{
