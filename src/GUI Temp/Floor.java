@@ -212,7 +212,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(40, 54, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(3);
 
 								break;
@@ -224,7 +224,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(150, 250, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(2);
 
 								break;
@@ -236,7 +236,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 200, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(4);
 
 								break;
@@ -248,7 +248,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 350, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(5);
 
 								break;
@@ -260,7 +260,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 350, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(6);
 								Controller.eInstance().setOnFloor(5);
 								
@@ -310,7 +310,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 350, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(6);
 
 								break;
@@ -333,7 +333,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(140, 300, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(8);
 
 								break;
@@ -345,7 +345,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(380, 350, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(9);
 
 								break;
@@ -368,7 +368,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(380, 200, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(11);
 
 								break;
@@ -382,7 +382,7 @@ public class Floor
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
-									;
+									
 									Controller.eInstance().setInRoom(12);
 									Controller.eInstance().setOnFloor(4);
 									
@@ -419,7 +419,7 @@ public class Floor
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
-									;
+									
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
 									
@@ -486,12 +486,23 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(80, 300, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(14);
 
 								break;
 							}
 
+							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
+									&& selectedItem.toLowerCase().contains("kitchen".toLowerCase()))
+							{
+								String resp = "Moving to " + nr.toLowerCase() + "\n";
+								textPane.setText(textPane.getText() + "\n\n" + resp);
+								lblP.setBounds(380, 350, 61, 16);
+								
+								Controller.eInstance().setInRoom(15);
+
+								break;
+							}
 
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("pantry".toLowerCase()))
@@ -550,7 +561,7 @@ public class Floor
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
-									;
+									
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
 									
@@ -627,7 +638,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(370, 250, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(20);
 
 								break;
@@ -639,7 +650,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(380, 350, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(17);
 
 								break;
@@ -653,7 +664,7 @@ public class Floor
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
-									;
+									
 									
 									
 									Controller.eInstance().setInRoom(22);
@@ -692,7 +703,8 @@ public class Floor
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
-									;
+									
+									
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
 									
@@ -701,8 +713,6 @@ public class Floor
 									panel_2 = new ImagePanel(new ImageIcon("_f4.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
-									
-									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
@@ -776,7 +786,7 @@ public class Floor
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								
 								lblP.setBounds(370, 250, 61, 16);
-								;
+								
 								
 								Controller.eInstance().setInRoom(23);
 
@@ -824,13 +834,51 @@ public class Floor
 									{
 										lblP.setText(name);
 									}
+									
+									
 									break;
 								} 
 								
-								
+								else
+								{
+									String resp = "Moving to " + nr.toLowerCase() + "\n";
+									textPane.setText(textPane.getText() + "\n\n" + resp);
+									lblP.setBounds(250, 350, 61, 16);
+									
+									Controller.eInstance().setInRoom(5);
+									Controller.eInstance().setOnFloor(6);
+									
+									
+									
+									panel_2.hide();
+									panel_2 = new ImagePanel(new ImageIcon("_f3.png").getImage());
+									panel_2.setBackground(Color.WHITE);
+									panel_2.setBounds(379, 63, 449, 441);
+									
+									
+									frame.getContentPane().add(panel_2);
+
+									lblP = new JLabel("");
+									lblP.setForeground(Color.YELLOW);
+									lblP.setBounds(250, 350, 61, 16);
+									
+									
+									panel_2.add(lblP);
+									
+									if (name.length() > 3)
+									{
+										lblP.setText(name.substring(0, 3));
+									} 
+									
+									else
+									{
+										lblP.setText(name);
+									}
+									
+									break;
 								}
 							}
-						
+						}
 						
 						else if (Controller.eInstance().getOnFloor() == 1)
 						{
@@ -874,7 +922,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 190, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(29);
 
 								break;
@@ -886,7 +934,7 @@ public class Floor
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 300, 61, 16);
-								;
+								
 								Controller.eInstance().setInRoom(30);
 							}
 
@@ -897,7 +945,7 @@ public class Floor
 								textPane.setText("You have won the game");
 								button.setEnabled(false);
 								lblP.setBounds(250, 150, 61, 16);
-								;
+								
 
 							}
 						}
@@ -980,6 +1028,7 @@ public class Floor
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
 								+ " is picked up");
 					}
+					
 					else
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
@@ -1041,14 +1090,15 @@ public class Floor
 					}
 
 				}
-				// else if(selectedItem.contains("Engage Combat"))
-				// {
-				//
-				// }
+
+				
+				
 				else if (selectedItem.contains("Flee battle"))
 				{
 					textPane.setText("" + textPane.getText() + "\nFleeing battle, Running away");
 				} 
+				
+				
 				
 				else if (selectedItem.contains("Attack Monster"))
 				{
@@ -1110,10 +1160,15 @@ public class Floor
 				btnNewButton_2.setEnabled(false);
 				btnNewButton_2.hide();
 				btnNewButton_1.setEnabled(true);
+				
+				
 				updateUI("", 6);
 				updateUI("", 0);
+				
+				
 				textPane.setText("");
 			}
+			
 		});
 		
 		
@@ -1132,11 +1187,14 @@ public class Floor
 		panel_2.setBackground(Color.WHITE);
 		panel_2.setBounds(379, 63, 449, 441);
 		
+		
 		frame.getContentPane().add(panel_2);
 
 		lblP = new JLabel("");
 		lblP.setForeground(Color.YELLOW);
 		lblP.setBounds(40, 54, 61, 16);
+		
+		
 		panel_2.add(lblP);
 		
 		if (name.length() > 3)
@@ -1256,8 +1314,6 @@ public class Floor
 
 
 }
-
-
 
 
 
