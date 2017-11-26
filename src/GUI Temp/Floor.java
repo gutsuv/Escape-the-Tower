@@ -43,7 +43,8 @@ public class Floor
 					window = new Floor();
 					window.frame.setVisible(true);
 
-				} catch (Exception e)
+				}
+				catch (Exception e)
 				{
 					e.printStackTrace();
 				}
@@ -254,7 +255,8 @@ public class Floor
 								if (name.length() > 3)
 								{
 									lblP.setText(name.substring(0, 3));
-								} else
+								} 
+								else
 									lblP.setText(name);
 								break;
 							}
@@ -354,10 +356,12 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
-								} else
+								} 
+								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
@@ -378,12 +382,14 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
 								}
 							}
-						} else if (Controller.eInstance().getOnFloor() == 4)
+						} 
+						else if (Controller.eInstance().getOnFloor() == 4)
 						{
 							// lblP.setBounds(250, 350, 61, 16);
 
@@ -452,7 +458,7 @@ public class Floor
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
-									;
+									
 									Controller.eInstance().setInRoom(18);
 									Controller.eInstance().setOnFloor(3);
 									panel_2.hide();
@@ -471,7 +477,8 @@ public class Floor
 									} else
 										lblP.setText(name);
 									break;
-								} else
+								} 
+								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
@@ -492,7 +499,8 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
 								}
@@ -583,10 +591,12 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
-								} else
+								} 
+								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
@@ -607,7 +617,8 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
 								}
@@ -686,7 +697,8 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
 								} else
@@ -710,12 +722,14 @@ public class Floor
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									} 
+									else
 										lblP.setText(name);
 									break;
 								}
 							}
-						} else if (Controller.eInstance().getOnFloor() == 1)
+						}
+						else if (Controller.eInstance().getOnFloor() == 1)
 						{
 							// lblP.setBounds(250, 350, 61, 16);
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
@@ -786,11 +800,13 @@ public class Floor
 						}
 					}
 
-				} else if (selectedItem.equalsIgnoreCase("Inventory"))
+				} 
+				else if (selectedItem.equalsIgnoreCase("Inventory"))
 				{
 					String resp = Controller.eInstance().inventaryList();
 					textPane.setText(textPane.getText() + "\n\n" + resp);
-				} else if (selectedItem.contains("Inspect"))
+				}
+				else if (selectedItem.contains("Inspect"))
 				{
 					if (selectedItem.contains("Exit"))
 					{
@@ -798,7 +814,8 @@ public class Floor
 								.getRoom(Controller.eInstance().getInRoom()).doors();
 						textPane.setText(textPane.getText() + "\n\n" + resp);
 					}
-				} else if (selectedItem.contains("Use"))
+				} 
+				else if (selectedItem.contains("Use"))
 				{
 					if (Controller.eInstance().use(selectedItem))
 					{
@@ -857,7 +874,8 @@ public class Floor
 						Controller.eInstance().getPlayer().getInventary().add(artifact);
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
 								+ " is picked up");
-					} else
+					}
+					else
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
 								+ " is not found");
@@ -873,7 +891,8 @@ public class Floor
 						Controller.eInstance().getPlayer().getInventary().add(artifact);
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
 								+ " is picked up");
-					} else
+					} 
+					else
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
 								+ " is not found");
@@ -888,7 +907,8 @@ public class Floor
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(4, selectedItem.length())
 								+ "is used");
-					} else
+					} 
+					else
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(4, selectedItem.length())
 								+ "is not found");
@@ -904,7 +924,8 @@ public class Floor
 						String resp = "\n" + Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
 								.getRoom(Controller.eInstance().getInRoom()).getPuzzles().get(0).getHint();
 						textPane.setText("" + textPane.getText() + resp);
-					} else
+					} 
+					else
 					{
 						textPane.setText("" + textPane.getText() + "\nThere is no puzzle");
 					}
