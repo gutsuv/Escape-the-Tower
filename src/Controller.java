@@ -141,6 +141,7 @@ public class Controller
 				if (!model.getCurrentRoom().getPuzzle().isSolved())
 				{
 					model.getUser().receiveDamage(((PuzzleNumber) model.getCurrentRoom().getPuzzle()).getDamage());
+					menuView.print("Health: " + model.getUser().getHealth() + "/" + model.getUser().getMaxHealth());
 					if(model.getUser().getHealth()<=0)
 					{
 						menuView.line();
