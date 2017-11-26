@@ -236,14 +236,35 @@ public class ObjectHolder
 		}
 	}
 	
-	public void saveItems(String number) {
+	public void saveEnemys(String number) {
 		try 
 		{
-			PrintWriter print = new PrintWriter("TextFiles/Save" + number + "/RoomsBEnemy.txt");
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/RoomsBEnemy.txt");
+			writer.println();
+			for(int i = 0;i < rooms.size(); i++)
+			{
+				if(rooms.get(i).getEnemy()==null)
+				{
+					writer.println(".");
+				}
+				else
+				{
+					if(rooms.get(i).getEnemy().getEnemyId()<10)
+					{
+						writer.println("0" + rooms.get(i).getEnemy().getEnemyId());
+					}
+					else
+					{
+						writer.println(rooms.get(i).getEnemy().getEnemyId());
+					}
+				}
+			}
 			
-		} catch (FileNotFoundException e) 
+			writer.close();
+		} catch (Exception e) 
 		{
-			view.print("Items Save fail");
+			view.print("Enemys Save fail");
 		}
 	}
 
