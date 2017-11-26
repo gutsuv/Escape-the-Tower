@@ -83,7 +83,7 @@ public class ObjectHolder
 			file = new File("TextFiles/Save" + number + "/RoomsBPuzzle.txt");
 			loadPuzzles(file);
 			user = new Player(view);
-			file = new File("TextFiles/Save" + number + "Player/.txt");
+			file = new File("TextFiles/Save" + number + "/PlayerHealth.txt");
 			loadPlayer(file);
 			file = new File("TextFiles/Save" + number + "/Inventory.txt");
 			loadInventory(file);
