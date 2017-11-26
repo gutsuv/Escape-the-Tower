@@ -1,6 +1,8 @@
 
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.Panel;
 import java.awt.TextArea;
 import java.awt.event.ActionEvent;
@@ -13,6 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class Floor
 {
@@ -1080,5 +1083,34 @@ public class Floor
 		
 		
 	}
+	
+
+class ImagePanel extends JPanel
+{
+
+	  private Image img;
+
+	  public ImagePanel(String img)
+	  {
+	    this(new ImageIcon(img).getImage());
+	  }
+
+	  public ImagePanel(Image img) 
+	  {
+	    this.img = img;
+	    setLayout(null);
+	  }
+
+	  public void paintComponent(Graphics g) 
+	  {
+	    g.drawImage(img, 0, 0, null);
+	  }
+
+	}
+
+
+
+
+
 }
 
