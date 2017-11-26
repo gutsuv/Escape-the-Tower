@@ -45,7 +45,6 @@ public class Floor
 				{
 					window = new Floor();
 					window.frame.setVisible(true);
-
 				}
 				catch (Exception e)
 				{
@@ -63,7 +62,6 @@ public class Floor
 	public Floor() throws InterruptedException
 	{
 		initialize();
-
 	}
 
 	public static void startStory() throws InterruptedException
@@ -83,7 +81,7 @@ public class Floor
 		{
 			name = JOptionPane.showInputDialog("Err, no name entered. Kindly Enter Your Name Please");
 		}
-		//
+		
 		Controller.eInstance().setPlayerGender(gender);
 
 		Controller.eInstance().setPlayerName(name);
@@ -92,6 +90,7 @@ public class Floor
 		frame = new JFrame();
 		frame.setBounds(100, 100, 834, 532);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		frame.getContentPane().setLayout(null);
 
 		btnNewButton = new JButton("Name: " + name);
@@ -99,6 +98,7 @@ public class Floor
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setEnabled(false);
 		btnNewButton.setBounds(6, 3, 150, 38);
+		
 		frame.getContentPane().add(btnNewButton);
 
 		JButton button = new JButton("HIT POINTS: 0");
@@ -106,6 +106,7 @@ public class Floor
 		button.setEnabled(false);
 		button.setBackground(Color.WHITE);
 		button.setBounds(162, 3, 150, 38);
+		
 		frame.getContentPane().add(button);
 
 		JButton button2 = new JButton("Health: " + Controller.eInstance().getPlayer().getHealthPoints());
@@ -113,6 +114,7 @@ public class Floor
 		button2.setEnabled(false);
 		button2.setBackground(Color.WHITE);
 		button2.setBounds(318, 3, 150, 38);
+		
 		frame.getContentPane().add(button2);
 
 		JButton button3 = new JButton("Attack: " + Controller.eInstance().getPlayer().getAttackPoints() + "\n Defence: "
@@ -121,6 +123,7 @@ public class Floor
 		button3.setEnabled(false);
 		button3.setBackground(Color.WHITE);
 		button3.setBounds(474, 3, 200, 38);
+		
 		frame.getContentPane().add(button3);
 
 		JButton button4 = new JButton("Help");
@@ -128,8 +131,9 @@ public class Floor
 		// button4.setEnabled(false);
 		button4.setBackground(Color.WHITE);
 		button4.setBounds(10, 40, 40, 20);
+		
 		frame.getContentPane().add(button4);
-		//
+		
 		// JButton button5 = new JButton("Inventory");
 		// button5.setForeground(Color.DARK_GRAY);
 		// //button5.setEnabled(false);
@@ -140,26 +144,33 @@ public class Floor
 		JButton btnMenu = new JButton("MENU");
 		btnMenu.setForeground(Color.GRAY);
 		btnMenu.setBounds(711, 6, 117, 29);
+		
 		frame.getContentPane().add(btnMenu);
 		frame.setResizable(false);
+		
 		JButton btnMap = new JButton("MAP");
 		btnMap.setForeground(Color.DARK_GRAY);
 		btnMap.setEnabled(false);
 		btnMap.setBackground(Color.WHITE);
 		btnMap.setBounds(400, 36, 420, 29);
+		
 		frame.getContentPane().add(btnMap);
 
 		Panel panel = new Panel();
 		panel.setBackground(Color.WHITE);
 		panel.setBounds(6, 63, 370, 441);
+		
 		frame.getContentPane().add(panel);
+		
 		panel.setLayout(null);
 
 		comboBox = new JComboBox();
 		comboBox.setBounds(6, 28, 334, 27);
 		panel.add(comboBox);
+		
 		comboBox.setEditable(true);
 		JButton btnNewButton_1 = new JButton("Perform");
+		
 		btnNewButton_1.setEnabled(false);
 		btnNewButton_1.addActionListener(new ActionListener()
 		{
@@ -168,12 +179,15 @@ public class Floor
 				textPane.setColumns(20);
 
 				String selectedItem = (String) comboBox.getSelectedItem();
+				
 				if (selectedItem.equalsIgnoreCase("look"))
 				{
 					String resp = Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
 							.getRoom(Controller.eInstance().getInRoom()).toString();
 					textPane.setText("" + textPane.getText() + resp);
-				} else if (selectedItem.contains("Go to"))
+				} 
+				
+				else if (selectedItem.contains("Go to"))
 				{
 					ArrayList<String> nRooms = Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
 							.getRoom(Controller.eInstance().getInRoom()).getNeigbourRooms();
@@ -191,6 +205,7 @@ public class Floor
 
 								break;
 							}
+							
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("cell # 1".toLowerCase()))
 							{
@@ -202,6 +217,7 @@ public class Floor
 
 								break;
 							}
+							
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("cell # 2".toLowerCase()))
 							{
@@ -225,6 +241,7 @@ public class Floor
 
 								break;
 							}
+							
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("hallway".toLowerCase()))
 							{
@@ -236,6 +253,7 @@ public class Floor
 
 								break;
 							}
+							
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("staircase".toLowerCase()))
 							{
@@ -245,25 +263,44 @@ public class Floor
 								;
 								Controller.eInstance().setInRoom(6);
 								Controller.eInstance().setOnFloor(5);
+								
+								
 								panel_2.hide();
 								panel_2 = new ImagePanel(new ImageIcon("_f5.png").getImage());
 								panel_2.setBackground(Color.WHITE);
 								panel_2.setBounds(379, 63, 449, 441);
+								
+								
 								frame.getContentPane().add(panel_2);
+								
+								
 								lblP = new JLabel("");
 								lblP.setForeground(Color.YELLOW);
 								lblP.setBounds(250, 350, 61, 16);
-								;
+								
+								
+								
 								panel_2.add(lblP);
+								
 								if (name.length() > 3)
 								{
 									lblP.setText(name.substring(0, 3));
 								} 
+								
 								else
+								{
 									lblP.setText(name);
+								}
+								
 								break;
 							}
-						} else if (Controller.eInstance().getOnFloor() == 5)
+							
+						} 
+						
+						
+						
+						
+						else if (Controller.eInstance().getOnFloor() == 5)
 						{
 							// lblP.setBounds(250, 350, 61, 16);
 
@@ -278,6 +315,7 @@ public class Floor
 
 								break;
 							}
+							
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("cell 3".toLowerCase()))
 							{
@@ -288,6 +326,7 @@ public class Floor
 
 								break;
 							}
+							
 							if (selectedItem.toLowerCase().contains(nr.toLowerCase())
 									&& selectedItem.toLowerCase().contains("cell 4".toLowerCase()))
 							{
@@ -346,24 +385,35 @@ public class Floor
 									;
 									Controller.eInstance().setInRoom(12);
 									Controller.eInstance().setOnFloor(4);
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f4.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(40, 54, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
 									else
+									{
 										lblP.setText(name);
+									}
+									
 									break;
 								} 
+								
 								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
@@ -372,26 +422,38 @@ public class Floor
 									;
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f6.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(250, 350, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
+									
 									else
+									{
 										lblP.setText(name);
+									}
+									
 									break;
 								}
 							}
 						} 
+						
 						else if (Controller.eInstance().getOnFloor() == 4)
 						{
 							// lblP.setBounds(250, 350, 61, 16);
@@ -464,23 +526,36 @@ public class Floor
 									
 									Controller.eInstance().setInRoom(18);
 									Controller.eInstance().setOnFloor(3);
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f3.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(80, 350, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
-									} else
+									}
+									
+									else
+									{
 										lblP.setText(name);
+									}
+									
 									break;
 								} 
+								
 								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
@@ -489,22 +564,33 @@ public class Floor
 									;
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f5.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(250, 350, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
+									
 									else
+									{
 										lblP.setText(name);
+									}
+									
 									break;
 								}
 							}
@@ -579,26 +665,39 @@ public class Floor
 									textPane.setText(textPane.getText() + "\n\n" + resp);
 									lblP.setBounds(250, 350, 61, 16);
 									;
+									
+									
 									Controller.eInstance().setInRoom(22);
 									Controller.eInstance().setOnFloor(2);
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f2.png").getImage());
 									panel_2.setBackground(Color.WHITE);
 									panel_2.setBounds(379, 63, 449, 441);
+									
+									
 									frame.getContentPane().add(panel_2);
 
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(80, 350, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
+									
 									else
+									{
 										lblP.setText(name);
+									}
 									break;
 								} 
+								
 								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
