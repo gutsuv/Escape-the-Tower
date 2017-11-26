@@ -702,9 +702,12 @@ public class Floor
 										lblP.setText(name.substring(0, 3));
 									} 
 									else
+									{
 										lblP.setText(name);
+									}
 									break;
-								} else
+								} 
+								else
 								{
 									String resp = "Moving to " + nr.toLowerCase() + "\n";
 									textPane.setText(textPane.getText() + "\n\n" + resp);
@@ -712,6 +715,9 @@ public class Floor
 									;
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
+									
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f3.png").getImage());
 									panel_2.setBackground(Color.WHITE);
@@ -721,17 +727,24 @@ public class Floor
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(250, 350, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
+									
 									else
+									{
 										lblP.setText(name);
+									}
 									break;
 								}
 							}
 						}
+						
 						else if (Controller.eInstance().getOnFloor() == 1)
 						{
 							// lblP.setBounds(250, 350, 61, 16);
@@ -809,6 +822,7 @@ public class Floor
 					String resp = Controller.eInstance().inventaryList();
 					textPane.setText(textPane.getText() + "\n\n" + resp);
 				}
+				
 				else if (selectedItem.contains("Inspect"))
 				{
 					if (selectedItem.contains("Exit"))
@@ -818,6 +832,7 @@ public class Floor
 						textPane.setText(textPane.getText() + "\n\n" + resp);
 					}
 				} 
+				
 				else if (selectedItem.contains("Use"))
 				{
 					if (Controller.eInstance().use(selectedItem))
@@ -885,7 +900,9 @@ public class Floor
 
 					}
 
-				} else if (selectedItem.contains("pick up"))
+				} 
+				
+				else if (selectedItem.contains("pick up"))
 				{
 					Artifact artifact = Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
 							.getRoom(Controller.eInstance().getInRoom()).getArtifact(selectedItem);
@@ -895,6 +912,7 @@ public class Floor
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
 								+ " is picked up");
 					} 
+					
 					else
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(7, selectedItem.length())
@@ -910,7 +928,8 @@ public class Floor
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(4, selectedItem.length())
 								+ "is used");
-					} 
+					}
+					
 					else
 					{
 						textPane.setText(textPane.getText() + "\n\n" + selectedItem.substring(4, selectedItem.length())
@@ -928,6 +947,7 @@ public class Floor
 								.getRoom(Controller.eInstance().getInRoom()).getPuzzles().get(0).getHint();
 						textPane.setText("" + textPane.getText() + resp);
 					} 
+					
 					else
 					{
 						textPane.setText("" + textPane.getText() + "\nThere is no puzzle");
@@ -942,6 +962,7 @@ public class Floor
 				{
 					textPane.setText("" + textPane.getText() + "\nFleeing battle, Running away");
 				} 
+				
 				else if (selectedItem.contains("Attack Monster"))
 				{
 					if (!Controller.eInstance().getFloor(Controller.eInstance().getOnFloor())
@@ -954,20 +975,24 @@ public class Floor
 						button.setText("Points: " + Controller.eInstance().getPlayer().getGameScore());
 						button3.setText("Attack: " + Controller.eInstance().getPlayer().getAttackPoints()
 								+ "\n Defence: " + Controller.eInstance().getPlayer().getDefencePoints());
-					} 
+					}
+					
 					else
 					{
 						textPane.setText("" + textPane.getText() + "\nThere is no monster to attack");
 					}
 				}
+				
 				else if (selectedItem.contains("Start Puzzle"))
 				{
 
 				} 
+				
 				else if (selectedItem.contains("Leave Puzzle"))
 				{
 
 				} 
+				
 				else if (selectedItem.contains("Answer"))
 				{
 
@@ -975,6 +1000,9 @@ public class Floor
 
 			}
 		});
+		
+		
+		
 		btnNewButton_1.setBounds(108, 67, 117, 29);
 		panel.add(btnNewButton_1);
 
@@ -985,12 +1013,17 @@ public class Floor
 		textPane = new TextArea();
 		textPane.setBackground(Color.LIGHT_GRAY);
 		textPane.setBounds(6, 107, 358, 300);
+		
+		
 		panel.add(textPane);
 		textPane.setText(name + " was born in the Wackdro kingdom of Littlevinelle. "
 				+ "He had a detached temperament, \nwhich the queen disapproved of, "
 				+ "so he went off on his own to discover the outskirts of his own kingdom \n"
 				+ "at the age of 7. He defeated numerous monsters that crossed his path "
 				+ "and found a great power in \nall of them.");
+		
+		
+		
 		JLabel lblConsole = new JLabel("Console");
 		lblConsole.setBounds(6, 80, 129, 16);
 		panel.add(lblConsole);
@@ -1009,6 +1042,9 @@ public class Floor
 				textPane.setText("");
 			}
 		});
+		
+		
+		
 		btnNewButton_2.setBounds(124, 412, 117, 29);
 		panel.add(btnNewButton_2);
 
@@ -1028,10 +1064,12 @@ public class Floor
 		lblP.setForeground(Color.YELLOW);
 		lblP.setBounds(40, 54, 61, 16);
 		panel_2.add(lblP);
+		
 		if (name.length() > 3)
 		{
 			lblP.setText(name.substring(0, 3));
 		}
+		
 		else
 		{
 			lblP.setText(name);
@@ -1048,7 +1086,9 @@ public class Floor
 		if(room == 6)
 		{
 			comboBox.addItem("Look");
+			
 			comboBox.addItem("Go to ");
+			
 			comboBox.addItem("Inventory");
 			
 			comboBox.addItem("Inspect ");

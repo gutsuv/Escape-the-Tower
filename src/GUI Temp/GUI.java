@@ -24,6 +24,8 @@ public class GUI
 					GUI window = new GUI();
 					window.frame.setVisible(true);
 				} 
+				
+				
 				catch (Exception e) 
 				{
 					e.printStackTrace();
@@ -77,6 +79,7 @@ public class GUI
 				
 			}
 		});
+		
 		btnNewButton.setBounds(149, 105, 147, 43);
 		frame.getContentPane().add(btnNewButton);
 		
@@ -88,6 +91,7 @@ public class GUI
 				System.exit(0);
 			}
 		});
+		
 		btnExit.setBounds(149, 270, 147, 43);
 		frame.getContentPane().add(btnExit);
 		
@@ -103,6 +107,8 @@ public class GUI
 				helpView.main(null);
 			}
 		});
+		
+		
 		btnHelpMenu.setBounds(149, 215, 147, 43);
 		frame.getContentPane().add(btnHelpMenu);
 	}
