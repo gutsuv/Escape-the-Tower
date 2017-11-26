@@ -339,8 +339,8 @@ public class Controller
 			{
 				String number = "One";
 				model.saveEnemys(number);
-				/*model.saveItems(number);
 				model.savePuzzles(number);
+				/*model.saveItems(number);
 				model.saveInventory(number);
 				model.savePlayer(number);*/
 				menuView.line(10);
@@ -351,8 +351,8 @@ public class Controller
 			{
 				String number = "Two";
 				model.saveEnemys(number);
-				/*model.saveItems(number);
 				model.savePuzzles(number);
+				/*model.saveItems(number);
 				model.saveInventory(number);
 				model.savePlayer(number);*/
 				menuView.line(10);
@@ -363,8 +363,8 @@ public class Controller
 			{
 				String number = "Three";
 				model.saveEnemys(number);
-				/*model.saveItems(number);
 				model.savePuzzles(number);
+				/*model.saveItems(number);
 				model.saveInventory(number);
 				model.savePlayer(number);*/
 				menuView.line(10);

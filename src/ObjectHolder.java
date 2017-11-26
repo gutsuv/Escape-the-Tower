@@ -267,6 +267,37 @@ public class ObjectHolder
 			view.print("Enemys Save fail");
 		}
 	}
+	public void savePuzzles(String number) {
+		try 
+		{
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/RoomsBPuzzle.txt");
+			
+			for(int i = 0;i < rooms.size(); i++)
+			{
+				if(rooms.get(i).getPuzzle()==null)
+				{
+					writer.println(".");
+				}
+				else
+				{
+					if(rooms.get(i).getPuzzle().getPuzzleID()<10)
+					{
+						writer.println("0" + rooms.get(i).getPuzzle().getPuzzleID());
+					}
+					else
+					{
+						writer.println(rooms.get(i).getPuzzle().getPuzzleID());
+					}
+				}
+			}
+			
+			writer.close();
+		} catch (Exception e) 
+		{
+			view.print("Puzzle Save fail");
+		}
+	}
 
 	public void navigate(char direction) throws Exception
 	{
