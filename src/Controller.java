@@ -338,29 +338,38 @@ public class Controller
 			if(input.equalsIgnoreCase("Save One"))
 			{
 				String number = "One";
-				model.saveItems(number);
-				/*model.saveEnemys(number);
+				model.saveEnemys(number);
+				/*model.saveItems(number);
 				model.savePuzzles(number);
 				model.saveInventory(number);
 				model.savePlayer(number);*/
+				menuView.line(10);
+				menuView.print("Game Saved");
+				menuView.line(10);
 			}
 			if(input.equalsIgnoreCase("Save Two"))
 			{
 				String number = "Two";
-				model.saveItems(number);
-				/*model.saveEnemys(number);
+				model.saveEnemys(number);
+				/*model.saveItems(number);
 				model.savePuzzles(number);
 				model.saveInventory(number);
 				model.savePlayer(number);*/
+				menuView.line(10);
+				menuView.print("Game Saved");
+				menuView.line(10);
 			}
 			if(input.equalsIgnoreCase("Save Three"))
 			{
 				String number = "Three";
-				model.saveItems(number);
-				/*model.saveEnemys(number);
+				model.saveEnemys(number);
+				/*model.saveItems(number);
 				model.savePuzzles(number);
 				model.saveInventory(number);
 				model.savePlayer(number);*/
+				menuView.line(10);
+				menuView.print("Game Saved");
+				menuView.line(10);
 			}
 			if(input.equalsIgnoreCase("Leave Game") || input.equalsIgnoreCase("Leave"))
 			{
