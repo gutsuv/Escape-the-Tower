@@ -362,7 +362,7 @@ public class Controller
 				model.saveInventory(number);
 				model.savePlayer(number);*/
 			}
-			if(input.equalsIgnoreCase("Leave Game"))
+			if(input.equalsIgnoreCase("Leave Game") || input.equalsIgnoreCase("Leave"))
 			{
 				int exit = 1/0;
 				/*
