@@ -377,6 +377,70 @@ public class ObjectHolder
 		}
 	}
 	
+	public void saveCurrentLocation(String number)
+	{
+		try 
+		{
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/CurrentRoom.txt");
+			writer.print(currentRoom.getRoomId());
+			writer.close();
+		} catch (Exception e) 
+		{
+			view.print("CurrentLocation Save fail");
+		}
+	}
+	
+	public void savePlayerHealth(String number)
+	{
+		try 
+		{
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/PlayerHealth.txt");
+			writer.println(user.getMaxHealth());
+			writer.println(user.getHealth());
+			writer.print(user.isPoisoned());
+			writer.close();
+		} catch (Exception e) 
+		{
+			view.print("Player Health Save fail");
+		}
+	}
+	
+	public void saveInventory(String number)
+	{
+		try 
+		{
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/Inventory.txt");
+			for(int i = 0; i < user.getInventory().size(); i++)
+			{
+				writer.println(user.getInventory().get(i).getItemId());
+			}
+			writer.close();
+		} catch (Exception e) 
+		{
+			view.print("Inventory Save fail");
+		}
+	}
+	
+	public void saveEquippedItems(String number)
+	{
+		try 
+		{
+			PrintWriter writer = new PrintWriter(
+					"TextFiles/Save" + number + "/Equipped Items.txt");
+			for(int i = 0; i < user.getEquippedItems().size(); i++)
+			{
+				writer.println(user.getEquippedItems().get(i).getItemId());
+			}
+			writer.close();
+		} catch (Exception e) 
+		{
+			view.print("Equipped Items Save fail");
+		}
+	}
+	
 	public void savePuzzles(String number) {
 		try 
 		{

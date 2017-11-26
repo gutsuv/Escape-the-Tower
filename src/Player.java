@@ -105,6 +105,11 @@ public class Player extends Character
 	{
 		return inventory;
 	}
+	
+	public ArrayList<Gear> getEquippedItems()
+	{
+		return equippedItems;
+	}
 
 	public Item getItem(int i)
 	{

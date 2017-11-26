@@ -341,8 +341,10 @@ public class Controller
 				model.saveEnemys(number);
 				model.savePuzzles(number);
 				model.saveItems(number);
-				/*model.saveInventory(number);
-				model.savePlayer(number);*/
+				model.savePlayerHealth(number);
+				model.saveCurrentLocation(number);
+				model.saveInventory(number);
+				model.saveEquippedItems(number);
 				menuView.line(10);
 				menuView.print("Game Saved");
 				menuView.line(10);
@@ -353,8 +355,10 @@ public class Controller
 				model.saveEnemys(number);
 				model.savePuzzles(number);
 				model.saveItems(number);
-				/*model.saveInventory(number);
-				model.savePlayer(number);*/
+				model.savePlayerHealth(number);
+				model.saveCurrentLocation(number);
+				model.saveInventory(number);
+				model.saveEquippedItems(number);
 				menuView.line(10);
 				menuView.print("Game Saved");
 				menuView.line(10);
@@ -365,8 +369,10 @@ public class Controller
 				model.saveEnemys(number);
 				model.savePuzzles(number);
 				model.saveItems(number);
-				/*model.saveInventory(number);
-				model.savePlayer(number);*/
+				model.savePlayerHealth(number);
+				model.saveCurrentLocation(number);
+				model.saveInventory(number);
+				model.saveEquippedItems(number);
 				menuView.line(10);
 				menuView.print("Game Saved");
 				menuView.line(10);
