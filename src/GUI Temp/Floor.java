@@ -607,6 +607,8 @@ public class Floor
 									;
 									Controller.eInstance().setInRoom(5);
 									Controller.eInstance().setOnFloor(6);
+									
+									
 									panel_2.hide();
 									panel_2 = new ImagePanel(new ImageIcon("_f4.png").getImage());
 									panel_2.setBackground(Color.WHITE);
@@ -616,13 +618,19 @@ public class Floor
 									lblP = new JLabel("");
 									lblP.setForeground(Color.YELLOW);
 									lblP.setBounds(250, 350, 61, 16);
+									
+									
 									panel_2.add(lblP);
+									
 									if (name.length() > 3)
 									{
 										lblP.setText(name.substring(0, 3));
 									} 
+									
 									else
+									{
 										lblP.setText(name);
+									}
 									break;
 								}
 							}
@@ -635,8 +643,10 @@ public class Floor
 									&& selectedItem.toLowerCase().contains("common".toLowerCase()))
 							{
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
+								
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(250, 350, 61, 16);
+								
 								Controller.eInstance().setInRoom(22);
 
 								break;
@@ -646,9 +656,12 @@ public class Floor
 									&& selectedItem.toLowerCase().contains("library".toLowerCase()))
 							{
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
+								
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(40, 54, 61, 16);
+								
 								Controller.eInstance().setInRoom(25);
+								
 
 								break;
 							}
@@ -657,8 +670,10 @@ public class Floor
 									&& selectedItem.toLowerCase().contains("garderobe".toLowerCase()))
 							{
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
+								
 								textPane.setText(textPane.getText() + "\n\n" + resp);
 								lblP.setBounds(370, 350, 61, 16);
+								
 								Controller.eInstance().setInRoom(24);
 
 								break;
@@ -669,8 +684,10 @@ public class Floor
 							{
 								String resp = "Moving to " + nr.toLowerCase() + "\n";
 								textPane.setText(textPane.getText() + "\n\n" + resp);
+								
 								lblP.setBounds(370, 250, 61, 16);
 								;
+								
 								Controller.eInstance().setInRoom(23);
 
 								break;
@@ -1138,7 +1155,19 @@ public class Floor
 	}
 	
 
-class ImagePanel extends JPanel
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*class ImagePanel extends JPanel
 {
 
 	  private Image img;
@@ -1160,6 +1189,23 @@ class ImagePanel extends JPanel
 	  }
 
 	}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
