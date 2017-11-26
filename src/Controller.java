@@ -141,6 +141,20 @@ public class Controller
 				if (!model.getCurrentRoom().getPuzzle().isSolved())
 				{
 					model.getUser().receiveDamage(((PuzzleNumber) model.getCurrentRoom().getPuzzle()).getDamage());
+					if(model.getUser().getHealth()<=0)
+					{
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						menuView.print("player died");
+						menuView.print("Game Over.");
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						int exit = 1/0;
+					}
 				}
 			}
 			if (model.getCurrentRoom().getPuzzle().isSolved())
@@ -599,9 +613,17 @@ public class Controller
 					model.getUser().receiveDamage(g);
 					if (!model.getUser().isAlive())
 					{
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						menuView.line();
 						menuView.print("player died");
-						menuView.print("game over");
-						System.exit(0);
+						menuView.print("Game Over");
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						menuView.line();
+						int exit = 1/0;
 					}
 				}
 			}

@@ -514,8 +514,14 @@ public class ObjectHolder
 		}
 		if (currentRoom.getRoomId() == 31)
 		{
-			view.print("You won");
-			System.exit(0);
+			view.line();
+			view.line();
+			view.line();
+			view.print("Game Over");
+			view.print("You escaped the tower");
+			view.line();
+			view.printString("", 125);
+			int exit = 1/0;
 		}
 		currentRoom.display();
 	}
