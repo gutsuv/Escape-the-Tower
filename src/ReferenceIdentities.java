@@ -1,6 +1,18 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * Class: ReferenceIdentities
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
+
 public class ReferenceIdentities
 {
 	ReferenceIdentities library;
@@ -16,12 +28,23 @@ public class ReferenceIdentities
 	// changes in requirements
 	// the unforeseen requirements probably do not include view
 
+	/**
+     * Method: cloneItem()
+     * Clones item
+     * @param i int value
+     * @return getItem(i).clone()
+     */
 	public Item cloneItem(int i) throws Exception
 	{
 		return (Item) getItem(i).clone();
 	}
 
-	// this method clones an item
+	/**
+     * Method: getItem()
+     * Searches for an item based off of item Id
+     * @param i int value
+     * @return Item
+     */
 	public Item getItem(int i) throws Exception
 	{
 		for (int j = 0; j < items.size(); j++)
@@ -33,14 +56,24 @@ public class ReferenceIdentities
 		}
 		return null;
 	}
-	// the method searches for an item based off of item Id
 
+	/**
+     * Method: cloneEnemy()
+     * Clones enemy
+     * @param i int value
+     * @return Enemy
+     */
 	public Enemy cloneEnemy(int i) throws Exception
 	{
 		return (Enemy) getEnemy(i).clone();
 	}
 
-	// this method clones an enemy
+	/**
+     * Method: getEnemy()
+     * Searches for an enemy based off of enemy Id
+     * @param i int value
+     * @return Enemy
+     */
 	public Enemy getEnemy(int i) throws Exception
 	{
 		for (int j = 0; j < items.size(); j++)
@@ -52,14 +85,24 @@ public class ReferenceIdentities
 		}
 		return null;
 	}
-	// the method searches for an enemy based off of enemy Id
 
+	/**
+     * Method: clonePuzzle()
+     * Clones puzzle
+     * @param i int value
+     * @return Puzzle
+     */
 	public Puzzle clonePuzzle(int i) throws Exception
 	{
 		return (Puzzle) getPuzzle(i).clone();
 	}
 
-	// this method clones an item
+	/**
+     * Method: getPuzzle()
+     * Searches for an puzzle based off of puzzle Id
+     * @param i int value
+     * @return Puzzle
+     */
 	public Puzzle getPuzzle(int i) throws Exception
 	{
 		for (int j = 0; j < puzzles.size(); j++)
@@ -71,8 +114,13 @@ public class ReferenceIdentities
 		}
 		return null;
 	}
-	// the method searches for an puzzle based off of puzzle Id
 
+	/**
+     * Method: loaditems()
+     * Loads items
+     * @param nothing
+     * @return none
+     */
 	public void loaditems() throws FileNotFoundException
 	{
 		loadGearItems();
@@ -80,11 +128,23 @@ public class ReferenceIdentities
 		loadPuzzleItems();
 	}
 
+	/**
+     * Method: loadEnemys()
+     * Loads enemies
+     * @param nothing
+     * @return none
+     */
 	public void loadEnemys() throws FileNotFoundException
 	{
 		loadEnemyTable();
 	}
 
+	/**
+     * Method: loadPuzzles()
+     * Loads puzzles
+     * @param nothing
+     * @return none
+     */
 	public void loadPuzzles() throws FileNotFoundException
 	{
 		loadDoorPuzzles();
@@ -95,7 +155,12 @@ public class ReferenceIdentities
 		loadPuzzleDebuff();
 	}
 
-	// item load methods
+	/**
+     * Method: loadGearItems()
+     * Loads gear
+     * @param nothing
+     * @return none
+     */
 	private void loadGearItems() throws FileNotFoundException
 	{
 		file = new File("TextFiles/Gear.txt");
@@ -117,6 +182,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadConsumables()
+     * Loads consumables
+     * @param nothing
+     * @return none
+     */
 	private void loadConsumables() throws FileNotFoundException
 	{
 		file = new File("TextFiles/Consumable.txt");
@@ -138,6 +209,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadPuzzleItems()
+     * Loads puzzle items
+     * @param nothing
+     * @return none
+     */
 	private void loadPuzzleItems() throws FileNotFoundException
 	{
 		file = new File("TextFiles/PuzzleItem.txt");
@@ -159,7 +236,12 @@ public class ReferenceIdentities
 		}
 	}
 
-	// enemy load methods
+	/**
+     * Method: loadEnemyTable()
+     * Loads enemies
+     * @param nothing
+     * @return none
+     */
 	private void loadEnemyTable() throws FileNotFoundException
 	{
 		file = new File("TextFiles/EnemyTable.txt");
@@ -181,7 +263,12 @@ public class ReferenceIdentities
 		}
 	}
 
-	// Puzzle load methods
+	/**
+     * Method: loadDoorPuzzles()
+     * Loads puzzles
+     * @param nothing
+     * @return none
+     */
 	private void loadDoorPuzzles() throws FileNotFoundException
 	{
 		file = new File("TextFiles/PuzzleDoor.txt");
@@ -204,6 +291,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadObjectPuzzles()
+     * Loads object puzzle
+     * @param nothing
+     * @return none
+     */
 	private void loadObjectPuzzles() throws FileNotFoundException
 	{
 		file = new File("TextFiles/ObjectPuzzle.txt");
@@ -226,6 +319,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadWordPuzzles()
+     * Loads word puzzle
+     * @param nothing
+     * @return none
+     */
 	private void loadWordPuzzles() throws FileNotFoundException
 	{
 		file = new File("TextFiles/WordPuzzle.txt");
@@ -248,6 +347,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadNumberPuzzles()
+     * Loads number puzzle
+     * @param nothing
+     * @return none
+     */
 	private void loadNumberPuzzles() throws FileNotFoundException
 	{
 		file = new File("TextFiles/PuzzleNumber.txt");
@@ -270,6 +375,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadPuzzleRiddle()
+     * Loads riddle puzzle
+     * @param nothing
+     * @return none
+     */
 	private void loadPuzzleRiddle() throws FileNotFoundException
 	{
 		file = new File("TextFiles/PuzzleRiddle.txt");
@@ -292,6 +403,12 @@ public class ReferenceIdentities
 		}
 	}
 
+	/**
+     * Method: loadPuzzleDebuff()
+     * Loads puzzle debuff
+     * @param nothing
+     * @return none
+     */
 	private void loadPuzzleDebuff() throws FileNotFoundException
 	{
 		file = new File("TextFiles/PuzzleDebuff.txt");
@@ -314,7 +431,12 @@ public class ReferenceIdentities
 		}
 	}
 
-	// this exists for self reference
+	/**
+     * Method: setLibray()
+     * Sets library
+     * @param library ReferenceIdentities object
+     * @return none
+     */
 	public void setLibray(ReferenceIdentities library)
 	{
 		this.library = library;
