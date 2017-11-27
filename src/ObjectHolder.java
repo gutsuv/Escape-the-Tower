@@ -270,6 +270,12 @@ public class ObjectHolder
 		}
 	}
 
+	/**
+     * Method: loadItems()
+     * Loads items
+     * @param ItemFile File object
+     * @return nothing
+     */
 	public void loadItems(File ItemFile)
 	{
 		// loads a file formated like RoomsBEnemy.txt
@@ -317,6 +323,12 @@ public class ObjectHolder
 		}
 	}
 
+	/**
+     * Method: loadPuzzles()
+     * Loads puzzles
+     * @param PuzzleFile File object
+     * @return nothing
+     */
 	public void loadPuzzles(File PuzzleFile)
 	{
 		// loads a file formated like RoomsBPuzzle.txt
@@ -361,8 +373,7 @@ public class ObjectHolder
 				}
 				catch (Exception E)
 				{
-					System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-							+ "I	 can fix it in like 30 minutes. Include RoomBPuzzle or Load in the text message");
+					System.out.println("Error");
 				}
 			}
 			buff.close();
@@ -372,12 +383,20 @@ public class ObjectHolder
 			System.out.println("load error puzzle");
 		}
 	}
-	public void saveItems(String number) {
+	
+	/**
+     * Method: saveItems()
+     * Saves items
+     * @param number String value representing item
+     * @return nothing
+     */
+	public void saveItems(String number) 
+	{
 		try 
 		{
-			PrintWriter writer = new PrintWriter(
-					"TextFiles/Save" + number + "/RoomsBItem.txt");
+			PrintWriter writer = new PrintWriter("TextFiles/Save" + number + "/RoomsBItem.txt");
 			writer.println();
+			
 			for(int i = 0;i < rooms.size(); i++)
 			{
 				if(rooms.get(i).getItems().size()==0)
@@ -390,6 +409,7 @@ public class ObjectHolder
 					for(int j = 0; j < rooms.get(i).getItems().size();j++)
 					{
 						itemString = itemString + rooms.get(i).getItems().get(j).getItemId();
+						
 						if(rooms.get(i).getItems().size()!=j)
 						{
 							itemString = itemString + "><";
@@ -400,13 +420,21 @@ public class ObjectHolder
 			}
 			
 			writer.close();
-		} catch (Exception e) 
+		}
+		catch (Exception e) 
 		{
 			view.print("Item Save fail");
 		}
 	}
 	
-	public void saveEnemys(String number) {
+	/**
+     * Method: saveEnemys()
+     * Saves enemies
+     * @param number String value representing enemy
+     * @return nothing
+     */
+	public void saveEnemys(String number)
+	{
 		try 
 		{
 			PrintWriter writer = new PrintWriter(
@@ -432,12 +460,19 @@ public class ObjectHolder
 			}
 			
 			writer.close();
-		} catch (Exception e) 
+		} 
+		catch (Exception e) 
 		{
 			view.print("Enemys Save fail");
 		}
 	}
 	
+	/**
+     * Method: saveCurrentLocation()
+     * Saves current location
+     * @param number String value representing enemy
+     * @return nothing
+     */
 	public void saveCurrentLocation(String number)
 	{
 		try 
@@ -452,6 +487,12 @@ public class ObjectHolder
 		}
 	}
 	
+	/**
+     * Method: savePlayerHealth()
+     * Saves player health
+     * @param number String value representing health
+     * @return nothing
+     */
 	public void savePlayerHealth(String number)
 	{
 		try 
@@ -462,12 +503,19 @@ public class ObjectHolder
 			writer.println(user.getHealth());
 			writer.print(user.isPoisoned());
 			writer.close();
-		} catch (Exception e) 
+		} 
+		catch (Exception e) 
 		{
 			view.print("Player Health Save fail");
 		}
 	}
 	
+	/**
+     * Method: saveInventory()
+     * Saves inventory
+     * @param number String value representing inventory
+     * @return nothing
+     */
 	public void saveInventory(String number)
 	{
 		try 
@@ -479,12 +527,19 @@ public class ObjectHolder
 				writer.println(user.getInventory().get(i).getItemId());
 			}
 			writer.close();
-		} catch (Exception e) 
+		} 
+		catch (Exception e) 
 		{
 			view.print("Inventory Save fail");
 		}
 	}
 	
+	/**
+     * Method: saveEquippedItems()
+     * Saves equipped items
+     * @param number String value representing equipped item
+     * @return nothing
+     */
 	public void saveEquippedItems(String number)
 	{
 		try 
@@ -496,13 +551,21 @@ public class ObjectHolder
 				writer.println(user.getEquippedItems().get(i).getItemId());
 			}
 			writer.close();
-		} catch (Exception e) 
+		}
+		catch (Exception e) 
 		{
 			view.print("Equipped Items Save fail");
 		}
 	}
 	
-	public void savePuzzles(String number) {
+	/**
+     * Method: savePuzzles()
+     * Saves puzzles
+     * @param number String value representing puzzle
+     * @return nothing
+     */
+	public void savePuzzles(String number) 
+	{
 		try 
 		{
 			PrintWriter writer = new PrintWriter(
@@ -528,12 +591,19 @@ public class ObjectHolder
 			}
 			
 			writer.close();
-		} catch (Exception e) 
+		} 
+		catch (Exception e) 
 		{
 			view.print("Puzzle Save fail");
 		}
 	}
 
+	/**
+     * Method: navigate()
+     * Allows for navigation
+     * @param direction chat value representing direction
+     * @return nothing
+     */
 	public void navigate(char direction) throws Exception
 	{
 		int i = currentRoom.getDirections().length;
@@ -565,6 +635,12 @@ public class ObjectHolder
 		}
 	}
 
+	/**
+     * Method: setCurrentRoom()
+     * Setter for current room
+     * @param i int value representing current room
+     * @return nothing
+     */
 	public void setCurrentRoom(int i) throws Exception
 	{
 		previousRoom = currentRoom;
@@ -587,21 +663,45 @@ public class ObjectHolder
 		currentRoom.display();
 	}
 
+	/**
+     * Method: getCurrentRoom()
+     * Getter for current room
+     * @param none
+     * @return currentRoom
+     */
 	public Room getCurrentRoom()
 	{
 		return currentRoom;
 	}
 	
+	/**
+     * Method: getRoom()
+     * Getter for room
+     * @param none
+     * @return rooms.get(i-1)
+     */
 	public Room getRoom(int i)
 	{
 		return rooms.get(i-1);
 	}
 
+	/**
+     * Method: getRoom()
+     * Getter for player
+     * @param none
+     * @return user
+     */
 	public Player getUser()
 	{
 		return user;
 	}
 
+	/**
+     * Method: getView()
+     * Getter for view
+     * @param none
+     * @return user
+     */
 	public View getView()
 	{
 		return view;
