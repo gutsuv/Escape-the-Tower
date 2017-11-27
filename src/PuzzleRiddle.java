@@ -1,5 +1,16 @@
 import java.util.ArrayList;
 
+/**
+ * Class: PuzzleRiddle
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class PuzzleRiddle extends Puzzle
 {
 	String answer1;
@@ -7,6 +18,12 @@ public class PuzzleRiddle extends Puzzle
 	int roomId;
 	Room lockedRoom;
 
+	/**
+     * Method: PuzzleRiddle()
+     * PuzzleRiddle constructor
+     * @param loadedString String representing the string inputs to be parsed
+     * @return nothing
+     */
 	public PuzzleRiddle(String loadedString)
 	{
 		// loaded from file
@@ -30,27 +47,57 @@ public class PuzzleRiddle extends Puzzle
 		}
 	}
 
+	/**
+     * Method: getRoomId()
+     * Returns room ID
+     * @param none
+     * @return roomId int value representing the room id
+     */
 	public int getRoomId()
 	{
 		return roomId;
 	}
 
+	/**
+     * Method: setRoom()
+     * Sets room lock
+     * @param room Room Object
+     * @return nothing
+     */
 	public void setRoom(Room room)
 	{
 		lockedRoom = room;
 	}
 
+	/**
+     * Method: setLockedRoom()
+     * Sets room lock into ArrayList
+     * @param room Room ArrayList
+     * @return nothing
+     */
 	public void setLockedRoom(ArrayList<Room> rooms)
 	{
 		setRoom(rooms.get(roomId - 1));
 	}
 
+	/**
+     * Method: initialize()
+     * Locks Room
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void initialize()
 	{
 		lockedRoom.setLocked(true);
 	}
 
+	/**
+     * Method: attemptSolve()
+     * Initiates puzzle actions
+     * @param answer String value representing player answer
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(String answer)
 	{
@@ -61,6 +108,7 @@ public class PuzzleRiddle extends Puzzle
 			lockedRoom.setLocked(false);
 			solved = true;
 		}
+		
 		else
 		{
 			view.line(125);
@@ -68,12 +116,23 @@ public class PuzzleRiddle extends Puzzle
 		}
 	}
 
+	/**
+     * Method: attemptSolve()
+     * 
+     * @param itemId int value representing item ID
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(int itemId)
 	{
-		// no effect
 	}
 
+	/**
+     * Method: display()
+     * Displays puzzle options
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void display()
 	{
