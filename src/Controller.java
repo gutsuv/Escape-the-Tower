@@ -459,6 +459,7 @@ public class Controller
 		{
 			menuView.line(125);
 			//menuView.print("New Game:");
+			menuView.print("Help:");
 			menuView.print("Save One:");
 			menuView.print("Save Two:");
 			menuView.print("Save Three:");
@@ -487,6 +488,12 @@ public class Controller
 			{
 				// no code. It's done from main menu
 			}
+			
+			if (input.equalsIgnoreCase("help") || input.equalsIgnoreCase("help menu"))
+			{
+				controllerHelp();
+			}
+			
 			if(input.equalsIgnoreCase("Save One"))
 			{
 				String number = "One";
@@ -612,10 +619,6 @@ public class Controller
 		{
 			controllerStats();
 		} 
-		else if (input.equalsIgnoreCase("help"))
-		{
-			controllerHelp();
-		}
 		else if (input.equalsIgnoreCase("menu"))
 		{
 			controllerMenu();
