@@ -1,8 +1,25 @@
 
+/**
+ * Class: PuzzleItem
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class PuzzleItem extends Item
 {
 	protected int puzzleId;
 
+	/**
+     * Method: PuzzleItem()
+     * PuzzleItem constructor
+     * @param loadedString String representing the string inputs to be parsed
+     * @return nothing
+     */
 	public PuzzleItem(String loadedString)
 	{
 		// loaded from file
@@ -26,46 +43,80 @@ public class PuzzleItem extends Item
 		}
 	}
 
+	/**
+     * Method: getPuzzleId()
+     * Returns puzzle ID
+     * @param none
+     * @return puzzleId int value representing puzzle ID
+     */
 	public int getPuzzleId()
 	{
 		return puzzleId;
 	}
 
+	/**
+     * Method: use()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void use()
 	{
 	}
 
-	// code moved because I can't make an object delete itself without using outside
-	// method
+	/**
+     * Method: drop()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void drop()
 	{
 	}
-	// code moved because I can't make an object delete itself without using outside
-	// method
 
+	/**
+     * Method: examine()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void examine()
 	{
 		view.print(itemDescShort);
 	}
 
+	/**
+     * Method: getDisplay()
+     * Displays item usage options
+     * @param none
+     * @return String value representing item usage options
+     */
 	@Override
 	public String getDisplay()
 	{
 		return itemName + "-> [use], drop, examine:";
 	}
 
+	/**
+     * Method: displayCommands()
+     * Displays commands for items
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void displayCommands()
 	{
 		view.line(125);
 		view.print(itemName);
+		
 		if(itemId == 102)
 		{
 			view.print("use");
 		}
+		
 		view.print("drop:");
 		view.print("examine:");
 		view.print("exit:");
