@@ -7,9 +7,9 @@ import javafx.scene.control.Button;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class holds the functionality of items classified as gear or equipment
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: The purpose is store the attributes of the weapons and armor found in the game
  */
 public class Gear extends Item
 {
@@ -22,8 +22,8 @@ public class Gear extends Item
 	
 	/**
      * Method: Gear()
-     * [What the method does]
-     * @param loadedString String value representing...
+     * Gear Constructor
+     * @param loadedString String value representing the information from text file
      * @return nothing
      */
 	public Gear(String loadedString)
@@ -56,8 +56,8 @@ public class Gear extends Item
 	
 	/**
      * Method: setEquipped()
-     * [What the method does]
-     * @param equip boolean value representing...
+     * Signifies whether an item is been equipped
+     * @param equip boolean value representing whether an item is equipped
      * @return nothing
      */
 	public void setEquipped(boolean equip)
@@ -67,9 +67,9 @@ public class Gear extends Item
 	
 	/**
      * Method: getDefense()
-     * [What the method does]
+     * Retrieves defense attribute
      * @param none
-     * @return defense int value representing defense
+     * @return defense int value representing defense attribute
      */
 	public int getDefense()
 	{
@@ -78,9 +78,9 @@ public class Gear extends Item
 
 	/**
      * Method: getAttackMin()
-     * [What the method does]
+     * Retrieves minimum attack attribute of item
      * @param none
-     * @return attackMin int value representing minimum attack
+     * @return attackMin int value representing minimum attack of item
      */
 	public int getAttackMin()
 	{
@@ -89,9 +89,9 @@ public class Gear extends Item
 
 	/**
      * Method: getAttackMin()
-     * [What the method does]
+     * Retrieves maximum attack attribute of item
      * @param none
-     * @return attackMax int value representing maximum attack
+     * @return attackMax int value representing maximum attack of item
      */
 	public int getAttackMax()
 	{
@@ -100,9 +100,9 @@ public class Gear extends Item
 
 	/**
      * Method: getAcc()
-     * [What the method does]
+     * Retrieves accuracy attribute of item
      * @param none
-     * @return acc int value representing accuracy
+     * @return acc int value representing accuracy of item
      */
 	public int getAcc()
 	{
@@ -111,7 +111,7 @@ public class Gear extends Item
 
 	/**
      * Method: getItemslot()
-     * [What the method does]
+     * Retrieves item slot number
      * @param none
      * @return itemslot chat value representing item slot
      */
@@ -122,7 +122,7 @@ public class Gear extends Item
 
 	/**
      * Method: use()
-     * [What the method does]
+     * Performs action of using item
      * @param none
      * @return nothing
      */
@@ -133,7 +133,7 @@ public class Gear extends Item
 
 	/**
      * Method: drop()
-     * [What the method does]
+     * Performs action of dropping item
      * @param none
      * @return nothing
      */
@@ -144,7 +144,7 @@ public class Gear extends Item
 
 	/**
      * Method: examine()
-     * [What the method does]
+     * Prints item description
      * @param none
      * @return nothing
      */
@@ -164,7 +164,7 @@ public class Gear extends Item
 
 	/**
      * Method: getDisplay()
-     * [What the method does]
+     * Displays gear prompt
      * @param none
      * @return String value representing a display for gear
      */
@@ -180,7 +180,7 @@ public class Gear extends Item
 	
 	/**
      * Method: toString()
-     * [What the method does]
+     * Converts everything to string
      * @param none
      * @return String value representing a display for gear
      */
@@ -196,7 +196,7 @@ public class Gear extends Item
 	
 	/**
      * Method: displayCommands()
-     * [What the method does]
+     * Displays command for gear
      * @param none
      * @return nothing
      */
