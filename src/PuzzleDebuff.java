@@ -1,10 +1,27 @@
 import java.util.ArrayList;
 
+/**
+ * Class: PuzzleDebuff
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class PuzzleDebuff extends Puzzle
 {
 	private int itemId;
 	private boolean active = true;
 	
+	/**
+     * Method: PuzzleDebuff()
+     * PuzzleDebuff constructor
+     * @param loadedString String representing the string inputs to be parsed
+     * @return nothing
+     */
 	public PuzzleDebuff(String loadedString)
 	{
 		// loaded from file
@@ -22,27 +39,50 @@ public class PuzzleDebuff extends Puzzle
 		}
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include PuzzleDebuff in the text message");
+			System.out.println("Error");
 		}
 	}
 	
+	/**
+     * Method: isActive()
+     * Returns active status
+     * @param none
+     * @return active boolean value representing active status
+     */
 	public boolean isActive()
 	{
 		return active;
 	}
 	
+	/**
+     * Method: initialize()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void initialize()
 	{
-		// idk
 	}
 
+	/**
+     * Method: attemptSolve()
+     * Sets solved to true
+     * @param answer String value representing answer
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(String answer)
 	{
 		solved = true;
 	}
+	
+	/**
+     * Method: printPoison()
+     * Displays posion action
+     * @param none
+     * @return nothing
+     */
 	public void printPoison()
 	{
 		view.line(125);
@@ -51,12 +91,23 @@ public class PuzzleDebuff extends Puzzle
 		active = true;
 	}
 
+	/**
+     * Method: attemptSolve()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(int itemId)
 	{
-		// no effect
 	}
 
+	/**
+     * Method: display()
+     * Displays puzzle information
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void display()
 	{
