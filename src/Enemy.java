@@ -7,9 +7,9 @@ import java.util.*;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of Enemies in the game 
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – Purpose is to store variables related to enemies
  */
 public class Enemy extends Character implements Cloneable
 {
@@ -22,9 +22,9 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: Enemy()
-     * [What the method does]
-     * @param loadedString String value representing...
-     * @param library ReferenceIdentities representing...
+     * Enemy constructor
+     * @param String loadedString string loaded from file
+     * @param ReferenceIdentities library object
      * @return nothing
      */
 	public Enemy(String loadedString, ReferenceIdentities library)
@@ -69,7 +69,7 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: getEnemyDesc()
-     * [What the method does]
+     * Retrieves enemy description
      * @param none
      * @return enemyDesc String value representing enemy description
      */
@@ -80,7 +80,7 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: getEnemyId()
-     * [What the method does]
+     * Retrieves enemy ID
      * @param none
      * @return enemyId String value representing enemy ID
      */
@@ -91,8 +91,8 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: setView()
-     * [What the method does]
-     * @param view View object representing...
+     * Instantiates view object
+     * @param view View object representing View object
      * @return nothing
      */
 	public void setView(View view)
@@ -102,7 +102,7 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: display()
-     * [What the method does]
+     * Displays enemy prompt
      * @param none
      * @return nothing
      */
@@ -119,9 +119,9 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: getItems()
-     * [What the method does]
+     * Retrieves items Arraylist
      * @param none
-     * @return item ArrayList representing...
+     * @return item ArrayList representing a list of items from enemy
      */
 	public ArrayList<Item> getItems()
 	{
@@ -142,9 +142,9 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: clone()
-     * [What the method does]
+     * Clones super class
      * @param none
-     * @return clone
+     * @return cloned super Object
      */
 	protected Object clone() throws CloneNotSupportedException
 	{
@@ -153,7 +153,7 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: dealDamage()
-     * [What the method does]
+     * Performs action of enemies doing damage
      * @param none
      * @return int value representing damage dealt
      */
