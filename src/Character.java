@@ -2,14 +2,13 @@
  * Class: Character
  * @author Team Hydra
  * @version 1.0
- * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Course: ITEC 3150
+ * Written: January 22, 2017
  * 
- * This class – now describe what the class does 
+ * This class stores and initializes the player's personal statistics
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: Contains the attributes of the player's health, attack, defense, accuracy, and whether the player is alive
  */
-
 public abstract class Character
 {
 	protected int health;
@@ -21,11 +20,12 @@ public abstract class Character
 	public abstract int dealDamage();
 
 	/**
-     * Method: receiveDamage()
-     * [What the method does]
-     * @param damage int value representing...
+     * Method: receiveDamage(int damage)
+     * Displays the action of a the player receiving damage
+     * @param damage
      * @return nothing
      */
+	
 	public void receiveDamage(int damage)
 	{
 		health = health - damage;
@@ -41,12 +41,13 @@ public abstract class Character
 		}
 	}
 
+
 	/**
      * Method: getHealth()
-     * [What the method does]
+     * Retrieves the player's current health
      * @param none
-     * @return health int value representing...
-     */
+     * @return health 
+     */	
 	public int getHealth()
 	{
 		return health;
@@ -54,54 +55,45 @@ public abstract class Character
 
 	/**
      * Method: getMaxHealth()
-     * [What the method does]
+     * Retrieves the player's maximum health
      * @param none
-     * @return maxHealth int value representing...
-     */
+     * @return maxHealth 
+     */	
 	public int getMaxHealth()
 	{
 		return maxHealth;
 	}
-
 	/**
      * Method: getDefense()
-     * [What the method does]
+     * Retrieves the player's current defense stat
      * @param none
-     * @return defense int value representing...
-     */
+     * @return defense 
+     */	
 	public int getDefense()
 	{
 		return defense;
 	}
-
 	/**
      * Method: isAlive()
-     * [What the method does]
+     * Retrieves weather the player is alive or dead
      * @param none
-     * @return defense boolean value representing...
-     */
+     * @return alive 
+     */	
 	public boolean isAlive()
 	{
 		return alive;
 	}
-
 	/**
      * Method: setAlive()
-     * [What the method does]
-     * @param alive boolean value representing...
+     * Instantiates whether the player is dead or alive
+     * @param alive
      * @return nothing
-     */
+     */	
 	public void setAlive(boolean alive)
 	{
 		this.alive = alive;
 	}
 
-	/**
-     * Method: toString()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
 	@Override
 	public String toString()
 	{

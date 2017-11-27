@@ -1,16 +1,22 @@
-import java.util.Scanner;
-
 /**
  * Class: Controller
  * @author Team Hydra
  * @version 1.0
- * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Course: ITEC 3150
+ * Written: January 22, 2017
  * 
- * This class – now describe what the class does 
+ * This contains all of the controllers of every feature and relevant values
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: Contains the functionality of all the controllers
  */
+import java.util.Scanner;
+
+/**
+ * Method: Controller()
+ * Controller class constructor, holds values
+ * @param none
+ * @return nothing
+ */	
 public class Controller
 {
 	//Scanner control = new Scanner(System.in);
@@ -18,12 +24,6 @@ public class Controller
 	ObjectHolder model;
 	View menuView = new View();
 
-	/**
-     * Method: Controller()
-     * [What the method does]
-     * @param main ObjectHolder representing...
-     * @return nothing
-     */
 	public Controller(ObjectHolder main) 
 	{
 		model = main;
@@ -32,14 +32,12 @@ public class Controller
 			determine(control.nextLine());
 		}
 	}
-
 	/**
-     * Method: Controller()
-     * [What the method does]
-     * @param main ObjectHolder representing...
-     * @param control Scanner representing...
-     * @return nothing
-     */
+	 * Method: Controller(ObjectHolder main, Scanner control)
+	 * Controller class constructor, instantiates values
+	 * @param main, control
+	 * @return nothing
+	 */	
 	public Controller(ObjectHolder main, Scanner control)
 	{
 		model = main;
@@ -49,13 +47,12 @@ public class Controller
 			determine(control.nextLine());
 		}
 	}
-	
 	/**
-     * Method: controllerEnemy()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerEnemy()
+	 * Enemy controller that updates enemy stats
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerEnemy()
 	{
 		while (true)
@@ -71,13 +68,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerItem()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerItem()
+	 * Item controller that display inventory
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerItem()
 	{
 		while (true)
@@ -89,13 +85,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerItem()
-     * [What the method does]
-     * @param i int value representing...
-     * @return nothing
-     */
+	 * Method: controllerItem(int i)
+	 * Enemy controller that displays item commands
+	 * @param i
+	 * @return nothing
+	 */	
 	public void controllerItem(int i)
 	{
 		model.getUser().getItem(i).displayCommands();
@@ -103,11 +98,11 @@ public class Controller
 	}
 
 	/**
-     * Method: controllerObjectPuzzle()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerObjectPuzzle()
+	 * Puzzle controller that displays puzzle that has not been solved
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerObjectPuzzle()
 	{
 		String itemNumber;
@@ -136,13 +131,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerPuzzleDebuff()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerPuzzleDebuff()
+	 * Puzzle controller that handles the puzzle where the player is poisoned and his stats are affected
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerPuzzleDebuff()
 	{
 		String answer;
@@ -172,13 +166,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerPuzzleNumber()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerPuzzleNumber()
+	 * Controller for puzzles that involve the use of items
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerPuzzleNumber()
 	{
 		String answer;
@@ -224,13 +217,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerPuzzleRiddle()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerPuzzleRiddle()
+	 * Controller for puzzles that involve riddles
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerPuzzleRiddle()
 	{
 		String answer;
@@ -257,13 +249,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerDoorPuzzle()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerDoorPuzzle()
+	 * Controller for puzzles that involve a door that is locked
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerDoorPuzzle()
 	{
 		String itemNumber;
@@ -298,13 +289,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: controllerWordPuzzle()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerWordPuzzle()
+	 * Controller for puzzles that involve words having to be inputed
+	 * @param none
+	 * @return nothing
+	 */	
 	public void controllerWordPuzzle()
 	{
 		String answer;
@@ -325,13 +315,12 @@ public class Controller
 			}
 		}
 	}
-	
 	/**
-     * Method: controllerStats()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerStats()
+	 * Controller that displays the player's stats when requested
+	 * @param none
+	 * @return nothing
+	 */	
 	private void controllerStats()
 	{
 		String input;
@@ -356,13 +345,12 @@ public class Controller
 			}
 		}
 	}
-	
 	/**
-     * Method: controllerHelp()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerHelp()
+	 * Controller that will display a help menu when requested by user
+	 * @param none
+	 * @return nothing
+	 */	
 	private void controllerHelp()
 	{
 		String input;
@@ -406,13 +394,12 @@ public class Controller
 			}
 		}
 	}
-	
 	/**
-     * Method: controllerMenu()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: controllerMenu()
+	 * Controller that displays the main menu when requested by user
+	 * @param none
+	 * @return nothing
+	 */	
 	private void controllerMenu()
 	{
 		String input;
@@ -502,13 +489,12 @@ public class Controller
 			}
 		}
 	}
-
 	/**
-     * Method: determine()
-     * [What the method does]
-     * @param input String value representing...
-     * @return nothing
-     */
+	 * Method: determine()
+	 * Controller that will dictate what the user's input will initiate
+	 * @param input
+	 * @return nothing
+	 */	
 	private void determine(String input)
 	{
 		if (input.length() == 1)
@@ -582,13 +568,12 @@ public class Controller
 			controllerMenu();
 		}
 	}
-
 	/**
-     * Method: determineItem()
-     * [What the method does]
-     * @param input String value representing...
-     * @return boolean value representing...
-     */
+	 * Method: determineItem(String input)
+	 * Controller that will retrieve item from inventory based off the number entered by the user 
+	 * @param input
+	 * @return false
+	 */	
 	private boolean determineItem(String input)
 	{
 		if (input.matches("[0-9]+"))
@@ -616,14 +601,12 @@ public class Controller
 		}
 		return false;
 	}
-
 	/**
-     * Method: determineItem()
-     * [What the method does]
-     * @param input String value representing...
-     * @param i int value representing...
-     * @return boolean value representing...
-     */
+	 * Method: determineItem(String input, int i)
+	 * Controller that determines what the user does with the item while viewing item
+	 * @param input, i
+	 * @return true
+	 */	
 	private boolean determineItem(String input, int i)
 	{
 		try
@@ -680,13 +663,12 @@ public class Controller
 		}
 		return false;
 	}
-
 	/**
-     * Method: determineEnemy()
-     * [What the method does]
-     * @param input String value representing...
-     * @return boolean value representing...
-     */
+	 * Method: determineEnemy(String input)
+	 * Controller that determines what the user's input will do and what actions occur during combat
+	 * @param input
+	 * @return false
+	 */	
 	private boolean determineEnemy(String input)
 	{
 		if (input.equalsIgnoreCase("exit"))
@@ -759,24 +741,22 @@ public class Controller
 		}
 		return false;
 	}
-
 	/**
-     * Method: navigate()
-     * [What the method does]
-     * @param input String value representing...
-     * @return nothing
-     */
+	 * Method: navigate(String input)
+	 * Controller that determines what happens when user inputs a direction
+	 * @param input
+	 * @return nothing
+	 */	
 	private void navigate(String input) throws Exception
 	{
 		model.navigate(input.charAt(0));
 	}
-
 	/**
-     * Method: pickUpAll()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
+	 * Method: pickUpAll()
+	 * Controller that picks up item that are found in rooms or dropped by enemies 
+	 * @param none
+	 * @return nothing
+	 */	
 	private void pickUpAll()
 	{
 		while (model.getCurrentRoom().getItems().size() > 0)
@@ -791,7 +771,9 @@ public class Controller
 			model.getCurrentRoom().display();
 		} 
 		catch (Exception e)
-		{		
+		{
+			
 		}
 	}
+	
 }

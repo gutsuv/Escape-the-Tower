@@ -2,14 +2,13 @@
  * Class: Consumable
  * @author Team Hydra
  * @version 1.0
- * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Course: ITEC 3150
+ * Written: January 22, 2017
  * 
- * This class – now describe what the class does 
+ * This class sets the effects consumable items that are found in the game
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: Contains the attributes of consumable items and their commands
  */
-
 public class Consumable extends Item
 {
 	protected int healthEffect;
@@ -17,8 +16,8 @@ public class Consumable extends Item
 
 	/**
      * Method: Consumable()
-     * [What the method does]
-     * @param loadedString String value representing...
+     * Class constructor and file reader for consumables items
+     * @param none
      * @return nothing
      */
 	public Consumable(String loadedString)
@@ -45,35 +44,27 @@ public class Consumable extends Item
 		}
 
 	}
-
 	/**
      * Method: getHealthEffect()
-     * [What the method does]
+     * Retrieves consumable items's health effect
      * @param none
-     * @return healthEffect int value representing...
+     * @return healthEffect 
      */
 	public int getHealthEffect()
 	{
 		return healthEffect;
 	}
-
 	/**
      * Method: getMaxHealthEffect()
-     * [What the method does]
+     * Retrieves consumable items's max health effect
      * @param none
-     * @return -maxHealthEffect int value representing...
+     * @return maxHealthEffect 
      */
 	public int getMaxHealthEffect()
 	{
 		return -maxHealthEffect;
 	}
 
-	/**
-     * Method: use()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
 	@Override
 	public void use()
 	{
@@ -81,50 +72,43 @@ public class Consumable extends Item
 
 	// code moved because I can't make an object delete itself without using outside
 	// method
-	/**
-     * Method: drop()
-     * [What the method does]
-     * @param none
-     * @return nothing
-     */
 	@Override
 	public void drop()
 	{
 	}
 	// code moved because I can't make an object delete itself without using outside
 	// method
-	
+
+	@Override
 	/**
      * Method: examine()
-     * [What the method does]
+     * Displays consumable items's long descriptiom
      * @param none
-     * @return nothing
+     * @return void
      */
-	@Override
 	public void examine()
 	{
 		view.printString((healthEffect + ": " + itemDescLong), 125);
 	}
-
+	@Override
 	/**
      * Method: getDisplay()
-     * [What the method does]
+     * Retrieves consumable items's display prompt
      * @param none
-     * @return nothing
+     * @return itemName + "-> use, drop, examine:"
      */
-	@Override
 	public String getDisplay()
 	{
 		return itemName + "-> use, drop, examine:";
 	}
 
+	@Override
 	/**
      * Method: displayCommands()
-     * [What the method does]
+     * Prints the consumable item commands
      * @param none
-     * @return nothing
+     * @return nothing 
      */
-	@Override
 	public void displayCommands()
 	{
 		view.line(125);

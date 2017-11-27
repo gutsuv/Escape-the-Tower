@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class stores the functionality of puzzles with locked doors
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: The purpose is to store attributes that relate to locked door puzzles
  */
 public class DoorPuzzle extends Puzzle
 {
@@ -19,8 +19,8 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: DoorPuzzle()
-     * [What the method does]
-     * @param loadedString String value representing...
+     * Class constructor that initializes variables and reads from file
+     * @param loadedString
      * @return nothing
      */
 	public DoorPuzzle(String loadedString)
@@ -47,9 +47,9 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: getRoomId()
-     * [What the method does]
+     * Retrieves room ID
      * @param none
-     * @return int value representing...
+     * @return roomID
      */
 	public int getRoomId()
 	{
@@ -58,8 +58,8 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: setRoom()
-     * [What the method does]
-     * @param room Room object representing...
+     * Instantiates whether room is locked
+     * @param room
      * @return nothing
      */
 	public void setRoom(Room room)
@@ -69,8 +69,8 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: setLockedRoom()
-     * [What the method does]
-     * @param rooms ArrayList representing...
+     * Sets whether a room is locked
+     * @param Arraylisr<Room> rooms
      * @return nothing
      */
 	public void setLockedRoom(ArrayList<Room> rooms)
@@ -80,7 +80,7 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: initialize()
-     * [What the method does]
+     * Intializes whether a room is locked
      * @param none
      * @return nothing
      */
@@ -92,8 +92,8 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: attemptSolve()
-     * [What the method does]
-     * @param answer String value representing...
+     * user can attempt to solve puzzle
+     * @param answer
      * @return nothing
      */
 	@Override
@@ -104,8 +104,8 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: attemptSolve()
-     * [What the method does]
-     * @param itemId int value representing...
+     * user can attempt to solve puzzle
+     * @param itemId 
      * @return nothing
      */
 	@Override
@@ -126,7 +126,7 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: display()
-     * [What the method does]
+     * Displays locked door puzzle description
      * @param none
      * @return nothing
      */
@@ -140,8 +140,8 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: display()
-     * [What the method does]
-     * @param items ArrayList representing...
+     * Displays locked door puzzle prompt
+     * @param items
      * @return nothing
      */
 	public void display(ArrayList<Item> items)
