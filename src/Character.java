@@ -1,5 +1,5 @@
 /**
- * Class: 
+ * Class: Character
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
