@@ -1,5 +1,5 @@
 ﻿
-00-_Prison Guard-_10-_4-_0-_8-_10-_Pretty lazy. Sleeps often. Has a club. (If you start fight with guard he laughs at you and then eats the key)
+00-_Prison Guard-_10-_4-_0-_8-_10-_Pretty lazy. Sleeps often. Has a club.
 01-_Guard Dog-_15-_4-_0-_9-_12-_Not very strong but has a strong sense of smell and pretty darn fast
 02-_Interrogator-_30-_5-_1-_7-_04-_Loves to torture, pretty darn sadistic and has a whip 
 03-_Injured guard-_40-_7-_2-_6-_02><11-_Was injured badly, has only one arm carries a Morning Star other arm is missing and bleeding. Was waiting on doctor to help him
