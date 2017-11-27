@@ -12,7 +12,6 @@ import java.util.*;
  * 
  * Purpose: – Describe the purpose of this class
  */
-
 public class ReferenceIdentities
 {
 	ReferenceIdentities library;

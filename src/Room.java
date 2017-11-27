@@ -4,6 +4,17 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+/**
+ * Class: Room
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class Room
 {
 	View view;
@@ -20,6 +31,12 @@ public class Room
 	protected ArrayList<Item> items = new ArrayList<Item>();
 	protected Puzzle puzzle;
 
+	/**
+     * Method: Room()
+     * Room constructor
+     * @param loadedString String representing the string inputs to be parsed
+     * @return nothing
+     */
 	public Room(String loadedString)
 	{
 		// loaded from file
@@ -53,41 +70,89 @@ public class Room
 		}
 	}
 
+	/**
+     * Method: getRoomId()
+     * Returns room ID
+     * @param none
+     * @return roomId int value representing the room id
+     */
 	public int getRoomId()
 	{
 		return roomId;
 	}
 
+	/**
+     * Method: getRoomDesc()
+     * Returns room description
+     * @param none
+     * @return roomDesc String value representing the room description
+     */
 	public String getRoomDesc()
 	{
 		return roomDesc;
 	}
 
+	/**
+     * Method: getExits()
+     * Returns exit IDs
+     * @param none
+     * @return exitIDs int array representing exit IDs
+     */
 	public int[] getExits()
 	{
 		return exitIDs;
 	}
 
+	/**
+     * Method: getExit()
+     * Returns exit ID
+     * @param none
+     * @return exitIDs int value representing exit ID
+     */
 	public int getExit(int i)
 	{
 		return exitIDs[i];
 	}
 
+	/**
+     * Method: getExitDescriptions()
+     * Returns doorDescriptions
+     * @param none
+     * @return doorDescriptions String value representing door description
+     */
 	public String[] getExitDescriptions()
 	{
 		return doorDescriptions;
 	}
 
+	/**
+     * Method: getExitDescriptions()
+     * Returns doorDescription
+     * @param i int value
+     * @return doorDescriptions String value representing door description
+     */
 	public String getExitDescription(int i)
 	{
 		return doorDescriptions[i];
 	}
 
+	/**
+     * Method: getDirections()
+     * Returns directions
+     * @param none
+     * @return directions char value representing direction
+     */
 	public char[] getDirections()
 	{
 		return directions;
 	}
 
+	/**
+     * Method: getDirection()
+     * Returns direction
+     * @param i int value
+     * @return directions char value representing direction
+     */
 	public char getDirection(int i)
 	{
 		try
@@ -100,51 +165,111 @@ public class Room
 		}
 	}
 
+	/**
+     * Method: isLocked()
+     * Returns locked
+     * @param none
+     * @return locked boolean value representing locked
+     */
 	public boolean isLocked()
 	{
 		return locked;
 	}
 
+	/**
+     * Method: setLocked()
+     * Sets lock
+     * @param locked boolean
+     * @return nothing
+     */
 	public void setLocked(boolean locked)
 	{
 		this.locked = locked;
 	}
 
+	/**
+     * Method: getEnemy()
+     * returns enemy
+     * @param none
+     * @return enemy Enemy object
+     */
 	public Enemy getEnemy()
 	{
 		return enemy;
 	}
 
+	/**
+     * Method: setEnemy()
+     * Sets enemy
+     * @param enemy Enemy object
+     * @return nothing
+     */
 	public void setEnemy(Enemy enemy)
 	{
 		this.enemy = enemy;
 	}
 
+	/**
+     * Method: getPuzzle()
+     * Returns puzzle
+     * @param none
+     * @return puzzle
+     */
 	public Puzzle getPuzzle()
 	{
 		return puzzle;
 	}
 
+	/**
+     * Method: getPuzzle()
+     * Sets puzzle
+     * @param puzzle
+     * @return nothing
+     */
 	public void setPuzzle(Puzzle puzzle)
 	{
 		this.puzzle = puzzle;
 	}
 
+	/**
+     * Method: getItems()
+     * Returns items
+     * @param none
+     * @return nothing
+     */
 	public ArrayList<Item> getItems()
 	{
 		return items;
 	}
 
+	/**
+     * Method: addItem()
+     * Returns items
+     * @param item
+     * @return nothing
+     */
 	public void addItem(Item item)
 	{
 		items.add(item);
 	}
 
+	/**
+     * Method: removeItem()
+     * Returns items
+     * @param i
+     * @return nothing
+     */
 	public void removeItem(int i)
 	{
 		items.remove(i);
 	}
 
+	/**
+     * Method: pickUp()
+     * Returns items
+     * @param i
+     * @return item
+     */
 	public Item pickUp(int i)
 	{
 		Item item = items.get(i);
@@ -152,6 +277,13 @@ public class Room
 		return item;
 	}
 
+
+	/**
+     * Method: enemyDeathEffects()
+     * enemyDeathEffects
+     * @param none
+     * @return nothing
+     */
 	public void enemyDeathEffects()
 	{
 		view.print("enemy has died");
@@ -170,6 +302,12 @@ public class Room
 		}
 	}
 
+	/**
+     * Method: setView()
+     * Sets view
+     * @param v
+     * @return nothing
+     */
 	public void setView(View v)
 	{
 		view = v;
@@ -179,6 +317,12 @@ public class Room
 	{
 	}
 
+	/**
+     * Method: showPaths()
+     * Displays path
+     * @param none
+     * @return nothing
+     */
 	public void showPaths()
 	{
 		int i = directions.length;
@@ -189,6 +333,12 @@ public class Room
 		}
 	}
 
+	/**
+     * Method: display()
+     * Displays room
+     * @param none
+     * @return nothing
+     */
 	public void display() throws Exception
 	{
 		view.line(125);
@@ -233,12 +383,25 @@ public class Room
 
 		}
 	}
-	public void helpMessage() throws Exception{
+	
+	/**
+     * Method: helpMessage()
+     * Displays help message
+     * @param none
+     * @return nothing
+     */
+	public void helpMessage() throws Exception
+	{
 		view.print("=====[Help Menu]=====");
 		view.print("Enter 'help' for help");
 	}
 	
-
+	/**
+     * Method: toString()
+     * Displays room desc
+     * @param none
+     * @return getRoomDesc
+     */
 	@Override
 	public String toString()
 	{
