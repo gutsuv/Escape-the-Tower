@@ -1,5 +1,16 @@
 import javafx.scene.control.Button;
 
+/**
+ * Class: Gear
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class Gear extends Item
 {
 	protected int defense;
@@ -9,6 +20,12 @@ public class Gear extends Item
 	protected char itemslot;
 	protected boolean equipped = false;
 	
+	/**
+     * Method: Gear()
+     * [What the method does]
+     * @param loadedString String value representing...
+     * @return nothing
+     */
 	public Gear(String loadedString)
 	{
 		// loaded from file
@@ -37,50 +54,100 @@ public class Gear extends Item
 
 	}
 	
+	/**
+     * Method: setEquipped()
+     * [What the method does]
+     * @param equip boolean value representing...
+     * @return nothing
+     */
 	public void setEquipped(boolean equip)
 	{
 		equipped = equip;
 	}
 	
+	/**
+     * Method: getDefense()
+     * [What the method does]
+     * @param none
+     * @return defense int value representing defense
+     */
 	public int getDefense()
 	{
 		return defense;
 	}
 
+	/**
+     * Method: getAttackMin()
+     * [What the method does]
+     * @param none
+     * @return attackMin int value representing minimum attack
+     */
 	public int getAttackMin()
 	{
 		return attackMin;
 	}
 
+	/**
+     * Method: getAttackMin()
+     * [What the method does]
+     * @param none
+     * @return attackMax int value representing maximum attack
+     */
 	public int getAttackMax()
 	{
 		return attackMax;
 	}
 
+	/**
+     * Method: getAcc()
+     * [What the method does]
+     * @param none
+     * @return acc int value representing accuracy
+     */
 	public int getAcc()
 	{
 		return acc;
 	}
 
+	/**
+     * Method: getItemslot()
+     * [What the method does]
+     * @param none
+     * @return itemslot chat value representing item slot
+     */
 	public char getItemslot()
 	{
 		return itemslot;
 	}
 
+	/**
+     * Method: use()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void use()
 	{
 	}
 
-	// code moved because I can't make an object delete itself without using outside
-	// method
+	/**
+     * Method: drop()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void drop()
 	{
 	}
-	// code moved because I can't make an object delete itself without using outside
-	// method
 
+	/**
+     * Method: examine()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void examine()
 	{
@@ -95,6 +162,12 @@ public class Gear extends Item
 		}
 	}
 
+	/**
+     * Method: getDisplay()
+     * [What the method does]
+     * @param none
+     * @return String value representing a display for gear
+     */
 	@Override
 	public String getDisplay()
 	{
@@ -105,6 +178,12 @@ public class Gear extends Item
 		return "[Gear]" + itemName + "-> equip, drop, examine:";
 	}
 	
+	/**
+     * Method: toString()
+     * [What the method does]
+     * @param none
+     * @return String value representing a display for gear
+     */
 	@Override
 	public String toString()
 	{
@@ -115,6 +194,12 @@ public class Gear extends Item
 		return "Gear [" + itemName + ", " + itemDescShort + "]";
 	}
 	
+	/**
+     * Method: displayCommands()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void displayCommands()
 	{
