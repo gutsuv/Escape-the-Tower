@@ -76,7 +76,7 @@ public abstract class Item implements Cloneable, Comparable<Item>
 
 	/**
      * Method: use()
-     * [What the method does]
+     * Uses item
      * @param none
      * @return nothing
      */
@@ -84,7 +84,7 @@ public abstract class Item implements Cloneable, Comparable<Item>
 
 	/**
      * Method: drop()
-     * [What the method does]
+     * Drops item
      * @param none
      * @return nothing
      */
@@ -92,7 +92,7 @@ public abstract class Item implements Cloneable, Comparable<Item>
 
 	/**
      * Method: examine()
-     * [What the method does]
+     * Examines item
      * @param none
      * @return nothing
      */
@@ -100,7 +100,7 @@ public abstract class Item implements Cloneable, Comparable<Item>
 
 	/**
      * Method: getDisplay()
-     * [What the method does]
+     * gets Display
      * @param none
      * @return nothing
      */
@@ -108,7 +108,7 @@ public abstract class Item implements Cloneable, Comparable<Item>
 
 	/**
      * Method: displayCommands()
-     * [What the method does]
+     * Displays commands
      * @param none
      * @return nothing
      */
@@ -116,7 +116,7 @@ public abstract class Item implements Cloneable, Comparable<Item>
 
 	/**
      * Method: clone()
-     * [What the method does]
+     * Clones object
      * @param none
      * @return clone
      */
