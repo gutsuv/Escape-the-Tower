@@ -1,16 +1,41 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.*;
+
+/**
+ * Class: Initializer
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class Initializer
 {
 	static ObjectHolder main;
 	static View view;
 	static Controller cont;
 	
+	/**
+     * Method: main()
+     * Main method
+     * @param args
+     * @return nothing
+     */
 	public static void main(String[] args)
 	{
 		initializerControl();
 	}
+	
+	/**
+     * Method: initializerControl()
+     * Displays main menu
+     * @param none
+     * @return nothing
+     */
 	public static void initializerControl()
 	{
 		while(true)
@@ -102,11 +127,23 @@ public class Initializer
 
 	}
 	
+	/**
+     * Method: initializerControlLoad()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	public static void initializerControlLoad()
 	{
 		
 	}
 
+	/**
+     * Method: newGame()
+     * Sets up a new game
+     * @param control Scanner 
+     * @return nothing
+     */
 	public static void newGame(Scanner control) throws FileNotFoundException
 	{
 		main = new ObjectHolder(view);
@@ -114,6 +151,13 @@ public class Initializer
 		cont = new Controller(main, control);
 	}
 	
+	/**
+     * Method: loadGame()
+     * Loads game
+     * @param control Scanner 
+     * @param number String 
+     * @return nothing
+     */
 	public static void loadGame(Scanner control, String number) throws FileNotFoundException
 	{
 		main = new ObjectHolder(view);
