@@ -71,7 +71,7 @@ public class Enemy extends Character implements Cloneable
      * Method: getEnemyDesc()
      * [What the method does]
      * @param none
-     * @return enemyDesc String value representing...
+     * @return enemyDesc String value representing enemy description
      */
 	public String getEnemyDesc()
 	{
@@ -82,7 +82,7 @@ public class Enemy extends Character implements Cloneable
      * Method: getEnemyId()
      * [What the method does]
      * @param none
-     * @return enemyId String value representing...
+     * @return enemyId String value representing enemy ID
      */
 	public int getEnemyId()
 	{
