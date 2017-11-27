@@ -1,4 +1,14 @@
-
+/**
+ * Class: WordPuzzle
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class WordPuzzle extends Puzzle
 {
 	String answer;
