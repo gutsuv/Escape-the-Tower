@@ -1,9 +1,26 @@
 import java.util.ArrayList;
 
+/**
+ * Class: ObjectPuzzle
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class ObjectPuzzle extends Puzzle
 {
 	int itemId;
 
+	/**
+     * Method: ObjectPuzzle()
+     * ObjectPuzzle constructor
+     * @param loadedString String representing String to be loaded
+     * @return nothing
+     */
 	public ObjectPuzzle(String loadedString)
 	{
 		// loaded from file
@@ -16,27 +33,44 @@ public class ObjectPuzzle extends Puzzle
 			itemId = Integer.parseInt(splitString[2]);
 			puzzleDesc = splitString[3];
 			hint = splitString[4];
-
 		}
+		
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include DoorPuzzle in the text message");
+			System.out.println("Error");
 		}
 	}
 
+	/**
+     * Method: initialize()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void initialize()
 	{
 		
 	}
 
+	/**
+     * Method: attemptSolve()
+     * 
+     * @param answer String value representing the answer
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(String answer)
 	{
 		// no effect
 	}
 
+	/**
+     * Method: attemptSolve()
+     * Displays whether the item solved the puzzle or not
+     * @param itemId int value representing item ID
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(int itemId)
 	{
@@ -55,6 +89,12 @@ public class ObjectPuzzle extends Puzzle
 
 	}
 
+	/**
+     * Method: display()
+     * Displays puzzle name and description
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void display()
 	{
@@ -63,6 +103,12 @@ public class ObjectPuzzle extends Puzzle
 		view.printString(puzzleDesc);
 	}
 
+	/**
+     * Method: display()
+     * Displays puzzle menu
+     * @param items ArrayList representing items
+     * @return nothing
+     */
 	public void display(ArrayList<Item> items)
 	{
 		view.line(125);
