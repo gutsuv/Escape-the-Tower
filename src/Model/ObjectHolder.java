@@ -81,7 +81,7 @@ public class ObjectHolder
 			loadItems(file);
 			file = new File("TextFiles/RoomsBPuzzle.txt");
 			loadPuzzles(file);
-			file = new File("Text-Game/TextFiles/Intro.txt");
+			file = new File("TextFiles/Intro.txt");
 			BufferedReader buff = new BufferedReader(new FileReader(file));
 			while(buff.ready())
 			{

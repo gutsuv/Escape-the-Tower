@@ -2,8 +2,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.*;
 import View.View;
-import Model.*;
-import Controller.*;
+import Model.ObjectHolder;
+import Controller.Controller;
 /**
  * Class: Initializer
  * @author Team Hydra
@@ -47,9 +47,10 @@ public class Initializer
 			view.line(60);
 			view.line(60);
 			view.print( 
-					"	â•”â•�â•—â”Œâ”€â”�â”Œâ”€â”�â”Œâ”€â”�â”Œâ”€â”�â”Œâ”€â”�  â”Œâ”¬â”�â”¬ â”¬â”Œâ”€â”�  â•”â•¦â•—â”Œâ”€â”�â”¬ â”¬â”Œâ”€â”�â”¬â”€â”�\r\n" + 
-					"	â•‘â•£ â””â”€â”�â”‚  â”œâ”€â”¤â”œâ”€â”˜â”œâ”¤    â”‚ â”œâ”€â”¤â”œâ”¤    â•‘ â”‚ â”‚â”‚â”‚â”‚â”œâ”¤ â”œâ”¬â”˜\r\n" + 
-					"	â•šâ•�â•�â””â”€â”˜â””â”€â”˜â”´ â”´â”´  â””â”€â”˜   â”´ â”´ â”´â””â”€â”˜   â•© â””â”€â”˜â””â”´â”˜â””â”€â”˜â”´â””â”€" );
+
+					"	╔═╗┌─┐┌─┐┌─┐┌─┐┌─┐  ┌┬┐┬ ┬┌─┐  ╔╦╗┌─┐┬ ┬┌─┐┬─┐\r\n" + 
+					"	║╣ └─┐│  ├─┤├─┘├┤    │ ├─┤├┤    ║ │ ││││├┤ ├┬┘\r\n" + 
+					"	╚═╝└─┘└─┘┴ ┴┴  └─┘   ┴ ┴ ┴└─┘   ╩ └─┘└┴┘└─┘┴└─" );
 			
 			view.print("	  [ 		 New Game 		 ]\n"
 					 + "	  [ 		Load Game 1		 ]\n"
