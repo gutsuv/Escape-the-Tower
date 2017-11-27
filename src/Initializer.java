@@ -9,9 +9,9 @@ import java.util.*;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class initializes all of the objects
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – Stores the object instantiations
  */
 public class Initializer
 {
@@ -129,7 +129,7 @@ public class Initializer
 	
 	/**
      * Method: initializerControlLoad()
-     * [What the method does]
+     * loads the controller
      * @param none
      * @return nothing
      */
