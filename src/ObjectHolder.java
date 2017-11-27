@@ -9,9 +9,9 @@ import java.lang.reflect.Array;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class holds almost all data related to the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – This class is responsible for making class to class interactions easy and possible
  */
 public class ObjectHolder
 {
@@ -28,7 +28,7 @@ public class ObjectHolder
 
 	/**
      * Method: ObjectHolder()
-     * [What the method does]
+     * [Contructor]
      * @param v View object
      * @return nothing
      */
@@ -79,6 +79,12 @@ public class ObjectHolder
 			loadItems(file);
 			file = new File("TextFiles/RoomsBPuzzle.txt");
 			loadPuzzles(file);
+			file = new File("Text-Game/TextFiles/Intro.txt");
+			BufferedReader buff = new BufferedReader(new FileReader(file));
+			while(buff.ready())
+			{
+				view.print(buff.readLine());
+			}
 		}
 		catch (Exception E)
 		{
