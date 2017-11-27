@@ -2,6 +2,17 @@ import java.util.*;
 import java.io.*;
 import java.lang.reflect.Array;
 
+/**
+ * Class: ObjectHolder
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class ObjectHolder
 {
 	View view;
@@ -15,12 +26,19 @@ public class ObjectHolder
 	Room previousRoom;
 	ReferenceIdentities library = new ReferenceIdentities();
 
+	/**
+     * Method: ObjectHolder()
+     * [What the method does]
+     * @param v View object
+     * @return nothing
+     */
 	public ObjectHolder(View v) throws FileNotFoundException
 	{
 		view = v;
 		file = new File("TextFiles/RoomsA.txt");
 		fileread = new Scanner(file);
 		int i = 0;
+		
 		while (fileread.hasNextLine())
 		{
 			try
@@ -35,6 +53,7 @@ public class ObjectHolder
 				System.out.println("error " + i);
 			}
 		}
+		
 		fileread.close();
 		library.setLibray(library);
 		library.loaditems();
@@ -42,6 +61,12 @@ public class ObjectHolder
 		library.loadPuzzles();
 	}
 
+	/**
+     * Method: initializeNew()
+     * Loads room information
+     * @param none
+     * @return nothing
+     */
 	public void initializeNew()
 	{
 		// load new game
@@ -70,6 +95,12 @@ public class ObjectHolder
 		}
 	}
 	
+	/**
+     * Method: initializeLoad()
+     * Loads game
+     * @param none
+     * @return nothing
+     */
 	public void initializeLoad(String number)
 	{
 		// load new game
@@ -99,6 +130,12 @@ public class ObjectHolder
 		
 	}
 	
+	/**
+     * Method: loadCurrentRoom()
+     * Loads current room
+     * @param CurrentRoom File object
+     * @return nothing
+     */
 	public void loadCurrentRoom(File CurrentRoom)
 	{
 		// loads a file formatted with one number
@@ -108,12 +145,19 @@ public class ObjectHolder
 			setCurrentRoom(Integer.parseInt(buff.readLine()));
 			buff.close();
 		}
+		
 		catch(Exception E)
 		{
 			view.print("load error CurrentRoom");
 		}
 	}
 	
+	/**
+     * Method: loadPlayer()
+     * Loads player information
+     * @param Player File object
+     * @return nothing
+     */
 	public void loadPlayer(File Player)
 	{
 		// loads a file formatted with player health
@@ -131,6 +175,12 @@ public class ObjectHolder
 		}
 	}
 	
+	/**
+     * Method: loadInventory()
+     * Loads inventory information
+     * @param Inventory File object
+     * @return nothing
+     */
 	public void loadInventory(File Inventory)
 	{
 		// loads a file formatted item Ids
@@ -149,6 +199,12 @@ public class ObjectHolder
 		}
 	}
 	
+	/**
+     * Method: loadEquippedItems()
+     * Loads equipped items
+     * @param Equipped File object
+     * @return nothing
+     */
 	public void loadEquippedItems(File Equipped)
 	{
 		// loads a file formatted with item Ids
@@ -174,6 +230,12 @@ public class ObjectHolder
 		}
 	}
 	
+	/**
+     * Method: loadEnemys()
+     * Loads enemy
+     * @param EnemyFile File object
+     * @return nothing
+     */
 	public void loadEnemys(File EnemyFile)
 	{
 		// loads a file formatted like RoomsBEnemy.txt
@@ -197,8 +259,7 @@ public class ObjectHolder
 				}
 				catch (Exception E)
 				{
-					System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-							+ "I can fix it in like 30 minutes. Include RoomsBenemy or Load in the text message");
+					System.out.println("Error");
 				}
 			}
 			buff.close();
