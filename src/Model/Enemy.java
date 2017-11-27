@@ -1,5 +1,7 @@
-import java.util.*;
+package Model;
 
+import java.util.*;
+import View.View;
 /**
  * Class: Enemy
  * @author Team Hydra

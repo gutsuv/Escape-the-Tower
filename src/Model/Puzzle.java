@@ -1,4 +1,6 @@
+package Model;
 
+import View.View;
 /**
  * Class: Puzzle
  * @author Team Hydra

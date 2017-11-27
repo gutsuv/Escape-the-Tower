@@ -1,7 +1,9 @@
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.*;
-
+import View.View;
+import Model.*;
+import Controller.*;
 /**
  * Class: Initializer
  * @author Team Hydra
@@ -11,7 +13,7 @@ import java.util.*;
  * 
  * This class initializes all of the objects
  * 
- * Purpose: – Stores the object instantiations
+ * Purpose: â€“ Stores the object instantiations
  */
 public class Initializer
 {
@@ -45,9 +47,9 @@ public class Initializer
 			view.line(60);
 			view.line(60);
 			view.print( 
-					"	╔═╗┌─┐┌─┐┌─┐┌─┐┌─┐  ┌┬┐┬ ┬┌─┐  ╔╦╗┌─┐┬ ┬┌─┐┬─┐\r\n" + 
-					"	║╣ └─┐│  ├─┤├─┘├┤    │ ├─┤├┤    ║ │ ││││├┤ ├┬┘\r\n" + 
-					"	╚═╝└─┘└─┘┴ ┴┴  └─┘   ┴ ┴ ┴└─┘   ╩ └─┘└┴┘└─┘┴└─" );
+					"	â•”â•�â•—â”Œâ”€â”�â”Œâ”€â”�â”Œâ”€â”�â”Œâ”€â”�â”Œâ”€â”�  â”Œâ”¬â”�â”¬ â”¬â”Œâ”€â”�  â•”â•¦â•—â”Œâ”€â”�â”¬ â”¬â”Œâ”€â”�â”¬â”€â”�\r\n" + 
+					"	â•‘â•£ â””â”€â”�â”‚  â”œâ”€â”¤â”œâ”€â”˜â”œâ”¤    â”‚ â”œâ”€â”¤â”œâ”¤    â•‘ â”‚ â”‚â”‚â”‚â”‚â”œâ”¤ â”œâ”¬â”˜\r\n" + 
+					"	â•šâ•�â•�â””â”€â”˜â””â”€â”˜â”´ â”´â”´  â””â”€â”˜   â”´ â”´ â”´â””â”€â”˜   â•© â””â”€â”˜â””â”´â”˜â””â”€â”˜â”´â””â”€" );
 			
 			view.print("	  [ 		 New Game 		 ]\n"
 					 + "	  [ 		Load Game 1		 ]\n"

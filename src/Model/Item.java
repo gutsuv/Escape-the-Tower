@@ -1,5 +1,7 @@
-import javafx.scene.control.Button;
+package Model;
 
+import javafx.scene.control.Button;
+import View.View;
 /**
  * Class: Item
  * @author Team Hydra

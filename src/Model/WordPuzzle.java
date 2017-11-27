@@ -1,3 +1,5 @@
+package Model;
+
 /**
  * Class: WordPuzzle
  * @author Team Hydra

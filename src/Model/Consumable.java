@@ -1,3 +1,4 @@
+package Model;
 /**
  * Class: Consumable
  * @author Team Hydra

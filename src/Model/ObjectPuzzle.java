@@ -1,5 +1,7 @@
-import java.util.ArrayList;
+package Model;
 
+import java.util.ArrayList;
+import View.View;
 /**
  * Class: ObjectPuzzle
  * @author Team Hydra
@@ -14,7 +16,7 @@ import java.util.ArrayList;
 public class ObjectPuzzle extends Puzzle
 {
 	int itemId;
-
+	View view;
 	/**
      * Method: ObjectPuzzle()
      * ObjectPuzzle constructor
