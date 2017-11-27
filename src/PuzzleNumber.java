@@ -1,5 +1,16 @@
 import java.util.ArrayList;
 
+/**
+ * Class: PuzzleNumber
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class PuzzleNumber extends Puzzle
 {
 	int answer;
@@ -7,6 +18,12 @@ public class PuzzleNumber extends Puzzle
 	Room lockedRoom;
 	int damage = 5;
 
+	/**
+     * Method: PuzzleNumber()
+     * PuzzleNumber constructor
+     * @param loadedString String representing the string inputs to be parsed
+     * @return nothing
+     */
 	public PuzzleNumber(String loadedString)
 	{
 		// loaded from file
@@ -30,26 +47,57 @@ public class PuzzleNumber extends Puzzle
 		}
 	}
 
+	
+	/**
+     * Method: getRoomId()
+     * Returns room ID
+     * @param none
+     * @return roomId int value representing the room id
+     */
 	public int getRoomId()
 	{
 		return roomId;
 	}
 
+	/**
+     * Method: setRoom()
+     * Sets room lock
+     * @param room Room Object
+     * @return nothing
+     */
 	public void setRoom(Room room)
 	{
 		lockedRoom = room;
 	}
 
+	/**
+     * Method: setLockedRoom()
+     * Sets room lock into ArrayList
+     * @param room Room ArrayList
+     * @return nothing
+     */
 	public void setLockedRoom(ArrayList<Room> rooms)
 	{
 		setRoom(rooms.get(roomId - 1));
 	}
 
+	/**
+     * Method: getDamage()
+     * Returns damage
+     * @param none
+     * @return damage int value representing damage
+     */
 	public int getDamage()
 	{
 		return damage;
 	}
 
+	/**
+     * Method: initialize()
+     * Displays puzzle intro
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void initialize()
 	{
@@ -60,6 +108,12 @@ public class PuzzleNumber extends Puzzle
 				+ " guess the number on his mind.",125);
 	}
 
+	/**
+     * Method: attemptSolve()
+     * Initiates puzzle actions
+     * @param stringAnswer String value representing player answer
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(String stringAnswer)
 	{
@@ -78,6 +132,7 @@ public class PuzzleNumber extends Puzzle
 			solved = true;
 			lockedRoom.setLocked(false);
 			view.print("puzzle solved");
+			
 			if(puzzleId==5)
 			{
 				view.print("Answer to puzzle 01 is 'A horseshoe nail'(copy paste)");
@@ -85,12 +140,23 @@ public class PuzzleNumber extends Puzzle
 		}
 	}
 
+	/**
+     * Method: attemptSolve()
+     * 
+     * @param itemId int value representing item ID
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(int itemId)
 	{
-		// no effect
 	}
 
+	/**
+     * Method: display()
+     * Displays puzzle options
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void display()
 	{
