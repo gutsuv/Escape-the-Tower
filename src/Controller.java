@@ -5,14 +5,14 @@
  * Course: ITEC 3150
  * Written: January 22, 2017
  * 
-<<<<<<< HEAD
+
  * This class – The class receives and handles text input.
  * The text input is read/converted and invokes methods in
  * other classes or displays info
  * 
  * Purpose: – 'Controller' is a core component of the system that
  * is required for class interaction
-=======
+
  * This contains all of the controllers of every feature and relevant values
  * 
  * Purpose: Contains the functionality of all the controllers
@@ -33,8 +33,6 @@ public class Controller
 	ObjectHolder model;
 	View menuView = new View();
 
-<<<<<<< HEAD
-
 	/**
      * Constructor: Controller()
      * [This Method/Contructor serves as the main staging area for commands]
@@ -43,8 +41,6 @@ public class Controller
      * @param main ObjectHolder is the part of the model that holds all of the data.
      * @return nothing
      */
-=======
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
 	public Controller(ObjectHolder main) 
 	{
 		model = main;
@@ -54,20 +50,12 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
      * Method: Controller()
      * [Identical to previous]
      * @param main ObjectHolder is the part of the model that holds all of the data.
      * @param control Scanner is the Scanner used by the class to determine data.
      * @return nothing
      */
-=======
-	 * Method: Controller(ObjectHolder main, Scanner control)
-	 * Controller class constructor, instantiates values
-	 * @param main, control
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
 	public Controller(ObjectHolder main, Scanner control)
 	{
 		model = main;
@@ -78,7 +66,6 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
      * Method: controllerEnemy()
      * [sub-Controller]
      * controllerEnemy displays commands for enemy interaction
@@ -87,13 +74,7 @@ public class Controller
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerEnemy()
-	 * Enemy controller that updates enemy stats
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerEnemy()
 	{
 		while (true)
@@ -110,20 +91,13 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
      * Method: controllerItem()
      * [Receives input and invokes determine based off input]
      * The input should be exit or select an item number
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerItem()
-	 * Item controller that display inventory
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerItem()
 	{
 		while (true)
@@ -136,20 +110,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
 	 *
      * Method: controllerItem()
      * [The method displays commands and invokes another method to determine effect of commands]
      * @param i int value representing the Items location in inventory
      * @return nothing
      */
-=======
-	 * Method: controllerItem(int i)
-	 * Enemy controller that displays item commands
-	 * @param i
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerItem(int i)
 	{
 		model.getUser().getItem(i).displayCommands();
@@ -157,20 +125,13 @@ public class Controller
 	}
 
 	/**
-<<<<<<< HEAD
      * Method: controllerObjectPuzzle()
      * [subController/determine hybrid]
      * handles input for ObjectPuzzles
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerObjectPuzzle()
-	 * Puzzle controller that displays puzzle that has not been solved
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerObjectPuzzle()
 	{
 		String itemNumber;
@@ -200,20 +161,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerPuzzleDebuff()
      * [subController/determine hybrid]
      * handles input for PuzzleDebuffs
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerPuzzleDebuff()
-	 * Puzzle controller that handles the puzzle where the player is poisoned and his stats are affected
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerPuzzleDebuff()
 	{
 		String answer;
@@ -244,20 +199,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerPuzzleNumber()
      * [subController/determine hybrid]
      * handles input for PuzzleNumbers
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerPuzzleNumber()
-	 * Controller for puzzles that involve the use of items
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerPuzzleNumber()
 	{
 		String answer;
@@ -304,20 +253,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerPuzzleRiddle()
      * [subController/determine hybrid]
      * handles input for PuzzleRiddles
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerPuzzleRiddle()
-	 * Controller for puzzles that involve riddles
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerPuzzleRiddle()
 	{
 		String answer;
@@ -345,20 +288,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerDoorPuzzle()
      * [subController/determine hybrid]
      * handles input for DoorPuzzles
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerDoorPuzzle()
-	 * Controller for puzzles that involve a door that is locked
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerDoorPuzzle()
 	{
 		String itemNumber;
@@ -394,20 +331,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerWordPuzzle()
      * [subController/determine hybrid]
      * handles input for PuzzleDebuffs
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerWordPuzzle()
-	 * Controller for puzzles that involve words having to be inputed
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	public void controllerWordPuzzle()
 	{
 		String answer;
@@ -429,19 +360,14 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerStats()
      * [Displays stats]
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerStats()
-	 * Controller that displays the player's stats when requested
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
+
 	private void controllerStats()
 	{
 		String input;
@@ -467,19 +393,13 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerHelp()
      * [Displays Help]
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerHelp()
-	 * Controller that will display a help menu when requested by user
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private void controllerHelp()
 	{
 		String input;
@@ -524,19 +444,13 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: controllerMenu()
      * [Menu Funtions]
      * @param none
      * @return nothing
      */
-=======
-	 * Method: controllerMenu()
-	 * Controller that displays the main menu when requested by user
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private void controllerMenu()
 	{
 		String input;
@@ -627,19 +541,13 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: determine()
      * [The method usually invokes a sub controller]
      * @param input String a command from the main controller
      * @return nothing
      */
-=======
-	 * Method: determine()
-	 * Controller that will dictate what the user's input will initiate
-	 * @param input
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private void determine(String input)
 	{
 		if (input.length() == 1)
@@ -714,19 +622,13 @@ public class Controller
 		}
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: determineItem()
      * [determines funtion from item]
      * @param input String value representing information from controller
      * @return boolean value representing whether it breaks or not
      */
-=======
-	 * Method: determineItem(String input)
-	 * Controller that will retrieve item from inventory based off the number entered by the user 
-	 * @param input
-	 * @return false
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private boolean determineItem(String input)
 	{
 		if (input.matches("[0-9]+"))
@@ -755,20 +657,14 @@ public class Controller
 		return false;
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: determineItem()
      * [Item Funtions]
      * @param input String value representing command from controller
      * @param i int value representing item position in inventory
      * @return boolean value representing whether it breaks or not
      */
-=======
-	 * Method: determineItem(String input, int i)
-	 * Controller that determines what the user does with the item while viewing item
-	 * @param input, i
-	 * @return true
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private boolean determineItem(String input, int i)
 	{
 		try
@@ -826,19 +722,13 @@ public class Controller
 		return false;
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: determineEnemy()
      * [Enemy Commands]
      * @param input String value representing controller command
      * @return boolean value representing whether it breaks or not
      */
-=======
-	 * Method: determineEnemy(String input)
-	 * Controller that determines what the user's input will do and what actions occur during combat
-	 * @param input
-	 * @return false
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private boolean determineEnemy(String input)
 	{
 		if (input.equalsIgnoreCase("exit"))
@@ -912,37 +802,25 @@ public class Controller
 		return false;
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: navigate()
      * [The method attempts to move]
      * @param input String value representing a char to move
      * @return nothing
      */
-=======
-	 * Method: navigate(String input)
-	 * Controller that determines what happens when user inputs a direction
-	 * @param input
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private void navigate(String input) throws Exception
 	{
 		model.navigate(input.charAt(0));
 	}
 	/**
-<<<<<<< HEAD
+
      * Method: pickUpAll()
      * [picks up all items]
      * @param none
      * @return nothing
      */
-=======
-	 * Method: pickUpAll()
-	 * Controller that picks up item that are found in rooms or dropped by enemies 
-	 * @param none
-	 * @return nothing
-	 */	
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+
 	private void pickUpAll()
 	{
 		while (model.getCurrentRoom().getItems().size() > 0)
