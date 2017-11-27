@@ -1,11 +1,28 @@
 import java.util.ArrayList;
 
+/**
+ * Class: DoorPuzzle
+ * @author Team Hydra
+ * @version 1.0
+ * Course: ITEC 3860, Fall 2017
+ * Written: 
+ * 
+ * This class – now describe what the class does 
+ * 
+ * Purpose: – Describe the purpose of this class
+ */
 public class DoorPuzzle extends Puzzle
 {
 	int itemId;
 	int roomId;
 	Room lockedRoom;
 
+	/**
+     * Method: DoorPuzzle()
+     * [What the method does]
+     * @param loadedString String value representing...
+     * @return nothing
+     */
 	public DoorPuzzle(String loadedString)
 	{
 		// loaded from file
@@ -21,40 +38,76 @@ public class DoorPuzzle extends Puzzle
 			puzzleDesc = splitString[4];
 			hint = splitString[5];
 
-		} catch (Exception E)
+		} 
+		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include DoorPuzzle in the text message");
+			System.out.println("Errors");
 		}
 	}
 
+	/**
+     * Method: getRoomId()
+     * [What the method does]
+     * @param none
+     * @return int value representing...
+     */
 	public int getRoomId()
 	{
 		return roomId;
 	}
 
+	/**
+     * Method: setRoom()
+     * [What the method does]
+     * @param room Room object representing...
+     * @return nothing
+     */
 	public void setRoom(Room room)
 	{
 		lockedRoom = room;
 	}
 
+	/**
+     * Method: setLockedRoom()
+     * [What the method does]
+     * @param rooms ArrayList representing...
+     * @return nothing
+     */
 	public void setLockedRoom(ArrayList<Room> rooms)
 	{
 		setRoom(rooms.get(roomId - 1));
 	}
 
+	/**
+     * Method: initialize()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void initialize()
 	{
 		lockedRoom.setLocked(true);
 	}
 
+	/**
+     * Method: attemptSolve()
+     * [What the method does]
+     * @param answer String value representing...
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(String answer)
 	{
 		// no effect
 	}
 
+	/**
+     * Method: attemptSolve()
+     * [What the method does]
+     * @param itemId int value representing...
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(int itemId)
 	{
@@ -71,6 +124,12 @@ public class DoorPuzzle extends Puzzle
 		}
 	}
 
+	/**
+     * Method: display()
+     * [What the method does]
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void display()
 	{
@@ -79,6 +138,12 @@ public class DoorPuzzle extends Puzzle
 		view.printString(puzzleDesc);
 	}
 
+	/**
+     * Method: display()
+     * [What the method does]
+     * @param items ArrayList representing...
+     * @return nothing
+     */
 	public void display(ArrayList<Item> items)
 	{
 		view.line(125);
