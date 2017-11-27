@@ -7,9 +7,12 @@ import java.util.Scanner;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class – The class receives and handles text input.
+ * The text input is read/converted and invokes methods in
+ * other classes or displays info
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – 'Controller' is a core component of the system that
+ * is required for class interaction
  */
 public class Controller
 {
@@ -19,9 +22,11 @@ public class Controller
 	View menuView = new View();
 
 	/**
-     * Method: Controller()
-     * [What the method does]
-     * @param main ObjectHolder representing...
+     * Constructor: Controller()
+     * [This Method/Contructor serves as the main staging area for commands]
+     * This method is used as a constructor, so it autorun on activation.
+     * It invokes the determine method which usually invokes sub controllers
+     * @param main ObjectHolder is the part of the model that holds all of the data.
      * @return nothing
      */
 	public Controller(ObjectHolder main) 
@@ -35,9 +40,9 @@ public class Controller
 
 	/**
      * Method: Controller()
-     * [What the method does]
-     * @param main ObjectHolder representing...
-     * @param control Scanner representing...
+     * [Identical to previous]
+     * @param main ObjectHolder is the part of the model that holds all of the data.
+     * @param control Scanner is the Scanner used by the class to determine data.
      * @return nothing
      */
 	public Controller(ObjectHolder main, Scanner control)
@@ -52,7 +57,10 @@ public class Controller
 	
 	/**
      * Method: controllerEnemy()
-     * [What the method does]
+     * [sub-Controller]
+     * controllerEnemy displays commands for enemy interaction
+     * it invokes determineEnemy to do commands and breaks depending on input
+     * after break, it returns to main controller
      * @param none
      * @return nothing
      */
@@ -74,7 +82,8 @@ public class Controller
 
 	/**
      * Method: controllerItem()
-     * [What the method does]
+     * [Receives input and invokes determine based off input]
+     * The input should be exit or select an item number
      * @param none
      * @return nothing
      */
@@ -92,8 +101,8 @@ public class Controller
 
 	/**
      * Method: controllerItem()
-     * [What the method does]
-     * @param i int value representing...
+     * [The method displays commands and invokes another method to determine effect of commands]
+     * @param i int value representing the Items location in inventory
      * @return nothing
      */
 	public void controllerItem(int i)
@@ -104,7 +113,8 @@ public class Controller
 
 	/**
      * Method: controllerObjectPuzzle()
-     * [What the method does]
+     * [subController/determine hybrid]
+     * handles input for ObjectPuzzles
      * @param none
      * @return nothing
      */
@@ -139,7 +149,8 @@ public class Controller
 
 	/**
      * Method: controllerPuzzleDebuff()
-     * [What the method does]
+     * [subController/determine hybrid]
+     * handles input for PuzzleDebuffs
      * @param none
      * @return nothing
      */
@@ -175,7 +186,8 @@ public class Controller
 
 	/**
      * Method: controllerPuzzleNumber()
-     * [What the method does]
+     * [subController/determine hybrid]
+     * handles input for PuzzleNumbers
      * @param none
      * @return nothing
      */
@@ -227,7 +239,8 @@ public class Controller
 
 	/**
      * Method: controllerPuzzleRiddle()
-     * [What the method does]
+     * [subController/determine hybrid]
+     * handles input for PuzzleRiddles
      * @param none
      * @return nothing
      */
@@ -260,7 +273,8 @@ public class Controller
 
 	/**
      * Method: controllerDoorPuzzle()
-     * [What the method does]
+     * [subController/determine hybrid]
+     * handles input for DoorPuzzles
      * @param none
      * @return nothing
      */
@@ -301,7 +315,8 @@ public class Controller
 
 	/**
      * Method: controllerWordPuzzle()
-     * [What the method does]
+     * [subController/determine hybrid]
+     * handles input for PuzzleDebuffs
      * @param none
      * @return nothing
      */
@@ -328,7 +343,7 @@ public class Controller
 	
 	/**
      * Method: controllerStats()
-     * [What the method does]
+     * [Displays stats]
      * @param none
      * @return nothing
      */
@@ -359,7 +374,7 @@ public class Controller
 	
 	/**
      * Method: controllerHelp()
-     * [What the method does]
+     * [Displays Help]
      * @param none
      * @return nothing
      */
@@ -409,7 +424,7 @@ public class Controller
 	
 	/**
      * Method: controllerMenu()
-     * [What the method does]
+     * [Menu Funtions]
      * @param none
      * @return nothing
      */
@@ -505,8 +520,8 @@ public class Controller
 
 	/**
      * Method: determine()
-     * [What the method does]
-     * @param input String value representing...
+     * [The method usually invokes a sub controller]
+     * @param input String a command from the main controller
      * @return nothing
      */
 	private void determine(String input)
@@ -585,9 +600,9 @@ public class Controller
 
 	/**
      * Method: determineItem()
-     * [What the method does]
-     * @param input String value representing...
-     * @return boolean value representing...
+     * [determines funtion from item]
+     * @param input String value representing information from controller
+     * @return boolean value representing whether it breaks or not
      */
 	private boolean determineItem(String input)
 	{
@@ -619,10 +634,10 @@ public class Controller
 
 	/**
      * Method: determineItem()
-     * [What the method does]
-     * @param input String value representing...
-     * @param i int value representing...
-     * @return boolean value representing...
+     * [Item Funtions]
+     * @param input String value representing command from controller
+     * @param i int value representing item position in inventory
+     * @return boolean value representing whether it breaks or not
      */
 	private boolean determineItem(String input, int i)
 	{
@@ -683,9 +698,9 @@ public class Controller
 
 	/**
      * Method: determineEnemy()
-     * [What the method does]
-     * @param input String value representing...
-     * @return boolean value representing...
+     * [Enemy Commands]
+     * @param input String value representing controller command
+     * @return boolean value representing whether it breaks or not
      */
 	private boolean determineEnemy(String input)
 	{
@@ -762,8 +777,8 @@ public class Controller
 
 	/**
      * Method: navigate()
-     * [What the method does]
-     * @param input String value representing...
+     * [The method attempts to move]
+     * @param input String value representing a char to move
      * @return nothing
      */
 	private void navigate(String input) throws Exception
@@ -773,7 +788,7 @@ public class Controller
 
 	/**
      * Method: pickUpAll()
-     * [What the method does]
+     * [picks up all items]
      * @param none
      * @return nothing
      */
