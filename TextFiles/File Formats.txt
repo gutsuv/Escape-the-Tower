@@ -42,7 +42,7 @@ int roomId, String roomDescription, int exitRoomId, char direction, String descr
 Permanent room features. This file does not change
 unless rooms start moving or some nonsense
 
-RoomsB
+RoomsB(Obsolete)(Deleted)
 int roomId, int puzzleId, int enemyId, int itemId
 Rooms B is default thing that are initated on new game.
 Load Game will use a different file formated the same way.
@@ -50,12 +50,19 @@ There is a good chance room ID will not be used in RoomsB
 file but it is left there for clarity. 
 probably won't use
 
-I have new files to keep track(RoomsB*)
+I have new files to keep track(RoomsB*)(upgrade)
+Replacement files are easy to use and have the intended purpose of 
+cloning information loaded from previous files into rooms
+They are formated the same way as save files
 
 RoomsBEnemy
 int enemyId
 contains enemy ids for each floor
 
 RoomsBItem
-int ItemId
-contains Item ids for each floor
+int itemId
+contains item ids for each floor
+
+RoomsBPuzzle
+int puzzleId
+contains puzzle ids for each floor
