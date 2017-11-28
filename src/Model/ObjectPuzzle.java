@@ -113,6 +113,7 @@ public class ObjectPuzzle extends Puzzle
      */
 	public void display(ArrayList<Item> items)
 	{
+		try {
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
@@ -123,5 +124,21 @@ public class ObjectPuzzle extends Puzzle
 		}
 		view.print("hint:");
 		view.print("exit:");
+		}
+		catch(NullPointerException E)
+		//unknown error fix
+		{
+			view = new View();
+			view.line(125);
+			view.print(puzzleName);
+			view.printString(puzzleDesc);
+			view.print("---secect item---");
+			for (int i = 0; i < items.size(); i++)
+			{
+				view.print(i + ": " + items.get(i));
+			}
+			view.print("hint:");
+			view.print("exit:");
+		}
 	}
 }

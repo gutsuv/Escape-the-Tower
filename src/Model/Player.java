@@ -136,6 +136,10 @@ public class Player extends Character
 	public void updateMaxHealth(int i)
 	{
 		maxHealth = maxHealth + i;
+		if(health > maxHealth)
+		{
+			health = maxHealth;
+		}
 	}
 	
 	/**
@@ -147,6 +151,10 @@ public class Player extends Character
 	public void setMaxHealth(int i)
 	{
 		maxHealth = i;
+		if(health > maxHealth)
+		{
+			health = maxHealth;
+		}
 	}
 	
 	/**

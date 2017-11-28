@@ -683,6 +683,8 @@ public class Controller
 					model.getUser().receiveDamage(-((Consumable) model.getUser().getItem(i)).getHealthEffect());
 					model.getUser().updateMaxHealth(-((Consumable) model.getUser().getItem(i)).getMaxHealthEffect());
 					model.getUser().drop(i);
+					menuView.line(125);
+					menuView.print("Health: " + model.getUser().getHealth() + "/" + model.getUser().getMaxHealth());
 				}
 				if (model.getUser().getItem(i) instanceof PuzzleItem)
 				{
