@@ -9,9 +9,11 @@ import View.View;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class – The player inherits most it's functionality from Character but it has different rules and 
+ * includes Inventory functions that interact with items the player owns.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – Player Class is used to represent the user's character and progress 
+ *  
  */
 public class Player extends Character
 {
