@@ -570,14 +570,7 @@ public class Controller
 	{
 		if (input.length() == 1)
 		{
-			try
-			{
 				navigate(input);
-			} 
-			catch (Exception E)
-			{
-				
-			}
 		} 
 		else if (input.equalsIgnoreCase("pick up") || input.equalsIgnoreCase("pickup"))
 		{
@@ -830,7 +823,7 @@ public class Controller
      * @return nothing
      */
 
-	private void navigate(String input) throws Exception
+	private void navigate(String input)
 	{
 		model.navigate(input.charAt(0));
 	}

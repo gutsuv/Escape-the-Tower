@@ -616,7 +616,7 @@ public class ObjectHolder
      * @param direction chat value representing direction
      * @return nothing
      */
-	public void navigate(char direction) throws Exception
+	public void navigate(char direction)
 	{
 		int i = currentRoom.getDirections().length;
 		while (i > 0)
@@ -653,7 +653,7 @@ public class ObjectHolder
      * @param i int value representing current room
      * @return nothing
      */
-	public void setCurrentRoom(int i) throws Exception
+	public void setCurrentRoom(int i)
 	{
 		previousRoom = currentRoom;
 		currentRoom = rooms.get(i - 1);
@@ -679,7 +679,14 @@ public class ObjectHolder
 			//view.printString("", 125);
 			int exit = 1/0;
 		}
+		try
+		{
 		currentRoom.display();
+		}
+		catch(Exception E)
+		{
+			
+		}
 	}
 
 	/**
