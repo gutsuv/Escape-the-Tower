@@ -6,9 +6,9 @@ package Model;
  * Course: ITEC 3150
  * Written: November 22, 2017
  * 
- * This class sets the effects consumable items that are found in the game
+ * This class sets the effects of consumable items that are found in the game.
  * 
- * Purpose: Contains the attributes of consumable items and their commands
+ * Purpose: Contains the attributes of consumable items and their commands.
  */
 public class Consumable extends Item
 {
@@ -40,8 +40,7 @@ public class Consumable extends Item
 		} 
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include Consumable in the text message");
+			System.out.println("Error");
 		}
 	}
 	
@@ -55,6 +54,7 @@ public class Consumable extends Item
 	{
 		return healthEffect;
 	}
+	
 	/**
      * Method: getMaxHealthEffect()
      * Retrieves consumable items's max health effect
@@ -65,12 +65,24 @@ public class Consumable extends Item
 	{
 		return -maxHealthEffect;
 	}
-
+	
+	/**
+     * Method: use()
+     * 
+     * @param none
+     * @return nothing 
+     */
 	@Override
 	public void use()
 	{
 	}
 
+	/**
+     * Method: drop()
+     * 
+     * @param none
+     * @return nothing 
+     */
 	@Override
 	public void drop()
 	{
@@ -87,6 +99,7 @@ public class Consumable extends Item
 	{
 		view.printString((healthEffect + ": " + itemDescLong), 125);
 	}
+	
 	/**
      * Method: getDisplay()
      * Retrieves consumable items's display prompt

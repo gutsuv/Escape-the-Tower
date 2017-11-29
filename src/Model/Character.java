@@ -7,9 +7,9 @@ package Model;
  * Course: ITEC 3150
  * Written: January 22, 2017
  * 
- * This class stores and initializes the player's personal statistics
+ * This class stores and initializes the player's personal statistics.
  * 
- * Purpose: Contains the attributes of the player's health, attack, defense, accuracy, and whether the player is alive
+ * Purpose: Contains the attributes of the player's health, attack, defense, accuracy, and whether the player is alive.
  */
 public abstract class Character
 {
@@ -24,10 +24,9 @@ public abstract class Character
 	/**
      * Method: receiveDamage(int damage)
      * Displays the action of a the player receiving damage
-     * @param damage
+     * @param damage int value
      * @return nothing
      */
-	
 	public void receiveDamage(int damage)
 	{
 		health = health - damage;
@@ -42,7 +41,6 @@ public abstract class Character
 			alive = false;
 		}
 	}
-
 
 	/**
      * Method: getHealth()
@@ -65,6 +63,7 @@ public abstract class Character
 	{
 		return maxHealth;
 	}
+	
 	/**
      * Method: getDefense()
      * Retrieves the player's current defense stat
@@ -75,6 +74,7 @@ public abstract class Character
 	{
 		return defense;
 	}
+	
 	/**
      * Method: isAlive()
      * Retrieves weather the player is alive or dead
@@ -85,6 +85,7 @@ public abstract class Character
 	{
 		return alive;
 	}
+	
 	/**
      * Method: setAlive()
      * Instantiates whether the player is dead or alive
@@ -96,6 +97,12 @@ public abstract class Character
 		this.alive = alive;
 	}
 
+	/**
+     * Method: toString()
+     * 
+     * @param none
+     * @return blank
+     */	
 	@Override
 	public String toString()
 	{

@@ -11,9 +11,9 @@ import Controller.Controller;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class initializes all of the objects
+ * This class initializes all of the objects.
  * 
- * Purpose: Stores the object instantiations
+ * Purpose: Stores the object instantiations.
  */
 public class Initializer
 {
