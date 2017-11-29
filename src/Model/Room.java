@@ -288,7 +288,7 @@ public class Room
      */
 	public void enemyDeathEffects()
 	{
-		view.print("enemy has died");
+		view.print("Enemy has died");
 		for (int i = 0; i < enemy.getItems().size(); i++)
 		{
 			addItem(enemy.getItems().get(i));
@@ -357,7 +357,6 @@ public class Room
 		view.line();
 		view.print("=======[Commands]========");
 		view.print("Stats:");
-		view.print("Help:");
 		view.print("Menu:");
 		view.print("Inventory:");
 		if (items.size() > 0)

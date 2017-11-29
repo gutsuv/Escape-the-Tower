@@ -110,9 +110,9 @@ public class Consumable extends Item
 	{
 		view.line(125);
 		view.print(itemName);
-		view.print("use:");
-		view.print("drop:");
-		view.print("examine:");
-		view.print("exit:");
+		view.print("Use:");
+		view.print("Drop:");
+		view.print("Examine:");
+		view.print("Exit:");
 	}
 }

@@ -151,12 +151,12 @@ public class DoorPuzzle extends Puzzle
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
-		view.print("---secect item---");
+		view.print("---[Select Item]---");
 		for (int i = 0; i < items.size(); i++)
 		{
 			view.print(i + ": " + items.get(i));
 		}
-		view.print("hint:");
-		view.print("exit:");
+		view.print("Hint:");
+		view.print("Exit:");
 	}
 }

@@ -124,19 +124,19 @@ public class PuzzleNumber extends Puzzle
 		
 		if (guess > answer)
 		{
-			view.print("wrong answer: too high");
+			view.print("Wrong answer: too high");
 		}
 		
 		else if (guess < answer)
 		{
-			view.print("wrong answer: too low");
+			view.print("Wrong answer: too low");
 		}
 		
 		else
 		{
 			solved = true;
 			lockedRoom.setLocked(false);
-			view.print("puzzle solved");
+			view.print("Puzzle solved");
 			
 			if(puzzleId == 5)
 			{
@@ -168,8 +168,8 @@ public class PuzzleNumber extends Puzzle
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
-		view.print("guess a number:");
-		view.print("hint:");
-		view.print("exit:");
+		view.print("Guess a number:");
+		view.print("Hint:");
+		view.print("Exit:");
 	}
 }

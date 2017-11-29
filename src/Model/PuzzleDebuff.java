@@ -128,7 +128,7 @@ public class PuzzleDebuff extends Puzzle
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
-		view.print("hint:");
-		view.print("exit:");
+		view.print("Hint:");
+		view.print("Exit:");
 	}
 }

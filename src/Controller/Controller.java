@@ -428,6 +428,8 @@ public class Controller
 			menuView.print("To save progress (whilst in main menu), enter 'save one/save two/save three'");
 			menuView.print("To leave game (whilst in main menu), enter 'leave game'");
 			menuView.print("To exit main menu (whilst in main menu), enter 'exit'");
+			menuView.print("");
+			menuView.print("Game developed by Team Hydra.");
 			menuView.print("Exit:");
 			input = control.nextLine();
 			if(input.equalsIgnoreCase("exit"))
@@ -458,6 +460,7 @@ public class Controller
 		while(true)
 		{
 			menuView.line(125);
+			menuView.print("Help Menu:");
 			//menuView.print("New Game:");
 			menuView.print("Save One:");
 			menuView.print("Save Two:");
@@ -480,14 +483,10 @@ public class Controller
 				break;
 			}
 			
-			if(input.equalsIgnoreCase("New Game"))
+			if (input.equalsIgnoreCase("help") || input.equalsIgnoreCase("help menu"))
 			{
+				controllerHelp();
 			}
-			
-			if(input.equalsIgnoreCase("Load Game"))
-			{
-			}
-			
 			if(input.equalsIgnoreCase("Save One"))
 			{
 				String number = "One";
@@ -605,10 +604,6 @@ public class Controller
 		{
 			controllerStats();
 		} 
-		else if (input.equalsIgnoreCase("help"))
-		{
-			controllerHelp();
-		}
 		else if (input.equalsIgnoreCase("menu"))
 		{
 			controllerMenu();
@@ -755,6 +750,7 @@ public class Controller
 			}
 			if (!model.getCurrentRoom().getEnemy().isAlive())
 			{
+				menuView.print("Player attack: " + i + " damage");
 				model.getCurrentRoom().enemyDeathEffects();
 				return true;
 			} 

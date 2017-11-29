@@ -76,7 +76,7 @@ public class WordPuzzle extends Puzzle
 	@Override
 	public void attemptSolve(String answer)
 	{
-		if (this.answer.matches(answer))
+		if (this.answer.equalsIgnoreCase(answer))
 		{
 			solved = true;
 			view.line(125);
@@ -86,7 +86,7 @@ public class WordPuzzle extends Puzzle
 		else
 		{
 			view.line(125);
-			view.print("incorrect solution");
+			view.print("Incorrect solution");
 		}
 	}
 

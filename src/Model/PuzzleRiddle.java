@@ -140,8 +140,8 @@ public class PuzzleRiddle extends Puzzle
 		view.line(125);
 		view.print(puzzleName);
 		view.printString(puzzleDesc);
-		view.print("hint: ");
-		view.print("attempt to answer puzzle:");
-		view.print("exit:");
+		view.print("Hint: ");
+		view.print("Attempt to answer puzzle:");
+		view.print("Exit:");
 	}
 }

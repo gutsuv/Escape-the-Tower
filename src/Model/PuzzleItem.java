@@ -115,11 +115,11 @@ public class PuzzleItem extends Item
 		
 		if(itemId == 102)
 		{
-			view.print("use");
+			view.print("Use");
 		}
 		
-		view.print("drop:");
-		view.print("examine:");
-		view.print("exit:");
+		view.print("Drop:");
+		view.print("Examine:");
+		view.print("Exit:");
 	}
 }
