@@ -7,13 +7,12 @@ import View.View;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 20
  * 
  * This class – The player inherits most it's functionality from Character but it has different rules and 
  * includes Inventory functions that interact with items the player owns.
  * 
- * Purpose: – Player Class is used to represent the user's character and progress 
- *  
+ * Purpose: Used to represent the user's character and progress.
  */
 public class Player extends Character
 {
@@ -112,7 +111,7 @@ public class Player extends Character
 
 	/**
      * Method: dealDamage()
-     * Updates player stats
+     * Details damage dealt
      * @param none
      * @return int value representing damage
      */
@@ -160,9 +159,9 @@ public class Player extends Character
 	}
 	
 	/**
-     * Method: setMaxHealth()
-     * Sets player max health
-     * @param i int value representing max health
+     * Method: setHealth()
+     * Sets player health
+     * @param i int value representing health
      * @return nothing
      */
 	public void setHealth(int i)
@@ -219,7 +218,7 @@ public class Player extends Character
 	/**
      * Method: getItem()
      * Getter for item
-     * @param none
+     * @param i int value representing item
      * @return inventory.get(i)
      */
 	public Item getItem(int i)
