@@ -15,11 +15,23 @@ import java.util.ArrayList;
  */
 public class View<e>
 {
+	/**
+     * Method: line()
+     * Println method
+     * @param none
+     * @return nothing
+     */
 	public void line()
 	{
 		System.out.println();
 	}
 
+	/**
+     * Method: line()
+     * Print method
+     * @param i int value
+     * @return nothing
+     */
 	public void line(int i)
 	{
 		while (i > 0)
@@ -30,11 +42,24 @@ public class View<e>
 		line();
 	}
 
+	/**
+     * Method: printString()
+     * Println method for a string
+     * @param a String value
+     * @return nothing
+     */
 	public void printString(String a)
 	{
 		System.out.println(a);
 	}
 
+	/**
+     * Method: printString()
+     * Println method
+     * @param a String value
+     * @param i int value
+     * @return nothing
+     */
 	public void printString(String a, int i)
 	{
 		int j = 0, k = 0, m = a.length();
@@ -54,11 +79,24 @@ public class View<e>
 		System.out.println();
 	}
 
+	/**
+     * Method: printStringO()
+     * Print method for object
+     * @param o Object object
+     * @param i int value
+     * @return nothing
+     */
 	public void printStringO(Object o, int i)
 	{
 		printString(o.toString(), i);
 	}
 
+	/**
+     * Method: print()
+     * Println method for a string array
+     * @param a String array
+     * @return nothing
+     */
 	public void print(String[] a)
 	{
 		int i = a.length;
@@ -69,6 +107,12 @@ public class View<e>
 		}
 	}
 
+	/**
+     * Method: print()
+     * Println method for object
+     * @param o Object object
+     * @return nothing
+     */
 	public void print(Object o)
 	{
 		if (o == null)
@@ -90,6 +134,13 @@ public class View<e>
 		System.out.println(o);
 	}
 
+	/**
+     * Method: printStrO()
+     * Println method 
+     * @param o Object object
+     * @param i int value
+     * @return nothing
+     */
 	public void printStrO(Object o, int j)
 	{
 		if (o == null)
@@ -111,6 +162,12 @@ public class View<e>
 		printStringO(o, j);
 	}
 
+	/**
+     * Method: print()
+     * Println method for object array
+     * @param o Object array
+     * @return nothing
+     */
 	public void print(Object[] o)
 	{
 		int i = o.length;
@@ -121,12 +178,27 @@ public class View<e>
 		}
 	}
 
+	/**
+     * Method: print()
+     * Println method
+     * @param o Object 
+     * @param e Object 
+     * @return nothing
+     */
 	public void print(Object o, Object e)
 	{
 		System.out.print(o);
 		System.out.println(": " + e);
 	}
 
+	/**
+     * Method: printString()
+     * Print String method
+     * @param o Object 
+     * @param e Object 
+     * @param i int array
+     * @return nothing
+     */
 	public void printString(Object o, Object e, int i)
 	{
 		printString((o.toString() + ": " + e.toString()), i);
