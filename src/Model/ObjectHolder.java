@@ -676,7 +676,7 @@ public class ObjectHolder
 			view.print("Game Over");
 			view.print("You escaped the tower");
 			view.line();
-			view.printString("", 125);
+			//view.printString("", 125);
 			int exit = 1/0;
 		}
 		currentRoom.display();
