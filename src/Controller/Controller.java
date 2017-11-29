@@ -410,6 +410,7 @@ public class Controller
 		while(true)
 		{
 			menuView.line(125);
+			menuView.print("This is a text based game. All commands are executed through text input.");
 			menuView.print("To view your stats (health, min & max attack, defense, accuracy, equipped items), enter 'stats' ");
 			menuView.print("To view your inventory (items tht have been picked up), enter 'inventory/inv' ");
 			menuView.print("To navigate (corresponding letters or numbers near descriptions), enter 'n, s, w, e, 1, 2, 3, 4, 5, etc.'");
@@ -800,7 +801,7 @@ public class Controller
 				}
 			}
 		} 
-		else if (input.equalsIgnoreCase("inventory"))
+		else if (input.equalsIgnoreCase("inventory") || input.equalsIgnoreCase("inventory"))
 		{
 			controllerItem();
 		}
