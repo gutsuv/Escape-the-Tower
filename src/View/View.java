@@ -136,7 +136,7 @@ public class View<e>
 
 	/**
      * Method: printStrO()
-     * Println method 
+     * Print method 
      * @param o Object object
      * @param i int value
      * @return nothing
