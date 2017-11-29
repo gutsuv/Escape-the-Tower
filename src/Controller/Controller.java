@@ -198,11 +198,15 @@ public class Controller
 				((PuzzleDebuff) model.getCurrentRoom().getPuzzle()).printPoison();
 				model.getUser().setPoisoned(true);
 				
-				menuView.line(125);
 				menuView.line();
 				menuView.line();
-				menuView.print("Game Over: You drank too much poison");
 				menuView.line();
+				menuView.print("	|-----------------------------------|");
+				menuView.print("	|      You drank poison. Again.     |");
+				menuView.print("	|            Game Over.             |");
+				menuView.print("	|-----------------------------------|");
+				menuView.line();
+				menuView.print("	      Back to the main menu...");
 				menuView.line();
 				int exit = 1/0;
 				
@@ -247,12 +251,12 @@ public class Controller
 						menuView.line();
 						menuView.line();
 						menuView.line();
+						menuView.print("	|-----------------------------------|");
+						menuView.print("	|    Boom. You lack quick maths.    |");
+						menuView.print("	|            Game Over.             |");
+						menuView.print("	|-----------------------------------|");
 						menuView.line();
-						menuView.print("player died");
-						menuView.print("Game Over.");
-						menuView.line();
-						menuView.line();
-						menuView.line();
+						menuView.print("	      Back to the main menu...");
 						menuView.line();
 						int exit = 1/0;
 					}
@@ -799,19 +803,19 @@ public class Controller
 						menuView.line();
 						menuView.line();
 						menuView.line();
+						menuView.print("	|-----------------------------------|");
+						menuView.print("	| You were no match for your enemy. |");
+						menuView.print("	|            Game Over.             |");
+						menuView.print("	|-----------------------------------|");
 						menuView.line();
-						menuView.print("player died");
-						menuView.print("Game Over");
-						menuView.line();
-						menuView.line();
-						menuView.line();
+						menuView.print("	      Back to the main menu...");
 						menuView.line();
 						int exit = 1/0;
 					}
 				}
 			}
 		} 
-		else if (input.equalsIgnoreCase("inventory") || input.equalsIgnoreCase("inventory"))
+		else if (input.equalsIgnoreCase("inventory") || input.equalsIgnoreCase("inv"))
 		{
 			controllerItem();
 		}
