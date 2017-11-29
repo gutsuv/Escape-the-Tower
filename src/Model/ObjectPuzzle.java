@@ -7,16 +7,17 @@ import View.View;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 24
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of object related puzzles in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create object related puzzles.
  */
 public class ObjectPuzzle extends Puzzle
 {
 	int itemId;
 	View view;
+	
 	/**
      * Method: ObjectPuzzle()
      * ObjectPuzzle constructor
@@ -52,7 +53,6 @@ public class ObjectPuzzle extends Puzzle
 	@Override
 	public void initialize()
 	{
-		
 	}
 
 	/**
@@ -64,7 +64,6 @@ public class ObjectPuzzle extends Puzzle
 	@Override
 	public void attemptSolve(String answer)
 	{
-		// no effect
 	}
 
 	/**
@@ -81,8 +80,8 @@ public class ObjectPuzzle extends Puzzle
 			view.line(125);
 			view.print("Puzzle passed");
 			solved = true;
-			// the only puzzle of this type is fire
 		}
+		
 		else
 		{
 			view.line(125);
@@ -113,30 +112,35 @@ public class ObjectPuzzle extends Puzzle
      */
 	public void display(ArrayList<Item> items)
 	{
-		try {
-		view.line(125);
-		view.print(puzzleName);
-		view.printString(puzzleDesc);
-		view.print("---secect item---");
-		for (int i = 0; i < items.size(); i++)
+		try 
 		{
-			view.print(i + ": " + items.get(i));
+			view.line(125);
+			view.print(puzzleName);
+			view.printString(puzzleDesc);
+			view.print("---select item---");
+			
+			for (int i = 0; i < items.size(); i++)
+			{
+				view.print(i + ": " + items.get(i));
+			}
+			
+			view.print("hint:");
+			view.print("exit:");
 		}
-		view.print("hint:");
-		view.print("exit:");
-		}
+		
 		catch(NullPointerException E)
-		//unknown error fix
 		{
 			view = new View();
 			view.line(125);
 			view.print(puzzleName);
 			view.printString(puzzleDesc);
-			view.print("---secect item---");
+			view.print("---select item---");
+			
 			for (int i = 0; i < items.size(); i++)
 			{
 				view.print(i + ": " + items.get(i));
 			}
+			
 			view.print("hint:");
 			view.print("exit:");
 		}
