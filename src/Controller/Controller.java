@@ -7,22 +7,14 @@ package Controller;
  * Course: ITEC 3150
  * Written: January 22, 2017
  * 
-
- * This class – The class receives and handles text input.
- * The text input is read/converted and invokes methods in
- * other classes or displays info
+ * This class receives user inputs and handles data manipulation.
  * 
- * Purpose: – 'Controller' is a core component of the system that
- * is required for class interaction
-
- * This contains all of the controllers of every feature and relevant values
- * 
- * Purpose: Contains the functionality of all the controllers
->>>>>>> e3d668e97eb8abd59096e1cc0cf78b08365413c3
+ * Purpose: To control the flow of information between the user and the model.
  */
 import java.util.Scanner;
 import View.*;
 import Model.*;
+
 /**
  * Method: Controller()
  * Controller class constructor, holds values
@@ -39,7 +31,6 @@ public class Controller
 	/**
      * Constructor: Controller()
      * [This Method/Contructor serves as the main staging area for commands]
-     * This method is used as a constructor, so it autorun on activation.
      * It invokes the determine method which usually invokes sub controllers
      * @param main ObjectHolder is the part of the model that holds all of the data.
      * @return nothing
@@ -52,6 +43,7 @@ public class Controller
 			determine(control.nextLine());
 		}
 	}
+	
 	/**
      * Method: Controller()
      * [Identical to previous]
@@ -68,6 +60,7 @@ public class Controller
 			determine(control.nextLine());
 		}
 	}
+	
 	/**
      * Method: controllerEnemy()
      * [sub-Controller]
@@ -93,6 +86,7 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
      * Method: controllerItem()
      * [Receives input and invokes determine based off input]
@@ -112,15 +106,13 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
-	 *
      * Method: controllerItem()
      * [The method displays commands and invokes another method to determine effect of commands]
      * @param i int value representing the Items location in inventory
      * @return nothing
      */
-
 	public void controllerItem(int i)
 	{
 		model.getUser().getItem(i).displayCommands();
@@ -134,7 +126,6 @@ public class Controller
      * @param none
      * @return nothing
      */
-
 	public void controllerObjectPuzzle()
 	{
 		String itemNumber;
@@ -163,15 +154,14 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerPuzzleDebuff()
      * [subController/determine hybrid]
      * handles input for PuzzleDebuffs
      * @param none
      * @return nothing
      */
-
 	public void controllerPuzzleDebuff()
 	{
 		String answer;
@@ -215,15 +205,14 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerPuzzleNumber()
      * [subController/determine hybrid]
      * handles input for PuzzleNumbers
      * @param none
      * @return nothing
      */
-
 	public void controllerPuzzleNumber()
 	{
 		String answer;
@@ -269,15 +258,14 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerPuzzleRiddle()
      * [subController/determine hybrid]
      * handles input for PuzzleRiddles
      * @param none
      * @return nothing
      */
-
 	public void controllerPuzzleRiddle()
 	{
 		String answer;
@@ -304,15 +292,14 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerDoorPuzzle()
      * [subController/determine hybrid]
      * handles input for DoorPuzzles
      * @param none
      * @return nothing
      */
-
 	public void controllerDoorPuzzle()
 	{
 		String itemNumber;
@@ -347,15 +334,14 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerWordPuzzle()
      * [subController/determine hybrid]
      * handles input for PuzzleDebuffs
      * @param none
      * @return nothing
      */
-
 	public void controllerWordPuzzle()
 	{
 		String answer;
@@ -376,15 +362,13 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerStats()
      * [Displays stats]
      * @param none
      * @return nothing
      */
-
-
 	private void controllerStats()
 	{
 		String input;
@@ -409,14 +393,13 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerHelp()
      * [Displays Help]
      * @param none
      * @return nothing
      */
-
 	private void controllerHelp()
 	{
 		String input;
@@ -461,14 +444,13 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: controllerMenu()
      * [Menu Funtions]
      * @param none
      * @return nothing
      */
-
 	private void controllerMenu()
 	{
 		String input;
@@ -497,14 +479,15 @@ public class Controller
 				}
 				break;
 			}
+			
 			if(input.equalsIgnoreCase("New Game"))
 			{
-				// no code. It's done from main menu
 			}
+			
 			if(input.equalsIgnoreCase("Load Game"))
 			{
-				// no code. It's done from main menu
 			}
+			
 			if(input.equalsIgnoreCase("Save One"))
 			{
 				String number = "One";
@@ -558,14 +541,13 @@ public class Controller
 			}
 		}
 	}
+	
 	/**
-
      * Method: determine()
      * [The method usually invokes a sub controller]
      * @param input String a command from the main controller
      * @return nothing
      */
-
 	private void determine(String input)
 	{
 		if (input.length() == 1)
@@ -632,14 +614,13 @@ public class Controller
 			controllerMenu();
 		}
 	}
+	
 	/**
-
      * Method: determineItem()
-     * [determines funtion from item]
+     * [determines function from item]
      * @param input String value representing information from controller
      * @return boolean value representing whether it breaks or not
      */
-
 	private boolean determineItem(String input)
 	{
 		if (input.matches("[0-9]+"))
@@ -667,15 +648,14 @@ public class Controller
 		}
 		return false;
 	}
+	
 	/**
-
      * Method: determineItem()
-     * [Item Funtions]
+     * [Item Functions]
      * @param input String value representing command from controller
      * @param i int value representing item position in inventory
      * @return boolean value representing whether it breaks or not
      */
-
 	private boolean determineItem(String input, int i)
 	{
 		try
@@ -734,8 +714,8 @@ public class Controller
 		}
 		return false;
 	}
+	
 	/**
-
      * Method: determineEnemy()
      * [Enemy Commands]
      * @param input String value representing controller command
@@ -815,26 +795,24 @@ public class Controller
 		}
 		return false;
 	}
+	
 	/**
-
      * Method: navigate()
      * [The method attempts to move]
      * @param input String value representing a char to move
      * @return nothing
      */
-
 	private void navigate(String input)
 	{
 		model.navigate(input.charAt(0));
 	}
+	
 	/**
-
      * Method: pickUpAll()
      * [picks up all items]
      * @param none
      * @return nothing
      */
-
 	private void pickUpAll()
 	{
 		while (model.getCurrentRoom().getItems().size() > 0)
@@ -853,5 +831,4 @@ public class Controller
 			
 		}
 	}
-	
 }
