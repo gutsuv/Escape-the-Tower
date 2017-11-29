@@ -13,7 +13,7 @@ import Controller.Controller;
  * 
  * This class initializes all of the objects
  * 
- * Purpose: â€“ Stores the object instantiations
+ * Purpose: Stores the object instantiations
  */
 public class Initializer
 {

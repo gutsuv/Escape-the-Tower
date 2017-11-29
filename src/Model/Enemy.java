@@ -7,7 +7,7 @@ import View.View;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 23
  * 
  * This class stores and holds the functionality of Enemies in the game 
  * 
@@ -63,8 +63,7 @@ public class Enemy extends Character implements Cloneable
 		} 
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include Gear in the text message");
+			System.out.println("Error");
 		}
 
 	}
@@ -132,7 +131,7 @@ public class Enemy extends Character implements Cloneable
 
 	/**
      * Method: toString()
-     * [What the method does]
+     * Displays enemy information
      * @param none
      * @return String value representing...
      */
