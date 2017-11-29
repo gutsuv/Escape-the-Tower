@@ -1,17 +1,16 @@
 package Model;
 
-import javafx.scene.control.Button;
 import View.View;
 /**
  * Class: Item
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 20
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of items in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create items.
  */
 public abstract class Item implements Cloneable, Comparable<Item>
 {
