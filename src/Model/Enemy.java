@@ -9,9 +9,9 @@ import View.View;
  * Course: ITEC 3860, Fall 2017
  * Written: November 23
  * 
- * This class stores and holds the functionality of Enemies in the game 
+ * This class stores and holds the functionality of Enemies in the game.
  * 
- * Purpose: – Purpose is to store variables related to enemies
+ * Purpose: To contain the methods and attributes needed to create enemies.
  */
 public class Enemy extends Character implements Cloneable
 {

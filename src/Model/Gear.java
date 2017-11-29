@@ -8,9 +8,9 @@ package Model;
  * Course: ITEC 3860, Fall 2017
  * Written: November 22
  * 
- * This class holds the functionality of items classified as gear or equipment
+ * This class holds the functionality of items classified as gear or equipment.
  * 
- * Purpose: The purpose is store the attributes of the weapons and armor found in the game
+ * Purpose: The purpose is store the attributes of the weapons and armor found in the game.
  */
 public class Gear extends Item
 {

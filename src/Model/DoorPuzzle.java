@@ -9,9 +9,9 @@ import java.util.ArrayList;
  * Course: ITEC 3860, Fall 2017
  * Written: November 23
  * 
- * This class stores the functionality of puzzles with locked doors
+ * This class stores the functionality of puzzles with locked doors.
  * 
- * Purpose: The purpose is to store attributes that relate to locked door puzzles
+ * Purpose: The purpose is to store attributes that relate to locked door puzzles.
  */
 public class DoorPuzzle extends Puzzle
 {
