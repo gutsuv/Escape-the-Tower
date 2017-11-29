@@ -7,11 +7,11 @@ import java.util.ArrayList;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 24
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of riddle puzzles in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create riddle puzzles.
  */
 public class PuzzleRiddle extends Puzzle
 {
@@ -44,8 +44,7 @@ public class PuzzleRiddle extends Puzzle
 		}
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include PuzzleRiddle in the text message");
+			System.out.println("Error");
 		}
 	}
 
