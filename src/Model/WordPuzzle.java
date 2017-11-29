@@ -5,11 +5,11 @@ package Model;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 25
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of word based puzzles in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create word based puzzles.
  */
 public class WordPuzzle extends Puzzle
 {
@@ -20,7 +20,7 @@ public class WordPuzzle extends Puzzle
      * Method: WordPuzzle()
      * WordPuzzle constructor
      * @param loadedString String representing the string inputs to be parsed
-     * @param library ReferenceIdentities object representing 
+     * @param library ReferenceIdentities object 
      * @return nothing
      */
 	public WordPuzzle(String loadedString, ReferenceIdentities library)
@@ -92,7 +92,7 @@ public class WordPuzzle extends Puzzle
 
 	/**
      * Method: attemptSolve()
-     * Evaluates user result
+     * 
      * @param itemId int 
      * @return nothing
      */
