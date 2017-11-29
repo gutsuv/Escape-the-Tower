@@ -6,11 +6,11 @@ import View.View;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 20
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of puzzles in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create puzzles.
  */
 public abstract class Puzzle implements Cloneable
 {
@@ -153,7 +153,6 @@ public abstract class Puzzle implements Cloneable
      */
 	public abstract void display();
 
-	// I'm aware of redundancy but I did it this way for a reason
 	/**
      * Method: toString()
      * Displays puzzle name and description
