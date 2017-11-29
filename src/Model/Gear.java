@@ -1,13 +1,12 @@
 package Model;
 
-import javafx.scene.control.Button;
 
 /**
  * Class: Gear
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 22
  * 
  * This class holds the functionality of items classified as gear or equipment
  * 
@@ -50,10 +49,8 @@ public class Gear extends Item
 		} 
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include Gear in the text message");
+			System.out.println("Error");
 		}
-
 	}
 	
 	/**
@@ -90,7 +87,7 @@ public class Gear extends Item
 	}
 
 	/**
-     * Method: getAttackMin()
+     * Method: getAttackMax()
      * Retrieves maximum attack attribute of item
      * @param none
      * @return attackMax int value representing maximum attack of item
@@ -207,24 +204,29 @@ public class Gear extends Item
 	{
 		view.line(125);
 		view.print(itemName);
+		
 		if(equipped)
 		{
 			view.print("[equipped]");
 		}
+		
 		if(itemslot=='w') 
 		{
 			view.print("Max Damage " + attackMax + 
 					", Min Damage " + attackMin +
 					", Accuracy, " + (100-acc));
 		}
+		
 		else 
 		{
 			view.print("Armor " + defense);
 		}
+		
 		if(equipped == false)
 		{
 			view.print("equip:");
 		}
+		
 		view.print("drop:");
 		view.print("examine:");
 		view.print("exit:");
