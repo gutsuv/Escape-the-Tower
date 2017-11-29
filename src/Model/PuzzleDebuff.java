@@ -67,6 +67,16 @@ public class PuzzleDebuff extends Puzzle
 	{
 	}
 
+   /** Method: initialize()
+    * Poison the player because that's what poison does
+    * @param Player as the player invoking triggering poison
+    * @return nothing
+    */
+	public void initialize(Player user)
+	{
+		user.setPoisoned(true);
+		user.updateStats();
+	}
 	/**
      * Method: attemptSolve()
      * Sets solved to true

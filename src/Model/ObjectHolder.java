@@ -138,6 +138,8 @@ public class ObjectHolder
 		
 	}
 	
+	// Load Methods
+	
 	/**
      * Method: loadCurrentRoom()
      * Loads current room
@@ -391,6 +393,8 @@ public class ObjectHolder
 			System.out.println("load error puzzle");
 		}
 	}
+	
+	// Save Methods
 	
 	/**
      * Method: saveItems()
@@ -655,7 +659,14 @@ public class ObjectHolder
 		currentRoom = rooms.get(i - 1);
 		if(currentRoom.getPuzzle()!=null)
 		{
-			currentRoom.getPuzzle().initialize();
+			if(currentRoom.getPuzzle() instanceof PuzzleDebuff) 
+			{
+				((PuzzleDebuff)currentRoom.getPuzzle()).initialize(user);
+			}
+			else
+			{
+				currentRoom.getPuzzle().initialize();
+			}
 		}
 		if (currentRoom.getRoomId() == 31)
 		{
