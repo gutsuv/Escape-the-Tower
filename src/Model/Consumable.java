@@ -43,7 +43,6 @@ public class Consumable extends Item
 			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
 					+ "I can fix it in like 30 minutes. Include Consumable in the text message");
 		}
-
 	}
 	
 	/**

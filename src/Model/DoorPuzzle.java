@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 23
  * 
  * This class stores the functionality of puzzles with locked doors
  * 
@@ -82,7 +82,7 @@ public class DoorPuzzle extends Puzzle
 
 	/**
      * Method: initialize()
-     * Intializes whether a room is locked
+     * Initializes whether a room is locked
      * @param none
      * @return nothing
      */
