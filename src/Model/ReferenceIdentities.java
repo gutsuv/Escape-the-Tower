@@ -10,9 +10,10 @@ import java.util.*;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class – This class load identities of Objects and stores them in a system similar to a library
+ * It references the loaded Objects and makes a clone of it.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – This class is used to create item, enemy, and puzzle objects.
  */
 public class ReferenceIdentities
 {
