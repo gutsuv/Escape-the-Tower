@@ -7,11 +7,11 @@ import java.util.ArrayList;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 25
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of number based puzzles in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create number based puzzles.
  */
 public class PuzzleNumber extends Puzzle
 {
@@ -42,10 +42,10 @@ public class PuzzleNumber extends Puzzle
 			hint = splitString[4];
 
 		}
+		
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include PuzzleNumber in the text message");
+			System.out.println("Error");
 		}
 	}
 
@@ -121,21 +121,24 @@ public class PuzzleNumber extends Puzzle
 	{
 		
 		int guess = Integer.parseInt(stringAnswer);
+		
 		if (guess > answer)
 		{
-			view.print("wrong anser: too high");
+			view.print("wrong answer: too high");
 		}
+		
 		else if (guess < answer)
 		{
 			view.print("wrong answer: too low");
 		}
+		
 		else
 		{
 			solved = true;
 			lockedRoom.setLocked(false);
 			view.print("puzzle solved");
 			
-			if(puzzleId==5)
+			if(puzzleId == 5)
 			{
 				view.print("Answer to puzzle 01 is 'A horseshoe nail'(copy paste)");
 			}
