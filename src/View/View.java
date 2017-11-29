@@ -9,9 +9,9 @@ import java.util.ArrayList;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class displays model content to the user.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods necessary to print out content to the console.
  */
 public class View<e>
 {
