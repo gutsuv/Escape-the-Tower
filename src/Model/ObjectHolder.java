@@ -13,7 +13,7 @@ import View.View;
  * 
  * This class holds almost all data related to the game.
  * 
- * Purpose: � This class is responsible for making class to class interactions easy and possible
+ * Purpose: – This class is responsible for making class to class interactions easy and possible
  */
 public class ObjectHolder
 {
@@ -671,13 +671,17 @@ public class ObjectHolder
 		}
 		if (currentRoom.getRoomId() == 31)
 		{
+			view.print("\r\n" + 
+					"	 ╔═╗╔═╗╔╗╔╔═╗╦═╗╔═╗╔╦╗╦ ╦╦  ╔═╗╔╦╗╦╔═╗╔╗╔╔═╗\r\n" + 
+					"	 ║  ║ ║║║║║ ╦╠╦╝╠═╣ ║ ║ ║║  ╠═╣ ║ ║║ ║║║║╚═╗\r\n" + 
+					"	 ╚═╝╚═╝╝╚╝╚═╝╩╚═╩ ╩ ╩ ╚═╝╩═╝╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝");
+			view.print("	+-------------------------------------------+");
+			view.print("	|    No foe was a match for your strength   |");
+			view.print("	| You have completed the tower and escaped. |");
+			view.print("	+-------------------------------------------+");
 			view.line();
+			view.print("	           Back to the main menu...");
 			view.line();
-			view.line();
-			view.print("Game Over");
-			view.print("You escaped the tower");
-			view.line();
-			//view.printString("", 125);
 			int exit = 1/0;
 		}
 		try
