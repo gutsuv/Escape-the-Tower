@@ -128,6 +128,7 @@ public class ObjectHolder
 			loadInventory(file);
 			file = new File("TextFiles/Save" + number + "/Equipped Items.txt");
 			loadEquippedItems(file);
+			user.updateStats();
 			file = new File("TextFiles/Save" + number + "/CurrentRoom.txt");
 			loadCurrentRoom(file);
 		}
@@ -228,7 +229,7 @@ public class ObjectHolder
 				{
 					if(itemId==user.getItem(i).getItemId())
 					{
-						user.equip(i);
+						user.equipNoPrint(i);
 					}
 				}
 			}

@@ -275,6 +275,17 @@ public class Player extends Character
 	{
 		equip(inventory.get(i));
 	}
+	
+	/**
+     * Method: equipNoPrint()
+     * Equips item
+     * @param i int value representing item
+     * @return nothing
+     */
+	public void equipNoPrint(int i) throws Exception
+	{
+		equipNoPrint(inventory.get(i));
+	}
 
 	/**
      * Method: equip()
@@ -307,6 +318,35 @@ public class Player extends Character
 	}
 
 	/**
+     * Method: equipNoPrint()
+     * Equips item
+     * @param item Item object representing item
+     * @return nothing
+     */
+	public void equipNoPrint(Item item) throws Exception
+	{
+		for (int i = 0; i < equippedItems.size(); i++)
+		{
+			if (((Gear) item).getItemslot() == equippedItems.get(i).getItemslot())
+			{
+				if (equippedItems.get(i).getItemslot() != 'e')
+				{
+					unequip(i);
+				}
+			}
+		}
+		for (int i = 0; i < equippedItems.size(); i++)
+		{
+			if (equippedItems.get(i).getItemId() == item.getItemId())
+			{
+				unequip(i);
+			}
+		}
+		((Gear) item).setEquipped(true);
+		equippedItems.add((Gear) item);
+	}
+	
+	/**
      * Method: unequip()
      * Unequips item
      * @param i int value representing item
@@ -316,6 +356,7 @@ public class Player extends Character
 	{
 		equippedItems.get(i).setEquipped(false);
 		equippedItems.remove(i);
+		updateStats();
 	}
 
 	/**
