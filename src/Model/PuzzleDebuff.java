@@ -9,9 +9,9 @@ import java.util.ArrayList;
  * Course: ITEC 3860, Fall 2017
  * Written: 
  * 
- * This class – now describe what the class does 
+ * This class – This class handles puzzles that affect user stats. It applies the poison condition to the user.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: – Handles the poison puzzle.
  */
 public class PuzzleDebuff extends Puzzle
 {
