@@ -16,6 +16,13 @@ public class WordPuzzle extends Puzzle
 	String answer;
 	Item item;
 
+	/**
+     * Method: WordPuzzle()
+     * WordPuzzle constructor
+     * @param loadedString String representing the string inputs to be parsed
+     * @param library ReferenceIdentities object representing 
+     * @return nothing
+     */
 	public WordPuzzle(String loadedString, ReferenceIdentities library)
 	{
 		// loaded from file
@@ -34,21 +41,38 @@ public class WordPuzzle extends Puzzle
 		}
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include WordPuzzle in the text message");
+			System.out.println("Error");
 		}
 	}
 
+	/**
+     * Method: getItem()
+     * Returns item
+     * @param none
+     * @return item Item object
+     */
 	public Item getItem()
 	{
 		return item;
 	}
 
+	/**
+     * Method: initialize()
+     * 
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void initialize()
 	{
 	}
 
+	/**
+     * Method: attemptSolve()
+     * Evaluates user result
+     * @param answer String value representing user answer
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(String answer)
 	{
@@ -66,12 +90,23 @@ public class WordPuzzle extends Puzzle
 		}
 	}
 
+	/**
+     * Method: attemptSolve()
+     * Evaluates user result
+     * @param itemId int 
+     * @return nothing
+     */
 	@Override
 	public void attemptSolve(int itemId)
 	{
-		// no effect
 	}
 
+	/**
+     * Method: display()
+     * Displays word puzzle
+     * @param none
+     * @return nothing
+     */
 	@Override
 	public void display()
 	{
