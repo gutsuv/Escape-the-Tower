@@ -7,11 +7,11 @@ import java.util.ArrayList;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 24
  * 
- * This class – This class handles puzzles that affect user stats. It applies the poison condition to the user.
+ * This class stores and holds the functionality of debuff puzzles in the game.
  * 
- * Purpose: – Handles the poison puzzle.
+ * Purpose: To contain the methods and attributes needed to create debuff puzzles.
  */
 public class PuzzleDebuff extends Puzzle
 {
@@ -68,7 +68,7 @@ public class PuzzleDebuff extends Puzzle
 	}
 
    /** Method: initialize()
-    * Poison the player because that's what poison does
+    * Poisons the player
     * @param Player as the player invoking triggering poison
     * @return nothing
     */
@@ -78,6 +78,7 @@ public class PuzzleDebuff extends Puzzle
 		user.updateStats();
 		printPoison();
 	}
+	
 	/**
      * Method: attemptSolve()
      * Sets solved to true
@@ -92,7 +93,7 @@ public class PuzzleDebuff extends Puzzle
 	
 	/**
      * Method: printPoison()
-     * Displays posion action
+     * Displays poison action
      * @param none
      * @return nothing
      */
