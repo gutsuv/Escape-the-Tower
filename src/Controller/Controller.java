@@ -197,6 +197,16 @@ public class Controller
 			{
 				((PuzzleDebuff) model.getCurrentRoom().getPuzzle()).printPoison();
 				model.getUser().setPoisoned(true);
+				
+				menuView.line(125);
+				menuView.line();
+				menuView.line();
+				menuView.print("Game Over: You drank too much poison");
+				menuView.line();
+				menuView.line();
+				int exit = 1/0;
+				
+				// assuming death is avoided
 				model.getUser().updateStats();
 			}
 		}

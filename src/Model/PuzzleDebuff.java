@@ -76,6 +76,7 @@ public class PuzzleDebuff extends Puzzle
 	{
 		user.setPoisoned(true);
 		user.updateStats();
+		printPoison();
 	}
 	/**
      * Method: attemptSolve()
