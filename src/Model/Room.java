@@ -1,8 +1,5 @@
 package Model;
 
-
-// Used for designing room object.
-
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import View.View;
@@ -11,11 +8,11 @@ import View.View;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 22
  * 
- * This class – now describe what the class does 
+ * This class stores and holds the functionality of rooms in the game.
  * 
- * Purpose: – Describe the purpose of this class
+ * Purpose: To contain the methods and attributes needed to create rooms.
  */
 public class Room
 {
@@ -67,8 +64,7 @@ public class Room
 		}
 		catch (Exception E)
 		{
-			System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-					+ "I can fix it in like 30 minutes. Include RoomsA in the text message");
+			System.out.println("Error");
 		}
 	}
 
@@ -289,25 +285,27 @@ public class Room
 	public void enemyDeathEffects()
 	{
 		view.print("enemy has died");
+		
 		for (int i = 0; i < enemy.getItems().size(); i++)
 		{
 			addItem(enemy.getItems().get(i));
 		}
+		
 		enemy = null;
+		
 		try
 		{
 			display();
 		}
 		catch (Exception e)
 		{
-
 		}
 	}
 
 	/**
      * Method: setView()
      * Sets view
-     * @param v
+     * @param v View
      * @return nothing
      */
 	public void setView(View v)
@@ -328,6 +326,7 @@ public class Room
 	public void showPaths()
 	{
 		int i = directions.length;
+		
 		while (i > 0)
 		{
 			i--;
@@ -345,14 +344,17 @@ public class Room
 	{
 		view.line(125);
 		view.printString(getRoomDesc(), 125);
+		
 		if (enemy != null)
 		{
 			view.printString(enemy.toString(), 125);
 		}
+		
 		if (puzzle != null)
 		{
 			view.printString(puzzle.toString(), 125);
 		}
+		
 		view.printStrO(items, 125);
 		view.line();
 		view.print("=======[Commands]========");
@@ -360,19 +362,24 @@ public class Room
 		view.print("Help:");
 		view.print("Menu:");
 		view.print("Inventory:");
+		
 		if (items.size() > 0)
 		{
 			view.print("Pick up:");
 		}
+		
 		if (enemy != null)
 		{
 			view.print("Combat:");
 		}
+		
 		if (puzzle != null)
 		{
 			view.print("Puzzle:");
 		}
+		
 		view.print("=====[Move Commands]=====");
+		
 		try
 		{
 			for (int i = 0; i < directions[i]; i++)
@@ -400,7 +407,7 @@ public class Room
 	
 	/**
      * Method: toString()
-     * Displays room desc
+     * Displays room description
      * @param none
      * @return getRoomDesc
      */
