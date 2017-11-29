@@ -8,12 +8,12 @@ import java.util.*;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3860, Fall 2017
- * Written: 
+ * Written: November 25
  * 
- * This class – This class load identities of Objects and stores them in a system similar to a library
+ * This class load identities of Objects and stores them in a system similar to a library.
  * It references the loaded Objects and makes a clone of it.
  * 
- * Purpose: – This class is used to create item, enemy, and puzzle objects.
+ * Purpose: This class is used to create item, enemy, and puzzle objects.
  */
 public class ReferenceIdentities
 {
@@ -26,7 +26,7 @@ public class ReferenceIdentities
 	View itemView = new View();
 	View enemyView = new View();
 	View puzzleView = new View();
-	// redundant views are for if classes are changed to accomadate unforseen
+	// redundant views are for if classes are changed to accommodate unforeseen
 	// changes in requirements
 	// the unforeseen requirements probably do not include view
 
