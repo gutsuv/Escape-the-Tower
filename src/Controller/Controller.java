@@ -800,6 +800,7 @@ public class Controller
 					model.getUser().receiveDamage(g);
 					if (!model.getUser().isAlive())
 					{
+						menuView.print("You recieve a killing blow...");
 						menuView.line();
 						menuView.line();
 						menuView.line();

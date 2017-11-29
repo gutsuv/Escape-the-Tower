@@ -356,21 +356,21 @@ public class Room
 		view.printStrO(items, 125);
 		view.line();
 		view.print("=======[Commands]========");
-		view.print("stats:");
-		view.print("help:");
-		view.print("menu:");
-		view.print("inventory:");
+		view.print("Stats:");
+		view.print("Help:");
+		view.print("Menu:");
+		view.print("Inventory:");
 		if (items.size() > 0)
 		{
-			view.print("pick up:");
+			view.print("Pick up:");
 		}
 		if (enemy != null)
 		{
-			view.print("combat:");
+			view.print("Combat:");
 		}
 		if (puzzle != null)
 		{
-			view.print("puzzle:");
+			view.print("Puzzle:");
 		}
 		view.print("=====[Move Commands]=====");
 		try
