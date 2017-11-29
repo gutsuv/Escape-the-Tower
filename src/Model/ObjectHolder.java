@@ -30,7 +30,7 @@ public class ObjectHolder
 
 	/**
      * Method: ObjectHolder()
-     * [Contructor]
+     * Constructor
      * @param v View object
      * @return nothing
      */
@@ -322,8 +322,7 @@ public class ObjectHolder
 				}
 				catch (Exception E)
 				{
-					System.out.println("Text Spencer Williams to fix this. I might have messed up a TextFile."
-							+ "I	 can fix it in like 30 minutes. Include RoomBItem or Load in the text message");
+					System.out.println("Error");
 				}
 			}
 			buff.close();
@@ -684,13 +683,14 @@ public class ObjectHolder
 			view.line();
 			int exit = 1/0;
 		}
+		
 		try
 		{
-		currentRoom.display();
+			currentRoom.display();
 		}
+		
 		catch(Exception E)
-		{
-			
+		{	
 		}
 	}
 
