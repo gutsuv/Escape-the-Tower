@@ -4,7 +4,7 @@ package Model;
  * @author Team Hydra
  * @version 1.0
  * Course: ITEC 3150
- * Written: January 22, 2017
+ * Written: November 22, 2017
  * 
  * This class sets the effects consumable items that are found in the game
  * 
@@ -45,6 +45,7 @@ public class Consumable extends Item
 		}
 
 	}
+	
 	/**
      * Method: getHealthEffect()
      * Retrieves consumable items's health effect
@@ -71,45 +72,41 @@ public class Consumable extends Item
 	{
 	}
 
-	// code moved because I can't make an object delete itself without using outside
-	// method
 	@Override
 	public void drop()
 	{
 	}
-	// code moved because I can't make an object delete itself without using outside
-	// method
 
-	@Override
 	/**
      * Method: examine()
-     * Displays consumable items's long descriptiom
+     * Displays consumable items's long description
      * @param none
      * @return void
      */
+	@Override
 	public void examine()
 	{
 		view.printString((healthEffect + ": " + itemDescLong), 125);
 	}
-	@Override
 	/**
      * Method: getDisplay()
      * Retrieves consumable items's display prompt
      * @param none
      * @return itemName + "-> use, drop, examine:"
      */
+	@Override
 	public String getDisplay()
 	{
 		return itemName + "-> use, drop, examine:";
 	}
 
-	@Override
 	/**
      * Method: displayCommands()
      * Prints the consumable item commands
      * @param none
      * @return nothing 
      */
+	@Override
 	public void displayCommands()
 	{
 		view.line(125);
