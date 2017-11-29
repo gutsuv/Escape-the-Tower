@@ -13,7 +13,7 @@ import View.View;
  * 
  * This class holds almost all data related to the game.
  * 
- * Purpose: – This class is responsible for making class to class interactions easy and possible
+ * Purpose: This class is responsible for making class to class interactions easy and possible
  */
 public class ObjectHolder
 {
